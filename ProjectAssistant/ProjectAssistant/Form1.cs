@@ -12,9 +12,17 @@ namespace ProjectAssistant
 {
     public partial class Form1 : Form
     {
+        Student student = new Student();
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            student.set_name(textBox1.Text);
+            label1.Text = student.get_name();
         }
     }
 }
