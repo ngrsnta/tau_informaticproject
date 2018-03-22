@@ -13,31 +13,44 @@ namespace ProjectAssistant
     public partial class Form1 : Form
     {
         Student student = new Student();
+        LoginPage loginPage = new LoginPage();
+        StudentPage studentPage = new StudentPage();
+        AdminPage adminPage = new AdminPage();
+        CompanyPage companyPage = new CompanyPage();
 
         public Form1()
         {
             InitializeComponent();
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginPageButton_Click(object sender, EventArgs e)
         {
-            student.set_name(textBox1.Text);
-            label1.Text = student.get_name();
+            formsPanel.Controls.Clear();
+            formsPanel.Controls.Add(loginPage);
+            headerLabel.Text = "Login";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void adminPageButton_Click(object sender, EventArgs e)
         {
+            formsPanel.Controls.Clear();
+            formsPanel.Controls.Add(adminPage);
+            headerLabel.Text = "Admin";
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void studentPageButton_Click(object sender, EventArgs e)
         {
-
+            formsPanel.Controls.Clear();
+            formsPanel.Controls.Add(studentPage);
+            headerLabel.Text = "Student";
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void companyPageButton_Click(object sender, EventArgs e)
         {
-
+            formsPanel.Controls.Clear();
+            formsPanel.Controls.Add(companyPage);
+            headerLabel.Text = "Company";
         }
     }
 }

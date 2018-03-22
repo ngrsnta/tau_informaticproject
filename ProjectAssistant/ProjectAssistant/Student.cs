@@ -11,7 +11,7 @@ namespace ProjectAssistant
         string Name = "";
         string Surname = "";
         int ID_Number = 0;
-
+        
         public string get_name()
         {
             return this.Name;
@@ -22,4 +22,5 @@ namespace ProjectAssistant
             this.Name = _name;
         }
     }
+
 }
