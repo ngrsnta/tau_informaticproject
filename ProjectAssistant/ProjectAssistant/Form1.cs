@@ -18,6 +18,7 @@ namespace ProjectAssistant
         AdminPage adminPage = new AdminPage();
         CompanyPage companyPage = new CompanyPage();
 
+
         public Form1()
         {
             InitializeComponent();
@@ -51,6 +52,11 @@ namespace ProjectAssistant
             formsPanel.Controls.Clear();
             formsPanel.Controls.Add(companyPage);
             headerLabel.Text = "Company";
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
