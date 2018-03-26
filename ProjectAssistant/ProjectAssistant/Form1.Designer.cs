@@ -147,6 +147,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel sideMenuPanel;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel headerPanel;
