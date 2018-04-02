@@ -32,10 +32,15 @@
             this.reg_student = new System.Windows.Forms.Button();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
             this.tab_reg_student = new System.Windows.Forms.TabPage();
+            this.label_test4 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textbox_studentpassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textbox_studentsurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textbox_studentname = new System.Windows.Forms.TextBox();
+            this.label_test3 = new System.Windows.Forms.Label();
+            this.label_test2 = new System.Windows.Forms.Label();
             this.label_test1 = new System.Windows.Forms.Label();
             this.label_studentnumber = new System.Windows.Forms.Label();
             this.textbox_studentnumber = new System.Windows.Forms.TextBox();
@@ -46,12 +51,7 @@
             this.label_reg_firma = new System.Windows.Forms.Label();
             this.tab_update_firma = new System.Windows.Forms.TabPage();
             this.label_update_firma = new System.Windows.Forms.Label();
-            this.label_test2 = new System.Windows.Forms.Label();
-            this.label_test3 = new System.Windows.Forms.Label();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label_test4 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textbox_studentpassword = new System.Windows.Forms.TextBox();
             this.Admin_MainTab.SuspendLayout();
             this.tab_reg_student.SuspendLayout();
             this.tab_update_student.SuspendLayout();
@@ -110,6 +110,32 @@
             this.tab_reg_student.Text = "Student Registration";
             this.tab_reg_student.UseVisualStyleBackColor = true;
             // 
+            // label_test4
+            // 
+            this.label_test4.AutoSize = true;
+            this.label_test4.Location = new System.Drawing.Point(893, 259);
+            this.label_test4.Name = "label_test4";
+            this.label_test4.Size = new System.Drawing.Size(153, 29);
+            this.label_test4.TabIndex = 10;
+            this.label_test4.Text = "Place Holder";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(61, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 29);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Student Password";
+            // 
+            // textbox_studentpassword
+            // 
+            this.textbox_studentpassword.Location = new System.Drawing.Point(423, 259);
+            this.textbox_studentpassword.Name = "textbox_studentpassword";
+            this.textbox_studentpassword.Size = new System.Drawing.Size(366, 34);
+            this.textbox_studentpassword.TabIndex = 8;
+            this.textbox_studentpassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentpassword_KeyPress);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -143,6 +169,24 @@
             this.textbox_studentname.Size = new System.Drawing.Size(366, 34);
             this.textbox_studentname.TabIndex = 4;
             this.textbox_studentname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentname_KeyPress);
+            // 
+            // label_test3
+            // 
+            this.label_test3.AutoSize = true;
+            this.label_test3.Location = new System.Drawing.Point(893, 213);
+            this.label_test3.Name = "label_test3";
+            this.label_test3.Size = new System.Drawing.Size(153, 29);
+            this.label_test3.TabIndex = 3;
+            this.label_test3.Text = "Place Holder";
+            // 
+            // label_test2
+            // 
+            this.label_test2.AutoSize = true;
+            this.label_test2.Location = new System.Drawing.Point(893, 163);
+            this.label_test2.Name = "label_test2";
+            this.label_test2.Size = new System.Drawing.Size(153, 29);
+            this.label_test2.TabIndex = 3;
+            this.label_test2.Text = "Place Holder";
             // 
             // label_test1
             // 
@@ -243,53 +287,9 @@
             this.label_update_firma.TabIndex = 4;
             this.label_update_firma.Text = "Firma Update";
             // 
-            // label_test2
-            // 
-            this.label_test2.AutoSize = true;
-            this.label_test2.Location = new System.Drawing.Point(893, 163);
-            this.label_test2.Name = "label_test2";
-            this.label_test2.Size = new System.Drawing.Size(153, 29);
-            this.label_test2.TabIndex = 3;
-            this.label_test2.Text = "Place Holder";
-            // 
-            // label_test3
-            // 
-            this.label_test3.AutoSize = true;
-            this.label_test3.Location = new System.Drawing.Point(893, 213);
-            this.label_test3.Name = "label_test3";
-            this.label_test3.Size = new System.Drawing.Size(153, 29);
-            this.label_test3.TabIndex = 3;
-            this.label_test3.Text = "Place Holder";
-            // 
             // adminPageBindingSource
             // 
             this.adminPageBindingSource.DataSource = typeof(ProjectAssistant.AdminPage);
-            // 
-            // label_test4
-            // 
-            this.label_test4.AutoSize = true;
-            this.label_test4.Location = new System.Drawing.Point(893, 259);
-            this.label_test4.Name = "label_test4";
-            this.label_test4.Size = new System.Drawing.Size(153, 29);
-            this.label_test4.TabIndex = 10;
-            this.label_test4.Text = "Place Holder";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 29);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Student Password";
-            // 
-            // textbox_studentpassword
-            // 
-            this.textbox_studentpassword.Location = new System.Drawing.Point(423, 259);
-            this.textbox_studentpassword.Name = "textbox_studentpassword";
-            this.textbox_studentpassword.Size = new System.Drawing.Size(366, 34);
-            this.textbox_studentpassword.TabIndex = 8;
-            this.textbox_studentpassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentpassword_KeyPress);
             // 
             // AdminPage
             // 

@@ -16,14 +16,13 @@ namespace ProjectAssistant
         public AdminPage() //Start
         {
             InitializeComponent();
-            Student[] studentArray = new Student[100];
+//          Student[] studentArray = new Student[100];
             
         }
 
         private void reg_student_Click(object sender, EventArgs e)
         {
-           
-            //this.label_test = textbox_studentname.Text;
+            
         //   Student studentArray[i] = new Student();
             this.label_test1.Text = textbox_studentname.Text;
             this.label_test2.Text = textbox_studentsurname.Text;
