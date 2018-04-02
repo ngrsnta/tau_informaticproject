@@ -12,6 +12,9 @@ namespace ProjectAssistant
 {
     public partial class LoginPage : UserControl
     {
+
+        LoginInfos loginInfo = new LoginInfos();
+
         public LoginPage()
         {
             InitializeComponent();
@@ -19,18 +22,17 @@ namespace ProjectAssistant
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            LoginInfos loginInfo = new LoginInfos();
             try
             {
-                loginInfo.set_loginId(System.Convert.ToInt32(loginIdTextBox.Text));
+                loginInfo.set_loginId(Convert.ToInt32(loginIdTextBox.Text));
             }
-
-            catch (System.FormatException)
+            
+            catch (FormatException)
             {
                 MessageBox.Show("Login Id can only contain numbers");
                 return;
             }
-
+            
             loginInfo.set_password(passwordTextBox.Text);
 
             richTextBox1.Text = loginInfo.get_loginId() + loginInfo.get_password();
