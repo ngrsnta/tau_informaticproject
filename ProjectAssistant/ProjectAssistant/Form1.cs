@@ -18,6 +18,9 @@ namespace ProjectAssistant
         AdminPage adminPage = new AdminPage();
         CompanyPage companyPage = new CompanyPage();
 
+        bool homeDragging;
+        Point homeStartpoint;
+
 
         public Form1()
         {
@@ -57,6 +60,24 @@ namespace ProjectAssistant
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void home_MouseDown(object sender, MouseEventArgs e)
+        {
+            homeDragging = true;
+            homeStartpoint = new Point(e.X, e.Y);
+        }
+        private void home_MouseUp(object sender, MouseEventArgs e)
+        {
+            homeDragging = false;
+        }
+        private void home_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (homeDragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.homeStartpoint.X, p.Y - this.homeStartpoint.Y);
+            }
         }
     }
 }

@@ -131,6 +131,9 @@
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(871, 100);
             this.headerPanel.TabIndex = 8;
+            this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.home_MouseDown);
+            this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.home_MouseMove);
+            this.headerPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.home_MouseUp);
             // 
             // exitButton
             // 
