@@ -16,14 +16,19 @@ namespace ProjectAssistant
         public AdminPage() //Start
         {
             InitializeComponent();
+            Student[] studentArray = new Student[100];
+            
         }
 
         private void reg_student_Click(object sender, EventArgs e)
         {
+           
             //this.label_test = textbox_studentname.Text;
+        //   Student studentArray[i] = new Student();
             this.label_test1.Text = textbox_studentname.Text;
             this.label_test2.Text = textbox_studentsurname.Text;
             this.label_test3.Text = textbox_studentnumber.Text;
+            this.label_test4.Text = textbox_studentpassword.Text;
         }
 
         private void textbox_studentnumber_KeyPress(object sender, KeyPressEventArgs keypress)
@@ -45,6 +50,14 @@ namespace ProjectAssistant
         private void textbox_studentname_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textbox_studentpassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
             {
                 e.Handled = true;
             }

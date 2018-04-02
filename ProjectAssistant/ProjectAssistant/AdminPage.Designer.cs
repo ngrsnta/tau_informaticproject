@@ -49,6 +49,9 @@
             this.label_test2 = new System.Windows.Forms.Label();
             this.label_test3 = new System.Windows.Forms.Label();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label_test4 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textbox_studentpassword = new System.Windows.Forms.TextBox();
             this.Admin_MainTab.SuspendLayout();
             this.tab_reg_student.SuspendLayout();
             this.tab_update_student.SuspendLayout();
@@ -59,7 +62,7 @@
             // 
             // reg_student
             // 
-            this.reg_student.Location = new System.Drawing.Point(514, 275);
+            this.reg_student.Location = new System.Drawing.Point(514, 331);
             this.reg_student.Name = "reg_student";
             this.reg_student.Size = new System.Drawing.Size(172, 54);
             this.reg_student.TabIndex = 0;
@@ -85,6 +88,9 @@
             // 
             // tab_reg_student
             // 
+            this.tab_reg_student.Controls.Add(this.label_test4);
+            this.tab_reg_student.Controls.Add(this.label4);
+            this.tab_reg_student.Controls.Add(this.textbox_studentpassword);
             this.tab_reg_student.Controls.Add(this.label2);
             this.tab_reg_student.Controls.Add(this.textbox_studentsurname);
             this.tab_reg_student.Controls.Add(this.label1);
@@ -249,7 +255,7 @@
             // label_test3
             // 
             this.label_test3.AutoSize = true;
-            this.label_test3.Location = new System.Drawing.Point(893, 208);
+            this.label_test3.Location = new System.Drawing.Point(893, 213);
             this.label_test3.Name = "label_test3";
             this.label_test3.Size = new System.Drawing.Size(153, 29);
             this.label_test3.TabIndex = 3;
@@ -258,6 +264,32 @@
             // adminPageBindingSource
             // 
             this.adminPageBindingSource.DataSource = typeof(ProjectAssistant.AdminPage);
+            // 
+            // label_test4
+            // 
+            this.label_test4.AutoSize = true;
+            this.label_test4.Location = new System.Drawing.Point(893, 259);
+            this.label_test4.Name = "label_test4";
+            this.label_test4.Size = new System.Drawing.Size(153, 29);
+            this.label_test4.TabIndex = 10;
+            this.label_test4.Text = "Place Holder";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(61, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 29);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Student Password";
+            // 
+            // textbox_studentpassword
+            // 
+            this.textbox_studentpassword.Location = new System.Drawing.Point(423, 259);
+            this.textbox_studentpassword.Name = "textbox_studentpassword";
+            this.textbox_studentpassword.Size = new System.Drawing.Size(366, 34);
+            this.textbox_studentpassword.TabIndex = 8;
+            this.textbox_studentpassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentpassword_KeyPress);
             // 
             // AdminPage
             // 
@@ -303,5 +335,8 @@
         private System.Windows.Forms.Label label_test1;
         private System.Windows.Forms.Label label_test3;
         private System.Windows.Forms.Label label_test2;
+        private System.Windows.Forms.Label label_test4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textbox_studentpassword;
     }
 }

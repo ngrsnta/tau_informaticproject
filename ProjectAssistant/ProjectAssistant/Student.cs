@@ -8,10 +8,12 @@ namespace ProjectAssistant
 {
     class Student
     {
+//      string Name { get; set; } = "";
         string Name = "";
         string Surname = "";
         int ID_Number = 0;
-        
+        string Password= "";
+
         public string get_name()
         {
             return this.Name;
