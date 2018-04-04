@@ -68,6 +68,7 @@
     <Compile Include="CompanyPage.Designer.cs">
       <DependentUpon>CompanyPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

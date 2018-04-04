@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ProjectAssistant
 {
@@ -14,6 +15,7 @@ namespace ProjectAssistant
     {
 
         LoginInfos loginInfo = new LoginInfos();
+        DataBase db = new DataBase();
 
         public LoginPage()
         {
@@ -32,10 +34,13 @@ namespace ProjectAssistant
                 MessageBox.Show("Login Id can only contain numbers");
                 return;
             }
-            
+
             loginInfo.set_password(passwordTextBox.Text);
 
-            richTextBox1.Text = loginInfo.get_loginId() + loginInfo.get_password();
+            db.set_studentId(loginInfo.get_loginId(), loginInfo.get_password());
+
+            richTextBox1.Text = db.get_studentPass(loginInfo.get_loginId());
+
         }
     }
 }
