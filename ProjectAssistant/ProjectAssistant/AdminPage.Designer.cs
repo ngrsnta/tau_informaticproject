@@ -33,11 +33,11 @@
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
             this.tab_reg_student = new System.Windows.Forms.TabPage();
             this.label_test4 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_studentpassword = new System.Windows.Forms.Label();
             this.textbox_studentpassword = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_studentsurname = new System.Windows.Forms.Label();
             this.textbox_studentsurname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_studentname = new System.Windows.Forms.Label();
             this.textbox_studentname = new System.Windows.Forms.TextBox();
             this.label_test3 = new System.Windows.Forms.Label();
             this.label_test2 = new System.Windows.Forms.Label();
@@ -85,15 +85,16 @@
             this.Admin_MainTab.SelectedIndex = 0;
             this.Admin_MainTab.Size = new System.Drawing.Size(1236, 864);
             this.Admin_MainTab.TabIndex = 1;
+            this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
             // 
             // tab_reg_student
             // 
             this.tab_reg_student.Controls.Add(this.label_test4);
-            this.tab_reg_student.Controls.Add(this.label4);
+            this.tab_reg_student.Controls.Add(this.label_studentpassword);
             this.tab_reg_student.Controls.Add(this.textbox_studentpassword);
-            this.tab_reg_student.Controls.Add(this.label2);
+            this.tab_reg_student.Controls.Add(this.label_studentsurname);
             this.tab_reg_student.Controls.Add(this.textbox_studentsurname);
-            this.tab_reg_student.Controls.Add(this.label1);
+            this.tab_reg_student.Controls.Add(this.label_studentname);
             this.tab_reg_student.Controls.Add(this.textbox_studentname);
             this.tab_reg_student.Controls.Add(this.label_test3);
             this.tab_reg_student.Controls.Add(this.label_test2);
@@ -119,14 +120,14 @@
             this.label_test4.TabIndex = 10;
             this.label_test4.Text = "Place Holder";
             // 
-            // label4
+            // label_studentpassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 29);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Student Password";
+            this.label_studentpassword.AutoSize = true;
+            this.label_studentpassword.Location = new System.Drawing.Point(61, 264);
+            this.label_studentpassword.Name = "label_studentpassword";
+            this.label_studentpassword.Size = new System.Drawing.Size(208, 29);
+            this.label_studentpassword.TabIndex = 9;
+            this.label_studentpassword.Text = "Student Password";
             // 
             // textbox_studentpassword
             // 
@@ -136,14 +137,14 @@
             this.textbox_studentpassword.TabIndex = 8;
             this.textbox_studentpassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentpassword_KeyPress);
             // 
-            // label2
+            // label_studentsurname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Student Surname";
+            this.label_studentsurname.AutoSize = true;
+            this.label_studentsurname.Location = new System.Drawing.Point(61, 163);
+            this.label_studentsurname.Name = "label_studentsurname";
+            this.label_studentsurname.Size = new System.Drawing.Size(198, 29);
+            this.label_studentsurname.TabIndex = 7;
+            this.label_studentsurname.Text = "Student Surname";
             // 
             // textbox_studentsurname
             // 
@@ -153,14 +154,14 @@
             this.textbox_studentsurname.TabIndex = 6;
             this.textbox_studentsurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentsurname_KeyPress);
             // 
-            // label1
+            // label_studentname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 29);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Student Name";
+            this.label_studentname.AutoSize = true;
+            this.label_studentname.Location = new System.Drawing.Point(61, 116);
+            this.label_studentname.Name = "label_studentname";
+            this.label_studentname.Size = new System.Drawing.Size(166, 29);
+            this.label_studentname.TabIndex = 5;
+            this.label_studentname.Text = "Student Name";
             // 
             // textbox_studentname
             // 
@@ -209,6 +210,7 @@
             // textbox_studentnumber
             // 
             this.textbox_studentnumber.Location = new System.Drawing.Point(423, 208);
+            this.textbox_studentnumber.MaxLength = 9;
             this.textbox_studentnumber.Name = "textbox_studentnumber";
             this.textbox_studentnumber.Size = new System.Drawing.Size(366, 34);
             this.textbox_studentnumber.TabIndex = 2;
@@ -328,15 +330,15 @@
         private System.Windows.Forms.Label label_update_firma;
         private System.Windows.Forms.Label label_studentnumber;
         private System.Windows.Forms.TextBox textbox_studentnumber;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_studentsurname;
         private System.Windows.Forms.TextBox textbox_studentsurname;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_studentname;
         private System.Windows.Forms.TextBox textbox_studentname;
         private System.Windows.Forms.Label label_test1;
         private System.Windows.Forms.Label label_test3;
         private System.Windows.Forms.Label label_test2;
         private System.Windows.Forms.Label label_test4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_studentpassword;
         private System.Windows.Forms.TextBox textbox_studentpassword;
     }
 }
