@@ -32,6 +32,7 @@
             this.tabProject = new System.Windows.Forms.TabControl();
             this.tabProjectpage = new System.Windows.Forms.TabPage();
             this.tabNewprojectpage = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.buttonStartproject = new System.Windows.Forms.Button();
             this.dateTimePickerProjectend = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerProjectstart = new System.Windows.Forms.DateTimePicker();
@@ -48,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBoxCompanydesicription = new System.Windows.Forms.RichTextBox();
             this.textProjecttitle = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabProject.SuspendLayout();
             this.tabNewprojectpage.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             this.tabProjectpage.Location = new System.Drawing.Point(4, 22);
             this.tabProjectpage.Name = "tabProjectpage";
             this.tabProjectpage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProjectpage.Size = new System.Drawing.Size(1079, 974);
+            this.tabProjectpage.Size = new System.Drawing.Size(1079, 642);
             this.tabProjectpage.TabIndex = 0;
             this.tabProjectpage.Text = "Projects";
             this.tabProjectpage.UseVisualStyleBackColor = true;
@@ -110,6 +110,15 @@
             this.tabNewprojectpage.Text = "New Project";
             this.tabNewprojectpage.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(257, 824);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "--->";
+            // 
             // buttonStartproject
             // 
             this.buttonStartproject.Location = new System.Drawing.Point(685, 889);
@@ -118,6 +127,7 @@
             this.buttonStartproject.TabIndex = 21;
             this.buttonStartproject.Text = "Start Application Proccess ";
             this.buttonStartproject.UseVisualStyleBackColor = true;
+            this.buttonStartproject.Click += new System.EventHandler(this.buttonStartproject_Click);
             // 
             // dateTimePickerProjectend
             // 
@@ -240,15 +250,6 @@
             this.textProjecttitle.Name = "textProjecttitle";
             this.textProjecttitle.Size = new System.Drawing.Size(194, 20);
             this.textProjecttitle.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(257, 824);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "--->";
             // 
             // CompanyPage
             // 

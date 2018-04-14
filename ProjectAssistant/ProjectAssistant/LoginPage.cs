@@ -51,6 +51,7 @@ namespace ProjectAssistant
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 loginInfo.set_loginId(Convert.ToInt32(loginIdTextBox.Text));
