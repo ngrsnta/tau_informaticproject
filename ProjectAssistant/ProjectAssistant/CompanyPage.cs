@@ -14,8 +14,33 @@ namespace ProjectAssistant
     {
         public CompanyPage()
         {
+
             
             InitializeComponent();
+            for (int i = 0; i < 20; i++)
+            {
+                Label lbl = new Label();
+                lbl.Text = "a-" + i;
+                lbl.Location = new Point(18, 20);
+
+                GroupBox grupbox = new GroupBox();
+                
+                if (i % 2 == 0)
+                {
+                    grupbox.Location = new Point(0, panelProject.Controls.Count * 60);
+                    grupbox.Size = new Size(panelProject.Size.Width-20, 120);
+                    grupbox.BackColor = SystemColors.ControlLightLight;
+                    grupbox.Controls.Add(lbl);
+                }
+                else
+                {
+                    grupbox.Location = new Point(0, panelProject.Controls.Count * 60);
+                    grupbox.Size = new Size(panelProject.Size.Width-20, 5);
+                    grupbox.BackColor = SystemColors.Control;
+                }
+                panelProject.Controls.Add(grupbox);
+
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

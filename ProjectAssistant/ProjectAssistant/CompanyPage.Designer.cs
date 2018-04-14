@@ -49,7 +49,8 @@
             this.richTextBoxCompanydesicription = new System.Windows.Forms.RichTextBox();
             this.textProjecttitle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelProject = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabProject.SuspendLayout();
             this.tabProjectpage.SuspendLayout();
             this.tabNewprojectpage.SuspendLayout();
@@ -76,7 +77,7 @@
             // 
             // tabProjectpage
             // 
-            this.tabProjectpage.Controls.Add(this.flowLayoutPanel1);
+            this.tabProjectpage.Controls.Add(this.panelProject);
             this.tabProjectpage.Location = new System.Drawing.Point(4, 22);
             this.tabProjectpage.Name = "tabProjectpage";
             this.tabProjectpage.Padding = new System.Windows.Forms.Padding(3);
@@ -254,13 +255,14 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "--->";
             // 
-            // flowLayoutPanel1
+            // panelProject
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 636);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.panelProject.AutoScroll = true;
+            this.panelProject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelProject.Location = new System.Drawing.Point(3, 3);
+            this.panelProject.Name = "panelProject";
+            this.panelProject.Size = new System.Drawing.Size(1073, 636);
+            this.panelProject.TabIndex = 0;
             // 
             // CompanyPage
             // 
@@ -302,6 +304,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBoxSkillRequirements;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelProject;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
