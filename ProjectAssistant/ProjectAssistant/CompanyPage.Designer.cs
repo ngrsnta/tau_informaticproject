@@ -49,7 +49,9 @@
             this.richTextBoxCompanydesicription = new System.Windows.Forms.RichTextBox();
             this.textProjecttitle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabProject.SuspendLayout();
+            this.tabProjectpage.SuspendLayout();
             this.tabNewprojectpage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,10 +76,11 @@
             // 
             // tabProjectpage
             // 
+            this.tabProjectpage.Controls.Add(this.flowLayoutPanel1);
             this.tabProjectpage.Location = new System.Drawing.Point(4, 22);
             this.tabProjectpage.Name = "tabProjectpage";
             this.tabProjectpage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProjectpage.Size = new System.Drawing.Size(1079, 974);
+            this.tabProjectpage.Size = new System.Drawing.Size(1079, 642);
             this.tabProjectpage.TabIndex = 0;
             this.tabProjectpage.Text = "Projects";
             this.tabProjectpage.UseVisualStyleBackColor = true;
@@ -118,6 +121,7 @@
             this.buttonStartproject.TabIndex = 21;
             this.buttonStartproject.Text = "Start Application Proccess ";
             this.buttonStartproject.UseVisualStyleBackColor = true;
+            this.buttonStartproject.Click += new System.EventHandler(this.buttonStartproject_Click);
             // 
             // dateTimePickerProjectend
             // 
@@ -250,6 +254,14 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "--->";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 636);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // CompanyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +272,7 @@
             this.Size = new System.Drawing.Size(1087, 668);
             this.Load += new System.EventHandler(this.CompanyPage_Load);
             this.tabProject.ResumeLayout(false);
+            this.tabProjectpage.ResumeLayout(false);
             this.tabNewprojectpage.ResumeLayout(false);
             this.tabNewprojectpage.PerformLayout();
             this.ResumeLayout(false);
@@ -289,5 +302,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBoxSkillRequirements;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
