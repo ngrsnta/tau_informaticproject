@@ -47,7 +47,7 @@
             this.student_mainTab.Margin = new System.Windows.Forms.Padding(2);
             this.student_mainTab.Name = "student_mainTab";
             this.student_mainTab.SelectedIndex = 0;
-            this.student_mainTab.Size = new System.Drawing.Size(1640, 960);
+            this.student_mainTab.Size = new System.Drawing.Size(1087, 668);
             this.student_mainTab.TabIndex = 0;
             // 
             // studPage_projects
@@ -55,7 +55,7 @@
             this.studPage_projects.Location = new System.Drawing.Point(4, 25);
             this.studPage_projects.Name = "studPage_projects";
             this.studPage_projects.Padding = new System.Windows.Forms.Padding(3);
-            this.studPage_projects.Size = new System.Drawing.Size(1632, 931);
+            this.studPage_projects.Size = new System.Drawing.Size(1079, 639);
             this.studPage_projects.TabIndex = 0;
             this.studPage_projects.Text = "Projects";
             this.studPage_projects.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.studPage_applications.Location = new System.Drawing.Point(4, 25);
             this.studPage_applications.Name = "studPage_applications";
             this.studPage_applications.Padding = new System.Windows.Forms.Padding(3);
-            this.studPage_applications.Size = new System.Drawing.Size(666, 439);
+            this.studPage_applications.Size = new System.Drawing.Size(1632, 931);
             this.studPage_applications.TabIndex = 1;
             this.studPage_applications.Text = "Applications";
             this.studPage_applications.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             this.studPage_editInfo.Location = new System.Drawing.Point(4, 25);
             this.studPage_editInfo.Name = "studPage_editInfo";
-            this.studPage_editInfo.Size = new System.Drawing.Size(666, 439);
+            this.studPage_editInfo.Size = new System.Drawing.Size(1632, 931);
             this.studPage_editInfo.TabIndex = 2;
             this.studPage_editInfo.Text = "Edit Info";
             this.studPage_editInfo.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.student_mainTab);
             this.Name = "StudentPage";
-            this.Size = new System.Drawing.Size(1640, 960);
+            this.Size = new System.Drawing.Size(1087, 668);
             this.student_mainTab.ResumeLayout(false);
             this.ResumeLayout(false);
 

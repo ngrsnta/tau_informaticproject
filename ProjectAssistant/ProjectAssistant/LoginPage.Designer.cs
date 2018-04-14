@@ -98,7 +98,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginIdTextBox);
             this.Name = "LoginPage";
-            this.Size = new System.Drawing.Size(674, 468);
+            this.Size = new System.Drawing.Size(1087, 668);
             this.ResumeLayout(false);
             this.PerformLayout();
 

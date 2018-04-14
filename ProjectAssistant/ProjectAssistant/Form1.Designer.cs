@@ -54,7 +54,7 @@
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 100);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(276, 960);
+            this.sideMenuPanel.Size = new System.Drawing.Size(276, 668);
             this.sideMenuPanel.TabIndex = 7;
             // 
             // companyPageButton
@@ -129,7 +129,7 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1920, 100);
+            this.headerPanel.Size = new System.Drawing.Size(1366, 100);
             this.headerPanel.TabIndex = 8;
             this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.home_MouseDown);
             this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.home_MouseMove);
@@ -167,7 +167,7 @@
             this.headerLabel.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel.ForeColor = System.Drawing.Color.Black;
-            this.headerLabel.Location = new System.Drawing.Point(1786, 64);
+            this.headerLabel.Location = new System.Drawing.Point(1232, 64);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(74, 24);
             this.headerLabel.TabIndex = 0;
@@ -176,16 +176,16 @@
             // formsPanel
             // 
             this.formsPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.formsPanel.Location = new System.Drawing.Point(280, 100);
+            this.formsPanel.Location = new System.Drawing.Point(279, 100);
             this.formsPanel.Name = "formsPanel";
-            this.formsPanel.Size = new System.Drawing.Size(1640, 960);
+            this.formsPanel.Size = new System.Drawing.Size(1087, 668);
             this.formsPanel.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1060);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.sideMenuPanel);
             this.Controls.Add(this.formsPanel);
             this.Controls.Add(this.headerPanel);

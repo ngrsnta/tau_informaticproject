@@ -80,7 +80,7 @@
             this.Controls.Add(this.tabProject);
             this.Controls.Add(this.label3);
             this.Name = "CompanyPage";
-            this.Size = new System.Drawing.Size(1640, 960);
+            this.Size = new System.Drawing.Size(1087, 668);
             this.Load += new System.EventHandler(this.CompanyPage_Load);
             this.tabProject.ResumeLayout(false);
             this.ResumeLayout(false);
