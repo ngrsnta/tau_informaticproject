@@ -14,7 +14,33 @@ namespace ProjectAssistant
     {
         public StudentPage()
         {
+
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_studDateOfBirth_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void StudentPage_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

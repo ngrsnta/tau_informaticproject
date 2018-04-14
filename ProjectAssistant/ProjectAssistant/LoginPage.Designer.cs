@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // loginIdTextBox
@@ -86,11 +88,31 @@
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 768);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "label3";
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Location = new System.Drawing.Point(36, 397);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1008, 211);
+            this.panel1.TabIndex = 7;
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label2);
@@ -98,7 +120,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginIdTextBox);
             this.Name = "LoginPage";
-            this.Size = new System.Drawing.Size(674, 468);
+            this.Size = new System.Drawing.Size(1087, 668);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +134,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

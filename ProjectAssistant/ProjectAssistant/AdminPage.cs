@@ -108,16 +108,14 @@ namespace ProjectAssistant
 
             Student stu = new Student();
             
-            stu.set_name(textbox_studentname.Text);
-            stu.set_surname(textbox_studentsurname.Text);
-            stu.set_ID(Convert.ToInt32(textbox_studentnumber.Text));
-            stu.set_password(textbox_studentpassword.Text);
+            stu.name = textbox_studentname.Text;
+            stu.id_number = Convert.ToInt32(textbox_studentnumber.Text);
+            stu.password = textbox_studentpassword.Text;
 
             //Just to Check, will be removed
-            label_test1.Text= stu.get_name();
-            label_test2.Text = stu.get_surname();
-            label_test3.Text = (Convert.ToString(stu.get_ID()));
-            label_test4.Text = stu.get_password();
+            label_test1.Text= stu.name;
+            label_test3.Text = Convert.ToString(stu.id_number);
+            label_test4.Text = stu.password;
         }
 
         private void textbox_studentnumber_KeyPress(object sender, KeyPressEventArgs keypress)
@@ -166,7 +164,7 @@ namespace ProjectAssistant
 
                 if (ctrl is Label)
                 {
-                    if( (ctrl != label_studentname     ||
+                    if( (ctrl != label_studentname    ||
                         ctrl != label_studentnumber   ||
                         ctrl != label_studentsurname  ||
                         ctrl != label_studentpassword)==false )

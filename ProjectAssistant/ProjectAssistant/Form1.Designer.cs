@@ -54,7 +54,7 @@
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 100);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(197, 468);
+            this.sideMenuPanel.Size = new System.Drawing.Size(276, 668);
             this.sideMenuPanel.TabIndex = 7;
             // 
             // companyPageButton
@@ -65,7 +65,7 @@
             this.companyPageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.companyPageButton.Location = new System.Drawing.Point(0, 150);
             this.companyPageButton.Name = "companyPageButton";
-            this.companyPageButton.Size = new System.Drawing.Size(197, 50);
+            this.companyPageButton.Size = new System.Drawing.Size(276, 50);
             this.companyPageButton.TabIndex = 4;
             this.companyPageButton.Text = "  Company";
             this.companyPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -80,7 +80,7 @@
             this.studentPageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.studentPageButton.Location = new System.Drawing.Point(0, 100);
             this.studentPageButton.Name = "studentPageButton";
-            this.studentPageButton.Size = new System.Drawing.Size(197, 50);
+            this.studentPageButton.Size = new System.Drawing.Size(276, 50);
             this.studentPageButton.TabIndex = 3;
             this.studentPageButton.Text = "  Student Page";
             this.studentPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             this.adminPageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.adminPageButton.Location = new System.Drawing.Point(0, 50);
             this.adminPageButton.Name = "adminPageButton";
-            this.adminPageButton.Size = new System.Drawing.Size(197, 50);
+            this.adminPageButton.Size = new System.Drawing.Size(276, 50);
             this.adminPageButton.TabIndex = 2;
             this.adminPageButton.Text = "  Admin";
             this.adminPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +113,7 @@
             this.loginPageButton.Location = new System.Drawing.Point(0, 0);
             this.loginPageButton.Margin = new System.Windows.Forms.Padding(0);
             this.loginPageButton.Name = "loginPageButton";
-            this.loginPageButton.Size = new System.Drawing.Size(197, 50);
+            this.loginPageButton.Size = new System.Drawing.Size(276, 50);
             this.loginPageButton.TabIndex = 1;
             this.loginPageButton.Text = "  Login Page";
             this.loginPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,7 +129,7 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(871, 100);
+            this.headerPanel.Size = new System.Drawing.Size(1366, 100);
             this.headerPanel.TabIndex = 8;
             this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.home_MouseDown);
             this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.home_MouseMove);
@@ -142,7 +142,7 @@
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.exitButton.Location = new System.Drawing.Point(839, 9);
+            this.exitButton.Location = new System.Drawing.Point(1334, 9);
             this.exitButton.Margin = new System.Windows.Forms.Padding(0);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(23, 23);
@@ -167,7 +167,7 @@
             this.headerLabel.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel.ForeColor = System.Drawing.Color.Black;
-            this.headerLabel.Location = new System.Drawing.Point(737, 64);
+            this.headerLabel.Location = new System.Drawing.Point(1232, 64);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(74, 24);
             this.headerLabel.TabIndex = 0;
@@ -176,16 +176,16 @@
             // formsPanel
             // 
             this.formsPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.formsPanel.Location = new System.Drawing.Point(197, 100);
+            this.formsPanel.Location = new System.Drawing.Point(279, 100);
             this.formsPanel.Name = "formsPanel";
-            this.formsPanel.Size = new System.Drawing.Size(674, 468);
+            this.formsPanel.Size = new System.Drawing.Size(1087, 668);
             this.formsPanel.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 568);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.sideMenuPanel);
             this.Controls.Add(this.formsPanel);
             this.Controls.Add(this.headerPanel);
