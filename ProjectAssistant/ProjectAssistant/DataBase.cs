@@ -9,7 +9,7 @@ namespace ProjectAssistant
 {
     class DataBase
     {
-        static string connetionString = "server=localhost;database=ProjectSystemDB;uid=root;pwd=ngrsnta;";
+        static string connetionString = "server=localhost;database=ProjectSystemDB;uid=root;pwd=325630654Berk.;";
         MySqlConnection conn = new MySqlConnection(connetionString);
         string query;
         MySqlCommand myCommand;
