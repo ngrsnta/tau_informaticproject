@@ -19,7 +19,34 @@ namespace ProjectAssistant
 
         public LoginPage()
         {
+            this.AutoScroll = true;
             InitializeComponent();
+
+            for (int i = 0; i < 20; i++)
+            {
+                Label lbl = new Label();
+                lbl.Text = "a" + i;
+                lbl.Location = new Point(18, 2);
+
+                Panel pnl = new Panel();
+                pnl.Location = new Point(0, panel1.Controls.Count * 30);
+                pnl.Size = new Size(panel1.Size.Width, 30);
+                if (i % 2 == 0)
+                {
+                    pnl.Location = new Point(0, panel1.Controls.Count * 30);
+                    pnl.Size = new Size(panel1.Size.Width, 50);
+                    pnl.BackColor = SystemColors.ControlLightLight;
+                    pnl.Controls.Add(lbl);
+                }
+                else
+                {
+                    pnl.Location = new Point(0, panel1.Controls.Count * 30);
+                    pnl.Size = new Size(panel1.Size.Width, 5);
+                    pnl.BackColor = SystemColors.Control;
+                }
+                panel1.Controls.Add(pnl);
+
+            }
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -42,5 +69,7 @@ namespace ProjectAssistant
             richTextBox1.Text = db.get_studentPass(loginInfo.get_loginId());
 
         }
+
+        
     }
 }
