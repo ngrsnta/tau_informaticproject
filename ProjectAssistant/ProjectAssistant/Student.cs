@@ -26,7 +26,6 @@ namespace ProjectAssistant
         public string projects { get; set; } =  "";
         public string professions { get; set; } = "";
         public string other { get; set; } = "";
-
     }
 
 }

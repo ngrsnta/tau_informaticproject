@@ -14,9 +14,6 @@ namespace ProjectAssistant
     {
         public StudentPage()
         {
-            
-
-
 
             InitializeComponent();
         }

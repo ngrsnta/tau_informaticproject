@@ -25,7 +25,7 @@ namespace ProjectAssistant
             for (int i = 0; i < 20; i++)
             {
                 Label lbl = new Label();
-                lbl.Text = "a" + i;
+                lbl.Text = "a-" + i;
                 lbl.Location = new Point(18, 2);
 
                 Panel pnl = new Panel();

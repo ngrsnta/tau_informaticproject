@@ -142,7 +142,7 @@
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.exitButton.Location = new System.Drawing.Point(839, 9);
+            this.exitButton.Location = new System.Drawing.Point(1334, 9);
             this.exitButton.Margin = new System.Windows.Forms.Padding(0);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(23, 23);
