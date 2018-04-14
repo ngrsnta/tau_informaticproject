@@ -16,5 +16,15 @@ namespace ProjectAssistant
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompanyPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
