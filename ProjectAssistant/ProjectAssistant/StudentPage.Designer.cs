@@ -30,8 +30,21 @@
         {
             this.student_mainTab = new System.Windows.Forms.TabControl();
             this.studPage_projects = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.studPage_applications = new System.Windows.Forms.TabPage();
             this.studPage_editInfo = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.richTextBox_studWork = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_studEducation = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.richTextBox_studAdress = new System.Windows.Forms.RichTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_studMail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_studPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label_studSemester = new System.Windows.Forms.Label();
             this.label_studMajor = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,8 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_studName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.student_mainTab.SuspendLayout();
             this.studPage_projects.SuspendLayout();
             this.studPage_editInfo.SuspendLayout();
@@ -79,6 +91,15 @@
             this.studPage_projects.Text = "Projects";
             this.studPage_projects.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(482, 1031);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "label4";
+            // 
             // studPage_applications
             // 
             this.studPage_applications.Location = new System.Drawing.Point(4, 25);
@@ -91,6 +112,19 @@
             // 
             // studPage_editInfo
             // 
+            this.studPage_editInfo.AutoScroll = true;
+            this.studPage_editInfo.Controls.Add(this.label15);
+            this.studPage_editInfo.Controls.Add(this.label14);
+            this.studPage_editInfo.Controls.Add(this.richTextBox_studWork);
+            this.studPage_editInfo.Controls.Add(this.richTextBox_studEducation);
+            this.studPage_editInfo.Controls.Add(this.label13);
+            this.studPage_editInfo.Controls.Add(this.richTextBox_studAdress);
+            this.studPage_editInfo.Controls.Add(this.label12);
+            this.studPage_editInfo.Controls.Add(this.textBox_studMail);
+            this.studPage_editInfo.Controls.Add(this.label11);
+            this.studPage_editInfo.Controls.Add(this.label10);
+            this.studPage_editInfo.Controls.Add(this.label8);
+            this.studPage_editInfo.Controls.Add(this.textBox_studPhoneNumber);
             this.studPage_editInfo.Controls.Add(this.label6);
             this.studPage_editInfo.Controls.Add(this.label_studSemester);
             this.studPage_editInfo.Controls.Add(this.label_studMajor);
@@ -111,6 +145,110 @@
             this.studPage_editInfo.TabIndex = 2;
             this.studPage_editInfo.Text = "Edit Info";
             this.studPage_editInfo.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(495, 367);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(197, 17);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Work Experience ex. Intern at ";
+            // 
+            // richTextBox_studWork
+            // 
+            this.richTextBox_studWork.Location = new System.Drawing.Point(498, 387);
+            this.richTextBox_studWork.Name = "richTextBox_studWork";
+            this.richTextBox_studWork.Size = new System.Drawing.Size(291, 114);
+            this.richTextBox_studWork.TabIndex = 25;
+            this.richTextBox_studWork.Text = "";
+            this.richTextBox_studWork.MouseHover += new System.EventHandler(this.richTextBox_studWork_MouseHover);
+            // 
+            // richTextBox_studEducation
+            // 
+            this.richTextBox_studEducation.Location = new System.Drawing.Point(498, 255);
+            this.richTextBox_studEducation.Name = "richTextBox_studEducation";
+            this.richTextBox_studEducation.Size = new System.Drawing.Size(291, 105);
+            this.richTextBox_studEducation.TabIndex = 24;
+            this.richTextBox_studEducation.Text = "";
+            this.richTextBox_studEducation.MouseHover += new System.EventHandler(this.richTextBox_studEducation_MouseHover);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(495, 235);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(415, 17);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Education History ex. Kadıköy Anatolian Highschool (2010-2014)";
+            // 
+            // richTextBox_studAdress
+            // 
+            this.richTextBox_studAdress.Location = new System.Drawing.Point(62, 387);
+            this.richTextBox_studAdress.Name = "richTextBox_studAdress";
+            this.richTextBox_studAdress.Size = new System.Drawing.Size(302, 74);
+            this.richTextBox_studAdress.TabIndex = 22;
+            this.richTextBox_studAdress.Text = "";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(59, 367);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 17);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Open Adress";
+            // 
+            // textBox_studMail
+            // 
+            this.textBox_studMail.Location = new System.Drawing.Point(62, 320);
+            this.textBox_studMail.Name = "textBox_studMail";
+            this.textBox_studMail.Size = new System.Drawing.Size(100, 22);
+            this.textBox_studMail.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(59, 235);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(190, 17);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Phone Number(+905*********)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(59, 299);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 17);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "E-Mail Adress";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(59, 183);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(248, 17);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Please fill out the following information";
+            // 
+            // textBox_studPhoneNumber
+            // 
+            this.textBox_studPhoneNumber.Location = new System.Drawing.Point(62, 255);
+            this.textBox_studPhoneNumber.Name = "textBox_studPhoneNumber";
+            this.textBox_studPhoneNumber.Size = new System.Drawing.Size(100, 22);
+            this.textBox_studPhoneNumber.TabIndex = 16;
+            this.textBox_studPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_studPhoneNumber_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(521, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Semester";
             // 
             // label_studSemester
             // 
@@ -240,23 +378,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
             // 
-            // label4
+            // label15
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(482, 1031);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "label4";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(521, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Semester";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(468, 1055);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 17);
+            this.label15.TabIndex = 27;
             // 
             // StudentPage
             // 
@@ -296,5 +424,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_studPhoneNumber;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RichTextBox richTextBox_studWork;
+        private System.Windows.Forms.RichTextBox richTextBox_studEducation;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RichTextBox richTextBox_studAdress;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_studMail;
+        private System.Windows.Forms.Label label15;
     }
 }
