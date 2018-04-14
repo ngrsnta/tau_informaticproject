@@ -14,6 +14,7 @@ namespace ProjectAssistant
     {
         public CompanyPage()
         {
+            
             InitializeComponent();
         }
 
