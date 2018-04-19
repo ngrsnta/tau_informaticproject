@@ -22,11 +22,19 @@ namespace ProjectAssistant
             this.AutoScroll = true;
             InitializeComponent();
 
+            ListViewItem lvi = new ListViewItem("1234");
+            lvi.SubItems.Add("Kaan Kalender");
+            ListViewItem lva = new ListViewItem("1236");
+            lva.SubItems.Add("Berk Kara");
+            listView1.Items.Add(lvi);
+            listView1.Items.Add(lva);
+
             for (int i = 0; i < 20; i++)
             {
                 Label lbl = new Label();
                 lbl.Text = "a-" + i;
                 lbl.Location = new Point(18, 2);
+                lbl.Click += new System.EventHandler(this.deneme);
 
                 Panel pnl = new Panel();
                 pnl.Location = new Point(0, panel1.Controls.Count * 30);
@@ -47,6 +55,11 @@ namespace ProjectAssistant
                 panel1.Controls.Add(pnl);
 
             }
+        }
+
+        public void deneme(object sender, EventArgs e)
+        {
+            label4.Text = listView1.SelectedItems[0].Text;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
