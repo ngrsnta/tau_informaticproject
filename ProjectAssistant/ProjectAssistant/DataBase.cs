@@ -37,13 +37,13 @@ namespace ProjectAssistant
             }
         }
 
-        public void insert_toDatabase(string table, string coloumns, int id, string pass)
+        public void insert_toDatabase(string table, string coloumns, string values)
         {
             try
             {
                 //sadece select insert delete update vb gibiler için fonksiyon yazıp students(studentId)
                 //ve sonrası hep variable olarak olarak alınıcak böylece totalde 5-6 fonksiyonda bu iş tamam.
-                query = "insert into ' " + table + "'(' " + coloumns + "') values(' " + id + "','" + pass + "');";
+                query = "insert into ' " + table + "'(' " + coloumns + "') values(' " + values + "');";
                 myCommand = new MySqlCommand(query, conn);
                 conn.Open();
                 myReader = myCommand.ExecuteReader();
