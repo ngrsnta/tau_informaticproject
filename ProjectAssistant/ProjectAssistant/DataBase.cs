@@ -58,11 +58,11 @@ namespace ProjectAssistant
                 return;
             }
         }
-        public string get_studentPass(int id)
+        public string select_fromDatabase(string item, string table, string equal1, string equal2)
         {
             try
             {
-                query = "select studentPassword from students where studentId = '"+id+"';";
+                query = "select ' " + item + "' from ' " + table + "' where ' " + equal1 + "' = '" + equal2+"';";
                 string a = "";
                 myCommand = new MySqlCommand(query, conn);
                 myReader = myCommand.ExecuteReader();
