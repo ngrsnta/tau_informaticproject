@@ -53,13 +53,16 @@ namespace ProjectAssistant
                     pnl.BackColor = SystemColors.Control;
                 }
                 panel1.Controls.Add(pnl);
-
             }
+            
+            
         }
 
         public void deneme(object sender, EventArgs e)
         {
-            label4.Text = listView1.SelectedItems[0].Text;
+
+            //label4.Text = listView1.SelectedItems[0].Text;
+            label4.Text = sender.ToString().Substring(34);
         }
 
         private void loginButton_Click(object sender, EventArgs e)

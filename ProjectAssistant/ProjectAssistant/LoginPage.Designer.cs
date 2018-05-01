@@ -142,7 +142,7 @@
             this.listView1.Size = new System.Drawing.Size(285, 174);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Tile;
+            this.listView1.View = System.Windows.Forms.View.List;
             this.listView1.ItemActivate += new System.EventHandler(this.deneme);
             this.listView1.Click += new System.EventHandler(this.deneme);
             // 
