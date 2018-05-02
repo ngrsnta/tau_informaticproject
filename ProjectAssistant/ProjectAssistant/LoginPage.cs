@@ -83,7 +83,7 @@ namespace ProjectAssistant
 
             db.set_studentId(loginInfo.get_loginId(), loginInfo.get_password());
 
-            richTextBox1.Text = db.get_studentPass(loginInfo.get_loginId());
+ //           richTextBox1.Text = db.get_studentPass(loginInfo.get_loginId());
 
         }
 
