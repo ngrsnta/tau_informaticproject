@@ -46,30 +46,15 @@
             this.textbox_studentnumber = new System.Windows.Forms.TextBox();
             this.label_reg_student = new System.Windows.Forms.Label();
             this.tab_update_student = new System.Windows.Forms.TabPage();
-            this.groupBox_upt = new System.Windows.Forms.GroupBox();
-            this.label_studentnumber_show = new System.Windows.Forms.Label();
-            this.label_studentsurname_show = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label_studentname_show = new System.Windows.Forms.Label();
-            this.label_student_show = new System.Windows.Forms.Label();
-            this.textbox_studentnumber_upt = new System.Windows.Forms.TextBox();
             this.label_upt_student = new System.Windows.Forms.Label();
             this.tab_reg_firma = new System.Windows.Forms.TabPage();
             this.label_reg_firma = new System.Windows.Forms.Label();
             this.tab_update_firma = new System.Windows.Forms.TabPage();
             this.label_update_firma = new System.Windows.Forms.Label();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label_studentname_upt = new System.Windows.Forms.Label();
-            this.label_studentsurname_upt = new System.Windows.Forms.Label();
-            this.label_studentpassword_upt = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button_studentshow = new System.Windows.Forms.Button();
-            this.button_student_upt = new System.Windows.Forms.Button();
             this.Admin_MainTab.SuspendLayout();
             this.tab_reg_student.SuspendLayout();
             this.tab_update_student.SuspendLayout();
-            this.groupBox_upt.SuspendLayout();
             this.tab_reg_firma.SuspendLayout();
             this.tab_update_firma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminPageBindingSource)).BeginInit();
@@ -243,10 +228,6 @@
             // 
             // tab_update_student
             // 
-            this.tab_update_student.Controls.Add(this.button_studentshow);
-            this.tab_update_student.Controls.Add(this.groupBox_upt);
-            this.tab_update_student.Controls.Add(this.label_student_show);
-            this.tab_update_student.Controls.Add(this.textbox_studentnumber_upt);
             this.tab_update_student.Controls.Add(this.label_upt_student);
             this.tab_update_student.Location = new System.Drawing.Point(4, 38);
             this.tab_update_student.Name = "tab_update_student";
@@ -255,79 +236,6 @@
             this.tab_update_student.TabIndex = 1;
             this.tab_update_student.Text = "Student Update";
             this.tab_update_student.UseVisualStyleBackColor = true;
-            // 
-            // groupBox_upt
-            // 
-            this.groupBox_upt.Controls.Add(this.button_student_upt);
-            this.groupBox_upt.Controls.Add(this.label_studentpassword_upt);
-            this.groupBox_upt.Controls.Add(this.label_studentsurname_upt);
-            this.groupBox_upt.Controls.Add(this.label_studentname_upt);
-            this.groupBox_upt.Controls.Add(this.label_studentnumber_show);
-            this.groupBox_upt.Controls.Add(this.label_studentsurname_show);
-            this.groupBox_upt.Controls.Add(this.textBox3);
-            this.groupBox_upt.Controls.Add(this.textBox1);
-            this.groupBox_upt.Controls.Add(this.textBox2);
-            this.groupBox_upt.Controls.Add(this.label_studentname_show);
-            this.groupBox_upt.Location = new System.Drawing.Point(92, 217);
-            this.groupBox_upt.Name = "groupBox_upt";
-            this.groupBox_upt.Size = new System.Drawing.Size(1058, 547);
-            this.groupBox_upt.TabIndex = 12;
-            this.groupBox_upt.TabStop = false;
-            // 
-            // label_studentnumber_show
-            // 
-            this.label_studentnumber_show.AutoSize = true;
-            this.label_studentnumber_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentnumber_show.Location = new System.Drawing.Point(29, 44);
-            this.label_studentnumber_show.Name = "label_studentnumber_show";
-            this.label_studentnumber_show.Size = new System.Drawing.Size(202, 29);
-            this.label_studentnumber_show.TabIndex = 7;
-            this.label_studentnumber_show.Text = "Student Number";
-            // 
-            // label_studentsurname_show
-            // 
-            this.label_studentsurname_show.AutoSize = true;
-            this.label_studentsurname_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentsurname_show.Location = new System.Drawing.Point(515, 44);
-            this.label_studentsurname_show.Name = "label_studentsurname_show";
-            this.label_studentsurname_show.Size = new System.Drawing.Size(213, 29);
-            this.label_studentsurname_show.TabIndex = 11;
-            this.label_studentsurname_show.Text = "Student Surname";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(299, 143);
-            this.textBox2.MaxLength = 9;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 34);
-            this.textBox2.TabIndex = 9;
-            // 
-            // label_studentname_show
-            // 
-            this.label_studentname_show.AutoSize = true;
-            this.label_studentname_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentname_show.Location = new System.Drawing.Point(282, 44);
-            this.label_studentname_show.Name = "label_studentname_show";
-            this.label_studentname_show.Size = new System.Drawing.Size(178, 29);
-            this.label_studentname_show.TabIndex = 8;
-            this.label_studentname_show.Text = "Student Name";
-            // 
-            // label_student_show
-            // 
-            this.label_student_show.AutoSize = true;
-            this.label_student_show.Location = new System.Drawing.Point(87, 133);
-            this.label_student_show.Name = "label_student_show";
-            this.label_student_show.Size = new System.Drawing.Size(188, 29);
-            this.label_student_show.TabIndex = 5;
-            this.label_student_show.Text = "Student Number";
-            // 
-            // textbox_studentnumber_upt
-            // 
-            this.textbox_studentnumber_upt.Location = new System.Drawing.Point(391, 128);
-            this.textbox_studentnumber_upt.MaxLength = 9;
-            this.textbox_studentnumber_upt.Name = "textbox_studentnumber_upt";
-            this.textbox_studentnumber_upt.Size = new System.Drawing.Size(366, 34);
-            this.textbox_studentnumber_upt.TabIndex = 4;
             // 
             // label_upt_student
             // 
@@ -385,68 +293,6 @@
             // 
             this.adminPageBindingSource.DataSource = typeof(ProjectAssistant.AdminPage);
             // 
-            // label_studentname_upt
-            // 
-            this.label_studentname_upt.AutoSize = true;
-            this.label_studentname_upt.Location = new System.Drawing.Point(48, 143);
-            this.label_studentname_upt.Name = "label_studentname_upt";
-            this.label_studentname_upt.Size = new System.Drawing.Size(166, 29);
-            this.label_studentname_upt.TabIndex = 13;
-            this.label_studentname_upt.Text = "Student Name";
-            // 
-            // label_studentsurname_upt
-            // 
-            this.label_studentsurname_upt.AutoSize = true;
-            this.label_studentsurname_upt.Location = new System.Drawing.Point(48, 205);
-            this.label_studentsurname_upt.Name = "label_studentsurname_upt";
-            this.label_studentsurname_upt.Size = new System.Drawing.Size(198, 29);
-            this.label_studentsurname_upt.TabIndex = 13;
-            this.label_studentsurname_upt.Text = "Student Surname";
-            // 
-            // label_studentpassword_upt
-            // 
-            this.label_studentpassword_upt.AutoSize = true;
-            this.label_studentpassword_upt.Location = new System.Drawing.Point(48, 268);
-            this.label_studentpassword_upt.Name = "label_studentpassword_upt";
-            this.label_studentpassword_upt.Size = new System.Drawing.Size(208, 29);
-            this.label_studentpassword_upt.TabIndex = 13;
-            this.label_studentpassword_upt.Text = "Student Password";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(299, 205);
-            this.textBox1.MaxLength = 9;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 34);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(299, 265);
-            this.textBox3.MaxLength = 9;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(366, 34);
-            this.textBox3.TabIndex = 9;
-            // 
-            // button_studentshow
-            // 
-            this.button_studentshow.Location = new System.Drawing.Point(899, 118);
-            this.button_studentshow.Name = "button_studentshow";
-            this.button_studentshow.Size = new System.Drawing.Size(172, 54);
-            this.button_studentshow.TabIndex = 13;
-            this.button_studentshow.Text = "Show";
-            this.button_studentshow.UseVisualStyleBackColor = true;
-            this.button_studentshow.Click += new System.EventHandler(this.button_studentshow_Click);
-            // 
-            // button_student_upt
-            // 
-            this.button_student_upt.Location = new System.Drawing.Point(409, 386);
-            this.button_student_upt.Name = "button_student_upt";
-            this.button_student_upt.Size = new System.Drawing.Size(172, 54);
-            this.button_student_upt.TabIndex = 14;
-            this.button_student_upt.Text = "Update";
-            this.button_student_upt.UseVisualStyleBackColor = true;
-            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -460,8 +306,6 @@
             this.tab_reg_student.PerformLayout();
             this.tab_update_student.ResumeLayout(false);
             this.tab_update_student.PerformLayout();
-            this.groupBox_upt.ResumeLayout(false);
-            this.groupBox_upt.PerformLayout();
             this.tab_reg_firma.ResumeLayout(false);
             this.tab_reg_firma.PerformLayout();
             this.tab_update_firma.ResumeLayout(false);
@@ -496,19 +340,5 @@
         private System.Windows.Forms.Label label_test4;
         private System.Windows.Forms.Label label_studentpassword;
         private System.Windows.Forms.TextBox textbox_studentpassword;
-        private System.Windows.Forms.Label label_student_show;
-        private System.Windows.Forms.TextBox textbox_studentnumber_upt;
-        private System.Windows.Forms.Label label_studentnumber_show;
-        private System.Windows.Forms.Label label_studentname_show;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox groupBox_upt;
-        private System.Windows.Forms.Label label_studentsurname_show;
-        private System.Windows.Forms.Button button_studentshow;
-        private System.Windows.Forms.Label label_studentpassword_upt;
-        private System.Windows.Forms.Label label_studentsurname_upt;
-        private System.Windows.Forms.Label label_studentname_upt;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button_student_upt;
     }
 }

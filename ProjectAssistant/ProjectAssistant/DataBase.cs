@@ -25,7 +25,6 @@ namespace ProjectAssistant
                 myCommand = new MySqlCommand(query, conn);
                 conn.Open();
                 myReader = myCommand.ExecuteReader();
-                
                 while (myReader.Read())
                 {
                 }
@@ -80,11 +79,6 @@ namespace ProjectAssistant
                string a = "asd";
                return a;
             }
-        }
-
-        internal string get_studentPass(int v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

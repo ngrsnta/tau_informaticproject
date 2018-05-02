@@ -174,11 +174,6 @@ namespace ProjectAssistant
                 // Other Controls....
             }
         }
-
-        private void button_studentshow_Click(object sender, EventArgs e)
-        {
-         //   int a= this.textbox_studentnumber_upt.Text;
-        }
     }
 }
 
