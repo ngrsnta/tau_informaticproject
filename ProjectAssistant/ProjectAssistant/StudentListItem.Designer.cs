@@ -46,7 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "StudentListItem";
-            this.Size = new System.Drawing.Size(889, 58);
+            this.Size = new System.Drawing.Size(889, 118);
             this.Click += new System.EventHandler(this.StudentListItem_Click);
             this.ResumeLayout(false);
             this.PerformLayout();

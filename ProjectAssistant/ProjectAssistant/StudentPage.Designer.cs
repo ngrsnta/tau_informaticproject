@@ -33,6 +33,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.studPage_applications = new System.Windows.Forms.TabPage();
             this.studPage_editInfo = new System.Windows.Forms.TabPage();
+            this.button_SaveChanges = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.richTextBox_studFurtherInfo = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_studProfessions = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_studProjects = new System.Windows.Forms.RichTextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.richTextBox_studCurricular = new System.Windows.Forms.RichTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.richTextBox_studCertificates = new System.Windows.Forms.RichTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.richTextBox_studWork = new System.Windows.Forms.RichTextBox();
@@ -59,24 +70,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_studName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox_studCertificates = new System.Windows.Forms.RichTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.richTextBox_studCurricular = new System.Windows.Forms.RichTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.richTextBox_studProjects = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_studProfessions = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_studFurtherInfo = new System.Windows.Forms.RichTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Projects = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button_SaveChanges = new System.Windows.Forms.Button();
             this.student_mainTab.SuspendLayout();
             this.studPage_projects.SuspendLayout();
-            this.studPage_applications.SuspendLayout();
             this.studPage_editInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // student_mainTab
@@ -117,7 +113,6 @@
             // 
             // studPage_applications
             // 
-            this.studPage_applications.Controls.Add(this.dataGridView1);
             this.studPage_applications.Location = new System.Drawing.Point(4, 25);
             this.studPage_applications.Name = "studPage_applications";
             this.studPage_applications.Padding = new System.Windows.Forms.Padding(3);
@@ -173,6 +168,107 @@
             this.studPage_editInfo.Text = "Edit Info";
             this.studPage_editInfo.UseVisualStyleBackColor = true;
             this.studPage_editInfo.Click += new System.EventHandler(this.studPage_editInfo_Click);
+            // 
+            // button_SaveChanges
+            // 
+            this.button_SaveChanges.Location = new System.Drawing.Point(658, 54);
+            this.button_SaveChanges.Name = "button_SaveChanges";
+            this.button_SaveChanges.Size = new System.Drawing.Size(131, 34);
+            this.button_SaveChanges.TabIndex = 39;
+            this.button_SaveChanges.Text = "Save Changes";
+            this.button_SaveChanges.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(59, 930);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(191, 17);
+            this.label20.TabIndex = 38;
+            this.label20.Text = "Further Information(Optional)";
+            // 
+            // richTextBox_studFurtherInfo
+            // 
+            this.richTextBox_studFurtherInfo.Location = new System.Drawing.Point(62, 960);
+            this.richTextBox_studFurtherInfo.Name = "richTextBox_studFurtherInfo";
+            this.richTextBox_studFurtherInfo.Size = new System.Drawing.Size(727, 182);
+            this.richTextBox_studFurtherInfo.TabIndex = 37;
+            this.richTextBox_studFurtherInfo.Text = "";
+            this.richTextBox_studFurtherInfo.MouseHover += new System.EventHandler(this.richTextBox_studFurtherInfo_MouseHover);
+            // 
+            // richTextBox_studProfessions
+            // 
+            this.richTextBox_studProfessions.Location = new System.Drawing.Point(498, 663);
+            this.richTextBox_studProfessions.Name = "richTextBox_studProfessions";
+            this.richTextBox_studProfessions.Size = new System.Drawing.Size(291, 86);
+            this.richTextBox_studProfessions.TabIndex = 36;
+            this.richTextBox_studProfessions.Text = "";
+            this.richTextBox_studProfessions.MouseHover += new System.EventHandler(this.richTextBox_studProfessions_MouseHover);
+            // 
+            // richTextBox_studProjects
+            // 
+            this.richTextBox_studProjects.Location = new System.Drawing.Point(62, 663);
+            this.richTextBox_studProjects.Name = "richTextBox_studProjects";
+            this.richTextBox_studProjects.Size = new System.Drawing.Size(302, 234);
+            this.richTextBox_studProjects.TabIndex = 35;
+            this.richTextBox_studProjects.Text = "";
+            this.richTextBox_studProjects.MouseHover += new System.EventHandler(this.richTextBox_studProjects_MouseHover);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(59, 627);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(59, 17);
+            this.label19.TabIndex = 33;
+            this.label19.Text = "Projects";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(500, 627);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 17);
+            this.label18.TabIndex = 32;
+            this.label18.Text = "Professions";
+            // 
+            // richTextBox_studCurricular
+            // 
+            this.richTextBox_studCurricular.Location = new System.Drawing.Point(498, 509);
+            this.richTextBox_studCurricular.Name = "richTextBox_studCurricular";
+            this.richTextBox_studCurricular.Size = new System.Drawing.Size(291, 102);
+            this.richTextBox_studCurricular.TabIndex = 31;
+            this.richTextBox_studCurricular.Text = "";
+            this.richTextBox_studCurricular.MouseHover += new System.EventHandler(this.richTextBox_studCurricular_MouseHover);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(495, 484);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(388, 17);
+            this.label17.TabIndex = 30;
+            this.label17.Text = "Extracurricular Activities(Hobbies, Interests, Volunteer Work)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(59, 484);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 17);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Certificates";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // richTextBox_studCertificates
+            // 
+            this.richTextBox_studCertificates.Location = new System.Drawing.Point(62, 509);
+            this.richTextBox_studCertificates.Name = "richTextBox_studCertificates";
+            this.richTextBox_studCertificates.Size = new System.Drawing.Size(302, 102);
+            this.richTextBox_studCertificates.TabIndex = 28;
+            this.richTextBox_studCertificates.Text = "";
+            this.richTextBox_studCertificates.TextChanged += new System.EventHandler(this.richTextBox_studCertificates_TextChanged);
+            this.richTextBox_studCertificates.MouseHover += new System.EventHandler(this.richTextBox1_MouseHover);
             // 
             // label15
             // 
@@ -249,9 +345,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(59, 235);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(190, 17);
+            this.label11.Size = new System.Drawing.Size(174, 17);
             this.label11.TabIndex = 19;
-            this.label11.Text = "Phone Number(+905*********)";
+            this.label11.Text = "Phone Number(05*********)";
             // 
             // label10
             // 
@@ -416,122 +512,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
             // 
-            // richTextBox_studCertificates
-            // 
-            this.richTextBox_studCertificates.Location = new System.Drawing.Point(62, 509);
-            this.richTextBox_studCertificates.Name = "richTextBox_studCertificates";
-            this.richTextBox_studCertificates.Size = new System.Drawing.Size(302, 102);
-            this.richTextBox_studCertificates.TabIndex = 28;
-            this.richTextBox_studCertificates.Text = "";
-            this.richTextBox_studCertificates.TextChanged += new System.EventHandler(this.richTextBox_studCertificates_TextChanged);
-            this.richTextBox_studCertificates.MouseHover += new System.EventHandler(this.richTextBox1_MouseHover);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(59, 484);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 17);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Certificates";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(495, 484);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(388, 17);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "Extracurricular Activities(Hobbies, Interests, Volunteer Work)";
-            // 
-            // richTextBox_studCurricular
-            // 
-            this.richTextBox_studCurricular.Location = new System.Drawing.Point(498, 509);
-            this.richTextBox_studCurricular.Name = "richTextBox_studCurricular";
-            this.richTextBox_studCurricular.Size = new System.Drawing.Size(291, 102);
-            this.richTextBox_studCurricular.TabIndex = 31;
-            this.richTextBox_studCurricular.Text = "";
-            this.richTextBox_studCurricular.MouseHover += new System.EventHandler(this.richTextBox_studCurricular_MouseHover);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(500, 627);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 17);
-            this.label18.TabIndex = 32;
-            this.label18.Text = "Professions";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(59, 627);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 17);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "Projects";
-            // 
-            // richTextBox_studProjects
-            // 
-            this.richTextBox_studProjects.Location = new System.Drawing.Point(62, 663);
-            this.richTextBox_studProjects.Name = "richTextBox_studProjects";
-            this.richTextBox_studProjects.Size = new System.Drawing.Size(302, 234);
-            this.richTextBox_studProjects.TabIndex = 35;
-            this.richTextBox_studProjects.Text = "";
-            this.richTextBox_studProjects.MouseHover += new System.EventHandler(this.richTextBox_studProjects_MouseHover);
-            // 
-            // richTextBox_studProfessions
-            // 
-            this.richTextBox_studProfessions.Location = new System.Drawing.Point(498, 663);
-            this.richTextBox_studProfessions.Name = "richTextBox_studProfessions";
-            this.richTextBox_studProfessions.Size = new System.Drawing.Size(291, 86);
-            this.richTextBox_studProfessions.TabIndex = 36;
-            this.richTextBox_studProfessions.Text = "";
-            this.richTextBox_studProfessions.MouseHover += new System.EventHandler(this.richTextBox_studProfessions_MouseHover);
-            // 
-            // richTextBox_studFurtherInfo
-            // 
-            this.richTextBox_studFurtherInfo.Location = new System.Drawing.Point(62, 960);
-            this.richTextBox_studFurtherInfo.Name = "richTextBox_studFurtherInfo";
-            this.richTextBox_studFurtherInfo.Size = new System.Drawing.Size(727, 182);
-            this.richTextBox_studFurtherInfo.TabIndex = 37;
-            this.richTextBox_studFurtherInfo.Text = "";
-            this.richTextBox_studFurtherInfo.MouseHover += new System.EventHandler(this.richTextBox_studFurtherInfo_MouseHover);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(59, 930);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(191, 17);
-            this.label20.TabIndex = 38;
-            this.label20.Text = "Further Information(Optional)";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Projects});
-            this.dataGridView1.Location = new System.Drawing.Point(55, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Projects
-            // 
-            this.Projects.HeaderText = "Applied Projects";
-            this.Projects.Name = "Projects";
-            // 
-            // button_SaveChanges
-            // 
-            this.button_SaveChanges.Location = new System.Drawing.Point(658, 54);
-            this.button_SaveChanges.Name = "button_SaveChanges";
-            this.button_SaveChanges.Size = new System.Drawing.Size(131, 34);
-            this.button_SaveChanges.TabIndex = 39;
-            this.button_SaveChanges.Text = "Save Changes";
-            this.button_SaveChanges.UseVisualStyleBackColor = true;
-            // 
             // StudentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,10 +523,8 @@
             this.student_mainTab.ResumeLayout(false);
             this.studPage_projects.ResumeLayout(false);
             this.studPage_projects.PerformLayout();
-            this.studPage_applications.ResumeLayout(false);
             this.studPage_editInfo.ResumeLayout(false);
             this.studPage_editInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,8 +572,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.RichTextBox richTextBox_studFurtherInfo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn Projects;
         private System.Windows.Forms.Button button_SaveChanges;
     }
 }

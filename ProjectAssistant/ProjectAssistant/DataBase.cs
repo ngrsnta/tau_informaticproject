@@ -17,13 +17,11 @@ namespace ProjectAssistant
         MySqlDataReader myReader;
 
 
-        public void insert_toDatabase(string table, string coloumns, string values)
+        public void insert_toDatabase(string table, string columns, string values)
         {
             try
             {
-                //sadece select insert delete update vb gibiler için fonksiyon yazıp students(studentId)
-                //ve sonrası hep variable olarak olarak alınıcak böylece totalde 5-6 fonksiyonda bu iş tamam.
-                query = "insert into " + table + "(" + coloumns + ") values(" + values + ");";
+                query = "insert into " + table + "(" + columns + ") values(" + values + ");";
                 myCommand = new MySqlCommand(query, conn);
                 conn.Open();
                 myReader = myCommand.ExecuteReader();
@@ -71,7 +69,24 @@ namespace ProjectAssistant
             {
                 query = "update " + table + " set " + item + " = " + new_value + ";";
                 myCommand = new MySqlCommand(query, conn);
-                myCommand.Connection.Open();
+                conn.Open();
+                myCommand.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return;
+            }
+        }
+
+        public void delete_fromDatabase(string table, string column, string id)
+        {
+            try
+            {
+                query = "delete from " + table + " where " + column + " = " + id + ";";
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
                 myCommand.ExecuteNonQuery();
                 conn.Close();
             }
