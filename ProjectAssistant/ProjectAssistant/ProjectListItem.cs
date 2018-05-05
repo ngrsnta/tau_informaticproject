@@ -31,5 +31,10 @@ namespace ProjectAssistant
         {
 
         }
+
+        private void label_projectStart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

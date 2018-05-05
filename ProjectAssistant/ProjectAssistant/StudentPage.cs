@@ -15,9 +15,19 @@ namespace ProjectAssistant
         public StudentPage()
         {
             InitializeComponent();
-
-
             
+
+            for (int i = 0; i < 20; i++)
+            {
+                ProjectListItem projectList = new ProjectListItem();
+
+                
+                projectList.Location = new Point(5, (i * 160)+5);
+                projectList.BackColor = SystemColors.Control;
+                studPage_projects.Controls.Add(projectList);
+            }
+
+
         }
 
         private void textBox_studPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)

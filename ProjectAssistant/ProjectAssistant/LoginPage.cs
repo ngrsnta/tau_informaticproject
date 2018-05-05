@@ -55,6 +55,7 @@ namespace ProjectAssistant
             try
             {
                 loginInfo.set_loginId(Convert.ToInt32(loginIdTextBox.Text));
+                
             }
             
             catch (FormatException)
