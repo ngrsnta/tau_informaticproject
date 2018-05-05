@@ -66,12 +66,13 @@ namespace ProjectAssistant
 
             project.title = textProjecttitle.Text;
             project.areaofinterest = textBoxAreaofinterest.Text;
-            project.companydesc = richTextBoxCompanydesicription.Text;
+            project.companybranchdec = richTextBoxCompanybranchdesicription.Text;
             project.deadline = dateTimePickerDeadline.Text;
             project.end = dateTimePickerProjectend.Text;
             project.start = dateTimePickerProjectstart.Text;
             project.projectdesc = richTextBoxProjectdescription.Text;
             project.skills = richTextBoxSkillRequirements.Text;
+            
 
 
         }

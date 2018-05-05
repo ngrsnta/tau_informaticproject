@@ -31,7 +31,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabProject = new System.Windows.Forms.TabControl();
             this.tabProjectpage = new System.Windows.Forms.TabPage();
+            this.panelProject = new System.Windows.Forms.Panel();
             this.tabNewprojectpage = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.buttonStartproject = new System.Windows.Forms.Button();
             this.dateTimePickerProjectend = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerProjectstart = new System.Windows.Forms.DateTimePicker();
@@ -46,14 +48,20 @@
             this.richTextBoxProjectdescription = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBoxCompanydesicription = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxCompanybranchdesicription = new System.Windows.Forms.RichTextBox();
             this.textProjecttitle = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panelProject = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextBoxCompanydec = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxCompanyhis = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxCompanymission = new System.Windows.Forms.RichTextBox();
+            this.labelCompanymiss = new System.Windows.Forms.Label();
+            this.labelCompanyhis = new System.Windows.Forms.Label();
+            this.labelCompanydec = new System.Windows.Forms.Label();
             this.tabProject.SuspendLayout();
             this.tabProjectpage.SuspendLayout();
             this.tabNewprojectpage.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -68,6 +76,7 @@
             // 
             this.tabProject.Controls.Add(this.tabProjectpage);
             this.tabProject.Controls.Add(this.tabNewprojectpage);
+            this.tabProject.Controls.Add(this.tabPage1);
             this.tabProject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabProject.Location = new System.Drawing.Point(0, 0);
             this.tabProject.Name = "tabProject";
@@ -85,6 +94,15 @@
             this.tabProjectpage.TabIndex = 0;
             this.tabProjectpage.Text = "Projects";
             this.tabProjectpage.UseVisualStyleBackColor = true;
+            // 
+            // panelProject
+            // 
+            this.panelProject.AutoScroll = true;
+            this.panelProject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelProject.Location = new System.Drawing.Point(3, 3);
+            this.panelProject.Name = "panelProject";
+            this.panelProject.Size = new System.Drawing.Size(1073, 636);
+            this.panelProject.TabIndex = 0;
             // 
             // tabNewprojectpage
             // 
@@ -104,7 +122,7 @@
             this.tabNewprojectpage.Controls.Add(this.richTextBoxProjectdescription);
             this.tabNewprojectpage.Controls.Add(this.label2);
             this.tabNewprojectpage.Controls.Add(this.label1);
-            this.tabNewprojectpage.Controls.Add(this.richTextBoxCompanydesicription);
+            this.tabNewprojectpage.Controls.Add(this.richTextBoxCompanybranchdesicription);
             this.tabNewprojectpage.Controls.Add(this.textProjecttitle);
             this.tabNewprojectpage.Location = new System.Drawing.Point(4, 22);
             this.tabNewprojectpage.Name = "tabNewprojectpage";
@@ -113,6 +131,15 @@
             this.tabNewprojectpage.TabIndex = 1;
             this.tabNewprojectpage.Text = "New Project";
             this.tabNewprojectpage.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(257, 824);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "--->";
             // 
             // buttonStartproject
             // 
@@ -218,9 +245,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 13);
+            this.label2.Size = new System.Drawing.Size(144, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Company Description";
+            this.label2.Text = "Company Branch Description";
             // 
             // label1
             // 
@@ -231,13 +258,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Project Title";
             // 
-            // richTextBoxCompanydesicription
+            // richTextBoxCompanybranchdesicription
             // 
-            this.richTextBoxCompanydesicription.Location = new System.Drawing.Point(6, 100);
-            this.richTextBoxCompanydesicription.Name = "richTextBoxCompanydesicription";
-            this.richTextBoxCompanydesicription.Size = new System.Drawing.Size(813, 158);
-            this.richTextBoxCompanydesicription.TabIndex = 4;
-            this.richTextBoxCompanydesicription.Text = "";
+            this.richTextBoxCompanybranchdesicription.Location = new System.Drawing.Point(6, 100);
+            this.richTextBoxCompanybranchdesicription.Name = "richTextBoxCompanybranchdesicription";
+            this.richTextBoxCompanybranchdesicription.Size = new System.Drawing.Size(813, 158);
+            this.richTextBoxCompanybranchdesicription.TabIndex = 4;
+            this.richTextBoxCompanybranchdesicription.Text = "";
             // 
             // textProjecttitle
             // 
@@ -246,23 +273,72 @@
             this.textProjecttitle.Size = new System.Drawing.Size(194, 20);
             this.textProjecttitle.TabIndex = 0;
             // 
-            // label9
+            // tabPage1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(257, 824);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "--->";
+            this.tabPage1.Controls.Add(this.labelCompanydec);
+            this.tabPage1.Controls.Add(this.labelCompanyhis);
+            this.tabPage1.Controls.Add(this.labelCompanymiss);
+            this.tabPage1.Controls.Add(this.richTextBoxCompanymission);
+            this.tabPage1.Controls.Add(this.richTextBoxCompanyhis);
+            this.tabPage1.Controls.Add(this.richTextBoxCompanydec);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1079, 642);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Company Info";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // panelProject
+            // richTextBoxCompanydec
             // 
-            this.panelProject.AutoScroll = true;
-            this.panelProject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelProject.Location = new System.Drawing.Point(3, 3);
-            this.panelProject.Name = "panelProject";
-            this.panelProject.Size = new System.Drawing.Size(1073, 636);
-            this.panelProject.TabIndex = 0;
+            this.richTextBoxCompanydec.Location = new System.Drawing.Point(25, 39);
+            this.richTextBoxCompanydec.Name = "richTextBoxCompanydec";
+            this.richTextBoxCompanydec.Size = new System.Drawing.Size(799, 160);
+            this.richTextBoxCompanydec.TabIndex = 0;
+            this.richTextBoxCompanydec.Text = "";
+            // 
+            // richTextBoxCompanyhis
+            // 
+            this.richTextBoxCompanyhis.Location = new System.Drawing.Point(25, 240);
+            this.richTextBoxCompanyhis.Name = "richTextBoxCompanyhis";
+            this.richTextBoxCompanyhis.Size = new System.Drawing.Size(799, 160);
+            this.richTextBoxCompanyhis.TabIndex = 1;
+            this.richTextBoxCompanyhis.Text = "";
+            // 
+            // richTextBoxCompanymission
+            // 
+            this.richTextBoxCompanymission.Location = new System.Drawing.Point(25, 450);
+            this.richTextBoxCompanymission.Name = "richTextBoxCompanymission";
+            this.richTextBoxCompanymission.Size = new System.Drawing.Size(799, 160);
+            this.richTextBoxCompanymission.TabIndex = 2;
+            this.richTextBoxCompanymission.Text = "";
+            // 
+            // labelCompanymiss
+            // 
+            this.labelCompanymiss.AutoSize = true;
+            this.labelCompanymiss.Location = new System.Drawing.Point(22, 434);
+            this.labelCompanymiss.Name = "labelCompanymiss";
+            this.labelCompanymiss.Size = new System.Drawing.Size(163, 13);
+            this.labelCompanymiss.TabIndex = 3;
+            this.labelCompanymiss.Text = "Company Mission and Objectives";
+            // 
+            // labelCompanyhis
+            // 
+            this.labelCompanyhis.AutoSize = true;
+            this.labelCompanyhis.Location = new System.Drawing.Point(22, 224);
+            this.labelCompanyhis.Name = "labelCompanyhis";
+            this.labelCompanyhis.Size = new System.Drawing.Size(86, 13);
+            this.labelCompanyhis.TabIndex = 4;
+            this.labelCompanyhis.Text = "Company History";
+            // 
+            // labelCompanydec
+            // 
+            this.labelCompanydec.AutoSize = true;
+            this.labelCompanydec.Location = new System.Drawing.Point(22, 23);
+            this.labelCompanydec.Name = "labelCompanydec";
+            this.labelCompanydec.Size = new System.Drawing.Size(102, 13);
+            this.labelCompanydec.TabIndex = 5;
+            this.labelCompanydec.Text = "Company Decription";
             // 
             // CompanyPage
             // 
@@ -277,6 +353,8 @@
             this.tabProjectpage.ResumeLayout(false);
             this.tabNewprojectpage.ResumeLayout(false);
             this.tabNewprojectpage.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,7 +365,7 @@
         private System.Windows.Forms.TabControl tabProject;
         private System.Windows.Forms.TabPage tabProjectpage;
         private System.Windows.Forms.TabPage tabNewprojectpage;
-        private System.Windows.Forms.RichTextBox richTextBoxCompanydesicription;
+        private System.Windows.Forms.RichTextBox richTextBoxCompanybranchdesicription;
         private System.Windows.Forms.TextBox textProjecttitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBoxProjectdescription;
@@ -306,5 +384,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelProject;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label labelCompanydec;
+        private System.Windows.Forms.Label labelCompanyhis;
+        private System.Windows.Forms.Label labelCompanymiss;
+        private System.Windows.Forms.RichTextBox richTextBoxCompanymission;
+        private System.Windows.Forms.RichTextBox richTextBoxCompanyhis;
+        private System.Windows.Forms.RichTextBox richTextBoxCompanydec;
     }
 }
