@@ -171,7 +171,7 @@ namespace ProjectAssistant
             Student stu = new Student();
             
             //Storing inputs to Class
-            stu.name = textbox_studentname.Text + " " + textbox_studentsurname.Text;
+            stu.name = textbox_studentname.Text +" "+ textbox_studentsurname.Text;
             stu.id_number = Convert.ToInt32(textbox_studentnumber.Text);
             stu.password = textbox_studentpassword.Text;
             stu.dateofbirth = date_student.Value;// ("yyyy-MM-dd");
@@ -180,9 +180,9 @@ namespace ProjectAssistant
             stu.major = textbox_studentmajor.Text;
             stu.semester = Convert.ToInt32(textbox_studentsemester.Text);
 
-                       db.insert_toDatabase("students","studentId, studentPassword, studentName, studentGender, studentBirthday, " +
-                                           "studentFaculty, studentMajor, studentSemester", stu.id_number+", "+stu.password+", "+stu.name+", "+stu.gender+", " 
-                                           +stu.dateofbirth.ToString("yyyy-MM-dd") + ", "+stu.faculty+", "+stu.major+", "+stu.semester);
+            db.insert_toDatabase("students","studentId, studentPassword, studentName, studentGender, studentBirthday, " +
+                                 "studentFaculty, studentMajor, studentSemester", stu.id_number+", '"+stu.password+"', '"+stu.name+"', '"+stu.gender+"', '" 
+                                 +stu.dateofbirth.ToString("yyyy-MM-dd") + "', '"+stu.faculty+"', '"+stu.major+"', "+stu.semester);
 
   /*        db.insert_toDatabase("students", "studentId", Convert.ToString(stu.id_number));
             db.insert_toDatabase("students", "studentPassword", stu.password);
