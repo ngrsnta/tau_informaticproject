@@ -11,7 +11,7 @@ namespace ProjectAssistant
         public string name { get; set; } = "";
         public int id_number { get; set; }
         public string password { get; set; } = "";
-        public string dateofbirth { get; set; } = ""; //Must be type date
+        public DateTime dateofbirth { get; set; } //Must be type date
         public string gender { get; set; } = "";
         public string faculty { get; set; } = "";
         public string major { get; set; } = "";
