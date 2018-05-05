@@ -65,6 +65,7 @@ namespace ProjectAssistant
             loginInfo.set_password(passwordTextBox.Text);
 
             label4.Text = db.select_fromDatabase("studentName", "students", "studentId", loginInfo.get_loginId().ToString());
+           
 
         }
 

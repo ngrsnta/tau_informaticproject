@@ -171,6 +171,7 @@ namespace ProjectAssistant
             stu.name = textbox_studentname.Text + " " + textbox_studentsurname.Text;
             stu.id_number = Convert.ToInt32(textbox_studentnumber.Text);
             stu.password = textbox_studentpassword.Text;
+            
 
             //Just to Check, will be removed
 
