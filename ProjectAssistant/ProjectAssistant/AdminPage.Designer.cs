@@ -61,18 +61,21 @@
             this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.label_upt_student = new System.Windows.Forms.Label();
             this.tab_firma_reg = new System.Windows.Forms.TabPage();
-            this.label_reg_firma = new System.Windows.Forms.Label();
-            this.tab_firma_upt = new System.Windows.Forms.TabPage();
-            this.label_update_firma = new System.Windows.Forms.Label();
+            this.label_test7 = new System.Windows.Forms.Label();
+            this.label_firmaID = new System.Windows.Forms.Label();
+            this.textbox_firmaID = new System.Windows.Forms.TextBox();
+            this.label_test6 = new System.Windows.Forms.Label();
+            this.label_test5 = new System.Windows.Forms.Label();
+            this.button_firma_reg = new System.Windows.Forms.Button();
             this.label_firma_surname = new System.Windows.Forms.Label();
             this.label_firma_name = new System.Windows.Forms.Label();
             this.textbox_firmapassword = new System.Windows.Forms.TextBox();
             this.textbox_firmaname = new System.Windows.Forms.TextBox();
-            this.button_firma_reg = new System.Windows.Forms.Button();
-            this.label_test6 = new System.Windows.Forms.Label();
-            this.label_test5 = new System.Windows.Forms.Label();
+            this.label_reg_firma = new System.Windows.Forms.Label();
+            this.tab_firma_upt = new System.Windows.Forms.TabPage();
             this.button_firma_show = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label_firmaID_show = new System.Windows.Forms.Label();
             this.button_firma_update = new System.Windows.Forms.Button();
             this.label_firmapassword_upt = new System.Windows.Forms.Label();
             this.label_firmaname_upt = new System.Windows.Forms.Label();
@@ -81,11 +84,8 @@
             this.textbox_firmaname_upt = new System.Windows.Forms.TextBox();
             this.label_firma_show = new System.Windows.Forms.Label();
             this.textbox_firma_show = new System.Windows.Forms.TextBox();
+            this.label_update_firma = new System.Windows.Forms.Label();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label_test7 = new System.Windows.Forms.Label();
-            this.label_firmaID = new System.Windows.Forms.Label();
-            this.textbox_firmaID = new System.Windows.Forms.TextBox();
-            this.label_firmaID_show = new System.Windows.Forms.Label();
             this.Admin_MainTab.SuspendLayout();
             this.tab_student_reg.SuspendLayout();
             this.tab_student_upt.SuspendLayout();
@@ -247,10 +247,10 @@
             // label_reg_student
             // 
             this.label_reg_student.AutoSize = true;
-            this.label_reg_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_reg_student.Font = new System.Drawing.Font("MetaPro-Bold", 11.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_reg_student.Location = new System.Drawing.Point(21, 33);
             this.label_reg_student.Name = "label_reg_student";
-            this.label_reg_student.Size = new System.Drawing.Size(261, 31);
+            this.label_reg_student.Size = new System.Drawing.Size(262, 40);
             this.label_reg_student.TabIndex = 1;
             this.label_reg_student.Text = "Student Registration";
             // 
@@ -435,40 +435,58 @@
             this.tab_firma_reg.Text = "Firma Registration";
             this.tab_firma_reg.UseVisualStyleBackColor = true;
             // 
-            // label_reg_firma
+            // label_test7
             // 
-            this.label_reg_firma.AutoSize = true;
-            this.label_reg_firma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_reg_firma.Location = new System.Drawing.Point(20, 33);
-            this.label_reg_firma.Name = "label_reg_firma";
-            this.label_reg_firma.Size = new System.Drawing.Size(236, 31);
-            this.label_reg_firma.TabIndex = 1;
-            this.label_reg_firma.Text = "Firma Registration";
+            this.label_test7.AutoSize = true;
+            this.label_test7.Location = new System.Drawing.Point(1332, 367);
+            this.label_test7.Name = "label_test7";
+            this.label_test7.Size = new System.Drawing.Size(153, 29);
+            this.label_test7.TabIndex = 11;
+            this.label_test7.Text = "Place Holder";
             // 
-            // tab_firma_upt
+            // label_firmaID
             // 
-            this.tab_firma_upt.Controls.Add(this.button_firma_show);
-            this.tab_firma_upt.Controls.Add(this.groupBox1);
-            this.tab_firma_upt.Controls.Add(this.label_firma_show);
-            this.tab_firma_upt.Controls.Add(this.textbox_firma_show);
-            this.tab_firma_upt.Controls.Add(this.label_update_firma);
-            this.tab_firma_upt.Location = new System.Drawing.Point(4, 38);
-            this.tab_firma_upt.Name = "tab_firma_upt";
-            this.tab_firma_upt.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_firma_upt.Size = new System.Drawing.Size(1985, 1191);
-            this.tab_firma_upt.TabIndex = 3;
-            this.tab_firma_upt.Text = "Firma Update";
-            this.tab_firma_upt.UseVisualStyleBackColor = true;
+            this.label_firmaID.AutoSize = true;
+            this.label_firmaID.Location = new System.Drawing.Point(460, 241);
+            this.label_firmaID.Name = "label_firmaID";
+            this.label_firmaID.Size = new System.Drawing.Size(104, 29);
+            this.label_firmaID.TabIndex = 2;
+            this.label_firmaID.Text = "Firma ID";
             // 
-            // label_update_firma
+            // textbox_firmaID
             // 
-            this.label_update_firma.AutoSize = true;
-            this.label_update_firma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_update_firma.Location = new System.Drawing.Point(20, 33);
-            this.label_update_firma.Name = "label_update_firma";
-            this.label_update_firma.Size = new System.Drawing.Size(178, 31);
-            this.label_update_firma.TabIndex = 1;
-            this.label_update_firma.Text = "Firma Update";
+            this.textbox_firmaID.Location = new System.Drawing.Point(822, 238);
+            this.textbox_firmaID.MaxLength = 18;
+            this.textbox_firmaID.Name = "textbox_firmaID";
+            this.textbox_firmaID.Size = new System.Drawing.Size(366, 34);
+            this.textbox_firmaID.TabIndex = 3;
+            // 
+            // label_test6
+            // 
+            this.label_test6.AutoSize = true;
+            this.label_test6.Location = new System.Drawing.Point(1332, 307);
+            this.label_test6.Name = "label_test6";
+            this.label_test6.Size = new System.Drawing.Size(153, 29);
+            this.label_test6.TabIndex = 7;
+            this.label_test6.Text = "Place Holder";
+            // 
+            // label_test5
+            // 
+            this.label_test5.AutoSize = true;
+            this.label_test5.Location = new System.Drawing.Point(1332, 243);
+            this.label_test5.Name = "label_test5";
+            this.label_test5.Size = new System.Drawing.Size(153, 29);
+            this.label_test5.TabIndex = 4;
+            this.label_test5.Text = "Place Holder";
+            // 
+            // button_firma_reg
+            // 
+            this.button_firma_reg.Location = new System.Drawing.Point(923, 611);
+            this.button_firma_reg.Name = "button_firma_reg";
+            this.button_firma_reg.Size = new System.Drawing.Size(172, 54);
+            this.button_firma_reg.TabIndex = 8;
+            this.button_firma_reg.Text = "Register";
+            this.button_firma_reg.UseVisualStyleBackColor = true;
             // 
             // label_firma_surname
             // 
@@ -504,32 +522,30 @@
             this.textbox_firmaname.Size = new System.Drawing.Size(366, 34);
             this.textbox_firmaname.TabIndex = 5;
             // 
-            // button_firma_reg
+            // label_reg_firma
             // 
-            this.button_firma_reg.Location = new System.Drawing.Point(923, 611);
-            this.button_firma_reg.Name = "button_firma_reg";
-            this.button_firma_reg.Size = new System.Drawing.Size(172, 54);
-            this.button_firma_reg.TabIndex = 8;
-            this.button_firma_reg.Text = "Register";
-            this.button_firma_reg.UseVisualStyleBackColor = true;
+            this.label_reg_firma.AutoSize = true;
+            this.label_reg_firma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_reg_firma.Location = new System.Drawing.Point(20, 33);
+            this.label_reg_firma.Name = "label_reg_firma";
+            this.label_reg_firma.Size = new System.Drawing.Size(236, 31);
+            this.label_reg_firma.TabIndex = 1;
+            this.label_reg_firma.Text = "Firma Registration";
             // 
-            // label_test6
+            // tab_firma_upt
             // 
-            this.label_test6.AutoSize = true;
-            this.label_test6.Location = new System.Drawing.Point(1332, 307);
-            this.label_test6.Name = "label_test6";
-            this.label_test6.Size = new System.Drawing.Size(153, 29);
-            this.label_test6.TabIndex = 7;
-            this.label_test6.Text = "Place Holder";
-            // 
-            // label_test5
-            // 
-            this.label_test5.AutoSize = true;
-            this.label_test5.Location = new System.Drawing.Point(1332, 243);
-            this.label_test5.Name = "label_test5";
-            this.label_test5.Size = new System.Drawing.Size(153, 29);
-            this.label_test5.TabIndex = 4;
-            this.label_test5.Text = "Place Holder";
+            this.tab_firma_upt.Controls.Add(this.button_firma_show);
+            this.tab_firma_upt.Controls.Add(this.groupBox1);
+            this.tab_firma_upt.Controls.Add(this.label_firma_show);
+            this.tab_firma_upt.Controls.Add(this.textbox_firma_show);
+            this.tab_firma_upt.Controls.Add(this.label_update_firma);
+            this.tab_firma_upt.Location = new System.Drawing.Point(4, 38);
+            this.tab_firma_upt.Name = "tab_firma_upt";
+            this.tab_firma_upt.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_firma_upt.Size = new System.Drawing.Size(1985, 1191);
+            this.tab_firma_upt.TabIndex = 3;
+            this.tab_firma_upt.Text = "Firma Update";
+            this.tab_firma_upt.UseVisualStyleBackColor = true;
             // 
             // button_firma_show
             // 
@@ -554,6 +570,16 @@
             this.groupBox1.Size = new System.Drawing.Size(1058, 547);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // label_firmaID_show
+            // 
+            this.label_firmaID_show.AutoSize = true;
+            this.label_firmaID_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_firmaID_show.Location = new System.Drawing.Point(48, 44);
+            this.label_firmaID_show.Name = "label_firmaID_show";
+            this.label_firmaID_show.Size = new System.Drawing.Size(112, 29);
+            this.label_firmaID_show.TabIndex = 4;
+            this.label_firmaID_show.Text = "Firma ID";
             // 
             // button_firma_update
             // 
@@ -623,45 +649,19 @@
             this.textbox_firma_show.Size = new System.Drawing.Size(366, 34);
             this.textbox_firma_show.TabIndex = 3;
             // 
+            // label_update_firma
+            // 
+            this.label_update_firma.AutoSize = true;
+            this.label_update_firma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_update_firma.Location = new System.Drawing.Point(20, 33);
+            this.label_update_firma.Name = "label_update_firma";
+            this.label_update_firma.Size = new System.Drawing.Size(178, 31);
+            this.label_update_firma.TabIndex = 1;
+            this.label_update_firma.Text = "Firma Update";
+            // 
             // adminPageBindingSource
             // 
             this.adminPageBindingSource.DataSource = typeof(ProjectAssistant.AdminPage);
-            // 
-            // label_test7
-            // 
-            this.label_test7.AutoSize = true;
-            this.label_test7.Location = new System.Drawing.Point(1332, 367);
-            this.label_test7.Name = "label_test7";
-            this.label_test7.Size = new System.Drawing.Size(153, 29);
-            this.label_test7.TabIndex = 11;
-            this.label_test7.Text = "Place Holder";
-            // 
-            // label_firmaID
-            // 
-            this.label_firmaID.AutoSize = true;
-            this.label_firmaID.Location = new System.Drawing.Point(460, 241);
-            this.label_firmaID.Name = "label_firmaID";
-            this.label_firmaID.Size = new System.Drawing.Size(104, 29);
-            this.label_firmaID.TabIndex = 2;
-            this.label_firmaID.Text = "Firma ID";
-            // 
-            // textbox_firmaID
-            // 
-            this.textbox_firmaID.Location = new System.Drawing.Point(822, 238);
-            this.textbox_firmaID.MaxLength = 18;
-            this.textbox_firmaID.Name = "textbox_firmaID";
-            this.textbox_firmaID.Size = new System.Drawing.Size(366, 34);
-            this.textbox_firmaID.TabIndex = 3;
-            // 
-            // label_firmaID_show
-            // 
-            this.label_firmaID_show.AutoSize = true;
-            this.label_firmaID_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_firmaID_show.Location = new System.Drawing.Point(48, 44);
-            this.label_firmaID_show.Name = "label_firmaID_show";
-            this.label_firmaID_show.Size = new System.Drawing.Size(112, 29);
-            this.label_firmaID_show.TabIndex = 4;
-            this.label_firmaID_show.Text = "Firma ID";
             // 
             // AdminPage
             // 
