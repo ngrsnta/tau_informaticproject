@@ -17,10 +17,11 @@ namespace ProjectAssistant
         public AdminPage() //Start
         {
             InitializeComponent();
-            
 
         }
-        void Delete_Text()
+
+        
+        void Delete_Text()  //When changed to a Tab, delete all Text Boxes
         {
             var selectedTab = Admin_MainTab.SelectedTab;
 

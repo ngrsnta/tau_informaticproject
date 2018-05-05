@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.reg_student = new System.Windows.Forms.Button();
+            this.button_student_reg = new System.Windows.Forms.Button();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
-            this.tab_reg_student = new System.Windows.Forms.TabPage();
+            this.tab_student_reg = new System.Windows.Forms.TabPage();
             this.label_test4 = new System.Windows.Forms.Label();
             this.label_studentpassword = new System.Windows.Forms.Label();
             this.textbox_studentpassword = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             this.label_studentnumber = new System.Windows.Forms.Label();
             this.textbox_studentnumber = new System.Windows.Forms.TextBox();
             this.label_reg_student = new System.Windows.Forms.Label();
-            this.tab_update_student = new System.Windows.Forms.TabPage();
+            this.tab_student_upt = new System.Windows.Forms.TabPage();
             this.button_student_show = new System.Windows.Forms.Button();
             this.groupBox_upt = new System.Windows.Forms.GroupBox();
             this.button_student_upt = new System.Windows.Forms.Button();
@@ -60,56 +60,56 @@
             this.label_student_show = new System.Windows.Forms.Label();
             this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.label_upt_student = new System.Windows.Forms.Label();
-            this.tab_reg_firma = new System.Windows.Forms.TabPage();
+            this.tab_firma_reg = new System.Windows.Forms.TabPage();
             this.label_reg_firma = new System.Windows.Forms.Label();
-            this.tab_update_firma = new System.Windows.Forms.TabPage();
+            this.tab_firma_upt = new System.Windows.Forms.TabPage();
             this.label_update_firma = new System.Windows.Forms.Label();
             this.label_firma_surname = new System.Windows.Forms.Label();
             this.label_firma_name = new System.Windows.Forms.Label();
             this.textbox_firmapassword = new System.Windows.Forms.TextBox();
             this.textbox_firmaname = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_firma_reg = new System.Windows.Forms.Button();
             this.label_test6 = new System.Windows.Forms.Label();
             this.label_test5 = new System.Windows.Forms.Label();
             this.button_firma_show = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_firma_update = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_firmaname_show = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_firmapassword_show = new System.Windows.Forms.Label();
             this.label_firma_show = new System.Windows.Forms.Label();
             this.textbox_firmaname_show = new System.Windows.Forms.TextBox();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Admin_MainTab.SuspendLayout();
-            this.tab_reg_student.SuspendLayout();
-            this.tab_update_student.SuspendLayout();
+            this.tab_student_reg.SuspendLayout();
+            this.tab_student_upt.SuspendLayout();
             this.groupBox_upt.SuspendLayout();
-            this.tab_reg_firma.SuspendLayout();
-            this.tab_update_firma.SuspendLayout();
+            this.tab_firma_reg.SuspendLayout();
+            this.tab_firma_upt.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminPageBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // reg_student
+            // button_student_reg
             // 
-            this.reg_student.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.reg_student.Location = new System.Drawing.Point(566, 389);
-            this.reg_student.Name = "reg_student";
-            this.reg_student.Size = new System.Drawing.Size(172, 54);
-            this.reg_student.TabIndex = 10;
-            this.reg_student.Text = "Register";
-            this.reg_student.UseVisualStyleBackColor = true;
-            this.reg_student.Click += new System.EventHandler(this.reg_student_Click);
+            this.button_student_reg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_student_reg.Location = new System.Drawing.Point(566, 389);
+            this.button_student_reg.Name = "button_student_reg";
+            this.button_student_reg.Size = new System.Drawing.Size(172, 54);
+            this.button_student_reg.TabIndex = 10;
+            this.button_student_reg.Text = "Register";
+            this.button_student_reg.UseVisualStyleBackColor = true;
+            this.button_student_reg.Click += new System.EventHandler(this.reg_student_Click);
             // 
             // Admin_MainTab
             // 
-            this.Admin_MainTab.Controls.Add(this.tab_reg_student);
-            this.Admin_MainTab.Controls.Add(this.tab_update_student);
-            this.Admin_MainTab.Controls.Add(this.tab_reg_firma);
-            this.Admin_MainTab.Controls.Add(this.tab_update_firma);
+            this.Admin_MainTab.Controls.Add(this.tab_student_reg);
+            this.Admin_MainTab.Controls.Add(this.tab_student_upt);
+            this.Admin_MainTab.Controls.Add(this.tab_firma_reg);
+            this.Admin_MainTab.Controls.Add(this.tab_firma_upt);
             this.Admin_MainTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Admin_MainTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Admin_MainTab.Location = new System.Drawing.Point(0, 0);
@@ -121,28 +121,28 @@
             this.Admin_MainTab.TabIndex = 0;
             this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
             // 
-            // tab_reg_student
+            // tab_student_reg
             // 
-            this.tab_reg_student.Controls.Add(this.label_test4);
-            this.tab_reg_student.Controls.Add(this.label_studentpassword);
-            this.tab_reg_student.Controls.Add(this.textbox_studentpassword);
-            this.tab_reg_student.Controls.Add(this.label_studentsurname);
-            this.tab_reg_student.Controls.Add(this.textbox_studentsurname);
-            this.tab_reg_student.Controls.Add(this.label_studentname);
-            this.tab_reg_student.Controls.Add(this.textbox_studentname);
-            this.tab_reg_student.Controls.Add(this.label_test3);
-            this.tab_reg_student.Controls.Add(this.label_test2);
-            this.tab_reg_student.Controls.Add(this.label_studentnumber);
-            this.tab_reg_student.Controls.Add(this.textbox_studentnumber);
-            this.tab_reg_student.Controls.Add(this.label_reg_student);
-            this.tab_reg_student.Controls.Add(this.reg_student);
-            this.tab_reg_student.Location = new System.Drawing.Point(4, 38);
-            this.tab_reg_student.Name = "tab_reg_student";
-            this.tab_reg_student.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_reg_student.Size = new System.Drawing.Size(1228, 822);
-            this.tab_reg_student.TabIndex = 0;
-            this.tab_reg_student.Text = "Student Registration";
-            this.tab_reg_student.UseVisualStyleBackColor = true;
+            this.tab_student_reg.Controls.Add(this.label_test4);
+            this.tab_student_reg.Controls.Add(this.label_studentpassword);
+            this.tab_student_reg.Controls.Add(this.textbox_studentpassword);
+            this.tab_student_reg.Controls.Add(this.label_studentsurname);
+            this.tab_student_reg.Controls.Add(this.textbox_studentsurname);
+            this.tab_student_reg.Controls.Add(this.label_studentname);
+            this.tab_student_reg.Controls.Add(this.textbox_studentname);
+            this.tab_student_reg.Controls.Add(this.label_test3);
+            this.tab_student_reg.Controls.Add(this.label_test2);
+            this.tab_student_reg.Controls.Add(this.label_studentnumber);
+            this.tab_student_reg.Controls.Add(this.textbox_studentnumber);
+            this.tab_student_reg.Controls.Add(this.label_reg_student);
+            this.tab_student_reg.Controls.Add(this.button_student_reg);
+            this.tab_student_reg.Location = new System.Drawing.Point(4, 38);
+            this.tab_student_reg.Name = "tab_student_reg";
+            this.tab_student_reg.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_student_reg.Size = new System.Drawing.Size(1228, 822);
+            this.tab_student_reg.TabIndex = 0;
+            this.tab_student_reg.Text = "Student Registration";
+            this.tab_student_reg.UseVisualStyleBackColor = true;
             // 
             // label_test4
             // 
@@ -251,20 +251,20 @@
             this.label_reg_student.TabIndex = 1;
             this.label_reg_student.Text = "Student Registration";
             // 
-            // tab_update_student
+            // tab_student_upt
             // 
-            this.tab_update_student.Controls.Add(this.button_student_show);
-            this.tab_update_student.Controls.Add(this.groupBox_upt);
-            this.tab_update_student.Controls.Add(this.label_student_show);
-            this.tab_update_student.Controls.Add(this.textbox_studentnumber_show);
-            this.tab_update_student.Controls.Add(this.label_upt_student);
-            this.tab_update_student.Location = new System.Drawing.Point(4, 38);
-            this.tab_update_student.Name = "tab_update_student";
-            this.tab_update_student.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_update_student.Size = new System.Drawing.Size(1228, 822);
-            this.tab_update_student.TabIndex = 1;
-            this.tab_update_student.Text = "Student Update";
-            this.tab_update_student.UseVisualStyleBackColor = true;
+            this.tab_student_upt.Controls.Add(this.button_student_show);
+            this.tab_student_upt.Controls.Add(this.groupBox_upt);
+            this.tab_student_upt.Controls.Add(this.label_student_show);
+            this.tab_student_upt.Controls.Add(this.textbox_studentnumber_show);
+            this.tab_student_upt.Controls.Add(this.label_upt_student);
+            this.tab_student_upt.Location = new System.Drawing.Point(4, 38);
+            this.tab_student_upt.Name = "tab_student_upt";
+            this.tab_student_upt.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_student_upt.Size = new System.Drawing.Size(1228, 822);
+            this.tab_student_upt.TabIndex = 1;
+            this.tab_student_upt.Text = "Student Update";
+            this.tab_student_upt.UseVisualStyleBackColor = true;
             // 
             // button_student_show
             // 
@@ -411,23 +411,23 @@
             this.label_upt_student.TabIndex = 1;
             this.label_upt_student.Text = "Student Update";
             // 
-            // tab_reg_firma
+            // tab_firma_reg
             // 
-            this.tab_reg_firma.Controls.Add(this.label_test6);
-            this.tab_reg_firma.Controls.Add(this.label_test5);
-            this.tab_reg_firma.Controls.Add(this.button1);
-            this.tab_reg_firma.Controls.Add(this.label_firma_surname);
-            this.tab_reg_firma.Controls.Add(this.label_firma_name);
-            this.tab_reg_firma.Controls.Add(this.textbox_firmapassword);
-            this.tab_reg_firma.Controls.Add(this.textbox_firmaname);
-            this.tab_reg_firma.Controls.Add(this.label_reg_firma);
-            this.tab_reg_firma.Location = new System.Drawing.Point(4, 38);
-            this.tab_reg_firma.Name = "tab_reg_firma";
-            this.tab_reg_firma.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_reg_firma.Size = new System.Drawing.Size(1228, 822);
-            this.tab_reg_firma.TabIndex = 2;
-            this.tab_reg_firma.Text = "Firma Registration";
-            this.tab_reg_firma.UseVisualStyleBackColor = true;
+            this.tab_firma_reg.Controls.Add(this.label_test6);
+            this.tab_firma_reg.Controls.Add(this.label_test5);
+            this.tab_firma_reg.Controls.Add(this.button_firma_reg);
+            this.tab_firma_reg.Controls.Add(this.label_firma_surname);
+            this.tab_firma_reg.Controls.Add(this.label_firma_name);
+            this.tab_firma_reg.Controls.Add(this.textbox_firmapassword);
+            this.tab_firma_reg.Controls.Add(this.textbox_firmaname);
+            this.tab_firma_reg.Controls.Add(this.label_reg_firma);
+            this.tab_firma_reg.Location = new System.Drawing.Point(4, 38);
+            this.tab_firma_reg.Name = "tab_firma_reg";
+            this.tab_firma_reg.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_firma_reg.Size = new System.Drawing.Size(1228, 822);
+            this.tab_firma_reg.TabIndex = 2;
+            this.tab_firma_reg.Text = "Firma Registration";
+            this.tab_firma_reg.UseVisualStyleBackColor = true;
             // 
             // label_reg_firma
             // 
@@ -439,20 +439,20 @@
             this.label_reg_firma.TabIndex = 1;
             this.label_reg_firma.Text = "Firma Registration";
             // 
-            // tab_update_firma
+            // tab_firma_upt
             // 
-            this.tab_update_firma.Controls.Add(this.button_firma_show);
-            this.tab_update_firma.Controls.Add(this.groupBox1);
-            this.tab_update_firma.Controls.Add(this.label_firma_show);
-            this.tab_update_firma.Controls.Add(this.textbox_firmaname_show);
-            this.tab_update_firma.Controls.Add(this.label_update_firma);
-            this.tab_update_firma.Location = new System.Drawing.Point(4, 38);
-            this.tab_update_firma.Name = "tab_update_firma";
-            this.tab_update_firma.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_update_firma.Size = new System.Drawing.Size(1228, 822);
-            this.tab_update_firma.TabIndex = 3;
-            this.tab_update_firma.Text = "Firma Update";
-            this.tab_update_firma.UseVisualStyleBackColor = true;
+            this.tab_firma_upt.Controls.Add(this.button_firma_show);
+            this.tab_firma_upt.Controls.Add(this.groupBox1);
+            this.tab_firma_upt.Controls.Add(this.label_firma_show);
+            this.tab_firma_upt.Controls.Add(this.textbox_firmaname_show);
+            this.tab_firma_upt.Controls.Add(this.label_update_firma);
+            this.tab_firma_upt.Location = new System.Drawing.Point(4, 38);
+            this.tab_firma_upt.Name = "tab_firma_upt";
+            this.tab_firma_upt.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_firma_upt.Size = new System.Drawing.Size(1228, 822);
+            this.tab_firma_upt.TabIndex = 3;
+            this.tab_firma_upt.Text = "Firma Update";
+            this.tab_firma_upt.UseVisualStyleBackColor = true;
             // 
             // label_update_firma
             // 
@@ -498,14 +498,14 @@
             this.textbox_firmaname.Size = new System.Drawing.Size(366, 34);
             this.textbox_firmaname.TabIndex = 3;
             // 
-            // button1
+            // button_firma_reg
             // 
-            this.button1.Location = new System.Drawing.Point(566, 389);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 54);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_firma_reg.Location = new System.Drawing.Point(566, 389);
+            this.button_firma_reg.Name = "button_firma_reg";
+            this.button_firma_reg.Size = new System.Drawing.Size(172, 54);
+            this.button_firma_reg.TabIndex = 8;
+            this.button_firma_reg.Text = "Register";
+            this.button_firma_reg.UseVisualStyleBackColor = true;
             // 
             // label_test6
             // 
@@ -536,27 +536,27 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button_firma_update);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label_firmaname_show);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label_firmapassword_show);
             this.groupBox1.Location = new System.Drawing.Point(92, 217);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1058, 547);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // button3
+            // button_firma_update
             // 
-            this.button3.Location = new System.Drawing.Point(409, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 54);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_firma_update.Location = new System.Drawing.Point(409, 344);
+            this.button_firma_update.Name = "button_firma_update";
+            this.button_firma_update.Size = new System.Drawing.Size(172, 54);
+            this.button_firma_update.TabIndex = 12;
+            this.button_firma_update.Text = "Update";
+            this.button_firma_update.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -576,15 +576,15 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Firma Name";
             // 
-            // label4
+            // label_firmaname_show
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(29, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 29);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Firma Name";
+            this.label_firmaname_show.AutoSize = true;
+            this.label_firmaname_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_firmaname_show.Location = new System.Drawing.Point(29, 44);
+            this.label_firmaname_show.Name = "label_firmaname_show";
+            this.label_firmaname_show.Size = new System.Drawing.Size(156, 29);
+            this.label_firmaname_show.TabIndex = 6;
+            this.label_firmaname_show.Text = "Firma Name";
             // 
             // textBox2
             // 
@@ -601,15 +601,15 @@
             this.textBox3.Size = new System.Drawing.Size(366, 34);
             this.textBox3.TabIndex = 9;
             // 
-            // label6
+            // label_firmapassword_show
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(282, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 29);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Firma Password";
+            this.label_firmapassword_show.AutoSize = true;
+            this.label_firmapassword_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_firmapassword_show.Location = new System.Drawing.Point(282, 44);
+            this.label_firmapassword_show.Name = "label_firmapassword_show";
+            this.label_firmapassword_show.Size = new System.Drawing.Size(202, 29);
+            this.label_firmapassword_show.TabIndex = 7;
+            this.label_firmapassword_show.Text = "Firma Password";
             // 
             // label_firma_show
             // 
@@ -640,16 +640,16 @@
             this.Name = "AdminPage";
             this.Size = new System.Drawing.Size(1236, 864);
             this.Admin_MainTab.ResumeLayout(false);
-            this.tab_reg_student.ResumeLayout(false);
-            this.tab_reg_student.PerformLayout();
-            this.tab_update_student.ResumeLayout(false);
-            this.tab_update_student.PerformLayout();
+            this.tab_student_reg.ResumeLayout(false);
+            this.tab_student_reg.PerformLayout();
+            this.tab_student_upt.ResumeLayout(false);
+            this.tab_student_upt.PerformLayout();
             this.groupBox_upt.ResumeLayout(false);
             this.groupBox_upt.PerformLayout();
-            this.tab_reg_firma.ResumeLayout(false);
-            this.tab_reg_firma.PerformLayout();
-            this.tab_update_firma.ResumeLayout(false);
-            this.tab_update_firma.PerformLayout();
+            this.tab_firma_reg.ResumeLayout(false);
+            this.tab_firma_reg.PerformLayout();
+            this.tab_firma_upt.ResumeLayout(false);
+            this.tab_firma_upt.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminPageBindingSource)).EndInit();
@@ -660,13 +660,13 @@
         #endregion
 
         private System.Windows.Forms.BindingSource adminPageBindingSource;
-        private System.Windows.Forms.Button reg_student;
+        private System.Windows.Forms.Button button_student_reg;
         private System.Windows.Forms.TabControl Admin_MainTab;
-        private System.Windows.Forms.TabPage tab_reg_student;
+        private System.Windows.Forms.TabPage tab_student_reg;
         private System.Windows.Forms.Label label_reg_student;
-        private System.Windows.Forms.TabPage tab_update_student;
-        private System.Windows.Forms.TabPage tab_reg_firma;
-        private System.Windows.Forms.TabPage tab_update_firma;
+        private System.Windows.Forms.TabPage tab_student_upt;
+        private System.Windows.Forms.TabPage tab_firma_reg;
+        private System.Windows.Forms.TabPage tab_firma_upt;
         private System.Windows.Forms.Label label_upt_student;
         private System.Windows.Forms.Label label_reg_firma;
         private System.Windows.Forms.Label label_update_firma;
@@ -701,16 +701,16 @@
         private System.Windows.Forms.TextBox textbox_firmaname;
         private System.Windows.Forms.Label label_test6;
         private System.Windows.Forms.Label label_test5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_firma_reg;
         private System.Windows.Forms.Button button_firma_show;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_firma_update;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_firmaname_show;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_firmapassword_show;
         private System.Windows.Forms.Label label_firma_show;
         private System.Windows.Forms.TextBox textbox_firmaname_show;
     }
