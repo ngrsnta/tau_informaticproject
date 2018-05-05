@@ -180,9 +180,20 @@ namespace ProjectAssistant
             stu.major = textbox_studentmajor.Text;
             stu.semester = Convert.ToInt32(textbox_studentsemester.Text);
 
-                       db.insert_toDatabase("students","studentId, studentPassword, studentName, studentGender, studentBirthday, " +
-                                           "studentFaculty, studentMajor, studentSemester", stu.id_number+", "+stu.password+", "+stu.name+", "+stu.gender+", " 
-                                           +stu.dateofbirth.ToString("yyyy-MM-dd") + ", "+stu.faculty+", "+stu.major+", "+stu.semester);
+            //Just to Check, will be removed
+            label_test2.Text = stu.name;
+            label_test3.Text = Convert.ToString(stu.id_number);
+            label_test4.Text = stu.password;
+            label_dob.Text = stu.dateofbirth.ToString("yyyy-MM-dd");
+            label_gen.Text = stu.gender;
+            label_fac.Text = stu.faculty;
+            label_maj.Text = stu.major;
+            label_sem.Text = Convert.ToString(stu.semester);
+            ///
+
+            db.insert_toDatabase("students","studentId, studentPassword, studentName, studentGender, studentBirthday, " +
+                                "studentFaculty, studentMajor, studentSemester", stu.id_number+", "+stu.password+", "+stu.name+", "+stu.gender+", " 
+                                +stu.dateofbirth.ToString("yyyy-MM-dd") + ", "+stu.faculty+", "+stu.major+", "+stu.semester);
 
   /*        db.insert_toDatabase("students", "studentId", Convert.ToString(stu.id_number));
             db.insert_toDatabase("students", "studentPassword", stu.password);
@@ -192,11 +203,7 @@ namespace ProjectAssistant
             db.insert_toDatabase("students", "studentFaculty", stu.faculty);
             db.insert_toDatabase("students", "studentMajor", stu.major);
 */
-            //Just to Check, will be removed
 
-            label_test2.Text = stu.name;
-            label_test3.Text = Convert.ToString(stu.id_number);
-            label_test4.Text = stu.password;
         }
 
         #endregion

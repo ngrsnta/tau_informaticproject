@@ -32,6 +32,11 @@
             this.button_student_reg = new System.Windows.Forms.Button();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
             this.tab_student_reg = new System.Windows.Forms.TabPage();
+            this.label_sem = new System.Windows.Forms.Label();
+            this.label_maj = new System.Windows.Forms.Label();
+            this.label_fac = new System.Windows.Forms.Label();
+            this.label_gen = new System.Windows.Forms.Label();
+            this.label_dob = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox_studentgender = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -150,6 +155,11 @@
             // 
             // tab_student_reg
             // 
+            this.tab_student_reg.Controls.Add(this.label_sem);
+            this.tab_student_reg.Controls.Add(this.label_maj);
+            this.tab_student_reg.Controls.Add(this.label_fac);
+            this.tab_student_reg.Controls.Add(this.label_gen);
+            this.tab_student_reg.Controls.Add(this.label_dob);
             this.tab_student_reg.Controls.Add(this.button1);
             this.tab_student_reg.Controls.Add(this.comboBox_studentgender);
             this.tab_student_reg.Controls.Add(this.groupBox2);
@@ -180,10 +190,55 @@
             this.tab_student_reg.Text = "Student Registration";
             this.tab_student_reg.UseVisualStyleBackColor = true;
             // 
+            // label_sem
+            // 
+            this.label_sem.AutoSize = true;
+            this.label_sem.Location = new System.Drawing.Point(1424, 709);
+            this.label_sem.Name = "label_sem";
+            this.label_sem.Size = new System.Drawing.Size(153, 29);
+            this.label_sem.TabIndex = 120;
+            this.label_sem.Text = "Place Holder";
+            // 
+            // label_maj
+            // 
+            this.label_maj.AutoSize = true;
+            this.label_maj.Location = new System.Drawing.Point(1424, 640);
+            this.label_maj.Name = "label_maj";
+            this.label_maj.Size = new System.Drawing.Size(153, 29);
+            this.label_maj.TabIndex = 120;
+            this.label_maj.Text = "Place Holder";
+            // 
+            // label_fac
+            // 
+            this.label_fac.AutoSize = true;
+            this.label_fac.Location = new System.Drawing.Point(1424, 577);
+            this.label_fac.Name = "label_fac";
+            this.label_fac.Size = new System.Drawing.Size(153, 29);
+            this.label_fac.TabIndex = 120;
+            this.label_fac.Text = "Place Holder";
+            // 
+            // label_gen
+            // 
+            this.label_gen.AutoSize = true;
+            this.label_gen.Location = new System.Drawing.Point(1424, 515);
+            this.label_gen.Name = "label_gen";
+            this.label_gen.Size = new System.Drawing.Size(153, 29);
+            this.label_gen.TabIndex = 120;
+            this.label_gen.Text = "Place Holder";
+            // 
+            // label_dob
+            // 
+            this.label_dob.AutoSize = true;
+            this.label_dob.Location = new System.Drawing.Point(1424, 438);
+            this.label_dob.Name = "label_dob";
+            this.label_dob.Size = new System.Drawing.Size(153, 29);
+            this.label_dob.TabIndex = 120;
+            this.label_dob.Text = "Place Holder";
+            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(1419, 778);
+            this.button1.Location = new System.Drawing.Point(1721, 757);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 60);
             this.button1.TabIndex = 119;
@@ -193,6 +248,8 @@
             // 
             // comboBox_studentgender
             // 
+            this.comboBox_studentgender.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_studentgender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_studentgender.FormattingEnabled = true;
             this.comboBox_studentgender.Items.AddRange(new object[] {
             "female",
@@ -259,7 +316,6 @@
             this.date_student.Margin = new System.Windows.Forms.Padding(6);
             this.date_student.MaxDate = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
             this.date_student.Name = "date_student";
-            this.date_student.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.date_student.Size = new System.Drawing.Size(366, 34);
             this.date_student.TabIndex = 116;
             this.date_student.Value = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
@@ -317,7 +373,7 @@
             // label_date
             // 
             this.label_date.AutoSize = true;
-            this.label_date.Location = new System.Drawing.Point(1476, 709);
+            this.label_date.Location = new System.Drawing.Point(1778, 688);
             this.label_date.Name = "label_date";
             this.label_date.Size = new System.Drawing.Size(63, 29);
             this.label_date.TabIndex = 103;
@@ -326,7 +382,7 @@
             // label_test4
             // 
             this.label_test4.AutoSize = true;
-            this.label_test4.Location = new System.Drawing.Point(1424, 436);
+            this.label_test4.Location = new System.Drawing.Point(1414, 209);
             this.label_test4.Name = "label_test4";
             this.label_test4.Size = new System.Drawing.Size(153, 29);
             this.label_test4.TabIndex = 103;
@@ -396,7 +452,7 @@
             // label_test3
             // 
             this.label_test3.AutoSize = true;
-            this.label_test3.Location = new System.Drawing.Point(1424, 379);
+            this.label_test3.Location = new System.Drawing.Point(1414, 149);
             this.label_test3.Name = "label_test3";
             this.label_test3.Size = new System.Drawing.Size(153, 29);
             this.label_test3.TabIndex = 102;
@@ -405,7 +461,7 @@
             // label_test2
             // 
             this.label_test2.AutoSize = true;
-            this.label_test2.Location = new System.Drawing.Point(1424, 322);
+            this.label_test2.Location = new System.Drawing.Point(1424, 353);
             this.label_test2.Name = "label_test2";
             this.label_test2.Size = new System.Drawing.Size(153, 29);
             this.label_test2.TabIndex = 101;
@@ -1045,6 +1101,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label_sem;
+        private System.Windows.Forms.Label label_maj;
+        private System.Windows.Forms.Label label_fac;
+        private System.Windows.Forms.Label label_gen;
+        private System.Windows.Forms.Label label_dob;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_date;
     }
