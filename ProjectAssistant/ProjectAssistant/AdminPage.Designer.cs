@@ -74,15 +74,18 @@
             this.button_firma_show = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_firma_update = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_firmapassword_upt = new System.Windows.Forms.Label();
+            this.label_firmaname_upt = new System.Windows.Forms.Label();
             this.label_firmaname_show = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label_firmapassword_show = new System.Windows.Forms.Label();
+            this.textbox_firmapassword_upt = new System.Windows.Forms.TextBox();
+            this.textbox_firmaname_upt = new System.Windows.Forms.TextBox();
             this.label_firma_show = new System.Windows.Forms.Label();
-            this.textbox_firmaname_show = new System.Windows.Forms.TextBox();
+            this.textbox_firma_show = new System.Windows.Forms.TextBox();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label_test7 = new System.Windows.Forms.Label();
+            this.label_firmaID = new System.Windows.Forms.Label();
+            this.textbox_firmaID = new System.Windows.Forms.TextBox();
+            this.label_firmaID_show = new System.Windows.Forms.Label();
             this.Admin_MainTab.SuspendLayout();
             this.tab_student_reg.SuspendLayout();
             this.tab_student_upt.SuspendLayout();
@@ -96,7 +99,7 @@
             // button_student_reg
             // 
             this.button_student_reg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_student_reg.Location = new System.Drawing.Point(566, 389);
+            this.button_student_reg.Location = new System.Drawing.Point(926, 610);
             this.button_student_reg.Name = "button_student_reg";
             this.button_student_reg.Size = new System.Drawing.Size(172, 54);
             this.button_student_reg.TabIndex = 10;
@@ -117,7 +120,7 @@
             this.Admin_MainTab.Name = "Admin_MainTab";
             this.Admin_MainTab.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Admin_MainTab.SelectedIndex = 0;
-            this.Admin_MainTab.Size = new System.Drawing.Size(1236, 864);
+            this.Admin_MainTab.Size = new System.Drawing.Size(1993, 1233);
             this.Admin_MainTab.TabIndex = 0;
             this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
             // 
@@ -139,7 +142,7 @@
             this.tab_student_reg.Location = new System.Drawing.Point(4, 38);
             this.tab_student_reg.Name = "tab_student_reg";
             this.tab_student_reg.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_student_reg.Size = new System.Drawing.Size(1228, 822);
+            this.tab_student_reg.Size = new System.Drawing.Size(1985, 1191);
             this.tab_student_reg.TabIndex = 0;
             this.tab_student_reg.Text = "Student Registration";
             this.tab_student_reg.UseVisualStyleBackColor = true;
@@ -147,16 +150,16 @@
             // label_test4
             // 
             this.label_test4.AutoSize = true;
-            this.label_test4.Location = new System.Drawing.Point(939, 273);
+            this.label_test4.Location = new System.Drawing.Point(1310, 400);
             this.label_test4.Name = "label_test4";
             this.label_test4.Size = new System.Drawing.Size(153, 29);
-            this.label_test4.TabIndex = 10;
+            this.label_test4.TabIndex = 103;
             this.label_test4.Text = "Place Holder";
             // 
             // label_studentpassword
             // 
             this.label_studentpassword.AutoSize = true;
-            this.label_studentpassword.Location = new System.Drawing.Point(110, 301);
+            this.label_studentpassword.Location = new System.Drawing.Point(460, 421);
             this.label_studentpassword.Name = "label_studentpassword";
             this.label_studentpassword.Size = new System.Drawing.Size(208, 29);
             this.label_studentpassword.TabIndex = 8;
@@ -164,7 +167,7 @@
             // 
             // textbox_studentpassword
             // 
-            this.textbox_studentpassword.Location = new System.Drawing.Point(472, 296);
+            this.textbox_studentpassword.Location = new System.Drawing.Point(822, 416);
             this.textbox_studentpassword.MaxLength = 18;
             this.textbox_studentpassword.Name = "textbox_studentpassword";
             this.textbox_studentpassword.Size = new System.Drawing.Size(366, 34);
@@ -174,7 +177,7 @@
             // label_studentsurname
             // 
             this.label_studentsurname.AutoSize = true;
-            this.label_studentsurname.Location = new System.Drawing.Point(110, 187);
+            this.label_studentsurname.Location = new System.Drawing.Point(460, 303);
             this.label_studentsurname.Name = "label_studentsurname";
             this.label_studentsurname.Size = new System.Drawing.Size(198, 29);
             this.label_studentsurname.TabIndex = 4;
@@ -182,7 +185,7 @@
             // 
             // textbox_studentsurname
             // 
-            this.textbox_studentsurname.Location = new System.Drawing.Point(472, 182);
+            this.textbox_studentsurname.Location = new System.Drawing.Point(822, 300);
             this.textbox_studentsurname.Name = "textbox_studentsurname";
             this.textbox_studentsurname.Size = new System.Drawing.Size(366, 34);
             this.textbox_studentsurname.TabIndex = 5;
@@ -191,7 +194,7 @@
             // label_studentname
             // 
             this.label_studentname.AutoSize = true;
-            this.label_studentname.Location = new System.Drawing.Point(110, 135);
+            this.label_studentname.Location = new System.Drawing.Point(460, 241);
             this.label_studentname.Name = "label_studentname";
             this.label_studentname.Size = new System.Drawing.Size(166, 29);
             this.label_studentname.TabIndex = 2;
@@ -199,7 +202,7 @@
             // 
             // textbox_studentname
             // 
-            this.textbox_studentname.Location = new System.Drawing.Point(472, 130);
+            this.textbox_studentname.Location = new System.Drawing.Point(822, 238);
             this.textbox_studentname.Name = "textbox_studentname";
             this.textbox_studentname.Size = new System.Drawing.Size(366, 34);
             this.textbox_studentname.TabIndex = 3;
@@ -208,25 +211,25 @@
             // label_test3
             // 
             this.label_test3.AutoSize = true;
-            this.label_test3.Location = new System.Drawing.Point(939, 216);
+            this.label_test3.Location = new System.Drawing.Point(1310, 343);
             this.label_test3.Name = "label_test3";
             this.label_test3.Size = new System.Drawing.Size(153, 29);
-            this.label_test3.TabIndex = 3;
+            this.label_test3.TabIndex = 102;
             this.label_test3.Text = "Place Holder";
             // 
             // label_test2
             // 
             this.label_test2.AutoSize = true;
-            this.label_test2.Location = new System.Drawing.Point(939, 159);
+            this.label_test2.Location = new System.Drawing.Point(1310, 286);
             this.label_test2.Name = "label_test2";
             this.label_test2.Size = new System.Drawing.Size(153, 29);
-            this.label_test2.TabIndex = 3;
+            this.label_test2.TabIndex = 101;
             this.label_test2.Text = "Place Holder";
             // 
             // label_studentnumber
             // 
             this.label_studentnumber.AutoSize = true;
-            this.label_studentnumber.Location = new System.Drawing.Point(110, 244);
+            this.label_studentnumber.Location = new System.Drawing.Point(460, 361);
             this.label_studentnumber.Name = "label_studentnumber";
             this.label_studentnumber.Size = new System.Drawing.Size(188, 29);
             this.label_studentnumber.TabIndex = 6;
@@ -234,7 +237,7 @@
             // 
             // textbox_studentnumber
             // 
-            this.textbox_studentnumber.Location = new System.Drawing.Point(472, 239);
+            this.textbox_studentnumber.Location = new System.Drawing.Point(822, 358);
             this.textbox_studentnumber.MaxLength = 9;
             this.textbox_studentnumber.Name = "textbox_studentnumber";
             this.textbox_studentnumber.Size = new System.Drawing.Size(366, 34);
@@ -261,14 +264,14 @@
             this.tab_student_upt.Location = new System.Drawing.Point(4, 38);
             this.tab_student_upt.Name = "tab_student_upt";
             this.tab_student_upt.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_student_upt.Size = new System.Drawing.Size(1228, 822);
+            this.tab_student_upt.Size = new System.Drawing.Size(1985, 1191);
             this.tab_student_upt.TabIndex = 1;
             this.tab_student_upt.Text = "Student Update";
             this.tab_student_upt.UseVisualStyleBackColor = true;
             // 
             // button_student_show
             // 
-            this.button_student_show.Location = new System.Drawing.Point(893, 122);
+            this.button_student_show.Location = new System.Drawing.Point(1280, 214);
             this.button_student_show.Name = "button_student_show";
             this.button_student_show.Size = new System.Drawing.Size(172, 54);
             this.button_student_show.TabIndex = 4;
@@ -288,7 +291,7 @@
             this.groupBox_upt.Controls.Add(this.textbox_studentsurname_upt);
             this.groupBox_upt.Controls.Add(this.textbox_studentname_upt);
             this.groupBox_upt.Controls.Add(this.label_studentname_show);
-            this.groupBox_upt.Location = new System.Drawing.Point(92, 217);
+            this.groupBox_upt.Location = new System.Drawing.Point(449, 308);
             this.groupBox_upt.Name = "groupBox_upt";
             this.groupBox_upt.Size = new System.Drawing.Size(1058, 547);
             this.groupBox_upt.TabIndex = 5;
@@ -334,7 +337,7 @@
             // 
             this.label_studentnumber_show.AutoSize = true;
             this.label_studentnumber_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentnumber_show.Location = new System.Drawing.Point(29, 44);
+            this.label_studentnumber_show.Location = new System.Drawing.Point(48, 44);
             this.label_studentnumber_show.Name = "label_studentnumber_show";
             this.label_studentnumber_show.Size = new System.Drawing.Size(202, 29);
             this.label_studentnumber_show.TabIndex = 6;
@@ -344,7 +347,7 @@
             // 
             this.label_studentsurname_show.AutoSize = true;
             this.label_studentsurname_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentsurname_show.Location = new System.Drawing.Point(515, 44);
+            this.label_studentsurname_show.Location = new System.Drawing.Point(536, 44);
             this.label_studentsurname_show.Name = "label_studentsurname_show";
             this.label_studentsurname_show.Size = new System.Drawing.Size(213, 29);
             this.label_studentsurname_show.TabIndex = 8;
@@ -378,7 +381,7 @@
             // 
             this.label_studentname_show.AutoSize = true;
             this.label_studentname_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentname_show.Location = new System.Drawing.Point(282, 44);
+            this.label_studentname_show.Location = new System.Drawing.Point(294, 44);
             this.label_studentname_show.Name = "label_studentname_show";
             this.label_studentname_show.Size = new System.Drawing.Size(178, 29);
             this.label_studentname_show.TabIndex = 7;
@@ -387,7 +390,7 @@
             // label_student_show
             // 
             this.label_student_show.AutoSize = true;
-            this.label_student_show.Location = new System.Drawing.Point(110, 135);
+            this.label_student_show.Location = new System.Drawing.Point(497, 227);
             this.label_student_show.Name = "label_student_show";
             this.label_student_show.Size = new System.Drawing.Size(188, 29);
             this.label_student_show.TabIndex = 2;
@@ -395,7 +398,7 @@
             // 
             // textbox_studentnumber_show
             // 
-            this.textbox_studentnumber_show.Location = new System.Drawing.Point(391, 132);
+            this.textbox_studentnumber_show.Location = new System.Drawing.Point(778, 224);
             this.textbox_studentnumber_show.MaxLength = 9;
             this.textbox_studentnumber_show.Name = "textbox_studentnumber_show";
             this.textbox_studentnumber_show.Size = new System.Drawing.Size(366, 34);
@@ -413,6 +416,9 @@
             // 
             // tab_firma_reg
             // 
+            this.tab_firma_reg.Controls.Add(this.label_test7);
+            this.tab_firma_reg.Controls.Add(this.label_firmaID);
+            this.tab_firma_reg.Controls.Add(this.textbox_firmaID);
             this.tab_firma_reg.Controls.Add(this.label_test6);
             this.tab_firma_reg.Controls.Add(this.label_test5);
             this.tab_firma_reg.Controls.Add(this.button_firma_reg);
@@ -424,7 +430,7 @@
             this.tab_firma_reg.Location = new System.Drawing.Point(4, 38);
             this.tab_firma_reg.Name = "tab_firma_reg";
             this.tab_firma_reg.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_firma_reg.Size = new System.Drawing.Size(1228, 822);
+            this.tab_firma_reg.Size = new System.Drawing.Size(1985, 1191);
             this.tab_firma_reg.TabIndex = 2;
             this.tab_firma_reg.Text = "Firma Registration";
             this.tab_firma_reg.UseVisualStyleBackColor = true;
@@ -444,12 +450,12 @@
             this.tab_firma_upt.Controls.Add(this.button_firma_show);
             this.tab_firma_upt.Controls.Add(this.groupBox1);
             this.tab_firma_upt.Controls.Add(this.label_firma_show);
-            this.tab_firma_upt.Controls.Add(this.textbox_firmaname_show);
+            this.tab_firma_upt.Controls.Add(this.textbox_firma_show);
             this.tab_firma_upt.Controls.Add(this.label_update_firma);
             this.tab_firma_upt.Location = new System.Drawing.Point(4, 38);
             this.tab_firma_upt.Name = "tab_firma_upt";
             this.tab_firma_upt.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_firma_upt.Size = new System.Drawing.Size(1228, 822);
+            this.tab_firma_upt.Size = new System.Drawing.Size(1985, 1191);
             this.tab_firma_upt.TabIndex = 3;
             this.tab_firma_upt.Text = "Firma Update";
             this.tab_firma_upt.UseVisualStyleBackColor = true;
@@ -467,40 +473,40 @@
             // label_firma_surname
             // 
             this.label_firma_surname.AutoSize = true;
-            this.label_firma_surname.Location = new System.Drawing.Point(110, 193);
+            this.label_firma_surname.Location = new System.Drawing.Point(460, 361);
             this.label_firma_surname.Name = "label_firma_surname";
             this.label_firma_surname.Size = new System.Drawing.Size(188, 29);
-            this.label_firma_surname.TabIndex = 5;
+            this.label_firma_surname.TabIndex = 6;
             this.label_firma_surname.Text = "Firma Password";
             // 
             // label_firma_name
             // 
             this.label_firma_name.AutoSize = true;
-            this.label_firma_name.Location = new System.Drawing.Point(110, 135);
+            this.label_firma_name.Location = new System.Drawing.Point(460, 303);
             this.label_firma_name.Name = "label_firma_name";
             this.label_firma_name.Size = new System.Drawing.Size(146, 29);
-            this.label_firma_name.TabIndex = 2;
+            this.label_firma_name.TabIndex = 4;
             this.label_firma_name.Text = "Firma Name";
             // 
             // textbox_firmapassword
             // 
-            this.textbox_firmapassword.Location = new System.Drawing.Point(472, 190);
+            this.textbox_firmapassword.Location = new System.Drawing.Point(822, 358);
             this.textbox_firmapassword.MaxLength = 18;
             this.textbox_firmapassword.Name = "textbox_firmapassword";
             this.textbox_firmapassword.Size = new System.Drawing.Size(366, 34);
-            this.textbox_firmapassword.TabIndex = 6;
+            this.textbox_firmapassword.TabIndex = 7;
             // 
             // textbox_firmaname
             // 
-            this.textbox_firmaname.Location = new System.Drawing.Point(472, 130);
+            this.textbox_firmaname.Location = new System.Drawing.Point(822, 298);
             this.textbox_firmaname.MaxLength = 9;
             this.textbox_firmaname.Name = "textbox_firmaname";
             this.textbox_firmaname.Size = new System.Drawing.Size(366, 34);
-            this.textbox_firmaname.TabIndex = 3;
+            this.textbox_firmaname.TabIndex = 5;
             // 
             // button_firma_reg
             // 
-            this.button_firma_reg.Location = new System.Drawing.Point(566, 389);
+            this.button_firma_reg.Location = new System.Drawing.Point(923, 611);
             this.button_firma_reg.Name = "button_firma_reg";
             this.button_firma_reg.Size = new System.Drawing.Size(172, 54);
             this.button_firma_reg.TabIndex = 8;
@@ -510,7 +516,7 @@
             // label_test6
             // 
             this.label_test6.AutoSize = true;
-            this.label_test6.Location = new System.Drawing.Point(954, 195);
+            this.label_test6.Location = new System.Drawing.Point(1332, 307);
             this.label_test6.Name = "label_test6";
             this.label_test6.Size = new System.Drawing.Size(153, 29);
             this.label_test6.TabIndex = 7;
@@ -519,7 +525,7 @@
             // label_test5
             // 
             this.label_test5.AutoSize = true;
-            this.label_test5.Location = new System.Drawing.Point(954, 130);
+            this.label_test5.Location = new System.Drawing.Point(1332, 243);
             this.label_test5.Name = "label_test5";
             this.label_test5.Size = new System.Drawing.Size(153, 29);
             this.label_test5.TabIndex = 4;
@@ -527,7 +533,7 @@
             // 
             // button_firma_show
             // 
-            this.button_firma_show.Location = new System.Drawing.Point(893, 122);
+            this.button_firma_show.Location = new System.Drawing.Point(1280, 217);
             this.button_firma_show.Name = "button_firma_show";
             this.button_firma_show.Size = new System.Drawing.Size(172, 54);
             this.button_firma_show.TabIndex = 4;
@@ -536,14 +542,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label_firmaID_show);
             this.groupBox1.Controls.Add(this.button_firma_update);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label_firmapassword_upt);
+            this.groupBox1.Controls.Add(this.label_firmaname_upt);
             this.groupBox1.Controls.Add(this.label_firmaname_show);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label_firmapassword_show);
-            this.groupBox1.Location = new System.Drawing.Point(92, 217);
+            this.groupBox1.Controls.Add(this.textbox_firmapassword_upt);
+            this.groupBox1.Controls.Add(this.textbox_firmaname_upt);
+            this.groupBox1.Location = new System.Drawing.Point(449, 308);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1058, 547);
             this.groupBox1.TabIndex = 5;
@@ -554,82 +560,108 @@
             this.button_firma_update.Location = new System.Drawing.Point(409, 344);
             this.button_firma_update.Name = "button_firma_update";
             this.button_firma_update.Size = new System.Drawing.Size(172, 54);
-            this.button_firma_update.TabIndex = 12;
+            this.button_firma_update.TabIndex = 10;
             this.button_firma_update.Text = "Update";
             this.button_firma_update.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // label_firmapassword_upt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 29);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Firma Password";
+            this.label_firmapassword_upt.AutoSize = true;
+            this.label_firmapassword_upt.Location = new System.Drawing.Point(48, 205);
+            this.label_firmapassword_upt.Name = "label_firmapassword_upt";
+            this.label_firmapassword_upt.Size = new System.Drawing.Size(188, 29);
+            this.label_firmapassword_upt.TabIndex = 8;
+            this.label_firmapassword_upt.Text = "Firma Password";
             // 
-            // label3
+            // label_firmaname_upt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 29);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Firma Name";
+            this.label_firmaname_upt.AutoSize = true;
+            this.label_firmaname_upt.Location = new System.Drawing.Point(48, 143);
+            this.label_firmaname_upt.Name = "label_firmaname_upt";
+            this.label_firmaname_upt.Size = new System.Drawing.Size(146, 29);
+            this.label_firmaname_upt.TabIndex = 6;
+            this.label_firmaname_upt.Text = "Firma Name";
             // 
             // label_firmaname_show
             // 
             this.label_firmaname_show.AutoSize = true;
             this.label_firmaname_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_firmaname_show.Location = new System.Drawing.Point(29, 44);
+            this.label_firmaname_show.Location = new System.Drawing.Point(292, 44);
             this.label_firmaname_show.Name = "label_firmaname_show";
             this.label_firmaname_show.Size = new System.Drawing.Size(156, 29);
-            this.label_firmaname_show.TabIndex = 6;
+            this.label_firmaname_show.TabIndex = 5;
             this.label_firmaname_show.Text = "Firma Name";
             // 
-            // textBox2
+            // textbox_firmapassword_upt
             // 
-            this.textBox2.Location = new System.Drawing.Point(299, 205);
-            this.textBox2.MaxLength = 18;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 34);
-            this.textBox2.TabIndex = 11;
+            this.textbox_firmapassword_upt.Location = new System.Drawing.Point(299, 205);
+            this.textbox_firmapassword_upt.MaxLength = 18;
+            this.textbox_firmapassword_upt.Name = "textbox_firmapassword_upt";
+            this.textbox_firmapassword_upt.Size = new System.Drawing.Size(366, 34);
+            this.textbox_firmapassword_upt.TabIndex = 9;
             // 
-            // textBox3
+            // textbox_firmaname_upt
             // 
-            this.textBox3.Location = new System.Drawing.Point(299, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(366, 34);
-            this.textBox3.TabIndex = 9;
-            // 
-            // label_firmapassword_show
-            // 
-            this.label_firmapassword_show.AutoSize = true;
-            this.label_firmapassword_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_firmapassword_show.Location = new System.Drawing.Point(282, 44);
-            this.label_firmapassword_show.Name = "label_firmapassword_show";
-            this.label_firmapassword_show.Size = new System.Drawing.Size(202, 29);
-            this.label_firmapassword_show.TabIndex = 7;
-            this.label_firmapassword_show.Text = "Firma Password";
+            this.textbox_firmaname_upt.Location = new System.Drawing.Point(299, 143);
+            this.textbox_firmaname_upt.Name = "textbox_firmaname_upt";
+            this.textbox_firmaname_upt.Size = new System.Drawing.Size(366, 34);
+            this.textbox_firmaname_upt.TabIndex = 7;
             // 
             // label_firma_show
             // 
             this.label_firma_show.AutoSize = true;
-            this.label_firma_show.Location = new System.Drawing.Point(110, 135);
+            this.label_firma_show.Location = new System.Drawing.Point(497, 230);
             this.label_firma_show.Name = "label_firma_show";
-            this.label_firma_show.Size = new System.Drawing.Size(146, 29);
+            this.label_firma_show.Size = new System.Drawing.Size(104, 29);
             this.label_firma_show.TabIndex = 2;
-            this.label_firma_show.Text = "Firma Name";
+            this.label_firma_show.Text = "Firma ID";
             // 
-            // textbox_firmaname_show
+            // textbox_firma_show
             // 
-            this.textbox_firmaname_show.Location = new System.Drawing.Point(391, 132);
-            this.textbox_firmaname_show.Name = "textbox_firmaname_show";
-            this.textbox_firmaname_show.Size = new System.Drawing.Size(366, 34);
-            this.textbox_firmaname_show.TabIndex = 3;
+            this.textbox_firma_show.Location = new System.Drawing.Point(778, 227);
+            this.textbox_firma_show.Name = "textbox_firma_show";
+            this.textbox_firma_show.Size = new System.Drawing.Size(366, 34);
+            this.textbox_firma_show.TabIndex = 3;
             // 
             // adminPageBindingSource
             // 
             this.adminPageBindingSource.DataSource = typeof(ProjectAssistant.AdminPage);
+            // 
+            // label_test7
+            // 
+            this.label_test7.AutoSize = true;
+            this.label_test7.Location = new System.Drawing.Point(1332, 367);
+            this.label_test7.Name = "label_test7";
+            this.label_test7.Size = new System.Drawing.Size(153, 29);
+            this.label_test7.TabIndex = 11;
+            this.label_test7.Text = "Place Holder";
+            // 
+            // label_firmaID
+            // 
+            this.label_firmaID.AutoSize = true;
+            this.label_firmaID.Location = new System.Drawing.Point(460, 241);
+            this.label_firmaID.Name = "label_firmaID";
+            this.label_firmaID.Size = new System.Drawing.Size(104, 29);
+            this.label_firmaID.TabIndex = 2;
+            this.label_firmaID.Text = "Firma ID";
+            // 
+            // textbox_firmaID
+            // 
+            this.textbox_firmaID.Location = new System.Drawing.Point(822, 238);
+            this.textbox_firmaID.MaxLength = 18;
+            this.textbox_firmaID.Name = "textbox_firmaID";
+            this.textbox_firmaID.Size = new System.Drawing.Size(366, 34);
+            this.textbox_firmaID.TabIndex = 3;
+            // 
+            // label_firmaID_show
+            // 
+            this.label_firmaID_show.AutoSize = true;
+            this.label_firmaID_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_firmaID_show.Location = new System.Drawing.Point(48, 44);
+            this.label_firmaID_show.Name = "label_firmaID_show";
+            this.label_firmaID_show.Size = new System.Drawing.Size(112, 29);
+            this.label_firmaID_show.TabIndex = 4;
+            this.label_firmaID_show.Text = "Firma ID";
             // 
             // AdminPage
             // 
@@ -638,7 +670,7 @@
             this.Controls.Add(this.Admin_MainTab);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AdminPage";
-            this.Size = new System.Drawing.Size(1236, 864);
+            this.Size = new System.Drawing.Size(1993, 1233);
             this.Admin_MainTab.ResumeLayout(false);
             this.tab_student_reg.ResumeLayout(false);
             this.tab_student_reg.PerformLayout();
@@ -705,13 +737,16 @@
         private System.Windows.Forms.Button button_firma_show;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_firma_update;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_firmapassword_upt;
+        private System.Windows.Forms.Label label_firmaname_upt;
         private System.Windows.Forms.Label label_firmaname_show;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label_firmapassword_show;
+        private System.Windows.Forms.TextBox textbox_firmapassword_upt;
+        private System.Windows.Forms.TextBox textbox_firmaname_upt;
         private System.Windows.Forms.Label label_firma_show;
-        private System.Windows.Forms.TextBox textbox_firmaname_show;
+        private System.Windows.Forms.TextBox textbox_firma_show;
+        private System.Windows.Forms.Label label_test7;
+        private System.Windows.Forms.Label label_firmaID;
+        private System.Windows.Forms.TextBox textbox_firmaID;
+        private System.Windows.Forms.Label label_firmaID_show;
     }
 }

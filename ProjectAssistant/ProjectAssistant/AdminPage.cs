@@ -70,6 +70,39 @@ namespace ProjectAssistant
             }
         }
 
+        #region Student Register
+
+        private void textbox_studentnumber_KeyPress(object sender, KeyPressEventArgs keypress)
+        {
+            if (!char.IsControl(keypress.KeyChar) && !char.IsDigit(keypress.KeyChar))
+            {
+                keypress.Handled = true;
+            }
+        }
+
+        private void textbox_studentsurname_KeyPress(object sender, KeyPressEventArgs keypress)
+        {
+            if (!char.IsControl(keypress.KeyChar) && !char.IsLetter(keypress.KeyChar))
+            {
+                keypress.Handled = true;
+            }
+        }
+
+        private void textbox_studentname_KeyPress(object sender, KeyPressEventArgs keypress)
+        {
+            if (!char.IsControl(keypress.KeyChar) && !char.IsLetter(keypress.KeyChar))
+            {
+                keypress.Handled = true;
+            }
+        }
+
+        private void textbox_studentpassword_KeyPress(object sender, KeyPressEventArgs keypress)
+        {
+            if (!char.IsControl(keypress.KeyChar) && !char.IsLetterOrDigit(keypress.KeyChar))
+            {
+                keypress.Handled = true;
+            }
+        }
         private void reg_student_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -123,9 +156,10 @@ namespace ProjectAssistant
                     }
             }
 
-            i=0;
+            i = 0;
             //Experimental: Out of Bit, will be removed
-            if (Int32.TryParse(textbox_studentnumber.Text, out i) != true) { 
+            if (Int32.TryParse(textbox_studentnumber.Text, out i) != true)
+            {
                 MessageBox.Show("Maximum number limit!!! (Maximum: 2147483647)");
                 Delete_Text();
                 i = 0;
@@ -133,8 +167,8 @@ namespace ProjectAssistant
             }
 
             Student stu = new Student();
-            
-            stu.name = textbox_studentname.Text+" "+textbox_studentsurname;
+
+            stu.name = textbox_studentname.Text + " " + textbox_studentsurname.Text;
             stu.id_number = Convert.ToInt32(textbox_studentnumber.Text);
             stu.password = textbox_studentpassword.Text;
 
@@ -145,44 +179,19 @@ namespace ProjectAssistant
             label_test4.Text = stu.password;
         }
 
-        private void textbox_studentnumber_KeyPress(object sender, KeyPressEventArgs keypress)
-        {
-            if (!char.IsControl(keypress.KeyChar) && !char.IsDigit(keypress.KeyChar) )
-            {
-                keypress.Handled = true;
-            }
-        }
-
-        private void textbox_studentsurname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textbox_studentname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textbox_studentpassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
+        #endregion
 
 
+        #region Student Update
 
         private void button_studentshow_Click(object sender, EventArgs e)
         {
             
         }
+
+
+
+        #endregion
     }
 }
 
