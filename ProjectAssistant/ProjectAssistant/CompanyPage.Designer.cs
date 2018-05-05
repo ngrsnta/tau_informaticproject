@@ -103,6 +103,7 @@
             this.panelProject.Name = "panelProject";
             this.panelProject.Size = new System.Drawing.Size(1073, 636);
             this.panelProject.TabIndex = 0;
+            this.panelProject.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProject_Paint);
             // 
             // tabNewprojectpage
             // 

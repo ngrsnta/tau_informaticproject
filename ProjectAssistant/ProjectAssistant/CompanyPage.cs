@@ -66,7 +66,6 @@ namespace ProjectAssistant
 
             project.title = textProjecttitle.Text;
             project.areaofinterest = textBoxAreaofinterest.Text;
-            project.companybranchdec = richTextBoxCompanybranchdesicription.Text;
             project.deadline = dateTimePickerDeadline.Text;
             project.end = dateTimePickerProjectend.Text;
             project.start = dateTimePickerProjectstart.Text;
@@ -74,6 +73,11 @@ namespace ProjectAssistant
             project.skills = richTextBoxSkillRequirements.Text;
             
 
+
+        }
+
+        private void panelProject_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
