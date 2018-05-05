@@ -21,7 +21,7 @@ namespace ProjectAssistant
         {
             try
             {
-                query = "insert into " + table + "(" + columns + ") values(" + values + ");";
+                query = "insert into " + table + " (" + columns + ") values(" + values + ");";
                 myCommand = new MySqlCommand(query, conn);
                 conn.Open();
                 myReader = myCommand.ExecuteReader();
