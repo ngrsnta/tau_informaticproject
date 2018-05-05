@@ -87,6 +87,12 @@
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentListItem.Designer.cs">
+      <DependentUpon>StudentListItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentListItem.resx">
+      <DependentUpon>StudentListItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentPage.resx">
       <DependentUpon>StudentPage.cs</DependentUpon>
     </EmbeddedResource>

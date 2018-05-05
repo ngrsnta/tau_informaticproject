@@ -22,29 +22,19 @@ namespace ProjectAssistant
             this.AutoScroll = true;
             InitializeComponent();
 
-            ListViewItem lvi = new ListViewItem("1234");
-            lvi.SubItems.Add("Kaan Kalender");
-            ListViewItem lva = new ListViewItem("1236");
-            lva.SubItems.Add("Berk Kara");
-            listView1.Items.Add(lvi);
-            listView1.Items.Add(lva);
+            
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 100; i++)
             {
-                Label lbl = new Label();
-                lbl.Text = "a-" + i;
-                lbl.Location = new Point(18, 2);
-                lbl.Click += new System.EventHandler(this.deneme);
-
                 Panel pnl = new Panel();
-                pnl.Location = new Point(0, panel1.Controls.Count * 30);
-                pnl.Size = new Size(panel1.Size.Width, 30);
+                StudentListItem sList = new StudentListItem();
+
                 if (i % 2 == 0)
                 {
-                    pnl.Location = new Point(0, panel1.Controls.Count * 30);
-                    pnl.Size = new Size(panel1.Size.Width, 50);
-                    pnl.BackColor = SystemColors.ControlLightLight;
-                    pnl.Controls.Add(lbl);
+                    sList.Location = new Point(0, panel1.Controls.Count * 30);
+                    sList.Size = new Size(panel1.Size.Width, 50);
+                    sList.BackColor = SystemColors.ControlLightLight;
+                    sList.label1.Text = "a-" + i;
                 }
                 else
                 {
@@ -52,18 +42,12 @@ namespace ProjectAssistant
                     pnl.Size = new Size(panel1.Size.Width, 5);
                     pnl.BackColor = SystemColors.Control;
                 }
-                panel1.Controls.Add(pnl);
+                panel1.Controls.Add(sList);
             }
-            
-            
+
         }
 
-        public void deneme(object sender, EventArgs e)
-        {
-
-            //label4.Text = listView1.SelectedItems[0].Text;
-            label4.Text = sender.ToString().Substring(34);
-        }
+        
 
         private void loginButton_Click(object sender, EventArgs e)
         {
@@ -78,12 +62,9 @@ namespace ProjectAssistant
                 MessageBox.Show("Login Id can only contain numbers");
                 return;
             }
-
             loginInfo.set_password(passwordTextBox.Text);
 
-            db.set_studentId(loginInfo.get_loginId(), loginInfo.get_password());
-
- //           richTextBox1.Text = db.get_studentPass(loginInfo.get_loginId());
+            label4.Text = db.select_fromDatabase("studentName", "students", "studentId", loginInfo.get_loginId().ToString());
 
         }
 
