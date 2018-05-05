@@ -20,31 +20,6 @@ namespace ProjectAssistant
             
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_studDateOfBirth_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void StudentPage_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textBox_studPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -53,9 +28,6 @@ namespace ProjectAssistant
             }
 
         }
-
-        
-
         
 
         private void richTextBox_studEducation_MouseHover(object sender, EventArgs e)
@@ -71,35 +43,10 @@ namespace ProjectAssistant
             tltip.SetToolTip(this.richTextBox_studWork, "Intern at Mercedes Benz Türk A.Ş (07.2015-08.2015)");
         }
 
-        private void studPage_editInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox_studWork_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox_studEducation_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void richTextBox1_MouseHover(object sender, EventArgs e)
         {
             ToolTip tltip = new ToolTip();
             tltip.SetToolTip(this.richTextBox_studCertificates, "DSH C1 Certificate(06.2015)");
-        }
-
-        private void richTextBox_studCertificates_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void richTextBox_studCurricular_MouseHover(object sender, EventArgs e)

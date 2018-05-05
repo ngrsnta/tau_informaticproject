@@ -167,7 +167,6 @@
             this.studPage_editInfo.TabIndex = 2;
             this.studPage_editInfo.Text = "Edit Info";
             this.studPage_editInfo.UseVisualStyleBackColor = true;
-            this.studPage_editInfo.Click += new System.EventHandler(this.studPage_editInfo_Click);
             // 
             // button_SaveChanges
             // 
@@ -258,7 +257,6 @@
             this.label16.Size = new System.Drawing.Size(78, 17);
             this.label16.TabIndex = 29;
             this.label16.Text = "Certificates";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // richTextBox_studCertificates
             // 
@@ -267,7 +265,6 @@
             this.richTextBox_studCertificates.Size = new System.Drawing.Size(302, 102);
             this.richTextBox_studCertificates.TabIndex = 28;
             this.richTextBox_studCertificates.Text = "";
-            this.richTextBox_studCertificates.TextChanged += new System.EventHandler(this.richTextBox_studCertificates_TextChanged);
             this.richTextBox_studCertificates.MouseHover += new System.EventHandler(this.richTextBox1_MouseHover);
             // 
             // label15
@@ -294,7 +291,6 @@
             this.richTextBox_studWork.Size = new System.Drawing.Size(291, 74);
             this.richTextBox_studWork.TabIndex = 25;
             this.richTextBox_studWork.Text = "";
-            this.richTextBox_studWork.TextChanged += new System.EventHandler(this.richTextBox_studWork_TextChanged);
             this.richTextBox_studWork.MouseHover += new System.EventHandler(this.richTextBox_studWork_MouseHover);
             // 
             // richTextBox_studEducation
@@ -304,7 +300,6 @@
             this.richTextBox_studEducation.Size = new System.Drawing.Size(291, 105);
             this.richTextBox_studEducation.TabIndex = 24;
             this.richTextBox_studEducation.Text = "";
-            this.richTextBox_studEducation.TextChanged += new System.EventHandler(this.richTextBox_studEducation_TextChanged);
             this.richTextBox_studEducation.MouseHover += new System.EventHandler(this.richTextBox_studEducation_MouseHover);
             // 
             // label13
@@ -460,7 +455,6 @@
             this.label_studDateOfBirth.Size = new System.Drawing.Size(80, 17);
             this.label_studDateOfBirth.TabIndex = 7;
             this.label_studDateOfBirth.Text = "25.07.1996";
-            this.label_studDateOfBirth.Click += new System.EventHandler(this.label_studDateOfBirth_Click);
             // 
             // label3
             // 
@@ -470,7 +464,6 @@
             this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Date of Birth";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label_studID
             // 
@@ -490,7 +483,6 @@
             this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Student ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label_studName
             // 
@@ -501,7 +493,6 @@
             this.label_studName.Size = new System.Drawing.Size(102, 17);
             this.label_studName.TabIndex = 3;
             this.label_studName.Text = "Berk Karaagac";
-            this.label_studName.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -519,7 +510,6 @@
             this.Controls.Add(this.student_mainTab);
             this.Name = "StudentPage";
             this.Size = new System.Drawing.Size(1087, 668);
-            this.Load += new System.EventHandler(this.StudentPage_Load);
             this.student_mainTab.ResumeLayout(false);
             this.studPage_projects.ResumeLayout(false);
             this.studPage_projects.PerformLayout();

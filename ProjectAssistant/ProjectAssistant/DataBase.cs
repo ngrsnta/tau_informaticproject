@@ -10,13 +10,13 @@ namespace ProjectAssistant
 {
     class DataBase
     {
-        static string connetionString = "server=localhost;database=ProjectSystemDB;uid=root;pwd=ngrsnta;";
-        MySqlConnection conn = new MySqlConnection(connetionString);
+        static string connectionString = "server=localhost;database=ProjectSystemDB;uid=root;pwd=ngrsnta;";
+        MySqlConnection conn = new MySqlConnection(connectionString);
         string query;
         MySqlCommand myCommand;
         MySqlDataReader myReader;
 
-
+        //Database'de yeni bir girdi oluşturma
         public void insert_toDatabase(string table, string columns, string values)
         {
             try
