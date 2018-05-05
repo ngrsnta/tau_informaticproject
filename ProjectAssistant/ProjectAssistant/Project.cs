@@ -12,7 +12,6 @@ namespace ProjectAssistant
             public int projectid_number { get; set; }
             public int companyid_number { get; set; }
             public string title { get; set; } = "";
-            public string companydesc { get; set; } = "";
             public string projectdesc { get; set; } = "";
             public string areaofinterest { get; set; } = "";
             public string skills { get; set; } = "";

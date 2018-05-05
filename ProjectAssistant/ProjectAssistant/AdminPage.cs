@@ -17,11 +17,37 @@ namespace ProjectAssistant
         public AdminPage() //Start
         {
             InitializeComponent();
-            
 
         }
-        void Delete_Text()
+
+        
+        void Delete_Text()  //When changed to a Tab, delete all Text Boxes
         {
+            var selectedTab = Admin_MainTab.SelectedTab;
+
+            foreach (Control ctrl in selectedTab.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    (ctrl as TextBox).Text = string.Empty;
+                }
+
+                if (ctrl is Label)
+                {
+                    if ((ctrl != label_studentname ||
+                        ctrl != label_studentnumber ||
+                        ctrl != label_studentsurname ||
+                        ctrl != label_studentpassword) == false)
+                        (ctrl as Label).Text = string.Empty;
+                }
+
+                // Other Controls....
+            }
+        }
+
+        private void Admin_MainTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get Selected Tab
             var selectedTab = Admin_MainTab.SelectedTab;
 
             foreach (Control ctrl in selectedTab.Controls)
@@ -108,12 +134,13 @@ namespace ProjectAssistant
 
             Student stu = new Student();
             
-            stu.name = textbox_studentname.Text;
+            stu.name = textbox_studentname.Text+" "+textbox_studentsurname;
             stu.id_number = Convert.ToInt32(textbox_studentnumber.Text);
             stu.password = textbox_studentpassword.Text;
 
             //Just to Check, will be removed
-            label_test1.Text= stu.name;
+
+            label_test2.Text = stu.name;
             label_test3.Text = Convert.ToString(stu.id_number);
             label_test4.Text = stu.password;
         }
@@ -150,30 +177,7 @@ namespace ProjectAssistant
             }
         }
 
-        private void Admin_MainTab_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Get Selected Tab
-            var selectedTab = Admin_MainTab.SelectedTab;
 
-            foreach (Control ctrl in selectedTab.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    (ctrl as TextBox).Text = string.Empty;
-                }
-
-                if (ctrl is Label)
-                {
-                    if( (ctrl != label_studentname    ||
-                        ctrl != label_studentnumber   ||
-                        ctrl != label_studentsurname  ||
-                        ctrl != label_studentpassword)==false )
-                    (ctrl as Label).Text = string.Empty;
-                }
-
-                // Other Controls....
-            }
-        }
 
         private void button_studentshow_Click(object sender, EventArgs e)
         {
