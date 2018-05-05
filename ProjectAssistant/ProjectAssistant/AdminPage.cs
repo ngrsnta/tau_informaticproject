@@ -13,6 +13,7 @@ namespace ProjectAssistant
   
     public partial class AdminPage : UserControl //Main
     {
+        DataBase db = new DataBase();
 
         public AdminPage() //Start
         {
@@ -103,7 +104,7 @@ namespace ProjectAssistant
                 keypress.Handled = true;
             }
         }
-        private void reg_student_Click(object sender, EventArgs e)
+        private void reg_student_Click(object sender, EventArgs e)  //Register Student
         {
             int i = 0;
 
@@ -166,12 +167,31 @@ namespace ProjectAssistant
                 return;
             }
 
+            //Creating a new Student Class to store inputs in order to send them to the Database
             Student stu = new Student();
-
+            
+            //Storing inputs to Class
             stu.name = textbox_studentname.Text + " " + textbox_studentsurname.Text;
             stu.id_number = Convert.ToInt32(textbox_studentnumber.Text);
             stu.password = textbox_studentpassword.Text;
+            stu.dateofbirth = date_student.Value;// ("yyyy-MM-dd");
+            stu.gender = comboBox_studentgender.Text;
+            stu.faculty = textbox_studentfaculty.Text;
+            stu.major = textbox_studentmajor.Text;
+            stu.semester = Convert.ToInt32(textbox_studentsemester.Text);
 
+                       db.insert_toDatabase("students","studentId, studentPassword, studentName, studentGender, studentBirthday, " +
+                                           "studentFaculty, studentMajor, studentSemester", stu.id_number+", "+stu.password+", "+stu.name+", "+stu.gender+", " 
+                                           +stu.dateofbirth.ToString("yyyy-MM-dd") + ", "+stu.faculty+", "+stu.major+", "+stu.semester);
+
+  /*        db.insert_toDatabase("students", "studentId", Convert.ToString(stu.id_number));
+            db.insert_toDatabase("students", "studentPassword", stu.password);
+            db.insert_toDatabase("students", "studentName", stu.name);
+            db.insert_toDatabase("students", "studentGender", stu.gender);
+            db.insert_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("yyyy-MM-dd"));
+            db.insert_toDatabase("students", "studentFaculty", stu.faculty);
+            db.insert_toDatabase("students", "studentMajor", stu.major);
+*/
             //Just to Check, will be removed
 
             label_test2.Text = stu.name;
@@ -184,14 +204,20 @@ namespace ProjectAssistant
 
         #region Student Update
 
+
+
         private void button_studentshow_Click(object sender, EventArgs e)
         {
             
         }
 
 
-
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label_date.Text = date_student.Value.ToShortDateString();
+        }
     }
 }
 
