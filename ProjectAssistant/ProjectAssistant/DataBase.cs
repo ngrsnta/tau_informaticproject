@@ -82,7 +82,8 @@ namespace ProjectAssistant
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
-                    list.Add(myReader.GetValue(0).ToString());
+                    list.Add(myReader.GetValue(1).ToString());
+                    
                 }
                 myReader.Close();
                 conn.Close();

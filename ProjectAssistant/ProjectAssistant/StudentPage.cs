@@ -60,11 +60,17 @@ namespace ProjectAssistant
             richTextBox_studProfessions.Text = st.professions;
             richTextBox_studFurtherInfo.Text = st.other;
 
-            for (int i = 0; i < 20; i++)
+            List<string> lst = new List<string>();
+
+            lst = db.select_asArray("applies", "studentId", "111111111");
+
+            for (int i = 0; i < lst.Count; i++)
             {
                 ProjectListItem projectList = new ProjectListItem();
+                Project prj = new Project();
 
-                
+                prj.title = db.select_fromDatabase("projectTitle", "projects", "projectId", lst[i]);
+                projectList.richTextBox_projectTitle.Text = prj.title;
                 projectList.Location = new Point(5, (i * 160)+5);
                 projectList.BackColor = SystemColors.Control;
                 studPage_projects.Controls.Add(projectList);

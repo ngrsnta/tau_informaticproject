@@ -71,6 +71,11 @@ namespace ProjectAssistant
             project.start = dateTimePickerProjectstart.Text;
             project.projectdesc = richTextBoxProjectdescription.Text;
             project.skills = richTextBoxSkillRequirements.Text;
+            project.email = textBoxCompanyemail.Text;
+            project.companymission = richTextBoxCompanymission.Text;
+            project.companyhis = richTextBoxCompanyhis.Text;
+            project.branchdec = richTextBoxCompanybranchdesicription.Text;
+            project.companydec = richTextBoxCompanydec.Text;
             
 
 
