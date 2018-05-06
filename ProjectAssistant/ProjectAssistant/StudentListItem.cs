@@ -19,7 +19,7 @@ namespace ProjectAssistant
 
         private void StudentListItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(label1.Text);
+            MessageBox.Show(labelName.Text);
         }
     }
 }

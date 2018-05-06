@@ -28,25 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelSemester = new System.Windows.Forms.Label();
+            this.labelMajor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(26, 20);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(113, 38);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "label1";
+            // 
+            // labelSemester
+            // 
+            this.labelSemester.AutoSize = true;
+            this.labelSemester.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSemester.Location = new System.Drawing.Point(462, 20);
+            this.labelSemester.Name = "labelSemester";
+            this.labelSemester.Size = new System.Drawing.Size(67, 22);
+            this.labelSemester.TabIndex = 1;
+            this.labelSemester.Text = "label2";
+            // 
+            // labelMajor
+            // 
+            this.labelMajor.AutoSize = true;
+            this.labelMajor.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMajor.Location = new System.Drawing.Point(462, 74);
+            this.labelMajor.Name = "labelMajor";
+            this.labelMajor.Size = new System.Drawing.Size(69, 23);
+            this.labelMajor.TabIndex = 2;
+            this.labelMajor.Text = "label3";
             // 
             // StudentListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelMajor);
+            this.Controls.Add(this.labelSemester);
+            this.Controls.Add(this.labelName);
             this.Name = "StudentListItem";
-            this.Size = new System.Drawing.Size(889, 118);
+            this.Size = new System.Drawing.Size(575, 118);
             this.Click += new System.EventHandler(this.StudentListItem_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -55,6 +80,8 @@
 
         #endregion
 
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label labelName;
+        public System.Windows.Forms.Label labelSemester;
+        public System.Windows.Forms.Label labelMajor;
     }
 }
