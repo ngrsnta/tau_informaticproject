@@ -16,37 +16,15 @@ namespace ProjectAssistant
 
         LoginInfos loginInfo = new LoginInfos();
         DataBase db = new DataBase();
+        string _password = "";
+        Panel mainPanel = new Panel();
+        StudentPage stuPage = new StudentPage();
 
         public LoginPage()
         {
             this.AutoScroll = true;
             InitializeComponent();
-
-            
-
-            for (int i = 0; i < 100; i++)
-            {
-                Panel pnl = new Panel();
-                StudentListItem sList = new StudentListItem();
-
-                if (i % 2 == 0)
-                {
-                    sList.Location = new Point(0, panel1.Controls.Count * 30);
-                    sList.Size = new Size(panel1.Size.Width, 50);
-                    sList.BackColor = SystemColors.ControlLightLight;
-                    sList.label1.Text = "a-" + i;
-                }
-                else
-                {
-                    pnl.Location = new Point(0, panel1.Controls.Count * 30);
-                    pnl.Size = new Size(panel1.Size.Width, 5);
-                    pnl.BackColor = SystemColors.Control;
-                }
-                panel1.Controls.Add(sList);
-            }
-
         }
-
         
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -55,7 +33,6 @@ namespace ProjectAssistant
             try
             {
                 loginInfo.set_loginId(Convert.ToInt32(loginIdTextBox.Text));
-                
             }
             
             catch (FormatException)
@@ -63,11 +40,21 @@ namespace ProjectAssistant
                 MessageBox.Show("Login Id can only contain numbers");
                 return;
             }
+
             loginInfo.set_password(passwordTextBox.Text);
-
-            label4.Text = db.select_fromDatabase("studentName", "students", "studentId", loginInfo.get_loginId().ToString());
-           
-
+            if(loginInfo.get_loginId() > 100000000)
+            {
+                _password = db.select_fromDatabase("studentPassword", "students", "studentId", loginInfo.get_loginId().ToString());
+                if (loginInfo.get_password() == _password)
+                {
+                }
+                else
+                {
+                    this.Dispose();
+                    mainPanel.Controls.Add(stuPage);
+                    MessageBox.Show("sa");
+                }
+            }
         }
 
         

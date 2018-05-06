@@ -204,7 +204,7 @@
 
         private System.Windows.Forms.Panel sideMenuPanel;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.Panel formsPanel;
+        public  System.Windows.Forms.Panel formsPanel;
         private System.Windows.Forms.Button adminPageButton;
         private System.Windows.Forms.Button loginPageButton;
         private System.Windows.Forms.Button companyPageButton;

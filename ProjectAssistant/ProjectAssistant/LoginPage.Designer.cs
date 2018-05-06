@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -92,15 +91,6 @@
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(24, 441);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 211);
-            this.panel1.TabIndex = 7;
             // 
             // label4
             // 
@@ -166,7 +156,7 @@
             this.panel2.Controls.Add(this.loginButton);
             this.panel2.Location = new System.Drawing.Point(319, 156);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(407, 279);
+            this.panel2.Size = new System.Drawing.Size(407, 329);
             this.panel2.TabIndex = 14;
             // 
             // LoginPage
@@ -178,7 +168,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "LoginPage";
@@ -192,18 +181,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox loginIdTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox loginIdTextBox;
+        public System.Windows.Forms.TextBox passwordTextBox;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Button loginButton;
     }
 }

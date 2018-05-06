@@ -17,14 +17,19 @@ namespace ProjectAssistant
         StudentPage studentPage = new StudentPage();
         AdminPage adminPage = new AdminPage();
         CompanyPage companyPage = new CompanyPage();
+        LoginInfos loginInfo = new LoginInfos();
+        DataBase db = new DataBase();
 
         bool homeDragging;
         Point homeStartpoint;
+        string _password;
 
 
         public Form1()
         {
             InitializeComponent();
+            formsPanel.Controls.Add(loginPage);
+            loginPage.loginButton.Click += loginPage_loginButton_Click;
         }
         
 
@@ -33,6 +38,41 @@ namespace ProjectAssistant
             formsPanel.Controls.Clear();
             formsPanel.Controls.Add(loginPage);
             headerLabel.Text = "Login";
+        }
+        private void loginPage_loginButton_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                loginInfo.set_loginId(Convert.ToInt32(loginPage.loginIdTextBox.Text));
+            }
+
+            catch (FormatException)
+            {
+                MessageBox.Show("Login Id can only contain numbers");
+                return;
+            }
+
+            loginInfo.set_password(loginPage.passwordTextBox.Text);
+            if (loginInfo.get_loginId() > 100000000)
+            {
+                _password = db.select_fromDatabase("studentPassword", "students", "studentId", loginInfo.get_loginId().ToString());
+                if (loginInfo.get_password() == _password)
+                {
+                    formsPanel.Controls.Clear();
+                    formsPanel.Controls.Add(studentPage);
+                    headerLabel.Text = "Student";
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password");
+                    loginPage.loginIdTextBox.Clear();
+                    loginPage.passwordTextBox.Clear();
+                    return;
+
+                }
+            }
+            
         }
 
         private void adminPageButton_Click(object sender, EventArgs e)
