@@ -273,7 +273,7 @@ namespace ProjectAssistant
             stu.semester = Convert.ToInt32(comboBox_studentsemester_upt.Text);
             if(textbox_studentpassword_upt.Text.Length>0)
                 stu.password = textbox_studentpassword_upt.Text;
-
+/*
             db.update_toDatabase("students", "studentName", stu.name);
             db.update_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("dd.MM.yyyy"));
             db.update_toDatabase("students", "studentGender", stu.gender);
@@ -281,7 +281,7 @@ namespace ProjectAssistant
             db.update_toDatabase("students", "studentMajor", stu.major);
             db.update_toDatabase("students", "studentSemester", stu.semester.ToString());
             if(stu.password.Length>0)
-                db.update_toDatabase("students", "studentPassword", stu.password);
+                db.update_toDatabase("students", "studentPassword", stu.password);*/
         }
 
         #endregion
