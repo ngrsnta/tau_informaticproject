@@ -168,9 +168,8 @@ namespace ProjectAssistant
 
         private void button_SaveChanges_Click(object sender, EventArgs e)
         {
-            db.update_toDatabase("students", "studentName", "'Berk'", "studentId", id.ToString());
-            st.name = db.select_fromDatabase("studentName", "students", "studentId", id.ToString());
-            label_studName.Text = st.name;
+            db.update_toDatabase("students", "studentTelnum", textBox_studPhoneNumber.Text, "studentId", id.ToString());
+            
         }
     }
 }
