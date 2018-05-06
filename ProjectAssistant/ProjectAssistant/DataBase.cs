@@ -71,11 +71,11 @@ namespace ProjectAssistant
             }
         }
 
-        public void update_toDatabase(string table, string item, string new_value)
+        public void update_toDatabase(string table, string item, string new_value, string equal1, string equal2)
         {
             try
             {
-                query = "update " + table + " set " + item + " = " + new_value + ";";
+                query = "update " + table + " set " + item + " = " + new_value + " where " + equal1 +" = "+ equal2+ ";";
                 myCommand = new MySqlCommand(query, conn);
                 conn.Open();
                 myCommand.ExecuteNonQuery();
