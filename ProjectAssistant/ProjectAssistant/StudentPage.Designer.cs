@@ -32,6 +32,7 @@
             this.studPage_projects = new System.Windows.Forms.TabPage();
             this.studPage_applications = new System.Windows.Forms.TabPage();
             this.studPage_editInfo = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_SaveChanges = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.richTextBox_studFurtherInfo = new System.Windows.Forms.RichTextBox();
@@ -69,7 +70,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_studName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.student_mainTab.SuspendLayout();
             this.studPage_editInfo.SuspendLayout();
             this.SuspendLayout();
@@ -157,6 +157,17 @@
             this.studPage_editInfo.TabIndex = 2;
             this.studPage_editInfo.Text = "Edit Info";
             this.studPage_editInfo.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(658, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 27);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Preview Profile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_SaveChanges
             // 
@@ -483,6 +494,7 @@
             this.label_studName.Size = new System.Drawing.Size(102, 17);
             this.label_studName.TabIndex = 3;
             this.label_studName.Text = "Berk Karaagac";
+            this.label_studName.Click += new System.EventHandler(this.label_studName_Click);
             // 
             // label1
             // 
@@ -492,17 +504,6 @@
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(658, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 27);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Preview Profile";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StudentPage
             // 

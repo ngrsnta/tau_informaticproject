@@ -13,6 +13,7 @@ namespace ProjectAssistant
         static string connectionString = "server=localhost;database=ProjectSystemDB;uid=root;pwd=ngrsnta;";
         MySqlConnection conn = new MySqlConnection(connectionString);
         string query;
+        int anyInt;
         MySqlCommand myCommand;
         MySqlDataReader myReader;
 
@@ -48,7 +49,14 @@ namespace ProjectAssistant
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
-                    a = (string)myReader[item];
+                    if (myReader[item].GetType() == a.GetType() || myReader[item].GetType() == anyInt.GetType())
+                    {
+                        a = (string)myReader[item];
+                    }
+                    else
+                    {
+                        a = Convert.ToString(myReader[item]);
+                    }
                 }
                 myReader.Close();
                 conn.Close();

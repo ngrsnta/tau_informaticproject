@@ -12,10 +12,23 @@ namespace ProjectAssistant
 {
     public partial class StudentPage : UserControl
     {
+        Student st = new Student();
+        DataBase db = new DataBase();
+        int id = 123; //Kaan id'yi yollayacak buraya, bu sadece geçici
 
         public StudentPage()
         {
+            
+ 
+
             InitializeComponent();
+            st.name = db.select_fromDatabase("studentName", "students", "studentId", id.ToString());
+            st.dateofbirth = Convert.ToDateTime(db.select_fromDatabase("studentBirthday", "students", "studentId", id.ToString()));
+            st.faculty = db.select_fromDatabase("studentFaculty", "students", "studentId", id.ToString());
+            
+            label_studName.Text = st.name;
+            label_studDateOfBirth.Text = st.dateofbirth.ToShortDateString();
+            label_studFaculty.Text = st.faculty;
             
 
             for (int i = 0; i < 20; i++)
@@ -106,6 +119,11 @@ namespace ProjectAssistant
         private void exitLabel_Click(object sender, EventArgs e)
         {
             //Profile.Close();
+        }
+
+        private void label_studName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
