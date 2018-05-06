@@ -400,7 +400,7 @@
             // label_studSemester
             // 
             this.label_studSemester.AutoSize = true;
-            this.label_studSemester.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studSemester.BackColor = System.Drawing.Color.Transparent;
             this.label_studSemester.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_studSemester.Location = new System.Drawing.Point(560, 54);
             this.label_studSemester.Name = "label_studSemester";
@@ -411,7 +411,7 @@
             // label_studMajor
             // 
             this.label_studMajor.AutoSize = true;
-            this.label_studMajor.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studMajor.BackColor = System.Drawing.Color.Transparent;
             this.label_studMajor.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label_studMajor.Location = new System.Drawing.Point(338, 125);
             this.label_studMajor.Name = "label_studMajor";
@@ -432,7 +432,7 @@
             // label_studFaculty
             // 
             this.label_studFaculty.AutoSize = true;
-            this.label_studFaculty.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studFaculty.BackColor = System.Drawing.Color.Transparent;
             this.label_studFaculty.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label_studFaculty.Location = new System.Drawing.Point(338, 54);
             this.label_studFaculty.Name = "label_studFaculty";
@@ -453,7 +453,7 @@
             // label_studGender
             // 
             this.label_studGender.AutoSize = true;
-            this.label_studGender.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studGender.BackColor = System.Drawing.Color.Transparent;
             this.label_studGender.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label_studGender.Location = new System.Drawing.Point(211, 125);
             this.label_studGender.Name = "label_studGender";
@@ -474,7 +474,7 @@
             // label_studDateOfBirth
             // 
             this.label_studDateOfBirth.AutoSize = true;
-            this.label_studDateOfBirth.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studDateOfBirth.BackColor = System.Drawing.Color.Transparent;
             this.label_studDateOfBirth.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label_studDateOfBirth.Location = new System.Drawing.Point(211, 54);
             this.label_studDateOfBirth.Name = "label_studDateOfBirth";
@@ -495,7 +495,7 @@
             // label_studID
             // 
             this.label_studID.AutoSize = true;
-            this.label_studID.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studID.BackColor = System.Drawing.Color.Transparent;
             this.label_studID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label_studID.Location = new System.Drawing.Point(59, 125);
             this.label_studID.Name = "label_studID";
@@ -516,7 +516,7 @@
             // label_studName
             // 
             this.label_studName.AutoSize = true;
-            this.label_studName.BackColor = System.Drawing.Color.DarkGray;
+            this.label_studName.BackColor = System.Drawing.Color.Transparent;
             this.label_studName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label_studName.Location = new System.Drawing.Point(59, 54);
             this.label_studName.Name = "label_studName";
