@@ -53,6 +53,7 @@
             this.richTextBox_projectTitle.Size = new System.Drawing.Size(292, 24);
             this.richTextBox_projectTitle.TabIndex = 0;
             this.richTextBox_projectTitle.Text = "Project Title here";
+            this.richTextBox_projectTitle.TextChanged += new System.EventHandler(this.richTextBox_projectTitle_TextChanged);
             // 
             // richTextBox_projectArea
             // 

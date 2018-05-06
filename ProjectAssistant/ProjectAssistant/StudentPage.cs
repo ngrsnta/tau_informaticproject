@@ -154,5 +154,17 @@ namespace ProjectAssistant
         {
 
         }
+
+        private void studPage_projects_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_SaveChanges_Click(object sender, EventArgs e)
+        {
+            db.update_toDatabase("students", "studentName", "'Berk'", "studentId", id.ToString());
+            st.name = db.select_fromDatabase("studentName", "students", "studentId", id.ToString());
+            label_studName.Text = st.name;
+        }
     }
 }

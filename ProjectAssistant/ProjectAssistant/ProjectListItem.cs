@@ -12,10 +12,15 @@ namespace ProjectAssistant
 {
     public partial class ProjectListItem : UserControl
     {
+        Project prj = new Project();
+        DataBase db = new DataBase();
+        int id = 1; //Kaan buraya proje id'si yollayacak
+
+
         public ProjectListItem()
         {
             InitializeComponent();
-           
+      
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -40,6 +45,11 @@ namespace ProjectAssistant
 
         private void ProjectListItem_MouseHover(object sender, EventArgs e)
         {
+        }
+
+        private void richTextBox_projectTitle_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
