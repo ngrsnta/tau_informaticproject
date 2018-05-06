@@ -18,6 +18,12 @@ namespace ProjectAssistant
             public string deadline { get; set; } = "";
             public string start { get; set; } = "";
             public string end { get; set; } = "";
+            public string email { get; set; } = "";
+            public string companydec { get; set; } = "";
+            public string branchdec { get; set; } = "";
+            public string companyhis { get; set; } = "";
+            public string companymission { get; set; } = "";
+
     }
     
 }
