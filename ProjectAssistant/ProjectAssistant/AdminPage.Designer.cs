@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tab_company_upt = new System.Windows.Forms.TabPage();
             this.groupBox_firma_del = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel_company_show = new System.Windows.Forms.TableLayoutPanel();
@@ -132,7 +131,6 @@
             this.label_test2 = new System.Windows.Forms.Label();
             this.label_reg_student = new System.Windows.Forms.Label();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
-            this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_company_upt.SuspendLayout();
             this.groupBox_firma_del.SuspendLayout();
             this.tableLayoutPanel_company_show.SuspendLayout();
@@ -156,7 +154,6 @@
             this.groupBox_studentinfo_reg.SuspendLayout();
             this.panel_gender_reg.SuspendLayout();
             this.Admin_MainTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminPageBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_company_upt
@@ -1356,10 +1353,6 @@
             this.Admin_MainTab.TabIndex = 0;
             this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
             // 
-            // adminPageBindingSource
-            // 
-            this.adminPageBindingSource.DataSource = typeof(ProjectAssistant.AdminPage);
-            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -1407,14 +1400,11 @@
             this.panel_gender_reg.ResumeLayout(false);
             this.panel_gender_reg.PerformLayout();
             this.Admin_MainTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adminPageBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource adminPageBindingSource;
         private System.Windows.Forms.TabPage tab_company_upt;
         private System.Windows.Forms.Button button_company_show;
         private System.Windows.Forms.GroupBox groupBox_company_upt;

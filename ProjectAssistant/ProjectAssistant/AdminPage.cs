@@ -267,8 +267,8 @@ namespace ProjectAssistant
             string student_ID = label_studentnumber_show.Text;
 
             //Bring new informations to Student Class
-            stu.name = textbox_studentname.Text;
-            stu.dateofbirth = datepicker_student.Value;
+            stu.name = textbox_studentname_upt.Text;
+            stu.dateofbirth = datepicker_student_upt.Value;
             if (radioButton_male_upt.Checked)
                 stu.gender = radioButton_male_upt.Text;
             else if (radioButton_female_upt.Checked)
@@ -279,14 +279,14 @@ namespace ProjectAssistant
             if(textbox_studentpassword_upt.Text.Length>0)
                 stu.password = textbox_studentpassword_upt.Text;
 
-            db.update_toDatabase("students", "studentName","'" + stu.name + "'", "studentId", student_ID);
-            db.update_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("'yyyy-MM-dd'"),"studentId", student_ID);
-            db.update_toDatabase("students", "studentGender", "'" + stu.gender + "'", "studentId", student_ID);
- //           db.update_toDatabase("students", "studentFaculty", "'" + stu.faculty + "'", "studentId", student_ID);
- //           db.update_toDatabase("students", "studentMajor", "'" + stu.major + "'", "studentId", student_ID);
- //           db.update_toDatabase("students", "studentSemester", "'" + stu.semester + "'", "studentId", student_ID);
- //           if (stu.password.Length>0)
- //               db.update_toDatabase("students", "studentPassword", "'" + stu.password + "'", "studentId", student_ID);
+            db.update_toDatabase("students", "studentName", stu.name, "studentId", student_ID);
+            db.update_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("yyyy-MM-dd"), "studentId", student_ID);
+            db.update_toDatabase("students", "studentGender",  stu.gender , "studentId", student_ID);
+            db.update_toDatabase("students", "studentFaculty",  stu.faculty , "studentId", student_ID);
+            db.update_toDatabase("students", "studentMajor", stu.major, "studentId", student_ID);
+            db.update_toDatabase("students", "studentSemester", stu.semester.ToString(), "studentId", student_ID);
+            if (stu.password.Length > 0)
+               db.update_toDatabase("students", "studentPassword", stu.password , "studentId", student_ID);
 
         }
 
