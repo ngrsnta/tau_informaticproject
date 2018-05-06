@@ -51,6 +51,8 @@
             this.richTextBoxCompanybranchdesicription = new System.Windows.Forms.RichTextBox();
             this.textProjecttitle = new System.Windows.Forms.TextBox();
             this.tabPageCompanyinf = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxCompanyemail = new System.Windows.Forms.TextBox();
             this.labelCompanydec = new System.Windows.Forms.Label();
             this.labelCompanyhis = new System.Windows.Forms.Label();
             this.labelCompanymiss = new System.Windows.Forms.Label();
@@ -58,8 +60,7 @@
             this.richTextBoxCompanyhis = new System.Windows.Forms.RichTextBox();
             this.richTextBoxCompanydec = new System.Windows.Forms.RichTextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.textBoxCompanyemail = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabProject.SuspendLayout();
             this.tabProjectpage.SuspendLayout();
             this.tabNewprojectpage.SuspendLayout();
@@ -92,7 +93,7 @@
             this.tabProjectpage.Location = new System.Drawing.Point(4, 22);
             this.tabProjectpage.Name = "tabProjectpage";
             this.tabProjectpage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProjectpage.Size = new System.Drawing.Size(1079, 1174);
+            this.tabProjectpage.Size = new System.Drawing.Size(1079, 642);
             this.tabProjectpage.TabIndex = 0;
             this.tabProjectpage.Text = "Projects";
             this.tabProjectpage.UseVisualStyleBackColor = true;
@@ -103,7 +104,7 @@
             this.panelProject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelProject.Location = new System.Drawing.Point(3, 3);
             this.panelProject.Name = "panelProject";
-            this.panelProject.Size = new System.Drawing.Size(1073, 1168);
+            this.panelProject.Size = new System.Drawing.Size(1073, 636);
             this.panelProject.TabIndex = 0;
             this.panelProject.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProject_Paint);
             // 
@@ -278,6 +279,7 @@
             // 
             // tabPageCompanyinf
             // 
+            this.tabPageCompanyinf.Controls.Add(this.button1);
             this.tabPageCompanyinf.Controls.Add(this.label10);
             this.tabPageCompanyinf.Controls.Add(this.textBoxCompanyemail);
             this.tabPageCompanyinf.Controls.Add(this.labelCompanydec);
@@ -293,6 +295,22 @@
             this.tabPageCompanyinf.TabIndex = 2;
             this.tabPageCompanyinf.Text = "Company Info";
             this.tabPageCompanyinf.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 633);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Company E-mail";
+            // 
+            // textBoxCompanyemail
+            // 
+            this.textBoxCompanyemail.Location = new System.Drawing.Point(25, 649);
+            this.textBoxCompanyemail.Name = "textBoxCompanyemail";
+            this.textBoxCompanyemail.Size = new System.Drawing.Size(330, 20);
+            this.textBoxCompanyemail.TabIndex = 6;
             // 
             // labelCompanydec
             // 
@@ -345,21 +363,15 @@
             this.richTextBoxCompanydec.TabIndex = 0;
             this.richTextBoxCompanydec.Text = "";
             // 
-            // textBoxCompanyemail
+            // button1
             // 
-            this.textBoxCompanyemail.Location = new System.Drawing.Point(25, 649);
-            this.textBoxCompanyemail.Name = "textBoxCompanyemail";
-            this.textBoxCompanyemail.Size = new System.Drawing.Size(330, 20);
-            this.textBoxCompanyemail.TabIndex = 6;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 633);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Company E-mail";
+            this.button1.Location = new System.Drawing.Point(879, 71);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CompanyPage
             // 
@@ -414,5 +426,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxCompanydec;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxCompanyemail;
+        private System.Windows.Forms.Button button1;
     }
 }

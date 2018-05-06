@@ -14,13 +14,11 @@ namespace ProjectAssistant
     {
         Student st = new Student();
         DataBase db = new DataBase();
-        int id = 123; //Kaan id'yi yollayacak buraya, bu sadece geçici
+        int id = 777777777; //Kaan id'yi yollayacak buraya, bu sadece geçici
 
         public StudentPage()
         {
             
- 
-
             InitializeComponent();
             //Getting info From Database
             st.name = db.select_fromDatabase("studentName", "students", "studentId", id.ToString());
