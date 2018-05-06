@@ -63,6 +63,12 @@
     <Compile Include="AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationListItem.Designer.cs">
+      <DependentUpon>ApplicationListItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company.cs" />
     <Compile Include="CompanyPage.cs">
       <SubType>UserControl</SubType>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationListItem.resx">
+      <DependentUpon>ApplicationListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyPage.resx">
       <DependentUpon>CompanyPage.cs</DependentUpon>
