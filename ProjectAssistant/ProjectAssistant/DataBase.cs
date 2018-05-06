@@ -51,7 +51,7 @@ namespace ProjectAssistant
                 {
                     if (myReader[item].GetType() == a.GetType() || myReader[item].GetType() == anyInt.GetType())
                     {
-                        a = (string)myReader[item];
+                        a = Convert.ToString(myReader[item]);
                     }
                     else
                     {

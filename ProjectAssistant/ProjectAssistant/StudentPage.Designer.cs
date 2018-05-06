@@ -333,7 +333,7 @@
             // 
             this.textBox_studMail.Location = new System.Drawing.Point(62, 320);
             this.textBox_studMail.Name = "textBox_studMail";
-            this.textBox_studMail.Size = new System.Drawing.Size(100, 22);
+            this.textBox_studMail.Size = new System.Drawing.Size(229, 22);
             this.textBox_studMail.TabIndex = 20;
             // 
             // label11
@@ -386,9 +386,9 @@
             this.label_studSemester.BackColor = System.Drawing.Color.DarkGray;
             this.label_studSemester.Location = new System.Drawing.Point(521, 54);
             this.label_studSemester.Name = "label_studSemester";
-            this.label_studSemester.Size = new System.Drawing.Size(16, 17);
+            this.label_studSemester.Size = new System.Drawing.Size(24, 17);
             this.label_studSemester.TabIndex = 14;
-            this.label_studSemester.Text = "6";
+            this.label_studSemester.Text = "12";
             // 
             // label_studMajor
             // 
@@ -474,7 +474,7 @@
             this.label_studID.Name = "label_studID";
             this.label_studID.Size = new System.Drawing.Size(80, 17);
             this.label_studID.TabIndex = 5;
-            this.label_studID.Text = "140501115";
+            this.label_studID.Text = "155555555";
             // 
             // label2
             // 

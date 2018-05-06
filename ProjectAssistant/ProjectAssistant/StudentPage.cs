@@ -22,14 +22,43 @@ namespace ProjectAssistant
  
 
             InitializeComponent();
+            //Getting info From Database
             st.name = db.select_fromDatabase("studentName", "students", "studentId", id.ToString());
             st.dateofbirth = Convert.ToDateTime(db.select_fromDatabase("studentBirthday", "students", "studentId", id.ToString()));
             st.faculty = db.select_fromDatabase("studentFaculty", "students", "studentId", id.ToString());
+            st.semester = Convert.ToInt32(db.select_fromDatabase("studentSemester", "students", "studentId", id.ToString()));
+            st.id_number = Convert.ToInt32(db.select_fromDatabase("studentId", "students", "studentId", id.ToString()));
+            st.gender = db.select_fromDatabase("studentGender", "students", "studentId", id.ToString());
+            st.major = db.select_fromDatabase("studentMajor", "students", "studentId", id.ToString());
+            st.phone = db.select_fromDatabase("studentTelNum", "students", "studentId", id.ToString());
+            st.email = db.select_fromDatabase("studentEmail", "students", "studentId", id.ToString());
+            st.adress = db.select_fromDatabase("studentAdress", "students", "studentId", id.ToString());
+            st.education = db.select_fromDatabase("studentHistory","students", "studentId", id.ToString());
+            st.experience = db.select_fromDatabase("studentExprience", "students", "studentId", id.ToString());
+            st.certificates = db.select_fromDatabase("studentCertifcates", "students", "studentId", id.ToString());
+            st.hobbies = db.select_fromDatabase("studentActivities", "students", "studentId", id.ToString());
+            st.projects = db.select_fromDatabase("studentProjects", "students", "studentId", id.ToString());
+            st.professions = db.select_fromDatabase("studentProfessions", "students", "studentId", id.ToString());
+            st.other = db.select_fromDatabase("studentOther", "students", "studentId", id.ToString());
             
+            //Printing info to the Labels
             label_studName.Text = st.name;
             label_studDateOfBirth.Text = st.dateofbirth.ToShortDateString();
             label_studFaculty.Text = st.faculty;
-            
+            label_studSemester.Text = st.semester.ToString();
+            label_studID.Text = st.id_number.ToString();
+            label_studGender.Text = st.gender;
+            label_studMajor.Text = st.major;
+            textBox_studPhoneNumber.Text = st.phone;
+            textBox_studMail.Text = st.email;
+            richTextBox_studAdress.Text = st.adress;
+            richTextBox_studEducation.Text = st.education;
+            richTextBox_studWork.Text = st.experience;
+            richTextBox_studCertificates.Text = st.certificates;
+            richTextBox_studCurricular.Text = st.hobbies;
+            richTextBox_studProjects.Text = st.projects;
+            richTextBox_studProfessions.Text = st.professions;
+            richTextBox_studFurtherInfo.Text = st.other;
 
             for (int i = 0; i < 20; i++)
             {
