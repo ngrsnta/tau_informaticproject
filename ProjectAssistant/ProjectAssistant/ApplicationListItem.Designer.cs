@@ -164,6 +164,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(613, 54);
             this.label1.Name = "label1";
@@ -175,6 +176,7 @@
             // 
             this.textBox_applyStatus.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_applyStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_applyStatus.Enabled = false;
             this.textBox_applyStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_applyStatus.Location = new System.Drawing.Point(647, 77);
             this.textBox_applyStatus.Name = "textBox_applyStatus";
