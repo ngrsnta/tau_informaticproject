@@ -68,7 +68,7 @@ namespace ProjectAssistant
             for(int i = 0; i < list.Count; i++)
             {
                 Label lbl = new Label();
-                lbl.Location = new Point(5, (i * 5));
+                lbl.Location = new Point(5, (i * 50));
                 lbl.Text = list[i];
                 this.Controls.Add(lbl);
             }

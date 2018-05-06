@@ -189,15 +189,15 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox_projectTitle;
-        private System.Windows.Forms.RichTextBox richTextBox_projectArea;
-        private System.Windows.Forms.RichTextBox richTextBox_description;
-        private System.Windows.Forms.RichTextBox richTextBox_projectDeadline;
-        private System.Windows.Forms.Label label_projectRemainingDays;
-        private System.Windows.Forms.RichTextBox richTextBox_companyName;
-        private System.Windows.Forms.Label label_projectDurationSign;
-        private System.Windows.Forms.Label label_projectStart;
-        private System.Windows.Forms.Label label_projectEnd;
-        private System.Windows.Forms.Label label_dontTouch;
+        public System.Windows.Forms.RichTextBox richTextBox_projectTitle;
+        public System.Windows.Forms.RichTextBox richTextBox_projectArea;
+        public System.Windows.Forms.RichTextBox richTextBox_description;
+        public System.Windows.Forms.RichTextBox richTextBox_projectDeadline;
+        public System.Windows.Forms.Label label_projectRemainingDays;
+        public System.Windows.Forms.RichTextBox richTextBox_companyName;
+        public System.Windows.Forms.Label label_projectDurationSign;
+        public System.Windows.Forms.Label label_projectStart;
+        public System.Windows.Forms.Label label_projectEnd;
+        public System.Windows.Forms.Label label_dontTouch;
     }
 }
