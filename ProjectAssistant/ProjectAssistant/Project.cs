@@ -15,14 +15,10 @@ namespace ProjectAssistant
             public string projectdesc { get; set; } = "";
             public string areaofinterest { get; set; } = "";
             public string skills { get; set; } = "";
-            public string deadline { get; set; } = "";
-            public string start { get; set; } = "";
-            public string end { get; set; } = "";
-            public string email { get; set; } = "";
-            public string companydec { get; set; } = "";
+            public DateTime deadline { get; set; }
+            public DateTime start { get; set; }
+            public DateTime end { get; set; }
             public string branchdec { get; set; } = "";
-            public string companyhis { get; set; } = "";
-            public string companymission { get; set; } = "";
 
     }
     

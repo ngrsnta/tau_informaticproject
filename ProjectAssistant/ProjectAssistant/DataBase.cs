@@ -103,7 +103,7 @@ namespace ProjectAssistant
         {
             try
             {
-                query = "update " + table + " set " + item + " = " + new_value + " where " + equal1 +" = "+ equal2+ ";";
+                query = "update " + table + " set " + item + " = '" + new_value + "' where " + equal1 +" = "+ equal2+ ";";
                 myCommand = new MySqlCommand(query, conn);
                 conn.Open();
                 myCommand.ExecuteNonQuery();

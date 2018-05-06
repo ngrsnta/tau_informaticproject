@@ -14,6 +14,8 @@ namespace ProjectAssistant
             public string password { get; set; } = "";
             public string description { get; set; } = "";
             public string email { get; set; } = "";
+            public string history { get; set; } = "";
+            public string mission { get; set; } = "";
     }
 
 
