@@ -30,7 +30,6 @@
         {
             this.student_mainTab = new System.Windows.Forms.TabControl();
             this.studPage_projects = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.studPage_applications = new System.Windows.Forms.TabPage();
             this.studPage_editInfo = new System.Windows.Forms.TabPage();
             this.button_SaveChanges = new System.Windows.Forms.Button();
@@ -70,8 +69,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_studName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.student_mainTab.SuspendLayout();
-            this.studPage_projects.SuspendLayout();
             this.studPage_editInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +92,6 @@
             // studPage_projects
             // 
             this.studPage_projects.AutoScroll = true;
-            this.studPage_projects.Controls.Add(this.label4);
             this.studPage_projects.Location = new System.Drawing.Point(4, 25);
             this.studPage_projects.Name = "studPage_projects";
             this.studPage_projects.Padding = new System.Windows.Forms.Padding(3);
@@ -101,15 +99,6 @@
             this.studPage_projects.TabIndex = 0;
             this.studPage_projects.Text = "Projects";
             this.studPage_projects.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(482, 1031);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "label4";
             // 
             // studPage_applications
             // 
@@ -124,6 +113,7 @@
             // studPage_editInfo
             // 
             this.studPage_editInfo.AutoScroll = true;
+            this.studPage_editInfo.Controls.Add(this.button1);
             this.studPage_editInfo.Controls.Add(this.button_SaveChanges);
             this.studPage_editInfo.Controls.Add(this.label20);
             this.studPage_editInfo.Controls.Add(this.richTextBox_studFurtherInfo);
@@ -503,6 +493,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(658, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 27);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Preview Profile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StudentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,8 +512,6 @@
             this.Name = "StudentPage";
             this.Size = new System.Drawing.Size(1087, 668);
             this.student_mainTab.ResumeLayout(false);
-            this.studPage_projects.ResumeLayout(false);
-            this.studPage_projects.PerformLayout();
             this.studPage_editInfo.ResumeLayout(false);
             this.studPage_editInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -538,7 +537,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label_studDateOfBirth;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox_studPhoneNumber;
         private System.Windows.Forms.Label label11;
@@ -563,5 +561,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.RichTextBox richTextBox_studFurtherInfo;
         private System.Windows.Forms.Button button_SaveChanges;
+        private System.Windows.Forms.Button button1;
     }
 }

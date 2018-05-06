@@ -16,5 +16,25 @@ namespace ProjectAssistant
         {
             InitializeComponent();
         }
+
+        private void StudentProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_studEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_studTelNum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

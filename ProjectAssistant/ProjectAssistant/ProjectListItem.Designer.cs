@@ -44,11 +44,13 @@
             // 
             this.richTextBox_projectTitle.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox_projectTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_projectTitle.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBox_projectTitle.Enabled = false;
             this.richTextBox_projectTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_projectTitle.Location = new System.Drawing.Point(16, 15);
             this.richTextBox_projectTitle.Name = "richTextBox_projectTitle";
-            this.richTextBox_projectTitle.Size = new System.Drawing.Size(176, 24);
+            this.richTextBox_projectTitle.ReadOnly = true;
+            this.richTextBox_projectTitle.Size = new System.Drawing.Size(292, 24);
             this.richTextBox_projectTitle.TabIndex = 0;
             this.richTextBox_projectTitle.Text = "Project Title here";
             // 
@@ -174,9 +176,11 @@
             this.Controls.Add(this.richTextBox_description);
             this.Controls.Add(this.richTextBox_projectArea);
             this.Controls.Add(this.richTextBox_projectTitle);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ProjectListItem";
             this.Size = new System.Drawing.Size(779, 153);
             this.Load += new System.EventHandler(this.ProjectListItem_Load);
+            this.MouseHover += new System.EventHandler(this.ProjectListItem_MouseHover);
             this.ResumeLayout(false);
             this.PerformLayout();
 

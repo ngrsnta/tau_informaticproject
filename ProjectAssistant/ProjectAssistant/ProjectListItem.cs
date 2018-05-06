@@ -15,6 +15,7 @@ namespace ProjectAssistant
         public ProjectListItem()
         {
             InitializeComponent();
+           
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -35,6 +36,10 @@ namespace ProjectAssistant
         private void label_projectStart_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ProjectListItem_MouseHover(object sender, EventArgs e)
+        {
         }
     }
 }
