@@ -14,7 +14,7 @@ namespace ProjectAssistant
     {
         Student st = new Student();
         DataBase db = new DataBase();
-        int id = 777777777; //Kaan id'yi yollayacak buraya, bu sadece geçici
+        int id = 111111111; //Kaan id'yi yollayacak buraya, bu sadece geçici
 
         public StudentPage()
         {
