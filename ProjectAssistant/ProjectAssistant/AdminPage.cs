@@ -21,7 +21,6 @@ namespace ProjectAssistant
 
         }
 
-        
         void Delete_Text()  //When changed to a Tab, delete all Text Boxes
         {
             var selectedTab = Admin_MainTab.SelectedTab;
@@ -51,6 +50,7 @@ namespace ProjectAssistant
             // Get Selected Tab
             var selectedTab = Admin_MainTab.SelectedTab;
 
+
             foreach (Control ctrl in selectedTab.Controls)
             {
                 if (ctrl is TextBox)
@@ -71,7 +71,7 @@ namespace ProjectAssistant
             }
         }
 
-        
+        #region TextBox Limitations KeypressEvent
 
         private void textbox_studentnumber_KeyPress(object sender, KeyPressEventArgs keypress)
         {
@@ -104,6 +104,9 @@ namespace ProjectAssistant
                 keypress.Handled = true;
             }
         }
+
+        #endregion
+
 
         #region Student Register
 
@@ -207,7 +210,6 @@ namespace ProjectAssistant
 
         #endregion
 
-
         #region Student Update: 1. Show Student - 2. Update Student - 3. Delete Student
 
         //1. Show Student Information
@@ -217,6 +219,7 @@ namespace ProjectAssistant
             string student_ID = textbox_studentnumber_show.Text;
             
             //From Database to Student Class
+            stu.id_number= Convert.ToInt32(db.select_fromDatabase("studentId", "students", "studentId", student_ID));
             stu.name=db.select_fromDatabase("studentName", "students", "studentId", student_ID);
             stu.dateofbirth= Convert.ToDateTime(db.select_fromDatabase("studentBirthday", "students", "studentId", student_ID));
             stu.gender=db.select_fromDatabase("studentGender", "students", "studentId", student_ID);
@@ -229,6 +232,7 @@ namespace ProjectAssistant
             groupBox_student_del.Visible = true;
 
             //Show Student Info from Class to Labels
+            label_studentnumber_show.Text = stu.id_number.ToString();
             label_studentname_show.Text = stu.name;
             label_studentdate_show.Text = stu.dateofbirth.ToString("dd.MM.yyyy");
             label_studentgender_show.Text = stu.gender;
@@ -250,10 +254,9 @@ namespace ProjectAssistant
             }
             textbox_studentfaculty_upt.Text = stu.faculty;
             textbox_studentmajor_upt.Text = stu.major;
-//          textbox_studentsemester.Text = stu.semester.ToString();
             comboBox_studentsemester_upt.Text = stu.semester.ToString();
 
-
+            
 
         }
 
@@ -261,32 +264,111 @@ namespace ProjectAssistant
         private void button_student_upt_Click(object sender, EventArgs e)
         {
             Student stu = new Student();
+            string student_ID = label_studentnumber_show.Text;
 
+            //Bring new informations to Student Class
             stu.name = textbox_studentname.Text;
             stu.dateofbirth = datepicker_student.Value;
-            if (radioButton_male_reg.Checked)
+            if (radioButton_male_upt.Checked)
                 stu.gender = radioButton_male_upt.Text;
-            else if (radioButton_female_reg.Checked)
+            else if (radioButton_female_upt.Checked)
                 stu.gender = radioButton_female_upt.Text;
             stu.faculty = textbox_studentfaculty_upt.Text;
             stu.major = textbox_studentmajor_upt.Text;
             stu.semester = Convert.ToInt32(comboBox_studentsemester_upt.Text);
             if(textbox_studentpassword_upt.Text.Length>0)
                 stu.password = textbox_studentpassword_upt.Text;
-/*
-            db.update_toDatabase("students", "studentName", stu.name);
-            db.update_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("dd.MM.yyyy"));
-            db.update_toDatabase("students", "studentGender", stu.gender);
-            db.update_toDatabase("students", "studentFaculty", stu.faculty);
-            db.update_toDatabase("students", "studentMajor", stu.major);
-            db.update_toDatabase("students", "studentSemester", stu.semester.ToString());
-            if(stu.password.Length>0)
-                db.update_toDatabase("students", "studentPassword", stu.password);*/
+
+            db.update_toDatabase("students", "studentName","'" + stu.name + "'", "studentId", student_ID);
+            db.update_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("'yyyy-MM-dd'"),"studentId", student_ID);
+            db.update_toDatabase("students", "studentGender", "'" + stu.gender + "'", "studentId", student_ID);
+ //           db.update_toDatabase("students", "studentFaculty", "'" + stu.faculty + "'", "studentId", student_ID);
+ //           db.update_toDatabase("students", "studentMajor", "'" + stu.major + "'", "studentId", student_ID);
+ //           db.update_toDatabase("students", "studentSemester", "'" + stu.semester + "'", "studentId", student_ID);
+ //           if (stu.password.Length>0)
+ //               db.update_toDatabase("students", "studentPassword", "'" + stu.password + "'", "studentId", student_ID);
+
+        }
+
+        //3. Delete Student
+        private void button_student_del_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
 
-    
+        #region Firma Register
+
+        private void button_company_reg_Click(object sender, EventArgs e)
+        {
+            //Creating a new Student Class to store inputs in order to send them to the Database
+            Company comp = new Company();
+
+            //Storing inputs to Class
+            comp.id_number = Convert.ToInt32(textbox_companyID.Text);
+            comp.name = textbox_companyname.Text;
+            comp.password = textbox_companypassword.Text;
+
+            //Insert Registration Infos from Class to Database
+            db.insert_toDatabase("companies", "companyId, companyPassword, companyName",
+                                comp.id_number + ", '" + comp.password + "', '" + comp.name + "'");
+
+        }
+
+        #endregion
+
+        #region Firma Update: 1. Show Firma - 2. Update Firma - 3. Delete Firma
+
+        private void button_company_show_Click(object sender, EventArgs e)
+        {
+                Company comp = new Company();
+                string company_ID = textbox_company_show.Text;
+
+                //From Database to Student Class
+                comp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "companies", "companyId", company_ID));
+                comp.name = db.select_fromDatabase("companyName", "companies", "companyId", company_ID);
+                
+                //Make the update panels visible
+                groupBox_company_upt.Visible = true;
+                groupBox_student_del.Visible = true;
+
+                //Show Student Info from Class to Labels
+                label_companyID_show.Text = comp.id_number.ToString();
+                label_companyname_show.Text = comp.name;
+
+                //Bring Student Info from Class to Update Panel
+                textbox_studentname_upt.Text = comp.name;
+            
+        }
+
+        //2. Update Student Informations
+        private void button_company_update_Click(object sender, EventArgs e)
+        {
+           
+            Company comp = new Company();
+            string company_ID = label_studentnumber_show.Text;
+
+            //Bring new informations to Student Class
+            comp.name = textbox_companyname_upt.Text;
+            comp.password = textbox_companypassword_upt.Text;
+       
+            //Update infos from Class to Database
+            db.update_toDatabase("companies", "companyName", "'" + comp.name + "'", "companyId", company_ID);
+            db.update_toDatabase("companies", "companyPassword", "'"+ comp.password, "companyId", company_ID);
+
+        }
+
+
+        //3. Delete Company
+        private void button_company_del_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+
     }
 }
 

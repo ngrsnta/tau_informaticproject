@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tab_firma_upt = new System.Windows.Forms.TabPage();
+            this.tab_company_upt = new System.Windows.Forms.TabPage();
             this.groupBox_firma_del = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel_firma_show = new System.Windows.Forms.TableLayoutPanel();
-            this.panel_firmaID_show = new System.Windows.Forms.Panel();
-            this.label_firmaID_show = new System.Windows.Forms.Label();
-            this.panel_firmaname_show = new System.Windows.Forms.Panel();
-            this.button_firma_del = new System.Windows.Forms.Button();
-            this.label_firmaname_show = new System.Windows.Forms.Label();
-            this.groupBox_firma_show = new System.Windows.Forms.GroupBox();
-            this.label_firma_show = new System.Windows.Forms.Label();
-            this.button_firma_show = new System.Windows.Forms.Button();
-            this.textbox_firma_show = new System.Windows.Forms.TextBox();
-            this.groupBox_firma_upt = new System.Windows.Forms.GroupBox();
-            this.button_firma_update = new System.Windows.Forms.Button();
-            this.label_firmapassword_upt = new System.Windows.Forms.Label();
-            this.label_firmaname_upt = new System.Windows.Forms.Label();
-            this.textbox_firmapassword_upt = new System.Windows.Forms.TextBox();
-            this.textbox_firmaname_upt = new System.Windows.Forms.TextBox();
-            this.label_update_firma = new System.Windows.Forms.Label();
-            this.tab_firma_reg = new System.Windows.Forms.TabPage();
-            this.groupBox_firma_reg = new System.Windows.Forms.GroupBox();
-            this.label_firmaID = new System.Windows.Forms.Label();
-            this.label_firma_name = new System.Windows.Forms.Label();
-            this.label_firma_surname = new System.Windows.Forms.Label();
-            this.textbox_firmaID = new System.Windows.Forms.TextBox();
-            this.button_firma_reg = new System.Windows.Forms.Button();
-            this.textbox_firmapassword = new System.Windows.Forms.TextBox();
-            this.textbox_firmaname = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel_company_show = new System.Windows.Forms.TableLayoutPanel();
+            this.panel_companyID_show = new System.Windows.Forms.Panel();
+            this.label_companyID_show = new System.Windows.Forms.Label();
+            this.panel_companyname_show = new System.Windows.Forms.Panel();
+            this.button_company_del = new System.Windows.Forms.Button();
+            this.label_companyname_show = new System.Windows.Forms.Label();
+            this.groupBox_company_show = new System.Windows.Forms.GroupBox();
+            this.label_company_show = new System.Windows.Forms.Label();
+            this.button_company_show = new System.Windows.Forms.Button();
+            this.textbox_company_show = new System.Windows.Forms.TextBox();
+            this.groupBox_company_upt = new System.Windows.Forms.GroupBox();
+            this.button_company_update = new System.Windows.Forms.Button();
+            this.label_companypassword_upt = new System.Windows.Forms.Label();
+            this.label_companyname_upt = new System.Windows.Forms.Label();
+            this.textbox_companypassword_upt = new System.Windows.Forms.TextBox();
+            this.textbox_companyname_upt = new System.Windows.Forms.TextBox();
+            this.label_company_upt = new System.Windows.Forms.Label();
+            this.tab_company_reg = new System.Windows.Forms.TabPage();
+            this.groupBox_company_reg = new System.Windows.Forms.GroupBox();
+            this.label_companyID = new System.Windows.Forms.Label();
+            this.label_company_name = new System.Windows.Forms.Label();
+            this.label_company_surname = new System.Windows.Forms.Label();
+            this.textbox_companyID = new System.Windows.Forms.TextBox();
+            this.button_company_reg = new System.Windows.Forms.Button();
+            this.textbox_companypassword = new System.Windows.Forms.TextBox();
+            this.textbox_companyname = new System.Windows.Forms.TextBox();
             this.label_test7 = new System.Windows.Forms.Label();
             this.label_test6 = new System.Windows.Forms.Label();
             this.label_test5 = new System.Windows.Forms.Label();
-            this.label_reg_firma = new System.Windows.Forms.Label();
+            this.label_company_reg = new System.Windows.Forms.Label();
             this.tab_student_upt = new System.Windows.Forms.TabPage();
             this.groupBox_student_del = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel_student_show = new System.Windows.Forms.TableLayoutPanel();
@@ -79,6 +79,7 @@
             this.button_student_show = new System.Windows.Forms.Button();
             this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.groupBox_student_upt = new System.Windows.Forms.GroupBox();
+            this.comboBox_studentsemester_upt = new System.Windows.Forms.ComboBox();
             this.panel_gender_upt = new System.Windows.Forms.Panel();
             this.radioButton_female_upt = new System.Windows.Forms.RadioButton();
             this.radioButton_male_upt = new System.Windows.Forms.RadioButton();
@@ -131,17 +132,16 @@
             this.label_test2 = new System.Windows.Forms.Label();
             this.label_reg_student = new System.Windows.Forms.Label();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
-            this.comboBox_studentsemester_upt = new System.Windows.Forms.ComboBox();
             this.adminPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tab_firma_upt.SuspendLayout();
+            this.tab_company_upt.SuspendLayout();
             this.groupBox_firma_del.SuspendLayout();
-            this.tableLayoutPanel_firma_show.SuspendLayout();
-            this.panel_firmaID_show.SuspendLayout();
-            this.panel_firmaname_show.SuspendLayout();
-            this.groupBox_firma_show.SuspendLayout();
-            this.groupBox_firma_upt.SuspendLayout();
-            this.tab_firma_reg.SuspendLayout();
-            this.groupBox_firma_reg.SuspendLayout();
+            this.tableLayoutPanel_company_show.SuspendLayout();
+            this.panel_companyID_show.SuspendLayout();
+            this.panel_companyname_show.SuspendLayout();
+            this.groupBox_company_show.SuspendLayout();
+            this.groupBox_company_upt.SuspendLayout();
+            this.tab_company_reg.SuspendLayout();
+            this.groupBox_company_reg.SuspendLayout();
             this.tab_student_upt.SuspendLayout();
             this.groupBox_student_del.SuspendLayout();
             this.tableLayoutPanel_student_show.SuspendLayout();
@@ -159,309 +159,313 @@
             ((System.ComponentModel.ISupportInitialize)(this.adminPageBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tab_firma_upt
+            // tab_company_upt
             // 
-            this.tab_firma_upt.Controls.Add(this.groupBox_firma_del);
-            this.tab_firma_upt.Controls.Add(this.groupBox_firma_show);
-            this.tab_firma_upt.Controls.Add(this.groupBox_firma_upt);
-            this.tab_firma_upt.Controls.Add(this.label_update_firma);
-            this.tab_firma_upt.Location = new System.Drawing.Point(4, 51);
-            this.tab_firma_upt.Name = "tab_firma_upt";
-            this.tab_firma_upt.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_firma_upt.Size = new System.Drawing.Size(1985, 1178);
-            this.tab_firma_upt.TabIndex = 3;
-            this.tab_firma_upt.Text = "Firma Update";
-            this.tab_firma_upt.UseVisualStyleBackColor = true;
+            this.tab_company_upt.Controls.Add(this.groupBox_firma_del);
+            this.tab_company_upt.Controls.Add(this.groupBox_company_show);
+            this.tab_company_upt.Controls.Add(this.groupBox_company_upt);
+            this.tab_company_upt.Controls.Add(this.label_company_upt);
+            this.tab_company_upt.Location = new System.Drawing.Point(4, 51);
+            this.tab_company_upt.Name = "tab_company_upt";
+            this.tab_company_upt.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_company_upt.Size = new System.Drawing.Size(1985, 1178);
+            this.tab_company_upt.TabIndex = 3;
+            this.tab_company_upt.Text = "Company Update";
+            this.tab_company_upt.UseVisualStyleBackColor = true;
             // 
             // groupBox_firma_del
             // 
-            this.groupBox_firma_del.Controls.Add(this.tableLayoutPanel_firma_show);
+            this.groupBox_firma_del.Controls.Add(this.tableLayoutPanel_company_show);
             this.groupBox_firma_del.Location = new System.Drawing.Point(1185, 371);
             this.groupBox_firma_del.Name = "groupBox_firma_del";
             this.groupBox_firma_del.Size = new System.Drawing.Size(437, 470);
             this.groupBox_firma_del.TabIndex = 12;
             this.groupBox_firma_del.TabStop = false;
+            this.groupBox_firma_del.Visible = false;
             // 
-            // tableLayoutPanel_firma_show
+            // tableLayoutPanel_company_show
             // 
-            this.tableLayoutPanel_firma_show.ColumnCount = 1;
-            this.tableLayoutPanel_firma_show.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_firma_show.Controls.Add(this.panel_firmaID_show, 0, 0);
-            this.tableLayoutPanel_firma_show.Controls.Add(this.panel_firmaname_show, 0, 1);
-            this.tableLayoutPanel_firma_show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_firma_show.Location = new System.Drawing.Point(3, 35);
-            this.tableLayoutPanel_firma_show.Name = "tableLayoutPanel_firma_show";
-            this.tableLayoutPanel_firma_show.RowCount = 2;
-            this.tableLayoutPanel_firma_show.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.56863F));
-            this.tableLayoutPanel_firma_show.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.43137F));
-            this.tableLayoutPanel_firma_show.Size = new System.Drawing.Size(431, 432);
-            this.tableLayoutPanel_firma_show.TabIndex = 13;
-            this.tableLayoutPanel_firma_show.TabStop = true;
+            this.tableLayoutPanel_company_show.ColumnCount = 1;
+            this.tableLayoutPanel_company_show.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_company_show.Controls.Add(this.panel_companyID_show, 0, 0);
+            this.tableLayoutPanel_company_show.Controls.Add(this.panel_companyname_show, 0, 1);
+            this.tableLayoutPanel_company_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel_company_show.Location = new System.Drawing.Point(3, 35);
+            this.tableLayoutPanel_company_show.Name = "tableLayoutPanel_company_show";
+            this.tableLayoutPanel_company_show.RowCount = 2;
+            this.tableLayoutPanel_company_show.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.56863F));
+            this.tableLayoutPanel_company_show.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.43137F));
+            this.tableLayoutPanel_company_show.Size = new System.Drawing.Size(431, 432);
+            this.tableLayoutPanel_company_show.TabIndex = 13;
+            this.tableLayoutPanel_company_show.TabStop = true;
             // 
-            // panel_firmaID_show
+            // panel_companyID_show
             // 
-            this.panel_firmaID_show.Controls.Add(this.label_firmaID_show);
-            this.panel_firmaID_show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_firmaID_show.Location = new System.Drawing.Point(3, 3);
-            this.panel_firmaID_show.Name = "panel_firmaID_show";
-            this.panel_firmaID_show.Size = new System.Drawing.Size(425, 87);
-            this.panel_firmaID_show.TabIndex = 14;
-            this.panel_firmaID_show.TabStop = true;
+            this.panel_companyID_show.Controls.Add(this.label_companyID_show);
+            this.panel_companyID_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_companyID_show.Location = new System.Drawing.Point(3, 3);
+            this.panel_companyID_show.Name = "panel_companyID_show";
+            this.panel_companyID_show.Size = new System.Drawing.Size(425, 87);
+            this.panel_companyID_show.TabIndex = 14;
+            this.panel_companyID_show.TabStop = true;
             // 
-            // label_firmaID_show
+            // label_companyID_show
             // 
-            this.label_firmaID_show.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_firmaID_show.AutoSize = true;
-            this.label_firmaID_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_firmaID_show.Location = new System.Drawing.Point(19, 29);
-            this.label_firmaID_show.Name = "label_firmaID_show";
-            this.label_firmaID_show.Size = new System.Drawing.Size(124, 34);
-            this.label_firmaID_show.TabIndex = 4;
-            this.label_firmaID_show.Text = "Firma ID";
-            this.label_firmaID_show.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_companyID_show.AutoSize = true;
+            this.label_companyID_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_companyID_show.Location = new System.Drawing.Point(17, 23);
+            this.label_companyID_show.Name = "label_companyID_show";
+            this.label_companyID_show.Size = new System.Drawing.Size(124, 34);
+            this.label_companyID_show.TabIndex = 4;
+            this.label_companyID_show.Text = "Firma ID";
+            this.label_companyID_show.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel_firmaname_show
+            // panel_companyname_show
             // 
-            this.panel_firmaname_show.Controls.Add(this.button_firma_del);
-            this.panel_firmaname_show.Controls.Add(this.label_firmaname_show);
-            this.panel_firmaname_show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_firmaname_show.Location = new System.Drawing.Point(3, 96);
-            this.panel_firmaname_show.Name = "panel_firmaname_show";
-            this.panel_firmaname_show.Size = new System.Drawing.Size(425, 333);
-            this.panel_firmaname_show.TabIndex = 15;
-            this.panel_firmaname_show.TabStop = true;
+            this.panel_companyname_show.Controls.Add(this.button_company_del);
+            this.panel_companyname_show.Controls.Add(this.label_companyname_show);
+            this.panel_companyname_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_companyname_show.Location = new System.Drawing.Point(3, 96);
+            this.panel_companyname_show.Name = "panel_companyname_show";
+            this.panel_companyname_show.Size = new System.Drawing.Size(425, 333);
+            this.panel_companyname_show.TabIndex = 15;
+            this.panel_companyname_show.TabStop = true;
             // 
-            // button_firma_del
+            // button_company_del
             // 
-            this.button_firma_del.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.button_firma_del.Location = new System.Drawing.Point(130, 182);
-            this.button_firma_del.Name = "button_firma_del";
-            this.button_firma_del.Size = new System.Drawing.Size(172, 61);
-            this.button_firma_del.TabIndex = 16;
-            this.button_firma_del.Text = "Delete";
-            this.button_firma_del.UseVisualStyleBackColor = true;
+            this.button_company_del.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.button_company_del.Location = new System.Drawing.Point(130, 191);
+            this.button_company_del.Name = "button_company_del";
+            this.button_company_del.Size = new System.Drawing.Size(172, 61);
+            this.button_company_del.TabIndex = 16;
+            this.button_company_del.Text = "Delete";
+            this.button_company_del.UseVisualStyleBackColor = true;
+            this.button_company_del.Click += new System.EventHandler(this.button_company_del_Click);
             // 
-            // label_firmaname_show
+            // label_companyname_show
             // 
-            this.label_firmaname_show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_firmaname_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_firmaname_show.Location = new System.Drawing.Point(0, 0);
-            this.label_firmaname_show.Name = "label_firmaname_show";
-            this.label_firmaname_show.Padding = new System.Windows.Forms.Padding(18, 15, 0, 0);
-            this.label_firmaname_show.Size = new System.Drawing.Size(425, 333);
-            this.label_firmaname_show.TabIndex = 5;
-            this.label_firmaname_show.Text = "Firma Name";
+            this.label_companyname_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_companyname_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_companyname_show.Location = new System.Drawing.Point(0, 0);
+            this.label_companyname_show.Name = "label_companyname_show";
+            this.label_companyname_show.Padding = new System.Windows.Forms.Padding(18, 13, 0, 0);
+            this.label_companyname_show.Size = new System.Drawing.Size(425, 333);
+            this.label_companyname_show.TabIndex = 5;
+            this.label_companyname_show.Text = "Firma Name";
             // 
-            // groupBox_firma_show
+            // groupBox_company_show
             // 
-            this.groupBox_firma_show.Controls.Add(this.label_firma_show);
-            this.groupBox_firma_show.Controls.Add(this.button_firma_show);
-            this.groupBox_firma_show.Controls.Add(this.textbox_firma_show);
-            this.groupBox_firma_show.Location = new System.Drawing.Point(446, 162);
-            this.groupBox_firma_show.Name = "groupBox_firma_show";
-            this.groupBox_firma_show.Size = new System.Drawing.Size(1176, 148);
-            this.groupBox_firma_show.TabIndex = 2;
-            this.groupBox_firma_show.TabStop = false;
+            this.groupBox_company_show.Controls.Add(this.label_company_show);
+            this.groupBox_company_show.Controls.Add(this.button_company_show);
+            this.groupBox_company_show.Controls.Add(this.textbox_company_show);
+            this.groupBox_company_show.Location = new System.Drawing.Point(446, 162);
+            this.groupBox_company_show.Name = "groupBox_company_show";
+            this.groupBox_company_show.Size = new System.Drawing.Size(1176, 148);
+            this.groupBox_company_show.TabIndex = 2;
+            this.groupBox_company_show.TabStop = false;
             // 
-            // label_firma_show
+            // label_company_show
             // 
-            this.label_firma_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_firma_show.AutoSize = true;
-            this.label_firma_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_firma_show.Location = new System.Drawing.Point(48, 65);
-            this.label_firma_show.Name = "label_firma_show";
-            this.label_firma_show.Size = new System.Drawing.Size(109, 30);
-            this.label_firma_show.TabIndex = 3;
-            this.label_firma_show.Text = "Firma ID";
+            this.label_company_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_company_show.AutoSize = true;
+            this.label_company_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_company_show.Location = new System.Drawing.Point(30, 65);
+            this.label_company_show.Name = "label_company_show";
+            this.label_company_show.Size = new System.Drawing.Size(171, 30);
+            this.label_company_show.TabIndex = 3;
+            this.label_company_show.Text = "Company ID:";
             // 
-            // button_firma_show
+            // button_company_show
             // 
-            this.button_firma_show.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button_company_show.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_firma_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.button_firma_show.Location = new System.Drawing.Point(949, 51);
-            this.button_firma_show.Name = "button_firma_show";
-            this.button_firma_show.Size = new System.Drawing.Size(172, 57);
-            this.button_firma_show.TabIndex = 5;
-            this.button_firma_show.Text = "Show";
-            this.button_firma_show.UseVisualStyleBackColor = true;
+            this.button_company_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.button_company_show.Location = new System.Drawing.Point(875, 50);
+            this.button_company_show.Name = "button_company_show";
+            this.button_company_show.Size = new System.Drawing.Size(172, 57);
+            this.button_company_show.TabIndex = 5;
+            this.button_company_show.Text = "Show";
+            this.button_company_show.UseVisualStyleBackColor = true;
+            this.button_company_show.Click += new System.EventHandler(this.button_company_show_Click);
             // 
-            // textbox_firma_show
+            // textbox_company_show
             // 
-            this.textbox_firma_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textbox_firma_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_firma_show.Location = new System.Drawing.Point(297, 62);
-            this.textbox_firma_show.Name = "textbox_firma_show";
-            this.textbox_firma_show.Size = new System.Drawing.Size(484, 36);
-            this.textbox_firma_show.TabIndex = 4;
+            this.textbox_company_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textbox_company_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_company_show.Location = new System.Drawing.Point(319, 62);
+            this.textbox_company_show.Name = "textbox_company_show";
+            this.textbox_company_show.Size = new System.Drawing.Size(366, 36);
+            this.textbox_company_show.TabIndex = 4;
             // 
-            // groupBox_firma_upt
+            // groupBox_company_upt
             // 
-            this.groupBox_firma_upt.Controls.Add(this.button_firma_update);
-            this.groupBox_firma_upt.Controls.Add(this.label_firmapassword_upt);
-            this.groupBox_firma_upt.Controls.Add(this.label_firmaname_upt);
-            this.groupBox_firma_upt.Controls.Add(this.textbox_firmapassword_upt);
-            this.groupBox_firma_upt.Controls.Add(this.textbox_firmaname_upt);
-            this.groupBox_firma_upt.Location = new System.Drawing.Point(446, 371);
-            this.groupBox_firma_upt.Name = "groupBox_firma_upt";
-            this.groupBox_firma_upt.Size = new System.Drawing.Size(712, 470);
-            this.groupBox_firma_upt.TabIndex = 6;
-            this.groupBox_firma_upt.TabStop = false;
+            this.groupBox_company_upt.Controls.Add(this.button_company_update);
+            this.groupBox_company_upt.Controls.Add(this.label_companypassword_upt);
+            this.groupBox_company_upt.Controls.Add(this.label_companyname_upt);
+            this.groupBox_company_upt.Controls.Add(this.textbox_companypassword_upt);
+            this.groupBox_company_upt.Controls.Add(this.textbox_companyname_upt);
+            this.groupBox_company_upt.Location = new System.Drawing.Point(446, 371);
+            this.groupBox_company_upt.Name = "groupBox_company_upt";
+            this.groupBox_company_upt.Size = new System.Drawing.Size(712, 470);
+            this.groupBox_company_upt.TabIndex = 6;
+            this.groupBox_company_upt.TabStop = false;
+            this.groupBox_company_upt.Visible = false;
             // 
-            // button_firma_update
+            // button_company_update
             // 
-            this.button_firma_update.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.button_firma_update.Location = new System.Drawing.Point(392, 309);
-            this.button_firma_update.Name = "button_firma_update";
-            this.button_firma_update.Size = new System.Drawing.Size(172, 61);
-            this.button_firma_update.TabIndex = 11;
-            this.button_firma_update.Text = "Update";
-            this.button_firma_update.UseVisualStyleBackColor = true;
+            this.button_company_update.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.button_company_update.Location = new System.Drawing.Point(392, 318);
+            this.button_company_update.Name = "button_company_update";
+            this.button_company_update.Size = new System.Drawing.Size(172, 61);
+            this.button_company_update.TabIndex = 11;
+            this.button_company_update.Text = "Update";
+            this.button_company_update.UseVisualStyleBackColor = true;
+            this.button_company_update.Click += new System.EventHandler(this.button_company_update_Click);
             // 
-            // label_firmapassword_upt
+            // label_companypassword_upt
             // 
-            this.label_firmapassword_upt.AutoSize = true;
-            this.label_firmapassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_firmapassword_upt.Location = new System.Drawing.Point(48, 205);
-            this.label_firmapassword_upt.Name = "label_firmapassword_upt";
-            this.label_firmapassword_upt.Size = new System.Drawing.Size(194, 30);
-            this.label_firmapassword_upt.TabIndex = 9;
-            this.label_firmapassword_upt.Text = "Firma Password";
+            this.label_companypassword_upt.AutoSize = true;
+            this.label_companypassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_companypassword_upt.Location = new System.Drawing.Point(30, 205);
+            this.label_companypassword_upt.Name = "label_companypassword_upt";
+            this.label_companypassword_upt.Size = new System.Drawing.Size(256, 30);
+            this.label_companypassword_upt.TabIndex = 9;
+            this.label_companypassword_upt.Text = "Company Password:";
             // 
-            // label_firmaname_upt
+            // label_companyname_upt
             // 
-            this.label_firmaname_upt.AutoSize = true;
-            this.label_firmaname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_firmaname_upt.Location = new System.Drawing.Point(48, 143);
-            this.label_firmaname_upt.Name = "label_firmaname_upt";
-            this.label_firmaname_upt.Size = new System.Drawing.Size(159, 30);
-            this.label_firmaname_upt.TabIndex = 7;
-            this.label_firmaname_upt.Text = "Firma Name";
+            this.label_companyname_upt.AutoSize = true;
+            this.label_companyname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_companyname_upt.Location = new System.Drawing.Point(30, 143);
+            this.label_companyname_upt.Name = "label_companyname_upt";
+            this.label_companyname_upt.Size = new System.Drawing.Size(221, 30);
+            this.label_companyname_upt.TabIndex = 7;
+            this.label_companyname_upt.Text = "Company Name:";
             // 
-            // textbox_firmapassword_upt
+            // textbox_companypassword_upt
             // 
-            this.textbox_firmapassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_firmapassword_upt.Location = new System.Drawing.Point(299, 205);
-            this.textbox_firmapassword_upt.MaxLength = 18;
-            this.textbox_firmapassword_upt.Name = "textbox_firmapassword_upt";
-            this.textbox_firmapassword_upt.Size = new System.Drawing.Size(366, 36);
-            this.textbox_firmapassword_upt.TabIndex = 10;
+            this.textbox_companypassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_companypassword_upt.Location = new System.Drawing.Point(319, 205);
+            this.textbox_companypassword_upt.MaxLength = 18;
+            this.textbox_companypassword_upt.Name = "textbox_companypassword_upt";
+            this.textbox_companypassword_upt.Size = new System.Drawing.Size(366, 36);
+            this.textbox_companypassword_upt.TabIndex = 10;
             // 
-            // textbox_firmaname_upt
+            // textbox_companyname_upt
             // 
-            this.textbox_firmaname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_firmaname_upt.Location = new System.Drawing.Point(299, 143);
-            this.textbox_firmaname_upt.Name = "textbox_firmaname_upt";
-            this.textbox_firmaname_upt.Size = new System.Drawing.Size(366, 36);
-            this.textbox_firmaname_upt.TabIndex = 8;
+            this.textbox_companyname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_companyname_upt.Location = new System.Drawing.Point(319, 143);
+            this.textbox_companyname_upt.Name = "textbox_companyname_upt";
+            this.textbox_companyname_upt.Size = new System.Drawing.Size(366, 36);
+            this.textbox_companyname_upt.TabIndex = 8;
             // 
-            // label_update_firma
+            // label_company_upt
             // 
-            this.label_update_firma.AutoSize = true;
-            this.label_update_firma.Font = new System.Drawing.Font("Century Gothic", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_update_firma.Location = new System.Drawing.Point(20, 33);
-            this.label_update_firma.Name = "label_update_firma";
-            this.label_update_firma.Size = new System.Drawing.Size(236, 40);
-            this.label_update_firma.TabIndex = 1;
-            this.label_update_firma.Text = "Firma Update";
+            this.label_company_upt.AutoSize = true;
+            this.label_company_upt.Font = new System.Drawing.Font("Century Gothic", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_company_upt.Location = new System.Drawing.Point(20, 33);
+            this.label_company_upt.Name = "label_company_upt";
+            this.label_company_upt.Size = new System.Drawing.Size(236, 40);
+            this.label_company_upt.TabIndex = 1;
+            this.label_company_upt.Text = "Firma Update";
             // 
-            // tab_firma_reg
+            // tab_company_reg
             // 
-            this.tab_firma_reg.Controls.Add(this.groupBox_firma_reg);
-            this.tab_firma_reg.Controls.Add(this.label_test7);
-            this.tab_firma_reg.Controls.Add(this.label_test6);
-            this.tab_firma_reg.Controls.Add(this.label_test5);
-            this.tab_firma_reg.Controls.Add(this.label_reg_firma);
-            this.tab_firma_reg.Location = new System.Drawing.Point(4, 51);
-            this.tab_firma_reg.Name = "tab_firma_reg";
-            this.tab_firma_reg.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_firma_reg.Size = new System.Drawing.Size(1985, 1178);
-            this.tab_firma_reg.TabIndex = 2;
-            this.tab_firma_reg.Text = "Firma Registration";
-            this.tab_firma_reg.UseVisualStyleBackColor = true;
+            this.tab_company_reg.Controls.Add(this.groupBox_company_reg);
+            this.tab_company_reg.Controls.Add(this.label_test7);
+            this.tab_company_reg.Controls.Add(this.label_test6);
+            this.tab_company_reg.Controls.Add(this.label_test5);
+            this.tab_company_reg.Controls.Add(this.label_company_reg);
+            this.tab_company_reg.Location = new System.Drawing.Point(4, 51);
+            this.tab_company_reg.Name = "tab_company_reg";
+            this.tab_company_reg.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_company_reg.Size = new System.Drawing.Size(1985, 1178);
+            this.tab_company_reg.TabIndex = 2;
+            this.tab_company_reg.Text = "Company Registration";
+            this.tab_company_reg.UseVisualStyleBackColor = true;
             // 
-            // groupBox_firma_reg
+            // groupBox_company_reg
             // 
-            this.groupBox_firma_reg.Controls.Add(this.label_firmaID);
-            this.groupBox_firma_reg.Controls.Add(this.label_firma_name);
-            this.groupBox_firma_reg.Controls.Add(this.label_firma_surname);
-            this.groupBox_firma_reg.Controls.Add(this.textbox_firmaID);
-            this.groupBox_firma_reg.Controls.Add(this.button_firma_reg);
-            this.groupBox_firma_reg.Controls.Add(this.textbox_firmapassword);
-            this.groupBox_firma_reg.Controls.Add(this.textbox_firmaname);
-            this.groupBox_firma_reg.Location = new System.Drawing.Point(561, 283);
-            this.groupBox_firma_reg.Name = "groupBox_firma_reg";
-            this.groupBox_firma_reg.Size = new System.Drawing.Size(882, 374);
-            this.groupBox_firma_reg.TabIndex = 103;
-            this.groupBox_firma_reg.TabStop = false;
+            this.groupBox_company_reg.Controls.Add(this.label_companyID);
+            this.groupBox_company_reg.Controls.Add(this.label_company_name);
+            this.groupBox_company_reg.Controls.Add(this.label_company_surname);
+            this.groupBox_company_reg.Controls.Add(this.textbox_companyID);
+            this.groupBox_company_reg.Controls.Add(this.button_company_reg);
+            this.groupBox_company_reg.Controls.Add(this.textbox_companypassword);
+            this.groupBox_company_reg.Controls.Add(this.textbox_companyname);
+            this.groupBox_company_reg.Location = new System.Drawing.Point(561, 283);
+            this.groupBox_company_reg.Name = "groupBox_company_reg";
+            this.groupBox_company_reg.Size = new System.Drawing.Size(882, 374);
+            this.groupBox_company_reg.TabIndex = 103;
+            this.groupBox_company_reg.TabStop = false;
             // 
-            // label_firmaID
+            // label_companyID
             // 
-            this.label_firmaID.AutoSize = true;
-            this.label_firmaID.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_firmaID.Location = new System.Drawing.Point(44, 59);
-            this.label_firmaID.Name = "label_firmaID";
-            this.label_firmaID.Size = new System.Drawing.Size(116, 30);
-            this.label_firmaID.TabIndex = 2;
-            this.label_firmaID.Text = "Firma ID:";
+            this.label_companyID.AutoSize = true;
+            this.label_companyID.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_companyID.Location = new System.Drawing.Point(44, 59);
+            this.label_companyID.Name = "label_companyID";
+            this.label_companyID.Size = new System.Drawing.Size(171, 30);
+            this.label_companyID.TabIndex = 2;
+            this.label_companyID.Text = "Company ID:";
             // 
-            // label_firma_name
+            // label_company_name
             // 
-            this.label_firma_name.AutoSize = true;
-            this.label_firma_name.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_firma_name.Location = new System.Drawing.Point(44, 121);
-            this.label_firma_name.Name = "label_firma_name";
-            this.label_firma_name.Size = new System.Drawing.Size(166, 30);
-            this.label_firma_name.TabIndex = 4;
-            this.label_firma_name.Text = "Firma Name:";
+            this.label_company_name.AutoSize = true;
+            this.label_company_name.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_company_name.Location = new System.Drawing.Point(44, 121);
+            this.label_company_name.Name = "label_company_name";
+            this.label_company_name.Size = new System.Drawing.Size(221, 30);
+            this.label_company_name.TabIndex = 4;
+            this.label_company_name.Text = "Company Name:";
             // 
-            // label_firma_surname
+            // label_company_surname
             // 
-            this.label_firma_surname.AutoSize = true;
-            this.label_firma_surname.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_firma_surname.Location = new System.Drawing.Point(44, 179);
-            this.label_firma_surname.Name = "label_firma_surname";
-            this.label_firma_surname.Size = new System.Drawing.Size(201, 30);
-            this.label_firma_surname.TabIndex = 6;
-            this.label_firma_surname.Text = "Firma Password:";
+            this.label_company_surname.AutoSize = true;
+            this.label_company_surname.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_company_surname.Location = new System.Drawing.Point(44, 179);
+            this.label_company_surname.Name = "label_company_surname";
+            this.label_company_surname.Size = new System.Drawing.Size(256, 30);
+            this.label_company_surname.TabIndex = 6;
+            this.label_company_surname.Text = "Company Password:";
             // 
-            // textbox_firmaID
+            // textbox_companyID
             // 
-            this.textbox_firmaID.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_firmaID.Location = new System.Drawing.Point(406, 56);
-            this.textbox_firmaID.MaxLength = 18;
-            this.textbox_firmaID.Name = "textbox_firmaID";
-            this.textbox_firmaID.Size = new System.Drawing.Size(366, 36);
-            this.textbox_firmaID.TabIndex = 3;
+            this.textbox_companyID.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_companyID.Location = new System.Drawing.Point(406, 56);
+            this.textbox_companyID.MaxLength = 18;
+            this.textbox_companyID.Name = "textbox_companyID";
+            this.textbox_companyID.Size = new System.Drawing.Size(366, 36);
+            this.textbox_companyID.TabIndex = 3;
             // 
-            // button_firma_reg
+            // button_company_reg
             // 
-            this.button_firma_reg.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.button_firma_reg.Location = new System.Drawing.Point(507, 279);
-            this.button_firma_reg.Name = "button_firma_reg";
-            this.button_firma_reg.Size = new System.Drawing.Size(172, 61);
-            this.button_firma_reg.TabIndex = 8;
-            this.button_firma_reg.Text = "Register";
-            this.button_firma_reg.UseVisualStyleBackColor = true;
+            this.button_company_reg.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.button_company_reg.Location = new System.Drawing.Point(507, 279);
+            this.button_company_reg.Name = "button_company_reg";
+            this.button_company_reg.Size = new System.Drawing.Size(172, 61);
+            this.button_company_reg.TabIndex = 8;
+            this.button_company_reg.Text = "Register";
+            this.button_company_reg.UseVisualStyleBackColor = true;
+            this.button_company_reg.Click += new System.EventHandler(this.button_company_reg_Click);
             // 
-            // textbox_firmapassword
+            // textbox_companypassword
             // 
-            this.textbox_firmapassword.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_firmapassword.Location = new System.Drawing.Point(406, 176);
-            this.textbox_firmapassword.MaxLength = 18;
-            this.textbox_firmapassword.Name = "textbox_firmapassword";
-            this.textbox_firmapassword.Size = new System.Drawing.Size(366, 36);
-            this.textbox_firmapassword.TabIndex = 7;
+            this.textbox_companypassword.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_companypassword.Location = new System.Drawing.Point(406, 176);
+            this.textbox_companypassword.MaxLength = 18;
+            this.textbox_companypassword.Name = "textbox_companypassword";
+            this.textbox_companypassword.Size = new System.Drawing.Size(366, 36);
+            this.textbox_companypassword.TabIndex = 7;
             // 
-            // textbox_firmaname
+            // textbox_companyname
             // 
-            this.textbox_firmaname.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_firmaname.Location = new System.Drawing.Point(406, 116);
-            this.textbox_firmaname.MaxLength = 9;
-            this.textbox_firmaname.Name = "textbox_firmaname";
-            this.textbox_firmaname.Size = new System.Drawing.Size(366, 36);
-            this.textbox_firmaname.TabIndex = 5;
+            this.textbox_companyname.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_companyname.Location = new System.Drawing.Point(406, 116);
+            this.textbox_companyname.MaxLength = 9;
+            this.textbox_companyname.Name = "textbox_companyname";
+            this.textbox_companyname.Size = new System.Drawing.Size(366, 36);
+            this.textbox_companyname.TabIndex = 5;
             // 
             // label_test7
             // 
@@ -493,15 +497,15 @@
             this.label_test5.TabIndex = 100;
             this.label_test5.Text = "Place Holder";
             // 
-            // label_reg_firma
+            // label_company_reg
             // 
-            this.label_reg_firma.AutoSize = true;
-            this.label_reg_firma.Font = new System.Drawing.Font("Century Gothic", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_reg_firma.Location = new System.Drawing.Point(20, 33);
-            this.label_reg_firma.Name = "label_reg_firma";
-            this.label_reg_firma.Size = new System.Drawing.Size(305, 40);
-            this.label_reg_firma.TabIndex = 1;
-            this.label_reg_firma.Text = "Firma Registration";
+            this.label_company_reg.AutoSize = true;
+            this.label_company_reg.Font = new System.Drawing.Font("Century Gothic", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_company_reg.Location = new System.Drawing.Point(20, 33);
+            this.label_company_reg.Name = "label_company_reg";
+            this.label_company_reg.Size = new System.Drawing.Size(385, 40);
+            this.label_company_reg.TabIndex = 1;
+            this.label_company_reg.Text = "Company Registration";
             // 
             // tab_student_upt
             // 
@@ -668,6 +672,7 @@
             this.button_student_del.TabIndex = 24;
             this.button_student_del.Text = "Delete";
             this.button_student_del.UseVisualStyleBackColor = true;
+            this.button_student_del.Click += new System.EventHandler(this.button_student_del_Click);
             // 
             // groupBox_student_show
             // 
@@ -737,6 +742,31 @@
             this.groupBox_student_upt.TabIndex = 4;
             this.groupBox_student_upt.TabStop = false;
             this.groupBox_student_upt.Visible = false;
+            // 
+            // comboBox_studentsemester_upt
+            // 
+            this.comboBox_studentsemester_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_studentsemester_upt.FormattingEnabled = true;
+            this.comboBox_studentsemester_upt.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.comboBox_studentsemester_upt.Location = new System.Drawing.Point(362, 467);
+            this.comboBox_studentsemester_upt.Name = "comboBox_studentsemester_upt";
+            this.comboBox_studentsemester_upt.Size = new System.Drawing.Size(422, 40);
+            this.comboBox_studentsemester_upt.TabIndex = 123;
+            this.comboBox_studentsemester_upt.Tag = "";
             // 
             // panel_gender_upt
             // 
@@ -1312,8 +1342,8 @@
             // 
             this.Admin_MainTab.Controls.Add(this.tab_student_reg);
             this.Admin_MainTab.Controls.Add(this.tab_student_upt);
-            this.Admin_MainTab.Controls.Add(this.tab_firma_reg);
-            this.Admin_MainTab.Controls.Add(this.tab_firma_upt);
+            this.Admin_MainTab.Controls.Add(this.tab_company_reg);
+            this.Admin_MainTab.Controls.Add(this.tab_company_upt);
             this.Admin_MainTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Admin_MainTab.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.Admin_MainTab.Location = new System.Drawing.Point(0, 0);
@@ -1325,31 +1355,6 @@
             this.Admin_MainTab.Size = new System.Drawing.Size(1993, 1233);
             this.Admin_MainTab.TabIndex = 0;
             this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
-            // 
-            // comboBox_studentsemester_upt
-            // 
-            this.comboBox_studentsemester_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_studentsemester_upt.FormattingEnabled = true;
-            this.comboBox_studentsemester_upt.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
-            this.comboBox_studentsemester_upt.Location = new System.Drawing.Point(362, 467);
-            this.comboBox_studentsemester_upt.Name = "comboBox_studentsemester_upt";
-            this.comboBox_studentsemester_upt.Size = new System.Drawing.Size(422, 40);
-            this.comboBox_studentsemester_upt.TabIndex = 123;
-            this.comboBox_studentsemester_upt.Tag = "";
             // 
             // adminPageBindingSource
             // 
@@ -1363,21 +1368,21 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AdminPage";
             this.Size = new System.Drawing.Size(1993, 1233);
-            this.tab_firma_upt.ResumeLayout(false);
-            this.tab_firma_upt.PerformLayout();
+            this.tab_company_upt.ResumeLayout(false);
+            this.tab_company_upt.PerformLayout();
             this.groupBox_firma_del.ResumeLayout(false);
-            this.tableLayoutPanel_firma_show.ResumeLayout(false);
-            this.panel_firmaID_show.ResumeLayout(false);
-            this.panel_firmaID_show.PerformLayout();
-            this.panel_firmaname_show.ResumeLayout(false);
-            this.groupBox_firma_show.ResumeLayout(false);
-            this.groupBox_firma_show.PerformLayout();
-            this.groupBox_firma_upt.ResumeLayout(false);
-            this.groupBox_firma_upt.PerformLayout();
-            this.tab_firma_reg.ResumeLayout(false);
-            this.tab_firma_reg.PerformLayout();
-            this.groupBox_firma_reg.ResumeLayout(false);
-            this.groupBox_firma_reg.PerformLayout();
+            this.tableLayoutPanel_company_show.ResumeLayout(false);
+            this.panel_companyID_show.ResumeLayout(false);
+            this.panel_companyID_show.PerformLayout();
+            this.panel_companyname_show.ResumeLayout(false);
+            this.groupBox_company_show.ResumeLayout(false);
+            this.groupBox_company_show.PerformLayout();
+            this.groupBox_company_upt.ResumeLayout(false);
+            this.groupBox_company_upt.PerformLayout();
+            this.tab_company_reg.ResumeLayout(false);
+            this.tab_company_reg.PerformLayout();
+            this.groupBox_company_reg.ResumeLayout(false);
+            this.groupBox_company_reg.PerformLayout();
             this.tab_student_upt.ResumeLayout(false);
             this.tab_student_upt.PerformLayout();
             this.groupBox_student_del.ResumeLayout(false);
@@ -1410,31 +1415,31 @@
         #endregion
 
         private System.Windows.Forms.BindingSource adminPageBindingSource;
-        private System.Windows.Forms.TabPage tab_firma_upt;
-        private System.Windows.Forms.Button button_firma_show;
-        private System.Windows.Forms.GroupBox groupBox_firma_upt;
-        private System.Windows.Forms.Label label_firmaID_show;
-        private System.Windows.Forms.Button button_firma_update;
-        private System.Windows.Forms.Label label_firmapassword_upt;
-        private System.Windows.Forms.Label label_firmaname_upt;
-        private System.Windows.Forms.Label label_firmaname_show;
-        private System.Windows.Forms.TextBox textbox_firmapassword_upt;
-        private System.Windows.Forms.TextBox textbox_firmaname_upt;
-        private System.Windows.Forms.Label label_firma_show;
-        private System.Windows.Forms.TextBox textbox_firma_show;
-        private System.Windows.Forms.Label label_update_firma;
-        private System.Windows.Forms.TabPage tab_firma_reg;
+        private System.Windows.Forms.TabPage tab_company_upt;
+        private System.Windows.Forms.Button button_company_show;
+        private System.Windows.Forms.GroupBox groupBox_company_upt;
+        private System.Windows.Forms.Label label_companyID_show;
+        private System.Windows.Forms.Button button_company_update;
+        private System.Windows.Forms.Label label_companypassword_upt;
+        private System.Windows.Forms.Label label_companyname_upt;
+        private System.Windows.Forms.Label label_companyname_show;
+        private System.Windows.Forms.TextBox textbox_companypassword_upt;
+        private System.Windows.Forms.TextBox textbox_companyname_upt;
+        private System.Windows.Forms.Label label_company_show;
+        private System.Windows.Forms.TextBox textbox_company_show;
+        private System.Windows.Forms.Label label_company_upt;
+        private System.Windows.Forms.TabPage tab_company_reg;
         private System.Windows.Forms.Label label_test7;
-        private System.Windows.Forms.Label label_firmaID;
-        private System.Windows.Forms.TextBox textbox_firmaID;
-        private System.Windows.Forms.TextBox textbox_firmapassword;
-        private System.Windows.Forms.TextBox textbox_firmaname;
+        private System.Windows.Forms.Label label_companyID;
+        private System.Windows.Forms.TextBox textbox_companyID;
+        private System.Windows.Forms.TextBox textbox_companypassword;
+        private System.Windows.Forms.TextBox textbox_companyname;
         private System.Windows.Forms.Label label_test6;
         private System.Windows.Forms.Label label_test5;
-        private System.Windows.Forms.Button button_firma_reg;
-        private System.Windows.Forms.Label label_firma_surname;
-        private System.Windows.Forms.Label label_firma_name;
-        private System.Windows.Forms.Label label_reg_firma;
+        private System.Windows.Forms.Button button_company_reg;
+        private System.Windows.Forms.Label label_company_surname;
+        private System.Windows.Forms.Label label_company_name;
+        private System.Windows.Forms.Label label_company_reg;
         private System.Windows.Forms.TabPage tab_student_upt;
         private System.Windows.Forms.Button button_student_show;
         private System.Windows.Forms.GroupBox groupBox_student_upt;
@@ -1485,8 +1490,8 @@
         private System.Windows.Forms.Label label_reg_student;
         private System.Windows.Forms.TabControl Admin_MainTab;
         private System.Windows.Forms.GroupBox groupBox_student_show;
-        private System.Windows.Forms.GroupBox groupBox_firma_reg;
-        private System.Windows.Forms.GroupBox groupBox_firma_show;
+        private System.Windows.Forms.GroupBox groupBox_company_reg;
+        private System.Windows.Forms.GroupBox groupBox_company_show;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_student_show;
         private System.Windows.Forms.Panel panel_studentinfo_show;
         private System.Windows.Forms.Label label_studentsemester_show;
@@ -1496,12 +1501,12 @@
         private System.Windows.Forms.Label label_studentgender_show;
         private System.Windows.Forms.Panel panel_studentnumber_show;
         private System.Windows.Forms.Label label_studentnumber_show;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_firma_show;
-        private System.Windows.Forms.Panel panel_firmaID_show;
-        private System.Windows.Forms.Panel panel_firmaname_show;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_company_show;
+        private System.Windows.Forms.Panel panel_companyID_show;
+        private System.Windows.Forms.Panel panel_companyname_show;
         private System.Windows.Forms.GroupBox groupBox_student_del;
         private System.Windows.Forms.GroupBox groupBox_firma_del;
-        private System.Windows.Forms.Button button_firma_del;
+        private System.Windows.Forms.Button button_company_del;
         private System.Windows.Forms.Button button_student_del;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_student_reg;
         private System.Windows.Forms.RadioButton radioButton_female_reg;
