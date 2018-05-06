@@ -68,16 +68,22 @@ namespace ProjectAssistant
 
             project.title = textProjecttitle.Text;
             project.areaofinterest = textBoxAreaofinterest.Text;
-            project.deadline = dateTimePickerDeadline.Text;
-            project.end = dateTimePickerProjectend.Text;
-            project.start = dateTimePickerProjectstart.Text;
+            project.deadline = dateTimePickerDeadline.Value;
+            project.end = dateTimePickerProjectend.Value;
+            project.start = dateTimePickerProjectstart.Value;
             project.projectdesc = richTextBoxProjectdescription.Text;
             project.skills = richTextBoxSkillRequirements.Text;
             project.branchdec = richTextBoxCompanybranchdesicription.Text;
 
             int id = 11111;
+            int cid = 11111;
+            int pid = 22222;
 
 
+            db.insert_toDatabase("projects", "projectId, companyId, projectTitle, projectDescription, projectArea, projectReqments, projectApplyDeadline, " 
+                +"projectStartDate, projectEndDate", pid +", " + cid +", '" + project.title + "', '" + project.projectdesc + "', '" 
+                + project.areaofinterest + "', '" + project.skills + "', '" + project.deadline.ToString("yyyy-MM-dd") + "', '" 
+                + project.start.ToString("yyyy-MM-dd") + "', '" + project.end.ToString("yyyy-MM-dd")+ "'");
 
 
 
