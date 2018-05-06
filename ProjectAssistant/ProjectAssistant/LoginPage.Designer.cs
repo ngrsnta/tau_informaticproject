@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -159,11 +160,22 @@
             this.panel2.Size = new System.Drawing.Size(407, 329);
             this.panel2.TabIndex = 14;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(821, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -192,5 +204,6 @@
         public System.Windows.Forms.TextBox passwordTextBox;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button button1;
     }
 }

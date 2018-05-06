@@ -57,6 +57,21 @@ namespace ProjectAssistant
             }
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            List<string> list = new List<string>();
+
+            list = db.select_asArray("students", "studentId", loginIdTextBox.Text);
+            label4.Text = list.Count.ToString();
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                Label lbl = new Label();
+                lbl.Location = new Point(5, (i * 5));
+                lbl.Text = list[i];
+                this.Controls.Add(lbl);
+            }
+        }
     }
 }

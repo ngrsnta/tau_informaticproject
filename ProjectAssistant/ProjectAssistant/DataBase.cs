@@ -70,6 +70,33 @@ namespace ProjectAssistant
                return a;
             }
         }
+        public List<string> select_asArray(string table, string equal1, string equal2)
+        {
+            try
+            {
+                query = "select * from " + table + " where " + equal1 + " = " + equal2 + ";";
+                string a = "";
+                List<string> list = new List<string>();
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    list.Add(myReader.GetValue(0).ToString());
+                }
+                myReader.Close();
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                List<string> list = new List<string>();
+                list.Add(e.Message);
+                MessageBox.Show(e.Message + "\n" + e.ToString());
+
+                return list;
+            }
+        }
 
         public void update_toDatabase(string table, string item, string new_value, string equal1, string equal2)
         {
