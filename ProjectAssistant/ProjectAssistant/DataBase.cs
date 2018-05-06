@@ -57,7 +57,7 @@ namespace ProjectAssistant
             catch(Exception e)
             {
                string a = e.Message;
-               MessageBox.Show(e.Message);
+               MessageBox.Show(e.Message +"\n"+ e.ToString());
                 
                return a;
             }

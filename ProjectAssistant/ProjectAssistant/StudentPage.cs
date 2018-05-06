@@ -91,12 +91,11 @@ namespace ProjectAssistant
             StudentProfile studentProfile = new StudentProfile();
             Label exitLabel = new Label();
             exitLabel.Text = "Close";
-            exitLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            exitLabel.Font = new Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             exitLabel.Location = new Point(1060, 15);
-            exitLabel.Click += new System.EventHandler(this.exitLabel_Click);
+            exitLabel.Click += new EventHandler(this.exitLabel_Click);
             exitLabel.Cursor = Cursors.Hand;
             exitLabel.Size = new Size(new Point(45, 20));
-
             //Profile.FormBorderStyle = FormBorderStyle.None;
             Profile.Size = studentProfile.Size;
             Profile.Controls.Add(studentProfile);
