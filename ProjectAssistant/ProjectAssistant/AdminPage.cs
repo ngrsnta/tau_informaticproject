@@ -14,7 +14,7 @@ namespace ProjectAssistant
     public partial class AdminPage : UserControl //Main
     {
         DataBase db = new DataBase();
-
+        Student stu = new Student();
         public AdminPage() //Start
         {
             InitializeComponent();
@@ -50,23 +50,40 @@ namespace ProjectAssistant
             // Get Selected Tab
             var selectedTab = Admin_MainTab.SelectedTab;
 
-
-            foreach (Control ctrl in selectedTab.Controls)
+            foreach (Control ctrl in selectedTab.Controls)  //For each Control in Selected Tab 
             {
-                if (ctrl is TextBox)
+                foreach (Control ctrl_sub in ctrl.Controls) //For each Control in Table Layout Panel
                 {
-                    (ctrl as TextBox).Text = string.Empty;
+                    foreach (Control ctrl_sub_sub in ctrl_sub.Controls) //For each Control in Group Box
+                    {
+                        if (ctrl_sub_sub is TextBox)
+                        {
+                            (ctrl_sub_sub as TextBox).Text = string.Empty;
+                        }
+/*
+                        if (ctrl_sub_sub is Label)
+                        {
+                            if (ctrl_sub_sub==label_studentdate_show    ||
+                                ctrl_sub_sub==label_studentfaculty_show ||
+                                ctrl_sub_sub==label_studentgender_show  ||
+                                ctrl_sub_sub==label_studentmajor_show   ||
+                                ctrl_sub_sub==label_studentname_show    ||
+                                ctrl_sub_sub==label_studentsemester_show    ||
+                                ctrl_sub_sub==label_companyID_show      ||
+                                ctrl_sub_sub==label_companyname_show
+                                )
+                                (ctrl_sub_sub as Label).Text = string.Empty;
+                        }*/
+                    }
                 }
-
-                if (ctrl is Label)
-                {
-                    if ((ctrl != label_studentname ||
-                        ctrl != label_studentnumber ||
-                        ctrl != label_studentsurname ||
-                        ctrl != label_studentpassword) == false)
-                        (ctrl as Label).Text = string.Empty;
-                }
-
+            /*
+                if (ctrl is GroupBox)
+                    if (ctrl == groupBox_student_upt ||
+                        ctrl == groupBox_student_del ||
+                        ctrl == groupBox_company_upt ||
+                        ctrl == groupBox_firma_del)
+                        ctrl.Visible = false;
+                */
                 // Other Controls....
             }
         }
@@ -106,7 +123,6 @@ namespace ProjectAssistant
         }
 
         #endregion
-
 
         #region Student Register
 
@@ -178,9 +194,6 @@ namespace ProjectAssistant
             }
 
             #endregion
-
-            //Creating a new Student Class to store inputs in order to send them to the Database
-            Student stu = new Student();
             
             //Storing inputs to Class
             stu.name = textbox_studentname.Text +" "+ textbox_studentsurname.Text;
@@ -214,8 +227,7 @@ namespace ProjectAssistant
 
         //1. Show Student Information
         private void button_studentshow_Click(object sender, EventArgs e)
-        {   
-            Student stu = new Student();
+        {
             string student_ID = textbox_studentnumber_show.Text;
             
             //From Database to Student Class
@@ -226,10 +238,11 @@ namespace ProjectAssistant
             stu.faculty = db.select_fromDatabase("studentFaculty", "students", "studentId", student_ID);
             stu.major= db.select_fromDatabase("studentMajor", "students", "studentId", student_ID);
             stu.semester = Convert.ToInt32(db.select_fromDatabase("studentSemester", "students", "studentId", student_ID));
-
+            
             //Make the update panels visible
             groupBox_student_upt.Visible = true;
-            groupBox_student_del.Visible = true;
+            groupBox_studentID_show.Visible = true;
+            groupBox_studentinfo_del.Visible = true;
 
             //Show Student Info from Class to Labels
             label_studentnumber_show.Text = stu.id_number.ToString();
@@ -263,31 +276,67 @@ namespace ProjectAssistant
         //2. Update Student Informations
         private void button_student_upt_Click(object sender, EventArgs e)
         {
-            Student stu = new Student();
+            Student stu_upt = new Student();
             string student_ID = label_studentnumber_show.Text;
 
-            //Bring new informations to Student Class
-            stu.name = textbox_studentname_upt.Text;
-            stu.dateofbirth = datepicker_student_upt.Value;
+            //Bring new informations to the temporary Student Class
+            foreach (Control ctrl in Admin_MainTab.SelectedTab.Controls)
+                foreach(Control ctrl_sub in ctrl.Controls)
+                    foreach(Control ctrl_sub_sub in ctrl_sub.Controls)
+                    {
+                        if (ctrl_sub_sub is TextBox)
+                        {
+                            if((ctrl_sub_sub as TextBox).TextLength != 0)
+                            {
+                                if (ctrl_sub_sub == textbox_studentname_upt)
+                                    stu_upt.name = ctrl_sub_sub.Text;
+                                else if (ctrl_sub_sub == textbox_studentfaculty_upt)
+                                    stu_upt.faculty = ctrl_sub_sub.Text;
+                                else if (ctrl_sub_sub == textbox_studentmajor_upt)
+                                    stu_upt.major = ctrl_sub_sub.Text;
+                                else if (ctrl_sub_sub == textbox_studentpassword_upt)
+                                    stu_upt.password = ctrl_sub_sub.Text;
+                            }
+                            
+                        }
+                            
+                    }
+//            stu_upt.name = textbox_studentname_upt.Text;
+            stu_upt.dateofbirth = datepicker_student_upt.Value;
             if (radioButton_male_upt.Checked)
-                stu.gender = radioButton_male_upt.Text;
+                stu_upt.gender = radioButton_male_upt.Text;
             else if (radioButton_female_upt.Checked)
-                stu.gender = radioButton_female_upt.Text;
-            stu.faculty = textbox_studentfaculty_upt.Text;
-            stu.major = textbox_studentmajor_upt.Text;
-            stu.semester = Convert.ToInt32(comboBox_studentsemester_upt.Text);
-            if(textbox_studentpassword_upt.Text.Length>0)
-                stu.password = textbox_studentpassword_upt.Text;
+                stu_upt.gender = radioButton_female_upt.Text;
+ //           stu_upt.faculty = textbox_studentfaculty_upt.Text;
+ //           stu_upt.major = textbox_studentmajor_upt.Text;
+            stu_upt.semester = Convert.ToInt32(comboBox_studentsemester_upt.Text);
+//            if(textbox_studentpassword_upt.Text.Length>0)
+//                stu_upt.password = textbox_studentpassword_upt.Text;
 
-            db.update_toDatabase("students", "studentName", stu.name, "studentId", student_ID);
-            db.update_toDatabase("students", "studentBirthday", stu.dateofbirth.ToString("yyyy-MM-dd"), "studentId", student_ID);
-            db.update_toDatabase("students", "studentGender",  stu.gender , "studentId", student_ID);
-            db.update_toDatabase("students", "studentFaculty",  stu.faculty , "studentId", student_ID);
-            db.update_toDatabase("students", "studentMajor", stu.major, "studentId", student_ID);
-            db.update_toDatabase("students", "studentSemester", stu.semester.ToString(), "studentId", student_ID);
-            if (stu.password.Length > 0)
-               db.update_toDatabase("students", "studentPassword", stu.password , "studentId", student_ID);
+            //Compare the updated infos from the temporary class with the current info
+            if(stu.name!=stu_upt.name)
+                db.update_toDatabase("students", "studentName", stu_upt.name, "studentId", student_ID);
+            if(stu.dateofbirth!=stu_upt.dateofbirth)
+                db.update_toDatabase("students", "studentBirthday", stu_upt.dateofbirth.ToString("yyyy-MM-dd"), "studentId", student_ID);
+            if(stu.gender!=stu_upt.gender)
+                db.update_toDatabase("students", "studentGender", stu_upt.gender, "studentId", student_ID);
+            if(stu.faculty!=stu_upt.faculty)
+                db.update_toDatabase("students", "studentFaculty", stu_upt.faculty, "studentId", student_ID);
+            if(stu.major!=stu_upt.major)
+                db.update_toDatabase("students", "studentMajor", stu_upt.major, "studentId", student_ID);
+            if(stu.semester!=stu_upt.semester)
+                db.update_toDatabase("students", "studentSemester", stu_upt.semester.ToString(), "studentId", student_ID);
+            if(stu.password!=stu_upt.password)
+                db.update_toDatabase("students", "studentPassword", stu_upt.password, "studentId", student_ID);
 
+            /*            db.update_toDatabase("students", "studentName", stu_upt.name, "studentId", student_ID);
+                        db.update_toDatabase("students", "studentBirthday", stu_upt.dateofbirth.ToString("yyyy-MM-dd"), "studentId", student_ID);
+                        db.update_toDatabase("students", "studentGender",  stu_upt.gender , "studentId", student_ID);
+                        db.update_toDatabase("students", "studentFaculty",  stu_upt.faculty , "studentId", student_ID);
+                        db.update_toDatabase("students", "studentMajor", stu_upt.major, "studentId", student_ID);
+                        db.update_toDatabase("students", "studentSemester", stu_upt.semester.ToString(), "studentId", student_ID);
+                        db.update_toDatabase("students", "studentPassword", stu_upt.password , "studentId", student_ID);
+            */
         }
 
         //3. Delete Student
@@ -331,7 +380,8 @@ namespace ProjectAssistant
                 
                 //Make the update panels visible
                 groupBox_company_upt.Visible = true;
-                groupBox_student_del.Visible = true;
+                groupBox_companyID.Visible = true;
+                groupBox_companyinfo_del.Visible = true;
 
                 //Show Student Info from Class to Labels
                 label_companyID_show.Text = comp.id_number.ToString();
@@ -366,9 +416,8 @@ namespace ProjectAssistant
 
         }
 
+
         #endregion
-
-
     }
 }
 
