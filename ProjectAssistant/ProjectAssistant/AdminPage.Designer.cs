@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.tab_company_upt = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel_company_upt = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox_companyID = new System.Windows.Forms.GroupBox();
             this.label_companyID_show = new System.Windows.Forms.Label();
+            this.groupBox_companyinfo_del = new System.Windows.Forms.GroupBox();
             this.button_company_del = new System.Windows.Forms.Button();
             this.label_companyname_show = new System.Windows.Forms.Label();
             this.groupBox_company_show = new System.Windows.Forms.GroupBox();
@@ -44,6 +47,7 @@
             this.textbox_companyname_upt = new System.Windows.Forms.TextBox();
             this.label_main_company_upt = new System.Windows.Forms.Label();
             this.tab_company_reg = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel_company_reg = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox_company_reg = new System.Windows.Forms.GroupBox();
             this.label_companyID = new System.Windows.Forms.Label();
             this.label_company_name = new System.Windows.Forms.Label();
@@ -52,25 +56,21 @@
             this.button_company_reg = new System.Windows.Forms.Button();
             this.textbox_companypassword = new System.Windows.Forms.TextBox();
             this.textbox_companyname = new System.Windows.Forms.TextBox();
-            this.label_test7 = new System.Windows.Forms.Label();
-            this.label_test6 = new System.Windows.Forms.Label();
-            this.label_test5 = new System.Windows.Forms.Label();
             this.label_main_company_reg = new System.Windows.Forms.Label();
             this.tab_student_upt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel_student_upt = new System.Windows.Forms.TableLayoutPanel();
-            this.label_studentnumber_show = new System.Windows.Forms.Label();
+            this.groupBox_studentinfo_del = new System.Windows.Forms.GroupBox();
             this.label_studentsemester_show = new System.Windows.Forms.Label();
             this.label_studentname_show = new System.Windows.Forms.Label();
+            this.button_student_del = new System.Windows.Forms.Button();
             this.label_studentmajor_show = new System.Windows.Forms.Label();
+            this.label_studentgender_show = new System.Windows.Forms.Label();
             this.label_studentfaculty_show = new System.Windows.Forms.Label();
             this.label_studentdate_show = new System.Windows.Forms.Label();
-            this.label_studentgender_show = new System.Windows.Forms.Label();
-            this.button_student_del = new System.Windows.Forms.Button();
-            this.groupBox_student_show = new System.Windows.Forms.GroupBox();
-            this.label_student_show = new System.Windows.Forms.Label();
-            this.button_student_show = new System.Windows.Forms.Button();
-            this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.groupBox_student_upt = new System.Windows.Forms.GroupBox();
+            this.panel_gender_upt = new System.Windows.Forms.Panel();
+            this.radioButton_female_upt = new System.Windows.Forms.RadioButton();
+            this.radioButton_male_upt = new System.Windows.Forms.RadioButton();
             this.comboBox_studentsemester_upt = new System.Windows.Forms.ComboBox();
             this.datepicker_student_upt = new System.Windows.Forms.DateTimePicker();
             this.label_studentsemester_upt = new System.Windows.Forms.Label();
@@ -85,6 +85,12 @@
             this.label_studentname_upt = new System.Windows.Forms.Label();
             this.textbox_studentpassword_upt = new System.Windows.Forms.TextBox();
             this.textbox_studentname_upt = new System.Windows.Forms.TextBox();
+            this.groupBox_studentID_show = new System.Windows.Forms.GroupBox();
+            this.label_studentnumber_show = new System.Windows.Forms.Label();
+            this.groupBox_student_show = new System.Windows.Forms.GroupBox();
+            this.label_student_show = new System.Windows.Forms.Label();
+            this.button_student_show = new System.Windows.Forms.Button();
+            this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.label_main_student_upt = new System.Windows.Forms.Label();
             this.tab_student_reg = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel_student_reg = new System.Windows.Forms.TableLayoutPanel();
@@ -111,47 +117,30 @@
             this.label_studentsemester = new System.Windows.Forms.Label();
             this.label_studentfaculty = new System.Windows.Forms.Label();
             this.label_studentmajor = new System.Windows.Forms.Label();
-            this.label_sem = new System.Windows.Forms.Label();
-            this.label_maj = new System.Windows.Forms.Label();
-            this.label_fac = new System.Windows.Forms.Label();
-            this.label_gen = new System.Windows.Forms.Label();
-            this.label_date = new System.Windows.Forms.Label();
-            this.label_test4 = new System.Windows.Forms.Label();
-            this.label_test3 = new System.Windows.Forms.Label();
-            this.label_test2 = new System.Windows.Forms.Label();
             this.label_main_student_reg = new System.Windows.Forms.Label();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
-            this.tableLayoutPanel_company_reg = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel_company_upt = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox_studentID_show = new System.Windows.Forms.GroupBox();
-            this.groupBox_studentinfo_del = new System.Windows.Forms.GroupBox();
-            this.groupBox_companyID = new System.Windows.Forms.GroupBox();
-            this.groupBox_companyinfo_del = new System.Windows.Forms.GroupBox();
-            this.panel_gender_upt = new System.Windows.Forms.Panel();
-            this.radioButton_female_upt = new System.Windows.Forms.RadioButton();
-            this.radioButton_male_upt = new System.Windows.Forms.RadioButton();
             this.tab_company_upt.SuspendLayout();
+            this.tableLayoutPanel_company_upt.SuspendLayout();
+            this.groupBox_companyID.SuspendLayout();
+            this.groupBox_companyinfo_del.SuspendLayout();
             this.groupBox_company_show.SuspendLayout();
             this.groupBox_company_upt.SuspendLayout();
             this.tab_company_reg.SuspendLayout();
+            this.tableLayoutPanel_company_reg.SuspendLayout();
             this.groupBox_company_reg.SuspendLayout();
             this.tab_student_upt.SuspendLayout();
             this.tableLayoutPanel_student_upt.SuspendLayout();
-            this.groupBox_student_show.SuspendLayout();
+            this.groupBox_studentinfo_del.SuspendLayout();
             this.groupBox_student_upt.SuspendLayout();
+            this.panel_gender_upt.SuspendLayout();
+            this.groupBox_studentID_show.SuspendLayout();
+            this.groupBox_student_show.SuspendLayout();
             this.tab_student_reg.SuspendLayout();
             this.tableLayoutPanel_student_reg.SuspendLayout();
             this.groupBox_studentID_reg.SuspendLayout();
             this.groupBox_studentinfo_reg.SuspendLayout();
             this.panel_gender.SuspendLayout();
             this.Admin_MainTab.SuspendLayout();
-            this.tableLayoutPanel_company_reg.SuspendLayout();
-            this.tableLayoutPanel_company_upt.SuspendLayout();
-            this.groupBox_studentID_show.SuspendLayout();
-            this.groupBox_studentinfo_del.SuspendLayout();
-            this.groupBox_companyID.SuspendLayout();
-            this.groupBox_companyinfo_del.SuspendLayout();
-            this.panel_gender_upt.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_company_upt
@@ -166,16 +155,57 @@
             this.tab_company_upt.Text = "Company Update";
             this.tab_company_upt.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel_company_upt
+            // 
+            this.tableLayoutPanel_company_upt.AutoSize = true;
+            this.tableLayoutPanel_company_upt.ColumnCount = 2;
+            this.tableLayoutPanel_company_upt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.377F));
+            this.tableLayoutPanel_company_upt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.623F));
+            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_companyID, 1, 0);
+            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_companyinfo_del, 1, 1);
+            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_company_show, 0, 0);
+            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_company_upt, 0, 1);
+            this.tableLayoutPanel_company_upt.Location = new System.Drawing.Point(458, 285);
+            this.tableLayoutPanel_company_upt.Name = "tableLayoutPanel_company_upt";
+            this.tableLayoutPanel_company_upt.RowCount = 2;
+            this.tableLayoutPanel_company_upt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.tableLayoutPanel_company_upt.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel_company_upt.Size = new System.Drawing.Size(1191, 456);
+            this.tableLayoutPanel_company_upt.TabIndex = 13;
+            // 
+            // groupBox_companyID
+            // 
+            this.groupBox_companyID.Controls.Add(this.label_companyID_show);
+            this.groupBox_companyID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_companyID.Location = new System.Drawing.Point(734, 3);
+            this.groupBox_companyID.Name = "groupBox_companyID";
+            this.groupBox_companyID.Size = new System.Drawing.Size(454, 132);
+            this.groupBox_companyID.TabIndex = 23;
+            this.groupBox_companyID.TabStop = false;
+            this.groupBox_companyID.Visible = false;
+            // 
             // label_companyID_show
             // 
             this.label_companyID_show.AutoSize = true;
             this.label_companyID_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_companyID_show.Location = new System.Drawing.Point(21, 52);
             this.label_companyID_show.Name = "label_companyID_show";
-            this.label_companyID_show.Size = new System.Drawing.Size(124, 34);
+            this.label_companyID_show.Size = new System.Drawing.Size(186, 34);
             this.label_companyID_show.TabIndex = 4;
-            this.label_companyID_show.Text = "Firma ID";
+            this.label_companyID_show.Text = "Company ID";
             this.label_companyID_show.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox_companyinfo_del
+            // 
+            this.groupBox_companyinfo_del.Controls.Add(this.button_company_del);
+            this.groupBox_companyinfo_del.Controls.Add(this.label_companyname_show);
+            this.groupBox_companyinfo_del.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_companyinfo_del.Location = new System.Drawing.Point(734, 141);
+            this.groupBox_companyinfo_del.Name = "groupBox_companyinfo_del";
+            this.groupBox_companyinfo_del.Size = new System.Drawing.Size(454, 312);
+            this.groupBox_companyinfo_del.TabIndex = 23;
+            this.groupBox_companyinfo_del.TabStop = false;
+            this.groupBox_companyinfo_del.Visible = false;
             // 
             // button_company_del
             // 
@@ -197,7 +227,7 @@
             this.label_companyname_show.Name = "label_companyname_show";
             this.label_companyname_show.Size = new System.Drawing.Size(379, 146);
             this.label_companyname_show.TabIndex = 5;
-            this.label_companyname_show.Text = "Firma Name";
+            this.label_companyname_show.Text = "Company Name";
             // 
             // groupBox_company_show
             // 
@@ -326,9 +356,6 @@
             // tab_company_reg
             // 
             this.tab_company_reg.Controls.Add(this.tableLayoutPanel_company_reg);
-            this.tab_company_reg.Controls.Add(this.label_test7);
-            this.tab_company_reg.Controls.Add(this.label_test6);
-            this.tab_company_reg.Controls.Add(this.label_test5);
             this.tab_company_reg.Controls.Add(this.label_main_company_reg);
             this.tab_company_reg.Location = new System.Drawing.Point(4, 51);
             this.tab_company_reg.Name = "tab_company_reg";
@@ -337,6 +364,18 @@
             this.tab_company_reg.TabIndex = 2;
             this.tab_company_reg.Text = "Company Registration";
             this.tab_company_reg.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel_company_reg
+            // 
+            this.tableLayoutPanel_company_reg.ColumnCount = 1;
+            this.tableLayoutPanel_company_reg.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_company_reg.Controls.Add(this.groupBox_company_reg, 0, 0);
+            this.tableLayoutPanel_company_reg.Location = new System.Drawing.Point(554, 299);
+            this.tableLayoutPanel_company_reg.Name = "tableLayoutPanel_company_reg";
+            this.tableLayoutPanel_company_reg.RowCount = 1;
+            this.tableLayoutPanel_company_reg.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_company_reg.Size = new System.Drawing.Size(900, 397);
+            this.tableLayoutPanel_company_reg.TabIndex = 104;
             // 
             // groupBox_company_reg
             // 
@@ -423,36 +462,6 @@
             this.textbox_companyname.Size = new System.Drawing.Size(366, 36);
             this.textbox_companyname.TabIndex = 5;
             // 
-            // label_test7
-            // 
-            this.label_test7.AutoSize = true;
-            this.label_test7.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_test7.Location = new System.Drawing.Point(1577, 512);
-            this.label_test7.Name = "label_test7";
-            this.label_test7.Size = new System.Drawing.Size(165, 30);
-            this.label_test7.TabIndex = 102;
-            this.label_test7.Text = "Place Holder";
-            // 
-            // label_test6
-            // 
-            this.label_test6.AutoSize = true;
-            this.label_test6.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_test6.Location = new System.Drawing.Point(1577, 452);
-            this.label_test6.Name = "label_test6";
-            this.label_test6.Size = new System.Drawing.Size(165, 30);
-            this.label_test6.TabIndex = 101;
-            this.label_test6.Text = "Place Holder";
-            // 
-            // label_test5
-            // 
-            this.label_test5.AutoSize = true;
-            this.label_test5.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_test5.Location = new System.Drawing.Point(1577, 388);
-            this.label_test5.Name = "label_test5";
-            this.label_test5.Size = new System.Drawing.Size(165, 30);
-            this.label_test5.TabIndex = 100;
-            this.label_test5.Text = "Place Holder";
-            // 
             // label_main_company_reg
             // 
             this.label_main_company_reg.AutoSize = true;
@@ -490,19 +499,24 @@
             this.tableLayoutPanel_student_upt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel_student_upt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel_student_upt.Size = new System.Drawing.Size(1362, 815);
-            this.tableLayoutPanel_student_upt.TabIndex = 21;
-            this.tableLayoutPanel_student_upt.TabStop = true;
+            this.tableLayoutPanel_student_upt.TabIndex = 1;
             // 
-            // label_studentnumber_show
+            // groupBox_studentinfo_del
             // 
-            this.label_studentnumber_show.AutoSize = true;
-            this.label_studentnumber_show.BackColor = System.Drawing.Color.Transparent;
-            this.label_studentnumber_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentnumber_show.Location = new System.Drawing.Point(27, 49);
-            this.label_studentnumber_show.Name = "label_studentnumber_show";
-            this.label_studentnumber_show.Size = new System.Drawing.Size(233, 34);
-            this.label_studentnumber_show.TabIndex = 7;
-            this.label_studentnumber_show.Text = "Student Number";
+            this.groupBox_studentinfo_del.Controls.Add(this.label_studentsemester_show);
+            this.groupBox_studentinfo_del.Controls.Add(this.label_studentname_show);
+            this.groupBox_studentinfo_del.Controls.Add(this.button_student_del);
+            this.groupBox_studentinfo_del.Controls.Add(this.label_studentmajor_show);
+            this.groupBox_studentinfo_del.Controls.Add(this.label_studentgender_show);
+            this.groupBox_studentinfo_del.Controls.Add(this.label_studentfaculty_show);
+            this.groupBox_studentinfo_del.Controls.Add(this.label_studentdate_show);
+            this.groupBox_studentinfo_del.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_studentinfo_del.Location = new System.Drawing.Point(917, 128);
+            this.groupBox_studentinfo_del.Name = "groupBox_studentinfo_del";
+            this.groupBox_studentinfo_del.Size = new System.Drawing.Size(442, 684);
+            this.groupBox_studentinfo_del.TabIndex = 24;
+            this.groupBox_studentinfo_del.TabStop = false;
+            this.groupBox_studentinfo_del.Visible = false;
             // 
             // label_studentsemester_show
             // 
@@ -514,7 +528,7 @@
             this.label_studentsemester_show.Location = new System.Drawing.Point(28, 422);
             this.label_studentsemester_show.Name = "label_studentsemester_show";
             this.label_studentsemester_show.Size = new System.Drawing.Size(210, 28);
-            this.label_studentsemester_show.TabIndex = 10;
+            this.label_studentsemester_show.TabIndex = 30;
             this.label_studentsemester_show.Text = "Student Semester";
             // 
             // label_studentname_show
@@ -527,8 +541,19 @@
             this.label_studentname_show.Location = new System.Drawing.Point(28, 90);
             this.label_studentname_show.Name = "label_studentname_show";
             this.label_studentname_show.Size = new System.Drawing.Size(176, 28);
-            this.label_studentname_show.TabIndex = 8;
+            this.label_studentname_show.TabIndex = 25;
             this.label_studentname_show.Text = "Student Name";
+            // 
+            // button_student_del
+            // 
+            this.button_student_del.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.button_student_del.Location = new System.Drawing.Point(152, 562);
+            this.button_student_del.Name = "button_student_del";
+            this.button_student_del.Size = new System.Drawing.Size(172, 57);
+            this.button_student_del.TabIndex = 31;
+            this.button_student_del.Text = "Delete";
+            this.button_student_del.UseVisualStyleBackColor = true;
+            this.button_student_del.Click += new System.EventHandler(this.button_student_del_Click);
             // 
             // label_studentmajor_show
             // 
@@ -540,8 +565,21 @@
             this.label_studentmajor_show.Location = new System.Drawing.Point(28, 359);
             this.label_studentmajor_show.Name = "label_studentmajor_show";
             this.label_studentmajor_show.Size = new System.Drawing.Size(171, 28);
-            this.label_studentmajor_show.TabIndex = 10;
+            this.label_studentmajor_show.TabIndex = 29;
             this.label_studentmajor_show.Text = "Student Major";
+            // 
+            // label_studentgender_show
+            // 
+            this.label_studentgender_show.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_studentgender_show.AutoSize = true;
+            this.label_studentgender_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_studentgender_show.Location = new System.Drawing.Point(28, 225);
+            this.label_studentgender_show.Name = "label_studentgender_show";
+            this.label_studentgender_show.Size = new System.Drawing.Size(192, 28);
+            this.label_studentgender_show.TabIndex = 27;
+            this.label_studentgender_show.Text = "Student Gender";
             // 
             // label_studentfaculty_show
             // 
@@ -553,7 +591,7 @@
             this.label_studentfaculty_show.Location = new System.Drawing.Point(28, 295);
             this.label_studentfaculty_show.Name = "label_studentfaculty_show";
             this.label_studentfaculty_show.Size = new System.Drawing.Size(188, 28);
-            this.label_studentfaculty_show.TabIndex = 10;
+            this.label_studentfaculty_show.TabIndex = 28;
             this.label_studentfaculty_show.Text = "Student Faculty";
             // 
             // label_studentdate_show
@@ -566,32 +604,263 @@
             this.label_studentdate_show.Location = new System.Drawing.Point(28, 154);
             this.label_studentdate_show.Name = "label_studentdate_show";
             this.label_studentdate_show.Size = new System.Drawing.Size(244, 28);
-            this.label_studentdate_show.TabIndex = 10;
+            this.label_studentdate_show.TabIndex = 26;
             this.label_studentdate_show.Text = "Student Date of Birth";
             // 
-            // label_studentgender_show
+            // groupBox_student_upt
             // 
-            this.label_studentgender_show.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_studentgender_show.AutoSize = true;
-            this.label_studentgender_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_studentgender_show.Location = new System.Drawing.Point(28, 225);
-            this.label_studentgender_show.Name = "label_studentgender_show";
-            this.label_studentgender_show.Size = new System.Drawing.Size(192, 28);
-            this.label_studentgender_show.TabIndex = 10;
-            this.label_studentgender_show.Text = "Student Gender";
+            this.groupBox_student_upt.Controls.Add(this.panel_gender_upt);
+            this.groupBox_student_upt.Controls.Add(this.comboBox_studentsemester_upt);
+            this.groupBox_student_upt.Controls.Add(this.datepicker_student_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentsemester_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentmajor_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentfaculty_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentgender_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentdate_upt);
+            this.groupBox_student_upt.Controls.Add(this.textbox_studentmajor_upt);
+            this.groupBox_student_upt.Controls.Add(this.textbox_studentfaculty_upt);
+            this.groupBox_student_upt.Controls.Add(this.button_student_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentpassword_upt);
+            this.groupBox_student_upt.Controls.Add(this.label_studentname_upt);
+            this.groupBox_student_upt.Controls.Add(this.textbox_studentpassword_upt);
+            this.groupBox_student_upt.Controls.Add(this.textbox_studentname_upt);
+            this.groupBox_student_upt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_student_upt.Location = new System.Drawing.Point(3, 128);
+            this.groupBox_student_upt.Name = "groupBox_student_upt";
+            this.groupBox_student_upt.Size = new System.Drawing.Size(908, 684);
+            this.groupBox_student_upt.TabIndex = 4;
+            this.groupBox_student_upt.TabStop = false;
+            this.groupBox_student_upt.Visible = false;
             // 
-            // button_student_del
+            // panel_gender_upt
             // 
-            this.button_student_del.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.button_student_del.Location = new System.Drawing.Point(152, 562);
-            this.button_student_del.Name = "button_student_del";
-            this.button_student_del.Size = new System.Drawing.Size(172, 57);
-            this.button_student_del.TabIndex = 24;
-            this.button_student_del.Text = "Delete";
-            this.button_student_del.UseVisualStyleBackColor = true;
-            this.button_student_del.Click += new System.EventHandler(this.button_student_del_Click);
+            this.panel_gender_upt.AutoSize = true;
+            this.panel_gender_upt.Controls.Add(this.radioButton_female_upt);
+            this.panel_gender_upt.Controls.Add(this.radioButton_male_upt);
+            this.panel_gender_upt.Location = new System.Drawing.Point(285, 218);
+            this.panel_gender_upt.Name = "panel_gender_upt";
+            this.panel_gender_upt.Size = new System.Drawing.Size(422, 41);
+            this.panel_gender_upt.TabIndex = 10;
+            // 
+            // radioButton_female_upt
+            // 
+            this.radioButton_female_upt.AutoSize = true;
+            this.radioButton_female_upt.Checked = true;
+            this.radioButton_female_upt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radioButton_female_upt.Location = new System.Drawing.Point(0, 0);
+            this.radioButton_female_upt.Name = "radioButton_female_upt";
+            this.radioButton_female_upt.Size = new System.Drawing.Size(135, 41);
+            this.radioButton_female_upt.TabIndex = 11;
+            this.radioButton_female_upt.TabStop = true;
+            this.radioButton_female_upt.Text = "Female";
+            this.radioButton_female_upt.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_male_upt
+            // 
+            this.radioButton_male_upt.AutoSize = true;
+            this.radioButton_male_upt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButton_male_upt.Location = new System.Drawing.Point(316, 0);
+            this.radioButton_male_upt.Name = "radioButton_male_upt";
+            this.radioButton_male_upt.Size = new System.Drawing.Size(106, 41);
+            this.radioButton_male_upt.TabIndex = 12;
+            this.radioButton_male_upt.Text = "Male";
+            this.radioButton_male_upt.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_studentsemester_upt
+            // 
+            this.comboBox_studentsemester_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox_studentsemester_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_studentsemester_upt.FormattingEnabled = true;
+            this.comboBox_studentsemester_upt.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.comboBox_studentsemester_upt.Location = new System.Drawing.Point(285, 421);
+            this.comboBox_studentsemester_upt.Name = "comboBox_studentsemester_upt";
+            this.comboBox_studentsemester_upt.Size = new System.Drawing.Size(422, 40);
+            this.comboBox_studentsemester_upt.TabIndex = 18;
+            this.comboBox_studentsemester_upt.Tag = "";
+            // 
+            // datepicker_student_upt
+            // 
+            this.datepicker_student_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.datepicker_student_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.datepicker_student_upt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datepicker_student_upt.Location = new System.Drawing.Point(285, 153);
+            this.datepicker_student_upt.Margin = new System.Windows.Forms.Padding(6);
+            this.datepicker_student_upt.MaxDate = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
+            this.datepicker_student_upt.Name = "datepicker_student_upt";
+            this.datepicker_student_upt.Size = new System.Drawing.Size(422, 36);
+            this.datepicker_student_upt.TabIndex = 8;
+            this.datepicker_student_upt.Value = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
+            // 
+            // label_studentsemester_upt
+            // 
+            this.label_studentsemester_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentsemester_upt.AutoSize = true;
+            this.label_studentsemester_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentsemester_upt.Location = new System.Drawing.Point(28, 421);
+            this.label_studentsemester_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label_studentsemester_upt.Name = "label_studentsemester_upt";
+            this.label_studentsemester_upt.Size = new System.Drawing.Size(129, 30);
+            this.label_studentsemester_upt.TabIndex = 17;
+            this.label_studentsemester_upt.Text = "Semester:";
+            // 
+            // label_studentmajor_upt
+            // 
+            this.label_studentmajor_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentmajor_upt.AutoSize = true;
+            this.label_studentmajor_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentmajor_upt.Location = new System.Drawing.Point(28, 361);
+            this.label_studentmajor_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label_studentmajor_upt.Name = "label_studentmajor_upt";
+            this.label_studentmajor_upt.Size = new System.Drawing.Size(87, 30);
+            this.label_studentmajor_upt.TabIndex = 15;
+            this.label_studentmajor_upt.Text = "Major:";
+            // 
+            // label_studentfaculty_upt
+            // 
+            this.label_studentfaculty_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentfaculty_upt.AutoSize = true;
+            this.label_studentfaculty_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentfaculty_upt.Location = new System.Drawing.Point(28, 292);
+            this.label_studentfaculty_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label_studentfaculty_upt.Name = "label_studentfaculty_upt";
+            this.label_studentfaculty_upt.Size = new System.Drawing.Size(106, 30);
+            this.label_studentfaculty_upt.TabIndex = 13;
+            this.label_studentfaculty_upt.Text = "Faculty:";
+            // 
+            // label_studentgender_upt
+            // 
+            this.label_studentgender_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentgender_upt.AutoSize = true;
+            this.label_studentgender_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentgender_upt.Location = new System.Drawing.Point(28, 220);
+            this.label_studentgender_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label_studentgender_upt.Name = "label_studentgender_upt";
+            this.label_studentgender_upt.Size = new System.Drawing.Size(111, 30);
+            this.label_studentgender_upt.TabIndex = 9;
+            this.label_studentgender_upt.Text = "Gender:";
+            // 
+            // label_studentdate_upt
+            // 
+            this.label_studentdate_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentdate_upt.AutoSize = true;
+            this.label_studentdate_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentdate_upt.Location = new System.Drawing.Point(28, 153);
+            this.label_studentdate_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label_studentdate_upt.Name = "label_studentdate_upt";
+            this.label_studentdate_upt.Size = new System.Drawing.Size(166, 30);
+            this.label_studentdate_upt.TabIndex = 7;
+            this.label_studentdate_upt.Text = "Date of Birth:";
+            // 
+            // textbox_studentmajor_upt
+            // 
+            this.textbox_studentmajor_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textbox_studentmajor_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_studentmajor_upt.Location = new System.Drawing.Point(285, 356);
+            this.textbox_studentmajor_upt.MaxLength = 25;
+            this.textbox_studentmajor_upt.Name = "textbox_studentmajor_upt";
+            this.textbox_studentmajor_upt.Size = new System.Drawing.Size(422, 36);
+            this.textbox_studentmajor_upt.TabIndex = 16;
+            // 
+            // textbox_studentfaculty_upt
+            // 
+            this.textbox_studentfaculty_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textbox_studentfaculty_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_studentfaculty_upt.Location = new System.Drawing.Point(285, 292);
+            this.textbox_studentfaculty_upt.MaxLength = 25;
+            this.textbox_studentfaculty_upt.Name = "textbox_studentfaculty_upt";
+            this.textbox_studentfaculty_upt.Size = new System.Drawing.Size(422, 36);
+            this.textbox_studentfaculty_upt.TabIndex = 14;
+            // 
+            // button_student_upt
+            // 
+            this.button_student_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_student_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.button_student_upt.Location = new System.Drawing.Point(418, 562);
+            this.button_student_upt.Name = "button_student_upt";
+            this.button_student_upt.Size = new System.Drawing.Size(172, 57);
+            this.button_student_upt.TabIndex = 21;
+            this.button_student_upt.Text = "Update";
+            this.button_student_upt.UseVisualStyleBackColor = true;
+            this.button_student_upt.Click += new System.EventHandler(this.button_student_upt_Click);
+            // 
+            // label_studentpassword_upt
+            // 
+            this.label_studentpassword_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentpassword_upt.AutoSize = true;
+            this.label_studentpassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentpassword_upt.Location = new System.Drawing.Point(28, 488);
+            this.label_studentpassword_upt.Name = "label_studentpassword_upt";
+            this.label_studentpassword_upt.Size = new System.Drawing.Size(129, 30);
+            this.label_studentpassword_upt.TabIndex = 19;
+            this.label_studentpassword_upt.Text = "Password:";
+            // 
+            // label_studentname_upt
+            // 
+            this.label_studentname_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_studentname_upt.AutoSize = true;
+            this.label_studentname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.label_studentname_upt.Location = new System.Drawing.Point(28, 89);
+            this.label_studentname_upt.Name = "label_studentname_upt";
+            this.label_studentname_upt.Size = new System.Drawing.Size(94, 30);
+            this.label_studentname_upt.TabIndex = 5;
+            this.label_studentname_upt.Text = "Name:";
+            // 
+            // textbox_studentpassword_upt
+            // 
+            this.textbox_studentpassword_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textbox_studentpassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_studentpassword_upt.Location = new System.Drawing.Point(285, 488);
+            this.textbox_studentpassword_upt.MaxLength = 18;
+            this.textbox_studentpassword_upt.Name = "textbox_studentpassword_upt";
+            this.textbox_studentpassword_upt.Size = new System.Drawing.Size(422, 36);
+            this.textbox_studentpassword_upt.TabIndex = 20;
+            this.textbox_studentpassword_upt.UseSystemPasswordChar = true;
+            // 
+            // textbox_studentname_upt
+            // 
+            this.textbox_studentname_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textbox_studentname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
+            this.textbox_studentname_upt.Location = new System.Drawing.Point(285, 86);
+            this.textbox_studentname_upt.MaxLength = 25;
+            this.textbox_studentname_upt.Name = "textbox_studentname_upt";
+            this.textbox_studentname_upt.Size = new System.Drawing.Size(422, 36);
+            this.textbox_studentname_upt.TabIndex = 6;
+            // 
+            // groupBox_studentID_show
+            // 
+            this.groupBox_studentID_show.Controls.Add(this.label_studentnumber_show);
+            this.groupBox_studentID_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_studentID_show.Location = new System.Drawing.Point(917, 3);
+            this.groupBox_studentID_show.Name = "groupBox_studentID_show";
+            this.groupBox_studentID_show.Size = new System.Drawing.Size(442, 119);
+            this.groupBox_studentID_show.TabIndex = 22;
+            this.groupBox_studentID_show.TabStop = false;
+            this.groupBox_studentID_show.Visible = false;
+            // 
+            // label_studentnumber_show
+            // 
+            this.label_studentnumber_show.AutoSize = true;
+            this.label_studentnumber_show.BackColor = System.Drawing.Color.Transparent;
+            this.label_studentnumber_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_studentnumber_show.Location = new System.Drawing.Point(27, 49);
+            this.label_studentnumber_show.Name = "label_studentnumber_show";
+            this.label_studentnumber_show.Size = new System.Drawing.Size(233, 34);
+            this.label_studentnumber_show.TabIndex = 23;
+            this.label_studentnumber_show.Text = "Student Number";
             // 
             // groupBox_student_show
             // 
@@ -602,7 +871,7 @@
             this.groupBox_student_show.Location = new System.Drawing.Point(3, 3);
             this.groupBox_student_show.Name = "groupBox_student_show";
             this.groupBox_student_show.Size = new System.Drawing.Size(908, 119);
-            this.groupBox_student_show.TabIndex = 2;
+            this.groupBox_student_show.TabIndex = 1;
             this.groupBox_student_show.TabStop = false;
             // 
             // label_student_show
@@ -639,205 +908,6 @@
             this.textbox_studentnumber_show.Size = new System.Drawing.Size(316, 36);
             this.textbox_studentnumber_show.TabIndex = 2;
             // 
-            // groupBox_student_upt
-            // 
-            this.groupBox_student_upt.Controls.Add(this.panel_gender_upt);
-            this.groupBox_student_upt.Controls.Add(this.comboBox_studentsemester_upt);
-            this.groupBox_student_upt.Controls.Add(this.datepicker_student_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentsemester_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentmajor_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentfaculty_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentgender_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentdate_upt);
-            this.groupBox_student_upt.Controls.Add(this.textbox_studentmajor_upt);
-            this.groupBox_student_upt.Controls.Add(this.textbox_studentfaculty_upt);
-            this.groupBox_student_upt.Controls.Add(this.button_student_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentpassword_upt);
-            this.groupBox_student_upt.Controls.Add(this.label_studentname_upt);
-            this.groupBox_student_upt.Controls.Add(this.textbox_studentpassword_upt);
-            this.groupBox_student_upt.Controls.Add(this.textbox_studentname_upt);
-            this.groupBox_student_upt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_student_upt.Location = new System.Drawing.Point(3, 128);
-            this.groupBox_student_upt.Name = "groupBox_student_upt";
-            this.groupBox_student_upt.Size = new System.Drawing.Size(908, 684);
-            this.groupBox_student_upt.TabIndex = 4;
-            this.groupBox_student_upt.TabStop = false;
-            this.groupBox_student_upt.Visible = false;
-            // 
-            // comboBox_studentsemester_upt
-            // 
-            this.comboBox_studentsemester_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox_studentsemester_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_studentsemester_upt.FormattingEnabled = true;
-            this.comboBox_studentsemester_upt.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
-            this.comboBox_studentsemester_upt.Location = new System.Drawing.Point(285, 421);
-            this.comboBox_studentsemester_upt.Name = "comboBox_studentsemester_upt";
-            this.comboBox_studentsemester_upt.Size = new System.Drawing.Size(422, 40);
-            this.comboBox_studentsemester_upt.TabIndex = 123;
-            this.comboBox_studentsemester_upt.Tag = "";
-            // 
-            // datepicker_student_upt
-            // 
-            this.datepicker_student_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.datepicker_student_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.datepicker_student_upt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepicker_student_upt.Location = new System.Drawing.Point(285, 153);
-            this.datepicker_student_upt.Margin = new System.Windows.Forms.Padding(6);
-            this.datepicker_student_upt.MaxDate = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
-            this.datepicker_student_upt.Name = "datepicker_student_upt";
-            this.datepicker_student_upt.Size = new System.Drawing.Size(422, 36);
-            this.datepicker_student_upt.TabIndex = 8;
-            this.datepicker_student_upt.Value = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
-            // 
-            // label_studentsemester_upt
-            // 
-            this.label_studentsemester_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentsemester_upt.AutoSize = true;
-            this.label_studentsemester_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentsemester_upt.Location = new System.Drawing.Point(28, 421);
-            this.label_studentsemester_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label_studentsemester_upt.Name = "label_studentsemester_upt";
-            this.label_studentsemester_upt.Size = new System.Drawing.Size(129, 30);
-            this.label_studentsemester_upt.TabIndex = 15;
-            this.label_studentsemester_upt.Text = "Semester:";
-            // 
-            // label_studentmajor_upt
-            // 
-            this.label_studentmajor_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentmajor_upt.AutoSize = true;
-            this.label_studentmajor_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentmajor_upt.Location = new System.Drawing.Point(28, 361);
-            this.label_studentmajor_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label_studentmajor_upt.Name = "label_studentmajor_upt";
-            this.label_studentmajor_upt.Size = new System.Drawing.Size(87, 30);
-            this.label_studentmajor_upt.TabIndex = 13;
-            this.label_studentmajor_upt.Text = "Major:";
-            // 
-            // label_studentfaculty_upt
-            // 
-            this.label_studentfaculty_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentfaculty_upt.AutoSize = true;
-            this.label_studentfaculty_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentfaculty_upt.Location = new System.Drawing.Point(28, 292);
-            this.label_studentfaculty_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label_studentfaculty_upt.Name = "label_studentfaculty_upt";
-            this.label_studentfaculty_upt.Size = new System.Drawing.Size(106, 30);
-            this.label_studentfaculty_upt.TabIndex = 11;
-            this.label_studentfaculty_upt.Text = "Faculty:";
-            // 
-            // label_studentgender_upt
-            // 
-            this.label_studentgender_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentgender_upt.AutoSize = true;
-            this.label_studentgender_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentgender_upt.Location = new System.Drawing.Point(28, 220);
-            this.label_studentgender_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label_studentgender_upt.Name = "label_studentgender_upt";
-            this.label_studentgender_upt.Size = new System.Drawing.Size(111, 30);
-            this.label_studentgender_upt.TabIndex = 9;
-            this.label_studentgender_upt.Text = "Gender:";
-            // 
-            // label_studentdate_upt
-            // 
-            this.label_studentdate_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentdate_upt.AutoSize = true;
-            this.label_studentdate_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentdate_upt.Location = new System.Drawing.Point(28, 153);
-            this.label_studentdate_upt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label_studentdate_upt.Name = "label_studentdate_upt";
-            this.label_studentdate_upt.Size = new System.Drawing.Size(166, 30);
-            this.label_studentdate_upt.TabIndex = 7;
-            this.label_studentdate_upt.Text = "Date of Birth:";
-            // 
-            // textbox_studentmajor_upt
-            // 
-            this.textbox_studentmajor_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textbox_studentmajor_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_studentmajor_upt.Location = new System.Drawing.Point(285, 356);
-            this.textbox_studentmajor_upt.MaxLength = 25;
-            this.textbox_studentmajor_upt.Name = "textbox_studentmajor_upt";
-            this.textbox_studentmajor_upt.Size = new System.Drawing.Size(422, 36);
-            this.textbox_studentmajor_upt.TabIndex = 14;
-            // 
-            // textbox_studentfaculty_upt
-            // 
-            this.textbox_studentfaculty_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textbox_studentfaculty_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_studentfaculty_upt.Location = new System.Drawing.Point(285, 292);
-            this.textbox_studentfaculty_upt.MaxLength = 25;
-            this.textbox_studentfaculty_upt.Name = "textbox_studentfaculty_upt";
-            this.textbox_studentfaculty_upt.Size = new System.Drawing.Size(422, 36);
-            this.textbox_studentfaculty_upt.TabIndex = 12;
-            // 
-            // button_student_upt
-            // 
-            this.button_student_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_student_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.button_student_upt.Location = new System.Drawing.Point(418, 562);
-            this.button_student_upt.Name = "button_student_upt";
-            this.button_student_upt.Size = new System.Drawing.Size(172, 57);
-            this.button_student_upt.TabIndex = 19;
-            this.button_student_upt.Text = "Update";
-            this.button_student_upt.UseVisualStyleBackColor = true;
-            this.button_student_upt.Click += new System.EventHandler(this.button_student_upt_Click);
-            // 
-            // label_studentpassword_upt
-            // 
-            this.label_studentpassword_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentpassword_upt.AutoSize = true;
-            this.label_studentpassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentpassword_upt.Location = new System.Drawing.Point(28, 488);
-            this.label_studentpassword_upt.Name = "label_studentpassword_upt";
-            this.label_studentpassword_upt.Size = new System.Drawing.Size(129, 30);
-            this.label_studentpassword_upt.TabIndex = 17;
-            this.label_studentpassword_upt.Text = "Password:";
-            // 
-            // label_studentname_upt
-            // 
-            this.label_studentname_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_studentname_upt.AutoSize = true;
-            this.label_studentname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.label_studentname_upt.Location = new System.Drawing.Point(28, 89);
-            this.label_studentname_upt.Name = "label_studentname_upt";
-            this.label_studentname_upt.Size = new System.Drawing.Size(94, 30);
-            this.label_studentname_upt.TabIndex = 5;
-            this.label_studentname_upt.Text = "Name:";
-            // 
-            // textbox_studentpassword_upt
-            // 
-            this.textbox_studentpassword_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textbox_studentpassword_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_studentpassword_upt.Location = new System.Drawing.Point(285, 488);
-            this.textbox_studentpassword_upt.MaxLength = 18;
-            this.textbox_studentpassword_upt.Name = "textbox_studentpassword_upt";
-            this.textbox_studentpassword_upt.Size = new System.Drawing.Size(422, 36);
-            this.textbox_studentpassword_upt.TabIndex = 18;
-            this.textbox_studentpassword_upt.UseSystemPasswordChar = true;
-            // 
-            // textbox_studentname_upt
-            // 
-            this.textbox_studentname_upt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textbox_studentname_upt.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
-            this.textbox_studentname_upt.Location = new System.Drawing.Point(285, 86);
-            this.textbox_studentname_upt.MaxLength = 25;
-            this.textbox_studentname_upt.Name = "textbox_studentname_upt";
-            this.textbox_studentname_upt.Size = new System.Drawing.Size(422, 36);
-            this.textbox_studentname_upt.TabIndex = 6;
-            // 
             // label_main_student_upt
             // 
             this.label_main_student_upt.AutoSize = true;
@@ -851,14 +921,6 @@
             // tab_student_reg
             // 
             this.tab_student_reg.Controls.Add(this.tableLayoutPanel_student_reg);
-            this.tab_student_reg.Controls.Add(this.label_sem);
-            this.tab_student_reg.Controls.Add(this.label_maj);
-            this.tab_student_reg.Controls.Add(this.label_fac);
-            this.tab_student_reg.Controls.Add(this.label_gen);
-            this.tab_student_reg.Controls.Add(this.label_date);
-            this.tab_student_reg.Controls.Add(this.label_test4);
-            this.tab_student_reg.Controls.Add(this.label_test3);
-            this.tab_student_reg.Controls.Add(this.label_test2);
             this.tab_student_reg.Controls.Add(this.label_main_student_reg);
             this.tab_student_reg.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.tab_student_reg.Location = new System.Drawing.Point(4, 51);
@@ -967,8 +1029,8 @@
             // 
             this.comboBox_studentsemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_studentsemester.FormattingEnabled = true;
+            this.comboBox_studentsemester.ImeMode = System.Windows.Forms.ImeMode.On;
             this.comboBox_studentsemester.Items.AddRange(new object[] {
-            "Please Choose Semester",
             "1",
             "2",
             "3",
@@ -986,7 +1048,8 @@
             this.comboBox_studentsemester.Location = new System.Drawing.Point(424, 429);
             this.comboBox_studentsemester.Name = "comboBox_studentsemester";
             this.comboBox_studentsemester.Size = new System.Drawing.Size(365, 40);
-            this.comboBox_studentsemester.TabIndex = 122;
+            this.comboBox_studentsemester.TabIndex = 22;
+            this.comboBox_studentsemester.SelectedIndex = 0;
             // 
             // panel_gender
             // 
@@ -996,7 +1059,7 @@
             this.panel_gender.Location = new System.Drawing.Point(424, 227);
             this.panel_gender.Name = "panel_gender";
             this.panel_gender.Size = new System.Drawing.Size(365, 41);
-            this.panel_gender.TabIndex = 121;
+            this.panel_gender.TabIndex = 15;
             // 
             // radioButton_female_reg
             // 
@@ -1006,7 +1069,7 @@
             this.radioButton_female_reg.Location = new System.Drawing.Point(0, 0);
             this.radioButton_female_reg.Name = "radioButton_female_reg";
             this.radioButton_female_reg.Size = new System.Drawing.Size(135, 41);
-            this.radioButton_female_reg.TabIndex = 121;
+            this.radioButton_female_reg.TabIndex = 15;
             this.radioButton_female_reg.TabStop = true;
             this.radioButton_female_reg.Text = "Female";
             this.radioButton_female_reg.UseVisualStyleBackColor = true;
@@ -1018,7 +1081,7 @@
             this.radioButton_male_reg.Location = new System.Drawing.Point(259, 0);
             this.radioButton_male_reg.Name = "radioButton_male_reg";
             this.radioButton_male_reg.Size = new System.Drawing.Size(106, 41);
-            this.radioButton_male_reg.TabIndex = 121;
+            this.radioButton_male_reg.TabIndex = 16;
             this.radioButton_male_reg.Text = "Male";
             this.radioButton_male_reg.UseVisualStyleBackColor = true;
             // 
@@ -1038,7 +1101,7 @@
             this.button_student_reg.Location = new System.Drawing.Point(515, 517);
             this.button_student_reg.Name = "button_student_reg";
             this.button_student_reg.Size = new System.Drawing.Size(172, 60);
-            this.button_student_reg.TabIndex = 22;
+            this.button_student_reg.TabIndex = 23;
             this.button_student_reg.Text = "Register";
             this.button_student_reg.UseVisualStyleBackColor = true;
             this.button_student_reg.Click += new System.EventHandler(this.reg_student_Click);
@@ -1078,7 +1141,7 @@
             this.textbox_studentfaculty.MaxLength = 18;
             this.textbox_studentfaculty.Name = "textbox_studentfaculty";
             this.textbox_studentfaculty.Size = new System.Drawing.Size(366, 36);
-            this.textbox_studentfaculty.TabIndex = 17;
+            this.textbox_studentfaculty.TabIndex = 18;
             this.textbox_studentfaculty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentpassword_KeyPress);
             // 
             // textbox_studentmajor
@@ -1088,7 +1151,7 @@
             this.textbox_studentmajor.MaxLength = 25;
             this.textbox_studentmajor.Name = "textbox_studentmajor";
             this.textbox_studentmajor.Size = new System.Drawing.Size(366, 36);
-            this.textbox_studentmajor.TabIndex = 19;
+            this.textbox_studentmajor.TabIndex = 20;
             this.textbox_studentmajor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentpassword_KeyPress);
             // 
             // label_studentdate
@@ -1134,7 +1197,7 @@
             this.label_studentsemester.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label_studentsemester.Name = "label_studentsemester";
             this.label_studentsemester.Size = new System.Drawing.Size(122, 30);
-            this.label_studentsemester.TabIndex = 20;
+            this.label_studentsemester.TabIndex = 21;
             this.label_studentsemester.Text = "Semester";
             // 
             // label_studentfaculty
@@ -1145,7 +1208,7 @@
             this.label_studentfaculty.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label_studentfaculty.Name = "label_studentfaculty";
             this.label_studentfaculty.Size = new System.Drawing.Size(99, 30);
-            this.label_studentfaculty.TabIndex = 16;
+            this.label_studentfaculty.TabIndex = 17;
             this.label_studentfaculty.Text = "Faculty";
             // 
             // label_studentmajor
@@ -1156,80 +1219,8 @@
             this.label_studentmajor.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label_studentmajor.Name = "label_studentmajor";
             this.label_studentmajor.Size = new System.Drawing.Size(80, 30);
-            this.label_studentmajor.TabIndex = 18;
+            this.label_studentmajor.TabIndex = 19;
             this.label_studentmajor.Text = "Major";
-            // 
-            // label_sem
-            // 
-            this.label_sem.AutoSize = true;
-            this.label_sem.Location = new System.Drawing.Point(1529, 728);
-            this.label_sem.Name = "label_sem";
-            this.label_sem.Size = new System.Drawing.Size(179, 32);
-            this.label_sem.TabIndex = 120;
-            this.label_sem.Text = "Place Holder";
-            // 
-            // label_maj
-            // 
-            this.label_maj.AutoSize = true;
-            this.label_maj.Location = new System.Drawing.Point(1529, 659);
-            this.label_maj.Name = "label_maj";
-            this.label_maj.Size = new System.Drawing.Size(179, 32);
-            this.label_maj.TabIndex = 120;
-            this.label_maj.Text = "Place Holder";
-            // 
-            // label_fac
-            // 
-            this.label_fac.AutoSize = true;
-            this.label_fac.Location = new System.Drawing.Point(1529, 596);
-            this.label_fac.Name = "label_fac";
-            this.label_fac.Size = new System.Drawing.Size(179, 32);
-            this.label_fac.TabIndex = 120;
-            this.label_fac.Text = "Place Holder";
-            // 
-            // label_gen
-            // 
-            this.label_gen.AutoSize = true;
-            this.label_gen.Location = new System.Drawing.Point(1529, 534);
-            this.label_gen.Name = "label_gen";
-            this.label_gen.Size = new System.Drawing.Size(179, 32);
-            this.label_gen.TabIndex = 120;
-            this.label_gen.Text = "Place Holder";
-            // 
-            // label_date
-            // 
-            this.label_date.AutoSize = true;
-            this.label_date.Location = new System.Drawing.Point(1529, 457);
-            this.label_date.Name = "label_date";
-            this.label_date.Size = new System.Drawing.Size(179, 32);
-            this.label_date.TabIndex = 120;
-            this.label_date.Text = "Place Holder";
-            // 
-            // label_test4
-            // 
-            this.label_test4.AutoSize = true;
-            this.label_test4.Location = new System.Drawing.Point(1519, 228);
-            this.label_test4.Name = "label_test4";
-            this.label_test4.Size = new System.Drawing.Size(179, 32);
-            this.label_test4.TabIndex = 103;
-            this.label_test4.Text = "Place Holder";
-            // 
-            // label_test3
-            // 
-            this.label_test3.AutoSize = true;
-            this.label_test3.Location = new System.Drawing.Point(1519, 168);
-            this.label_test3.Name = "label_test3";
-            this.label_test3.Size = new System.Drawing.Size(179, 32);
-            this.label_test3.TabIndex = 102;
-            this.label_test3.Text = "Place Holder";
-            // 
-            // label_test2
-            // 
-            this.label_test2.AutoSize = true;
-            this.label_test2.Location = new System.Drawing.Point(1529, 372);
-            this.label_test2.Name = "label_test2";
-            this.label_test2.Size = new System.Drawing.Size(179, 32);
-            this.label_test2.TabIndex = 101;
-            this.label_test2.Text = "Place Holder";
             // 
             // label_main_student_reg
             // 
@@ -1259,121 +1250,6 @@
             this.Admin_MainTab.TabIndex = 0;
             this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
             // 
-            // tableLayoutPanel_company_reg
-            // 
-            this.tableLayoutPanel_company_reg.ColumnCount = 1;
-            this.tableLayoutPanel_company_reg.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_company_reg.Controls.Add(this.groupBox_company_reg, 0, 0);
-            this.tableLayoutPanel_company_reg.Location = new System.Drawing.Point(554, 299);
-            this.tableLayoutPanel_company_reg.Name = "tableLayoutPanel_company_reg";
-            this.tableLayoutPanel_company_reg.RowCount = 1;
-            this.tableLayoutPanel_company_reg.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_company_reg.Size = new System.Drawing.Size(900, 397);
-            this.tableLayoutPanel_company_reg.TabIndex = 104;
-            // 
-            // tableLayoutPanel_company_upt
-            // 
-            this.tableLayoutPanel_company_upt.AutoSize = true;
-            this.tableLayoutPanel_company_upt.ColumnCount = 2;
-            this.tableLayoutPanel_company_upt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.377F));
-            this.tableLayoutPanel_company_upt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.623F));
-            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_companyID, 1, 0);
-            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_companyinfo_del, 1, 1);
-            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_company_show, 0, 0);
-            this.tableLayoutPanel_company_upt.Controls.Add(this.groupBox_company_upt, 0, 1);
-            this.tableLayoutPanel_company_upt.Location = new System.Drawing.Point(458, 285);
-            this.tableLayoutPanel_company_upt.Name = "tableLayoutPanel_company_upt";
-            this.tableLayoutPanel_company_upt.RowCount = 2;
-            this.tableLayoutPanel_company_upt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel_company_upt.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel_company_upt.Size = new System.Drawing.Size(1191, 456);
-            this.tableLayoutPanel_company_upt.TabIndex = 13;
-            // 
-            // groupBox_studentID_show
-            // 
-            this.groupBox_studentID_show.Controls.Add(this.label_studentnumber_show);
-            this.groupBox_studentID_show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_studentID_show.Location = new System.Drawing.Point(917, 3);
-            this.groupBox_studentID_show.Name = "groupBox_studentID_show";
-            this.groupBox_studentID_show.Size = new System.Drawing.Size(442, 119);
-            this.groupBox_studentID_show.TabIndex = 22;
-            this.groupBox_studentID_show.TabStop = false;
-            this.groupBox_studentID_show.Visible = false;
-            // 
-            // groupBox_studentinfo_del
-            // 
-            this.groupBox_studentinfo_del.Controls.Add(this.label_studentsemester_show);
-            this.groupBox_studentinfo_del.Controls.Add(this.label_studentname_show);
-            this.groupBox_studentinfo_del.Controls.Add(this.button_student_del);
-            this.groupBox_studentinfo_del.Controls.Add(this.label_studentmajor_show);
-            this.groupBox_studentinfo_del.Controls.Add(this.label_studentgender_show);
-            this.groupBox_studentinfo_del.Controls.Add(this.label_studentfaculty_show);
-            this.groupBox_studentinfo_del.Controls.Add(this.label_studentdate_show);
-            this.groupBox_studentinfo_del.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_studentinfo_del.Location = new System.Drawing.Point(917, 128);
-            this.groupBox_studentinfo_del.Name = "groupBox_studentinfo_del";
-            this.groupBox_studentinfo_del.Size = new System.Drawing.Size(442, 684);
-            this.groupBox_studentinfo_del.TabIndex = 23;
-            this.groupBox_studentinfo_del.TabStop = false;
-            this.groupBox_studentinfo_del.Visible = false;
-            // 
-            // groupBox_companyID
-            // 
-            this.groupBox_companyID.Controls.Add(this.label_companyID_show);
-            this.groupBox_companyID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_companyID.Location = new System.Drawing.Point(734, 3);
-            this.groupBox_companyID.Name = "groupBox_companyID";
-            this.groupBox_companyID.Size = new System.Drawing.Size(454, 132);
-            this.groupBox_companyID.TabIndex = 23;
-            this.groupBox_companyID.TabStop = false;
-            this.groupBox_companyID.Visible = false;
-            // 
-            // groupBox_companyinfo_del
-            // 
-            this.groupBox_companyinfo_del.Controls.Add(this.button_company_del);
-            this.groupBox_companyinfo_del.Controls.Add(this.label_companyname_show);
-            this.groupBox_companyinfo_del.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_companyinfo_del.Location = new System.Drawing.Point(734, 141);
-            this.groupBox_companyinfo_del.Name = "groupBox_companyinfo_del";
-            this.groupBox_companyinfo_del.Size = new System.Drawing.Size(454, 312);
-            this.groupBox_companyinfo_del.TabIndex = 23;
-            this.groupBox_companyinfo_del.TabStop = false;
-            this.groupBox_companyinfo_del.Visible = false;
-            // 
-            // panel_gender_upt
-            // 
-            this.panel_gender_upt.AutoSize = true;
-            this.panel_gender_upt.Controls.Add(this.radioButton_female_upt);
-            this.panel_gender_upt.Controls.Add(this.radioButton_male_upt);
-            this.panel_gender_upt.Location = new System.Drawing.Point(285, 218);
-            this.panel_gender_upt.Name = "panel_gender_upt";
-            this.panel_gender_upt.Size = new System.Drawing.Size(422, 41);
-            this.panel_gender_upt.TabIndex = 124;
-            // 
-            // radioButton_female_upt
-            // 
-            this.radioButton_female_upt.AutoSize = true;
-            this.radioButton_female_upt.Checked = true;
-            this.radioButton_female_upt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.radioButton_female_upt.Location = new System.Drawing.Point(0, 0);
-            this.radioButton_female_upt.Name = "radioButton_female_upt";
-            this.radioButton_female_upt.Size = new System.Drawing.Size(135, 41);
-            this.radioButton_female_upt.TabIndex = 121;
-            this.radioButton_female_upt.TabStop = true;
-            this.radioButton_female_upt.Text = "Female";
-            this.radioButton_female_upt.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_male_upt
-            // 
-            this.radioButton_male_upt.AutoSize = true;
-            this.radioButton_male_upt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton_male_upt.Location = new System.Drawing.Point(316, 0);
-            this.radioButton_male_upt.Name = "radioButton_male_upt";
-            this.radioButton_male_upt.Size = new System.Drawing.Size(106, 41);
-            this.radioButton_male_upt.TabIndex = 121;
-            this.radioButton_male_upt.Text = "Male";
-            this.radioButton_male_upt.UseVisualStyleBackColor = true;
-            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -1384,21 +1260,32 @@
             this.Size = new System.Drawing.Size(1993, 1233);
             this.tab_company_upt.ResumeLayout(false);
             this.tab_company_upt.PerformLayout();
+            this.tableLayoutPanel_company_upt.ResumeLayout(false);
+            this.groupBox_companyID.ResumeLayout(false);
+            this.groupBox_companyID.PerformLayout();
+            this.groupBox_companyinfo_del.ResumeLayout(false);
             this.groupBox_company_show.ResumeLayout(false);
             this.groupBox_company_show.PerformLayout();
             this.groupBox_company_upt.ResumeLayout(false);
             this.groupBox_company_upt.PerformLayout();
             this.tab_company_reg.ResumeLayout(false);
             this.tab_company_reg.PerformLayout();
+            this.tableLayoutPanel_company_reg.ResumeLayout(false);
             this.groupBox_company_reg.ResumeLayout(false);
             this.groupBox_company_reg.PerformLayout();
             this.tab_student_upt.ResumeLayout(false);
             this.tab_student_upt.PerformLayout();
             this.tableLayoutPanel_student_upt.ResumeLayout(false);
-            this.groupBox_student_show.ResumeLayout(false);
-            this.groupBox_student_show.PerformLayout();
+            this.groupBox_studentinfo_del.ResumeLayout(false);
+            this.groupBox_studentinfo_del.PerformLayout();
             this.groupBox_student_upt.ResumeLayout(false);
             this.groupBox_student_upt.PerformLayout();
+            this.panel_gender_upt.ResumeLayout(false);
+            this.panel_gender_upt.PerformLayout();
+            this.groupBox_studentID_show.ResumeLayout(false);
+            this.groupBox_studentID_show.PerformLayout();
+            this.groupBox_student_show.ResumeLayout(false);
+            this.groupBox_student_show.PerformLayout();
             this.tab_student_reg.ResumeLayout(false);
             this.tab_student_reg.PerformLayout();
             this.tableLayoutPanel_student_reg.ResumeLayout(false);
@@ -1409,17 +1296,6 @@
             this.panel_gender.ResumeLayout(false);
             this.panel_gender.PerformLayout();
             this.Admin_MainTab.ResumeLayout(false);
-            this.tableLayoutPanel_company_reg.ResumeLayout(false);
-            this.tableLayoutPanel_company_upt.ResumeLayout(false);
-            this.groupBox_studentID_show.ResumeLayout(false);
-            this.groupBox_studentID_show.PerformLayout();
-            this.groupBox_studentinfo_del.ResumeLayout(false);
-            this.groupBox_studentinfo_del.PerformLayout();
-            this.groupBox_companyID.ResumeLayout(false);
-            this.groupBox_companyID.PerformLayout();
-            this.groupBox_companyinfo_del.ResumeLayout(false);
-            this.panel_gender_upt.ResumeLayout(false);
-            this.panel_gender_upt.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1439,13 +1315,10 @@
         private System.Windows.Forms.TextBox textbox_company_show;
         private System.Windows.Forms.Label label_main_company_upt;
         private System.Windows.Forms.TabPage tab_company_reg;
-        private System.Windows.Forms.Label label_test7;
         private System.Windows.Forms.Label label_companyID;
         private System.Windows.Forms.TextBox textbox_companyID;
         private System.Windows.Forms.TextBox textbox_companypassword;
         private System.Windows.Forms.TextBox textbox_companyname;
-        private System.Windows.Forms.Label label_test6;
-        private System.Windows.Forms.Label label_test5;
         private System.Windows.Forms.Button button_company_reg;
         private System.Windows.Forms.Label label_company_surname;
         private System.Windows.Forms.Label label_company_name;
@@ -1485,18 +1358,11 @@
         private System.Windows.Forms.Label label_studentsemester;
         private System.Windows.Forms.Label label_studentfaculty;
         private System.Windows.Forms.Label label_studentmajor;
-        private System.Windows.Forms.Label label_sem;
-        private System.Windows.Forms.Label label_maj;
-        private System.Windows.Forms.Label label_fac;
-        private System.Windows.Forms.Label label_gen;
         private System.Windows.Forms.GroupBox groupBox_studentID_reg;
         private System.Windows.Forms.Label label_studentnumber;
         private System.Windows.Forms.TextBox textbox_studentnumber;
         private System.Windows.Forms.TextBox textbox_studentpassword;
         private System.Windows.Forms.Label label_studentpassword;
-        private System.Windows.Forms.Label label_test4;
-        private System.Windows.Forms.Label label_test3;
-        private System.Windows.Forms.Label label_test2;
         private System.Windows.Forms.Label label_main_student_reg;
         private System.Windows.Forms.TabControl Admin_MainTab;
         private System.Windows.Forms.GroupBox groupBox_student_show;
@@ -1515,7 +1381,6 @@
         private System.Windows.Forms.RadioButton radioButton_female_reg;
         private System.Windows.Forms.RadioButton radioButton_male_reg;
         private System.Windows.Forms.Panel panel_gender;
-        private System.Windows.Forms.Label label_date;
         private System.Windows.Forms.ComboBox comboBox_studentsemester;
         private System.Windows.Forms.ComboBox comboBox_studentsemester_upt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_company_reg;
