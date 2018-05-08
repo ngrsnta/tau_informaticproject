@@ -269,6 +269,7 @@
             this.textbox_company_show.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textbox_company_show.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
             this.textbox_company_show.Location = new System.Drawing.Point(227, 54);
+            this.textbox_company_show.MaxLength = 6;
             this.textbox_company_show.Name = "textbox_company_show";
             this.textbox_company_show.Size = new System.Drawing.Size(222, 36);
             this.textbox_company_show.TabIndex = 4;
@@ -427,7 +428,7 @@
             // 
             this.textbox_companyID.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
             this.textbox_companyID.Location = new System.Drawing.Point(406, 56);
-            this.textbox_companyID.MaxLength = 18;
+            this.textbox_companyID.MaxLength = 6;
             this.textbox_companyID.Name = "textbox_companyID";
             this.textbox_companyID.Size = new System.Drawing.Size(366, 36);
             this.textbox_companyID.TabIndex = 3;
@@ -457,7 +458,7 @@
             // 
             this.textbox_companyname.Font = new System.Drawing.Font("Century Gothic", 9.857143F);
             this.textbox_companyname.Location = new System.Drawing.Point(406, 116);
-            this.textbox_companyname.MaxLength = 9;
+            this.textbox_companyname.MaxLength = 45;
             this.textbox_companyname.Name = "textbox_companyname";
             this.textbox_companyname.Size = new System.Drawing.Size(366, 36);
             this.textbox_companyname.TabIndex = 5;
@@ -1049,7 +1050,6 @@
             this.comboBox_studentsemester.Name = "comboBox_studentsemester";
             this.comboBox_studentsemester.Size = new System.Drawing.Size(365, 40);
             this.comboBox_studentsemester.TabIndex = 22;
-            this.comboBox_studentsemester.SelectedIndex = 0;
             // 
             // panel_gender
             // 

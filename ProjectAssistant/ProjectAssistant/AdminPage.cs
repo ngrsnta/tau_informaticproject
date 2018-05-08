@@ -24,7 +24,7 @@ namespace ProjectAssistant
         /// <summary>
         /// When changed to a Tab, delete all Text Boxes
         /// </summary>
-        void Delete_Text()  
+ /*       void Delete_Text()  
         {
             var selectedTab = Admin_MainTab.SelectedTab;
 
@@ -47,7 +47,8 @@ namespace ProjectAssistant
                 // Other Controls....
             }
         }
-
+*/
+        
         /// <summary>
         /// Storing Inputs from Register Panel to Student Class
         /// </summary>
@@ -281,6 +282,8 @@ namespace ProjectAssistant
         }
 
         #endregion
+ 
+        
 
         #region Student Register
 
@@ -318,26 +321,26 @@ namespace ProjectAssistant
                 case 1:
                     {
                         MessageBox.Show("Please enter longer name (Minimum Length = 2)");
-                        Delete_Text();
+                   //     Delete_Text();
                         return;
                     }
 
                 case 2:
                     {
                         MessageBox.Show("Please enter longer surname (Minimum Length = 2)");
-                        Delete_Text();
+                    //    Delete_Text();
                         return;
                     }
                 case 3:
                     {
                         MessageBox.Show("Please enter a 9 digit number.");
-                        Delete_Text();
+                    //    Delete_Text();
                         return;
                     }
                 case 4:
                     {
                         MessageBox.Show("Please enter longer password. (Minimum Length = 6)");
-                        Delete_Text();
+                    //    Delete_Text();
                         return;
                     }
             }
@@ -348,7 +351,7 @@ namespace ProjectAssistant
             if (Int32.TryParse(textbox_studentnumber.Text, out i) != true)
             {
                 MessageBox.Show("Maximum number limit!!! (Maximum: 2147483647)");
-                Delete_Text();
+            //    Delete_Text();
                 i = 0;
                 return;
             }
@@ -393,8 +396,21 @@ namespace ProjectAssistant
         //2. Update Student Informations
         private void button_student_upt_Click(object sender, EventArgs e)
         {
+            #region Error @ Student Update
+
+            if (textbox_studentname_upt.Text.Length < 2)
+            {
+                MessageBox.Show("Please enter a longer name (Minimum Length = 2)");
+                return;
+            }
+ //           elseif(textbox_studentfaculty_upt.Text.Length < 3)
+            
+            #endregion
+
+
+
             Student stu_upt = new Student();
-            string student_ID = label_studentnumber_show.Text;
+            string student_ID = stu.id_number.ToString();
 
             //Bring new informations to the temporary Student Class
             UptToStudent(stu_upt);
@@ -431,7 +447,7 @@ namespace ProjectAssistant
             //Warning Dialog
             DialogResult res = MessageBox.Show("Are you sure to delete this user?", "Warning", 
                                                 MessageBoxButtons.YesNoCancel,MessageBoxIcon.Warning,
-                                                MessageBoxDefaultButton.Button3
+                                                MessageBoxDefaultButton.Button2
                                                );
             switch (res)
             {
@@ -475,7 +491,7 @@ namespace ProjectAssistant
                 return;
             }
 
-            if (textbox_companyID.Text.Length < 9)
+            if (textbox_companyID.Text.Length < 6)
                 i = 1;
             else if (textbox_companyname.Text.Length < 2)
                 i = 2;
@@ -489,7 +505,7 @@ namespace ProjectAssistant
                     break;
                 case 1:
                     {
-                        MessageBox.Show("Please enter a 9 digit ID (Minimum Length = 9)");
+                        MessageBox.Show("Please enter a 6 digit ID ");
                         return;
                     }
 
@@ -506,14 +522,6 @@ namespace ProjectAssistant
             }
 
             i = 0;
-
-            //Experimental: Maximum Limit of Integer
-            if (Int32.TryParse(textbox_companyID.Text, out i) != true)
-            {
-                MessageBox.Show("Maximum number limit!!! (Maximum: 2147483647)");
-                i = 0;
-                return;
-            }
 
             #endregion
 
@@ -534,31 +542,53 @@ namespace ProjectAssistant
 
         private void button_company_show_Click(object sender, EventArgs e)
         {
-                
-                string company_ID = textbox_company_show.Text;
+            #region Error Catch @ Company Show
 
-                //From Database to Student Class
-                comp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "companies", "companyId", company_ID));
-                comp.name = db.select_fromDatabase("companyName", "companies", "companyId", company_ID);
-                comp.password = db.select_fromDatabase("companyPassword", "companies", "companyId", company_ID);
+            if (textbox_company_show.Text.Length==0)
+            {
+                MessageBox.Show("Please enter a company ID");
+                return;
+            }
+            else if (0 < textbox_company_show.Text.Length && textbox_company_show.Text.Length < 6)
+            {
+                MessageBox.Show("Please enter a 6 digit ID");
+                return;
+            }
 
-                //Make the update panels visible
-                Show_Company_Upt_Panel(true);
+            #endregion
 
-                //Show Student Info from Class to Labels
-                label_companyID_show.Text = comp.id_number.ToString();
-                label_companyname_show.Text = comp.name;
+            string company_ID = textbox_company_show.Text;
 
-                //Bring Student Info from Class to Update Panel
-                textbox_companyname_upt.Text = comp.name;
+            //From Database to Student Class
+            comp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "companies", "companyId", company_ID));
+            comp.name = db.select_fromDatabase("companyName", "companies", "companyId", company_ID);
+            comp.password = db.select_fromDatabase("companyPassword", "companies", "companyId", company_ID);
+
+            //Make the update panels visible
+            Show_Company_Upt_Panel(true);
+
+            //Show Student Info from Class to Labels
+            label_companyID_show.Text = comp.id_number.ToString();
+            label_companyname_show.Text = comp.name;
+
+            //Bring Student Info from Class to Update Panel
+            textbox_companyname_upt.Text = comp.name;
             
         }
 
         //2. Update Student Informations
         private void button_company_update_Click(object sender, EventArgs e)
         {
+            #region Error Catch @ Company Update
+            if (0 < textbox_companypassword_upt.Text.Length && textbox_companypassword_upt.Text.Length < 6)
+            {
+                MessageBox.Show("Please enter a longer password (Minimum Length = 6 )");
+                return;
+            }
            
-            Company comp_upt= new Company();
+            #endregion
+
+            Company comp_upt = new Company();
             string company_ID = comp.id_number.ToString();
 
             //Bring new informations to Student Class &  //Update infos from Class to Database
@@ -594,7 +624,7 @@ namespace ProjectAssistant
 
             DialogResult res = MessageBox.Show("Are you sure to delete this user?", "Warning",
                                                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,
-                                               MessageBoxDefaultButton.Button3
+                                               MessageBoxDefaultButton.Button2
                                               );
             switch (res)
             {
