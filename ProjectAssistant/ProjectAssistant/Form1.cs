@@ -41,6 +41,18 @@ namespace ProjectAssistant
         }
         private void loginPage_loginButton_Click(object sender, EventArgs e)
         {
+            Form LoadingScreen = new Form();
+            LoadingScreen.Size = new Size(new Point(50, 50));
+            LoadingScreen.FormBorderStyle = FormBorderStyle.None;
+            LoadingScreen.TopMost = true;
+            LoadingScreen.StartPosition = FormStartPosition.CenterScreen;
+            LoadingScreen.BackColor = SystemColors.ControlDark;
+            Label lbl = new Label();
+            lbl.Text = "Please Wait...";
+            lbl.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(162)));
+            lbl.Location = new Point(10, 25);
+            LoadingScreen.Controls.Add(lbl);
+            LoadingScreen.Show();
 
             try
             {
@@ -112,7 +124,7 @@ namespace ProjectAssistant
 
                 }
             }
-            
+            LoadingScreen.Close();
         }
 
         private void adminPageButton_Click(object sender, EventArgs e)

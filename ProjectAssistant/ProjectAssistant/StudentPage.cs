@@ -15,6 +15,8 @@ namespace ProjectAssistant
         Student st = new Student();
         DataBase db = new DataBase();
 
+        
+
         public StudentPage(Student _st)
         {
             
@@ -178,8 +180,18 @@ namespace ProjectAssistant
 
         private void button_SaveChanges_Click(object sender, EventArgs e)
         {
+
             db.update_toDatabase("students", "studentTelnum", textBox_studPhoneNumber.Text, "studentId", st.id_number.ToString());
-            
+            db.update_toDatabase("students", "studentEmail", textBox_studMail.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentAdress", richTextBox_studAdress.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentHistory", richTextBox_studEducation.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentExprience", richTextBox_studWork.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentCertifcates", richTextBox_studCertificates.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentActivities", richTextBox_studCurricular.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentProjects", richTextBox_studProjects.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentProfessions", richTextBox_studProfessions.Text, "studentId", st.id_number.ToString());
+            db.update_toDatabase("students", "studentOther", richTextBox_studFurtherInfo.Text, "studentId", st.id_number.ToString());
+
         }
     }
 }
