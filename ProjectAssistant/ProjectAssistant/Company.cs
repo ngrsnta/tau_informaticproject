@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectAssistant
 {
-    class Company
+    public class Company
     {
         
             public string name { get; set; } = "";

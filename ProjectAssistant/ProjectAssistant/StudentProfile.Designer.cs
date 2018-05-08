@@ -47,7 +47,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.richTextBox_studAdress = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_edu = new System.Windows.Forms.RichTextBox();
             this.label_pageEnd = new System.Windows.Forms.Label();
             this.richTextBox_studExperience = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,6 +65,8 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label_semester = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -223,7 +225,6 @@
             this.label_studTelNum.Size = new System.Drawing.Size(131, 22);
             this.label_studTelNum.TabIndex = 13;
             this.label_studTelNum.Text = "05416659865";
-            this.label_studTelNum.Click += new System.EventHandler(this.label_studTelNum_Click);
             // 
             // label15
             // 
@@ -246,7 +247,6 @@
             this.label_studEmail.Size = new System.Drawing.Size(277, 22);
             this.label_studEmail.TabIndex = 15;
             this.label_studEmail.Text = "berkkaraagac25@gmail.com";
-            this.label_studEmail.Click += new System.EventHandler(this.label_studEmail_Click);
             // 
             // label17
             // 
@@ -283,17 +283,17 @@
             this.richTextBox_studAdress.Text = "There is a Rich TetBox here...\nThere is a Rich TetBox here...\nThere is a Rich Tet" +
     "Box here...\nThere is a Rich TetBox here...\nThere is a Rich TetBox here...\n\n";
             // 
-            // richTextBox1
+            // richTextBox_edu
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox1.Location = new System.Drawing.Point(589, 38);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(436, 227);
-            this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = "There is a Rich TetBox here...\nThere is a Rich TetBox here...\nThere is a Rich Tet" +
+            this.richTextBox_edu.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_edu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_edu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox_edu.Location = new System.Drawing.Point(589, 38);
+            this.richTextBox_edu.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.richTextBox_edu.Name = "richTextBox_edu";
+            this.richTextBox_edu.Size = new System.Drawing.Size(436, 227);
+            this.richTextBox_edu.TabIndex = 19;
+            this.richTextBox_edu.Text = "There is a Rich TetBox here...\nThere is a Rich TetBox here...\nThere is a Rich Tet" +
     "Box here...\nThere is a Rich TetBox here...\nThere is a Rich TetBox here...\n\n";
             // 
             // label_pageEnd
@@ -464,6 +464,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label_semester);
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label_studEmail);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label_studTelNum);
@@ -497,7 +499,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.richTextBox_studExperience);
-            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.richTextBox_edu);
             this.panel2.Controls.Add(this.richTextBox_studProjects);
             this.panel2.Controls.Add(this.richTextBox_studAdress);
             this.panel2.Controls.Add(this.label18);
@@ -506,6 +508,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1074, 848);
             this.panel2.TabIndex = 36;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(726, 120);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 17);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "Semester";
+            // 
+            // label_semester
+            // 
+            this.label_semester.AutoSize = true;
+            this.label_semester.Location = new System.Drawing.Point(722, 137);
+            this.label_semester.Name = "label_semester";
+            this.label_semester.Size = new System.Drawing.Size(76, 22);
+            this.label_semester.TabIndex = 17;
+            this.label_semester.Text = "label19";
             // 
             // StudentProfile
             // 
@@ -522,7 +543,6 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "StudentProfile";
             this.Size = new System.Drawing.Size(1152, 1075);
-            this.Load += new System.EventHandler(this.StudentProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -553,7 +573,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.RichTextBox richTextBox_studAdress;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox_edu;
         private System.Windows.Forms.Label label_pageEnd;
         private System.Windows.Forms.RichTextBox richTextBox_studExperience;
         private System.Windows.Forms.Label label2;
@@ -571,5 +591,7 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_semester;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -13,10 +13,11 @@ namespace ProjectAssistant
     public partial class CompanyPage : UserControl
     {
         DataBase db = new DataBase();
-        public CompanyPage()
-        {
-            
+        Company comp = new Company();
 
+        public CompanyPage(Company _comp)
+        {
+            comp = _comp;
             
             InitializeComponent();
             for (int i = 0; i < 20; i++)
@@ -115,7 +116,6 @@ namespace ProjectAssistant
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Company comp = new Company();
             comp.email = textBoxCompanyemail.Text;
             comp.mission = richTextBoxCompanymission.Text;
             comp.history = richTextBoxCompanyhis.Text;

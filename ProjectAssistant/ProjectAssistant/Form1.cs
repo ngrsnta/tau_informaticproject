@@ -13,10 +13,9 @@ namespace ProjectAssistant
     public partial class Form1 : Form
     {
         Student student = new Student();
+        Company company = new Company();
         LoginPage loginPage = new LoginPage();
-        StudentPage studentPage = new StudentPage();
         AdminPage adminPage = new AdminPage();
-        CompanyPage companyPage = new CompanyPage();
         LoginInfos loginInfo = new LoginInfos();
         DataBase db = new DataBase();
 
@@ -29,6 +28,7 @@ namespace ProjectAssistant
         {
             InitializeComponent();
             formsPanel.Controls.Add(loginPage);
+            loginPage.loginIdTextBox.MaxLength = 9;
             loginPage.loginButton.Click += loginPage_loginButton_Click;
         }
         
@@ -59,9 +59,49 @@ namespace ProjectAssistant
                 _password = db.select_fromDatabase("studentPassword", "students", "studentId", loginInfo.get_loginId().ToString());
                 if (loginInfo.get_password() == _password)
                 {
+                    student.id_number = loginInfo.get_loginId();
+                    StudentPage studentPage = new StudentPage(student);
                     formsPanel.Controls.Clear();
                     formsPanel.Controls.Add(studentPage);
                     headerLabel.Text = "Student";
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password");
+                    loginPage.loginIdTextBox.Clear();
+                    loginPage.passwordTextBox.Clear();
+                    return;
+
+                }
+            }
+            else if(loginInfo.get_loginId() < 100000000 && loginInfo.get_loginId() > 10000)
+            {
+                _password = db.select_fromDatabase("companyPassword", "companies", "companyId", loginInfo.get_loginId().ToString());
+                if (loginInfo.get_password() == _password)
+                {
+                    company.id_number = loginInfo.get_loginId();
+                    CompanyPage companyPage = new CompanyPage(company);
+                    formsPanel.Controls.Clear();
+                    formsPanel.Controls.Add(companyPage);
+                    headerLabel.Text = "Company";
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password");
+                    loginPage.loginIdTextBox.Clear();
+                    loginPage.passwordTextBox.Clear();
+                    return;
+
+                }
+            }
+            else if (loginInfo.get_loginId() == 9876)
+            {
+                _password = "9876";
+                if (loginInfo.get_password() == _password)
+                {
+                    formsPanel.Controls.Clear();
+                    formsPanel.Controls.Add(adminPage);
+                    headerLabel.Text = "Admin";
                 }
                 else
                 {
@@ -83,19 +123,6 @@ namespace ProjectAssistant
 
         }
 
-        private void studentPageButton_Click(object sender, EventArgs e)
-        {
-            formsPanel.Controls.Clear();
-            formsPanel.Controls.Add(studentPage);
-            headerLabel.Text = "Student";
-        }
-
-        private void companyPageButton_Click(object sender, EventArgs e)
-        {
-            formsPanel.Controls.Clear();
-            formsPanel.Controls.Add(companyPage);
-            headerLabel.Text = "Company";
-        }
 
         private void exitButton_Click(object sender, EventArgs e)
         {

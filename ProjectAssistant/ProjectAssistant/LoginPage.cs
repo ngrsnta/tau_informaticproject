@@ -16,47 +16,14 @@ namespace ProjectAssistant
 
         LoginInfos loginInfo = new LoginInfos();
         DataBase db = new DataBase();
-        string _password = "";
         Panel mainPanel = new Panel();
-        StudentPage stuPage = new StudentPage();
 
         public LoginPage()
         {
             this.AutoScroll = true;
             InitializeComponent();
         }
-        
-
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                loginInfo.set_loginId(Convert.ToInt32(loginIdTextBox.Text));
-            }
-            
-            catch (FormatException)
-            {
-                MessageBox.Show("Login Id can only contain numbers");
-                return;
-            }
-
-            loginInfo.set_password(passwordTextBox.Text);
-            if(loginInfo.get_loginId() > 100000000)
-            {
-                _password = db.select_fromDatabase("studentPassword", "students", "studentId", loginInfo.get_loginId().ToString());
-                if (loginInfo.get_password() == _password)
-                {
-                }
-                else
-                {
-                    this.Dispose();
-                    mainPanel.Controls.Add(stuPage);
-                    MessageBox.Show("sa");
-                }
-            }
-        }
-
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -73,5 +40,6 @@ namespace ProjectAssistant
                 this.Controls.Add(lbl);
             }
         }
+        */
     }
 }

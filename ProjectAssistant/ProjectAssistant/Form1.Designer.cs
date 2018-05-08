@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sideMenuPanel = new System.Windows.Forms.Panel();
-            this.companyPageButton = new System.Windows.Forms.Button();
-            this.studentPageButton = new System.Windows.Forms.Button();
             this.adminPageButton = new System.Windows.Forms.Button();
             this.loginPageButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
@@ -47,8 +45,6 @@
             // sideMenuPanel
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(133)))));
-            this.sideMenuPanel.Controls.Add(this.companyPageButton);
-            this.sideMenuPanel.Controls.Add(this.studentPageButton);
             this.sideMenuPanel.Controls.Add(this.adminPageButton);
             this.sideMenuPanel.Controls.Add(this.loginPageButton);
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -56,36 +52,6 @@
             this.sideMenuPanel.Name = "sideMenuPanel";
             this.sideMenuPanel.Size = new System.Drawing.Size(276, 668);
             this.sideMenuPanel.TabIndex = 7;
-            // 
-            // companyPageButton
-            // 
-            this.companyPageButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.companyPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.companyPageButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.companyPageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.companyPageButton.Location = new System.Drawing.Point(0, 150);
-            this.companyPageButton.Name = "companyPageButton";
-            this.companyPageButton.Size = new System.Drawing.Size(276, 50);
-            this.companyPageButton.TabIndex = 4;
-            this.companyPageButton.Text = "  Company";
-            this.companyPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.companyPageButton.UseVisualStyleBackColor = true;
-            this.companyPageButton.Click += new System.EventHandler(this.companyPageButton_Click);
-            // 
-            // studentPageButton
-            // 
-            this.studentPageButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.studentPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentPageButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentPageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.studentPageButton.Location = new System.Drawing.Point(0, 100);
-            this.studentPageButton.Name = "studentPageButton";
-            this.studentPageButton.Size = new System.Drawing.Size(276, 50);
-            this.studentPageButton.TabIndex = 3;
-            this.studentPageButton.Text = "  Student Page";
-            this.studentPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.studentPageButton.UseVisualStyleBackColor = true;
-            this.studentPageButton.Click += new System.EventHandler(this.studentPageButton_Click);
             // 
             // adminPageButton
             // 
@@ -207,8 +173,6 @@
         public  System.Windows.Forms.Panel formsPanel;
         private System.Windows.Forms.Button adminPageButton;
         private System.Windows.Forms.Button loginPageButton;
-        private System.Windows.Forms.Button companyPageButton;
-        private System.Windows.Forms.Button studentPageButton;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button exitButton;
