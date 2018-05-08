@@ -147,6 +147,14 @@ namespace ProjectAssistant
 
         public void button1_Click(object sender, EventArgs e)
         {
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            //loading.TopMost = true;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             Form Profile = new Form();
             StudentProfile studentProfile = new StudentProfile(st);
             Label exitLabel = new Label();
@@ -162,6 +170,7 @@ namespace ProjectAssistant
             Profile.Controls.Add(exitLabel);
             exitLabel.BringToFront();
             Profile.Show();
+            loading.Close();
         }
         private void exitLabel_Click(object sender, EventArgs e)
         {
@@ -180,7 +189,14 @@ namespace ProjectAssistant
 
         private void button_SaveChanges_Click(object sender, EventArgs e)
         {
-
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.TopMost = true;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             db.update_toDatabase("students", "studentTelnum", textBox_studPhoneNumber.Text, "studentId", st.id_number.ToString());
             db.update_toDatabase("students", "studentEmail", textBox_studMail.Text, "studentId", st.id_number.ToString());
             db.update_toDatabase("students", "studentAdress", richTextBox_studAdress.Text, "studentId", st.id_number.ToString());
@@ -191,7 +207,7 @@ namespace ProjectAssistant
             db.update_toDatabase("students", "studentProjects", richTextBox_studProjects.Text, "studentId", st.id_number.ToString());
             db.update_toDatabase("students", "studentProfessions", richTextBox_studProfessions.Text, "studentId", st.id_number.ToString());
             db.update_toDatabase("students", "studentOther", richTextBox_studFurtherInfo.Text, "studentId", st.id_number.ToString());
-
+            loading.Close();
         }
     }
 }

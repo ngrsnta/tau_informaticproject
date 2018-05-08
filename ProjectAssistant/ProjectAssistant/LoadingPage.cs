@@ -15,12 +15,7 @@ namespace ProjectAssistant
         public LoadingPage()
         {
             InitializeComponent();
-            List<Image> images;
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
