@@ -10,7 +10,7 @@ namespace ProjectAssistant
 {
     class DataBase
     {
-        static string connectionString = "server=localhost;database=ProjectSystemDB;uid=root;pwd=ngrsnta;";
+        static string connectionString = "server=db4free.net;port=3306;database=projectassistdb;uid=projectassistdb;pwd=projectassistdb;";
         MySqlConnection conn = new MySqlConnection(connectionString);
         string query;
         int anyInt;
