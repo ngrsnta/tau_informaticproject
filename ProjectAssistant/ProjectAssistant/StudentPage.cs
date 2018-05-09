@@ -88,6 +88,32 @@ namespace ProjectAssistant
                 studPage_applications.Controls.Add(projectList);
             }
 
+            List<string> _lst = new List<string>();
+            _lst = db.select_AllasArray("projects");
+            for (int i = 0; i < _lst.Count; i++)
+            {
+                ProjectListItem projectList = new ProjectListItem();
+                Project prj = new Project();
+                Company cmp = new Company();
+                //acquiring info about project from the database
+                prj.title = db.select_fromDatabase("projectTitle", "projects", "projectId", _lst[i]);
+                prj.areaofinterest = db.select_fromDatabase("projectArea", "projects", "projectId", _lst[i]);
+                prj.projectdesc = db.select_fromDatabase("projectDescription", "projects", "projectId", _lst[i]);
+                cmp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "projects", "projectId", _lst[i]));
+                cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
+                //prj.deadline = db.select_fromDatabase("projectDeadline", "projects", "projectId", lst[i]); KEZA AYNI ŞEQİLDE
+                //Writing info to the labels in list elements
+                projectList.richTextBox_projectTitle.Text = prj.title;
+                projectList.richTextBox_projectArea.Text = prj.areaofinterest;
+                projectList.richTextBox_description.Text = prj.projectdesc;
+                projectList.richTextBox_companyName.Text = cmp.name;
+                // projectList.richTextBox_projectDeadline.Text = prj.deadline; CLASSTAN DATE TIME OLARAK DEĞİŞTİR
+                projectList.Location = new Point(5, (i * 160) + 5);
+                projectList.BackColor = SystemColors.Control;
+                studPage_projects.Controls.Add(projectList);
+            }
+
+
 
         }
 

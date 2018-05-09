@@ -28,7 +28,6 @@ namespace ProjectAssistant
         public Form1()
         {
             InitializeComponent();
-            headerLabel.Text = "Login";
             formsPanel.Controls.Add(loginPage);
             loginPage.loginIdTextBox.MaxLength = 9;
             loginPage.loginButton.Click += loginPage_loginButton_Click;

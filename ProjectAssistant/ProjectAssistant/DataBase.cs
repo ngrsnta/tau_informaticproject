@@ -34,6 +34,7 @@ namespace ProjectAssistant
             }
             catch (Exception e)
             {
+                if(conn.State.ToString() == "Open") { conn.Close();}
                 MessageBox.Show(e.Message);
                 return;
             }
@@ -64,7 +65,8 @@ namespace ProjectAssistant
             }
             catch(Exception e)
             {
-               string a = e.Message;
+                if (conn.State.ToString() == "Open") { conn.Close(); }
+                string a = e.Message;
                MessageBox.Show(e.Message +"\n"+ e.ToString());
                 
                return a;
@@ -91,6 +93,37 @@ namespace ProjectAssistant
             }
             catch (Exception e)
             {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
+                List<string> list = new List<string>();
+                list.Add(e.Message);
+                MessageBox.Show(e.Message + "\n" + e.ToString());
+
+                return list;
+            }
+        }
+
+        public List<string> select_AllasArray(string table)
+        {
+            try
+            {
+                query = "select * from " + table + ";";
+                string a = "";
+                List<string> list = new List<string>();
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    list.Add(myReader.GetValue(0).ToString());
+
+                }
+                myReader.Close();
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
                 List<string> list = new List<string>();
                 list.Add(e.Message);
                 MessageBox.Show(e.Message + "\n" + e.ToString());
@@ -111,6 +144,7 @@ namespace ProjectAssistant
             }
             catch(Exception e)
             {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
                 MessageBox.Show(e.Message);
                 return;
             }
@@ -128,6 +162,7 @@ namespace ProjectAssistant
             }
             catch(Exception e)
             {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
                 MessageBox.Show(e.Message);
                 return;
             }
