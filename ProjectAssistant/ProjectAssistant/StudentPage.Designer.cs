@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.student_mainTab = new System.Windows.Forms.TabControl();
-            this.studPage_projects = new System.Windows.Forms.TabPage();
-            this.studPage_applications = new System.Windows.Forms.TabPage();
             this.studPage_editInfo = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button_SaveChanges = new System.Windows.Forms.Button();
@@ -70,6 +68,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_studName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.studPage_projects = new System.Windows.Forms.TabPage();
+            this.studPage_applications = new System.Windows.Forms.TabPage();
             this.student_mainTab.SuspendLayout();
             this.studPage_editInfo.SuspendLayout();
             this.SuspendLayout();
@@ -80,38 +80,16 @@
             this.student_mainTab.Controls.Add(this.studPage_projects);
             this.student_mainTab.Controls.Add(this.studPage_applications);
             this.student_mainTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.student_mainTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.student_mainTab.ItemSize = new System.Drawing.Size(132, 21);
+            this.student_mainTab.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.student_mainTab.ItemSize = new System.Drawing.Size(168, 35);
             this.student_mainTab.Location = new System.Drawing.Point(0, 0);
             this.student_mainTab.Margin = new System.Windows.Forms.Padding(2);
             this.student_mainTab.Name = "student_mainTab";
+            this.student_mainTab.Padding = new System.Drawing.Point(12, 5);
             this.student_mainTab.SelectedIndex = 0;
             this.student_mainTab.Size = new System.Drawing.Size(1087, 668);
+            this.student_mainTab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.student_mainTab.TabIndex = 0;
-            // 
-            // studPage_projects
-            // 
-            this.studPage_projects.AutoScroll = true;
-            this.studPage_projects.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.studPage_projects.Location = new System.Drawing.Point(4, 25);
-            this.studPage_projects.Name = "studPage_projects";
-            this.studPage_projects.Padding = new System.Windows.Forms.Padding(3);
-            this.studPage_projects.Size = new System.Drawing.Size(1079, 639);
-            this.studPage_projects.TabIndex = 0;
-            this.studPage_projects.Text = "Projects";
-            this.studPage_projects.UseVisualStyleBackColor = true;
-            this.studPage_projects.Click += new System.EventHandler(this.studPage_projects_Click);
-            // 
-            // studPage_applications
-            // 
-            this.studPage_applications.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.studPage_applications.Location = new System.Drawing.Point(4, 25);
-            this.studPage_applications.Name = "studPage_applications";
-            this.studPage_applications.Padding = new System.Windows.Forms.Padding(3);
-            this.studPage_applications.Size = new System.Drawing.Size(1079, 639);
-            this.studPage_applications.TabIndex = 1;
-            this.studPage_applications.Text = "Applications";
-            this.studPage_applications.UseVisualStyleBackColor = true;
             // 
             // studPage_editInfo
             // 
@@ -155,9 +133,9 @@
             this.studPage_editInfo.Controls.Add(this.label_studName);
             this.studPage_editInfo.Controls.Add(this.label1);
             this.studPage_editInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.studPage_editInfo.Location = new System.Drawing.Point(4, 25);
+            this.studPage_editInfo.Location = new System.Drawing.Point(4, 39);
             this.studPage_editInfo.Name = "studPage_editInfo";
-            this.studPage_editInfo.Size = new System.Drawing.Size(1079, 639);
+            this.studPage_editInfo.Size = new System.Drawing.Size(1079, 625);
             this.studPage_editInfo.TabIndex = 2;
             this.studPage_editInfo.Text = "Edit Info";
             this.studPage_editInfo.UseVisualStyleBackColor = true;
@@ -534,6 +512,30 @@
             this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
+            // 
+            // studPage_projects
+            // 
+            this.studPage_projects.AutoScroll = true;
+            this.studPage_projects.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.studPage_projects.Location = new System.Drawing.Point(4, 39);
+            this.studPage_projects.Name = "studPage_projects";
+            this.studPage_projects.Padding = new System.Windows.Forms.Padding(3);
+            this.studPage_projects.Size = new System.Drawing.Size(1079, 625);
+            this.studPage_projects.TabIndex = 0;
+            this.studPage_projects.Text = "Projects";
+            this.studPage_projects.UseVisualStyleBackColor = true;
+            this.studPage_projects.Click += new System.EventHandler(this.studPage_projects_Click);
+            // 
+            // studPage_applications
+            // 
+            this.studPage_applications.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.studPage_applications.Location = new System.Drawing.Point(4, 39);
+            this.studPage_applications.Name = "studPage_applications";
+            this.studPage_applications.Padding = new System.Windows.Forms.Padding(3);
+            this.studPage_applications.Size = new System.Drawing.Size(1079, 625);
+            this.studPage_applications.TabIndex = 1;
+            this.studPage_applications.Text = "Applications";
+            this.studPage_applications.UseVisualStyleBackColor = true;
             // 
             // StudentPage
             // 
