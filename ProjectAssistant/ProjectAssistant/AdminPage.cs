@@ -9,13 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectAssistant
-{
-  
+{ 
     public partial class AdminPage : UserControl //Main
     {
         DataBase db = new DataBase();
         Student stu = new Student();
         Company comp = new Company();
+ /*     
+        object[] obj_cultural = { "Economics and Administrative Sciences" },
+        obj_economics = { "Science of Management", "Economics", "Political Science and International Relations" },
+        obj_engineering = { "Civil Engineering", "Computer Engineering", "Electrical Engineering",
+                                            "Industrial Engineering","Mechanical Engineering", "Mechatronics"     },
+        obj_law = { "Law" },
+        obj_science = { "Energy Sciences and Technology", "Material Sciences and Technology", "Molecular Biotechnology" };
+*/
         public AdminPage() //Start
         {
             InitializeComponent();
@@ -24,31 +31,78 @@ namespace ProjectAssistant
         /// <summary>
         /// When changed to a Tab, delete all Text Boxes
         /// </summary>
- /*       void Delete_Text()  
+        /*       void Delete_Text()  
+               {
+                   var selectedTab = Admin_MainTab.SelectedTab;
+
+                   foreach (Control ctrl in selectedTab.Controls)
+                   {
+                       if (ctrl is TextBox)
+                       {
+                           (ctrl as TextBox).Text = string.Empty;
+                       }
+
+                       if (ctrl is Label)
+                       {
+                           if ((ctrl != label_studentname ||
+                               ctrl != label_studentnumber ||
+                               ctrl != label_studentsurname ||
+                               ctrl != label_studentpassword) == false)
+                               (ctrl as Label).Text = string.Empty;
+                       }
+
+                       // Other Controls....
+                   }
+               }
+       */
+
+        /// <summary>
+        /// Adjusts Student Major ComboBox according to Faculty ComboBox
+        /// </summary>
+        void FacultyToMajor(ComboBox ctrl_faculty, ComboBox ctrl_major)
         {
-            var selectedTab = Admin_MainTab.SelectedTab;
+            switch (ctrl_faculty.SelectedItem.ToString())
+            {   //comboBox_studentmajor
+                case "Cultural Studies and Social Sciences":
+                    {
+                        ctrl_major.Items.Clear();
+                        ctrl_major.Items.AddRange(new object[] { "Cultular and Communications Science" });
+                        ctrl_major.SelectedIndex = 0;
+                        break;
+                    }
+                case "Economics and Administrative Sciences":
+                    {
+                        ctrl_major.Items.Clear();
+                        ctrl_major.Items.AddRange(new object[] { "Science of Management", "Economics", "Political Science and International Relations" });
+                        ctrl_major.SelectedIndex = 0;
+                        break;
+                    }
+                case "Engineering":
+                    {
+                        ctrl_major.Items.Clear();
+                        ctrl_major.Items.AddRange(new object[] { "Civil Engineering", "Computer Engineering", "Electrical Engineering",
+                                                             "Industrial Engineering","Mechanical Engineering", "Mechatronics"     });
+                        ctrl_major.SelectedIndex = 0;
+                        break;
+                    }
+                case "Law":
+                    {
+                        ctrl_major.Items.Clear();
+                        ctrl_major.Items.AddRange(new object[] { "Law" });
+                        ctrl_major.SelectedIndex = 0;
+                        break;
+                    }
 
-            foreach (Control ctrl in selectedTab.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    (ctrl as TextBox).Text = string.Empty;
-                }
-
-                if (ctrl is Label)
-                {
-                    if ((ctrl != label_studentname ||
-                        ctrl != label_studentnumber ||
-                        ctrl != label_studentsurname ||
-                        ctrl != label_studentpassword) == false)
-                        (ctrl as Label).Text = string.Empty;
-                }
-
-                // Other Controls....
+                case "Science":
+                    {
+                        ctrl_major.Items.Clear();
+                        ctrl_major.Items.AddRange(new object[] { "Energy Sciences and Technology", "Material Sciences and Technology", "Molecular Biotechnology" });
+                        ctrl_major.SelectedIndex = 0;
+                        break;
+                    }
             }
         }
-*/
-        
+
         /// <summary>
         /// Storing Inputs from Register Panel to Student Class
         /// </summary>
@@ -63,9 +117,10 @@ namespace ProjectAssistant
             if (radioButton_male_reg.Checked)
                 stu.gender = radioButton_male_reg.Text;
             else if (radioButton_female_reg.Checked)
-                stu.gender = radioButton_female_reg.Text;
-            stu.faculty = textbox_studentfaculty.Text;
-            stu.major = textbox_studentmajor.Text;
+                stu.gender = radioButton_female_reg.Text; 
+            stu.faculty = comboBox_studentfaculty.Text;
+            if (comboBox_studentmajor_upt.Text != "<Select a Faculty>")
+                stu.major = comboBox_studentmajor.Text;
             //stu.semester = Convert.ToInt32(textbox_studentsemester.Text);
             stu.semester = Convert.ToInt32(comboBox_studentsemester.Text);
         }
@@ -114,8 +169,8 @@ namespace ProjectAssistant
                 radioButton_male_upt.Checked = false;
                 radioButton_female_upt.Checked = false;
             }
-            textbox_studentfaculty_upt.Text = stu.faculty;
-            textbox_studentmajor_upt.Text = stu.major;
+            comboBox_studentfaculty_upt.Text = stu.faculty;
+            comboBox_studentmajor_upt.Text = stu.major;
             comboBox_studentsemester_upt.Text = stu.semester.ToString();
         }
 
@@ -140,32 +195,28 @@ namespace ProjectAssistant
         /// <param name="stu_upt">Output Student Class</param>
         void UptToStudent(Student stu_upt)
         {
+
             foreach (Control ctrl in Admin_MainTab.SelectedTab.Controls)
                 foreach (Control ctrl_sub in ctrl.Controls)
                     foreach (Control ctrl_sub_sub in ctrl_sub.Controls)
                         if (ctrl_sub_sub is TextBox)
-                            if ((ctrl_sub_sub as TextBox).TextLength != 0)
+                            if ((ctrl_sub_sub as TextBox).Text.Length != 0)
                             {
                                 if (ctrl_sub_sub == textbox_studentname_upt)
                                     stu_upt.name = ctrl_sub_sub.Text;
-                                else if (ctrl_sub_sub == textbox_studentfaculty_upt)
-                                    stu_upt.faculty = ctrl_sub_sub.Text;
-                                else if (ctrl_sub_sub == textbox_studentmajor_upt)
-                                    stu_upt.major = ctrl_sub_sub.Text;
                                 else if (ctrl_sub_sub == textbox_studentpassword_upt)
                                     stu_upt.password = ctrl_sub_sub.Text;
+
                             }
             stu_upt.dateofbirth = datepicker_student_upt.Value;
             if (radioButton_male_upt.Checked)
                 stu_upt.gender = radioButton_male_upt.Text;
             else if (radioButton_female_upt.Checked)
                 stu_upt.gender = radioButton_female_upt.Text;
+            stu_upt.faculty = comboBox_studentfaculty_upt.SelectedItem.ToString();
+            stu_upt.major = comboBox_studentmajor_upt.SelectedItem.ToString();
             stu_upt.semester = Convert.ToInt32(comboBox_studentsemester_upt.Text);
-            /*           stu_upt.faculty = textbox_studentfaculty_upt.Text;
-                         stu_upt.major = textbox_studentmajor_upt.Text;
-                         if(textbox_studentpassword_upt.Text.Length>0)
-                            stu_upt.password = textbox_studentpassword_upt.Text;
-                         stu_upt.name = textbox_studentname_upt.Text;                      */
+
         }
 
         /// <summary>
@@ -243,8 +294,10 @@ namespace ProjectAssistant
 
         private void Admin_MainTab_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             Reset_TextBox();
+            Show_Student_Upt_Panel(false);
+            Show_Company_Upt_Panel(false);
+
         }
 
         #region TextBox Limitations KeypressEvent
@@ -282,10 +335,21 @@ namespace ProjectAssistant
         }
 
         #endregion
- 
-        
+
+
 
         #region Student Register
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label_test.Text = comboBox_studentfaculty.Text.ToString();
+            label_test2.Text = comboBox_studentmajor.SelectedItem.ToString();
+        }
+
+        private void comboBox_faculty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FacultyToMajor(comboBox_studentfaculty, comboBox_studentmajor);
+        }
 
         //Register a new Student
         private void reg_student_Click(object sender, EventArgs e)  //Register Student
@@ -298,8 +362,8 @@ namespace ProjectAssistant
                 textbox_studentsurname.Text.Length == 0     ||
                 textbox_studentnumber.Text.Length == 0      ||
                 textbox_studentpassword.Text.Length == 0    ||
-                textbox_studentfaculty.Text.Length==0       ||
-                textbox_studentmajor.Text.Length==0         )
+                comboBox_studentfaculty.Text.Length==0       ||
+                comboBox_studentmajor.Text.Length==0         )
             {
                 MessageBox.Show("Please fill all the blankets.");
                 return;
@@ -393,6 +457,11 @@ namespace ProjectAssistant
 
         }
 
+        private void comboBox_studentfaculty_upt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FacultyToMajor(comboBox_studentfaculty_upt, comboBox_studentmajor_upt);
+        }
+
         //2. Update Student Informations
         private void button_student_upt_Click(object sender, EventArgs e)
         {
@@ -403,13 +472,14 @@ namespace ProjectAssistant
                 MessageBox.Show("Please enter a longer name (Minimum Length = 2)");
                 return;
             }
- //           elseif(textbox_studentfaculty_upt.Text.Length < 3)
+
             
             #endregion
 
 
 
             Student stu_upt = new Student();
+            
             string student_ID = stu.id_number.ToString();
 
             //Bring new informations to the temporary Student Class
@@ -417,17 +487,6 @@ namespace ProjectAssistant
 
             //Compare the updated infos from the temporary class with the current info
             Student_UptToDb(stu, stu_upt, db, student_ID);
-
-            #region Db Update Codes (Commented)
-            /*            db.update_toDatabase("students", "studentName", stu_upt.name, "studentId", student_ID);
-                        db.update_toDatabase("students", "studentBirthday", stu_upt.dateofbirth.ToString("yyyy-MM-dd"), "studentId", student_ID);
-                        db.update_toDatabase("students", "studentGender",  stu_upt.gender , "studentId", student_ID);
-                        db.update_toDatabase("students", "studentFaculty",  stu_upt.faculty , "studentId", student_ID);
-                        db.update_toDatabase("students", "studentMajor", stu_upt.major, "studentId", student_ID);
-                        db.update_toDatabase("students", "studentSemester", stu_upt.semester.ToString(), "studentId", student_ID);
-                        db.update_toDatabase("students", "studentPassword", stu_upt.password , "studentId", student_ID);
-            */
-            #endregion
 
             //Reset Show Student Info Labels
             Reset_Label_Stu_Upt();
@@ -538,7 +597,7 @@ namespace ProjectAssistant
 
         #endregion
 
-        #region Firma Update: 1. Show Firma - 2. Update Firma - 3. Delete Firma
+        #region Company Update: 1. Show Firma - 2. Update Firma - 3. Delete Firma
 
         private void button_company_show_Click(object sender, EventArgs e)
         {
@@ -575,6 +634,7 @@ namespace ProjectAssistant
             textbox_companyname_upt.Text = comp.name;
             
         }
+
 
         //2. Update Student Informations
         private void button_company_update_Click(object sender, EventArgs e)
@@ -661,10 +721,16 @@ namespace ProjectAssistant
             }
         }
 
-
-
-
         #endregion
+
+
     }
-}
+
+ }
+
+            
+
+        
+    
+
 
