@@ -68,6 +68,8 @@
             this.label_studentfaculty_show = new System.Windows.Forms.Label();
             this.label_studentdate_show = new System.Windows.Forms.Label();
             this.groupBox_student_upt = new System.Windows.Forms.GroupBox();
+            this.comboBox_studentmajor_upt = new System.Windows.Forms.ComboBox();
+            this.comboBox_studentfaculty_upt = new System.Windows.Forms.ComboBox();
             this.panel_gender_upt = new System.Windows.Forms.Panel();
             this.radioButton_female_upt = new System.Windows.Forms.RadioButton();
             this.radioButton_male_upt = new System.Windows.Forms.RadioButton();
@@ -91,6 +93,9 @@
             this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.label_main_student_upt = new System.Windows.Forms.Label();
             this.tab_student_reg = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label_test2 = new System.Windows.Forms.Label();
+            this.label_test = new System.Windows.Forms.Label();
             this.tableLayoutPanel_student_reg = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox_studentID_reg = new System.Windows.Forms.GroupBox();
             this.label_studentnumber = new System.Windows.Forms.Label();
@@ -117,11 +122,6 @@
             this.label_studentmajor = new System.Windows.Forms.Label();
             this.label_main_student_reg = new System.Windows.Forms.Label();
             this.Admin_MainTab = new System.Windows.Forms.TabControl();
-            this.label_test = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label_test2 = new System.Windows.Forms.Label();
-            this.comboBox_studentfaculty_upt = new System.Windows.Forms.ComboBox();
-            this.comboBox_studentmajor_upt = new System.Windows.Forms.ComboBox();
             this.tab_company_upt.SuspendLayout();
             this.tableLayoutPanel_company_upt.SuspendLayout();
             this.groupBox_companyID.SuspendLayout();
@@ -683,6 +683,41 @@
             this.groupBox_student_upt.TabStop = false;
             this.groupBox_student_upt.Visible = false;
             // 
+            // comboBox_studentmajor_upt
+            // 
+            this.comboBox_studentmajor_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_studentmajor_upt.DropDownWidth = 340;
+            this.comboBox_studentmajor_upt.FormattingEnabled = true;
+            this.comboBox_studentmajor_upt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.comboBox_studentmajor_upt.Items.AddRange(new object[] {
+            "<Select a Faculty>"});
+            this.comboBox_studentmajor_upt.Location = new System.Drawing.Point(284, 348);
+            this.comboBox_studentmajor_upt.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_studentmajor_upt.Name = "comboBox_studentmajor_upt";
+            this.comboBox_studentmajor_upt.Size = new System.Drawing.Size(453, 40);
+            this.comboBox_studentmajor_upt.Sorted = true;
+            this.comboBox_studentmajor_upt.TabIndex = 16;
+            // 
+            // comboBox_studentfaculty_upt
+            // 
+            this.comboBox_studentfaculty_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_studentfaculty_upt.DropDownWidth = 320;
+            this.comboBox_studentfaculty_upt.FormattingEnabled = true;
+            this.comboBox_studentfaculty_upt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.comboBox_studentfaculty_upt.Items.AddRange(new object[] {
+            "Cultural Studies and Social Sciences",
+            "Economics and Administrative Sciences",
+            "Engineering",
+            "Law",
+            "Science"});
+            this.comboBox_studentfaculty_upt.Location = new System.Drawing.Point(284, 283);
+            this.comboBox_studentfaculty_upt.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_studentfaculty_upt.Name = "comboBox_studentfaculty_upt";
+            this.comboBox_studentfaculty_upt.Size = new System.Drawing.Size(453, 40);
+            this.comboBox_studentfaculty_upt.Sorted = true;
+            this.comboBox_studentfaculty_upt.TabIndex = 14;
+            this.comboBox_studentfaculty_upt.SelectedIndexChanged += new System.EventHandler(this.comboBox_studentfaculty_upt_SelectedIndexChanged);
+            // 
             // panel_gender_upt
             // 
             this.panel_gender_upt.AutoSize = true;
@@ -983,6 +1018,36 @@
             this.tab_student_reg.Text = "Student Registration";
             this.tab_student_reg.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(1592, 714);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 61);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Register";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label_test2
+            // 
+            this.label_test2.AutoSize = true;
+            this.label_test2.Location = new System.Drawing.Point(1634, 667);
+            this.label_test2.Name = "label_test2";
+            this.label_test2.Size = new System.Drawing.Size(58, 32);
+            this.label_test2.TabIndex = 2;
+            this.label_test2.Text = "test";
+            // 
+            // label_test
+            // 
+            this.label_test.AutoSize = true;
+            this.label_test.Location = new System.Drawing.Point(1634, 600);
+            this.label_test.Name = "label_test";
+            this.label_test.Size = new System.Drawing.Size(58, 32);
+            this.label_test.TabIndex = 2;
+            this.label_test.Text = "test";
+            // 
             // tableLayoutPanel_student_reg
             // 
             this.tableLayoutPanel_student_reg.ColumnCount = 1;
@@ -1087,6 +1152,7 @@
             // comboBox_studentmajor
             // 
             this.comboBox_studentmajor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_studentmajor.DropDownWidth = 340;
             this.comboBox_studentmajor.FormattingEnabled = true;
             this.comboBox_studentmajor.ImeMode = System.Windows.Forms.ImeMode.On;
             this.comboBox_studentmajor.Items.AddRange(new object[] {
@@ -1101,6 +1167,7 @@
             // comboBox_studentfaculty
             // 
             this.comboBox_studentfaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_studentfaculty.DropDownWidth = 320;
             this.comboBox_studentfaculty.FormattingEnabled = true;
             this.comboBox_studentfaculty.ImeMode = System.Windows.Forms.ImeMode.On;
             this.comboBox_studentfaculty.Items.AddRange(new object[] {
@@ -1137,7 +1204,7 @@
             "12",
             "13",
             "14"});
-            this.comboBox_studentsemester.Location = new System.Drawing.Point(411, 435);
+            this.comboBox_studentsemester.Location = new System.Drawing.Point(411, 432);
             this.comboBox_studentsemester.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_studentsemester.Name = "comboBox_studentsemester";
             this.comboBox_studentsemester.Size = new System.Drawing.Size(453, 40);
@@ -1331,69 +1398,6 @@
             this.Admin_MainTab.Size = new System.Drawing.Size(1993, 1233);
             this.Admin_MainTab.TabIndex = 0;
             this.Admin_MainTab.SelectedIndexChanged += new System.EventHandler(this.Admin_MainTab_SelectedIndexChanged);
-            // 
-            // label_test
-            // 
-            this.label_test.AutoSize = true;
-            this.label_test.Location = new System.Drawing.Point(1634, 600);
-            this.label_test.Name = "label_test";
-            this.label_test.Size = new System.Drawing.Size(58, 32);
-            this.label_test.TabIndex = 2;
-            this.label_test.Text = "test";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(1592, 714);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 61);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label_test2
-            // 
-            this.label_test2.AutoSize = true;
-            this.label_test2.Location = new System.Drawing.Point(1634, 667);
-            this.label_test2.Name = "label_test2";
-            this.label_test2.Size = new System.Drawing.Size(58, 32);
-            this.label_test2.TabIndex = 2;
-            this.label_test2.Text = "test";
-            // 
-            // comboBox_studentfaculty_upt
-            // 
-            this.comboBox_studentfaculty_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_studentfaculty_upt.FormattingEnabled = true;
-            this.comboBox_studentfaculty_upt.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.comboBox_studentfaculty_upt.Items.AddRange(new object[] {
-            "Cultural Studies and Social Sciences",
-            "Economics and Administrative Sciences",
-            "Engineering",
-            "Law",
-            "Science"});
-            this.comboBox_studentfaculty_upt.Location = new System.Drawing.Point(284, 283);
-            this.comboBox_studentfaculty_upt.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_studentfaculty_upt.Name = "comboBox_studentfaculty_upt";
-            this.comboBox_studentfaculty_upt.Size = new System.Drawing.Size(453, 40);
-            this.comboBox_studentfaculty_upt.Sorted = true;
-            this.comboBox_studentfaculty_upt.TabIndex = 19;
-            this.comboBox_studentfaculty_upt.SelectedIndexChanged += new System.EventHandler(this.comboBox_studentfaculty_upt_SelectedIndexChanged);
-            // 
-            // comboBox_studentmajor_upt
-            // 
-            this.comboBox_studentmajor_upt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_studentmajor_upt.FormattingEnabled = true;
-            this.comboBox_studentmajor_upt.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.comboBox_studentmajor_upt.Items.AddRange(new object[] {
-            "<Select a Faculty>"});
-            this.comboBox_studentmajor_upt.Location = new System.Drawing.Point(284, 348);
-            this.comboBox_studentmajor_upt.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_studentmajor_upt.Name = "comboBox_studentmajor_upt";
-            this.comboBox_studentmajor_upt.Size = new System.Drawing.Size(453, 40);
-            this.comboBox_studentmajor_upt.Sorted = true;
-            this.comboBox_studentmajor_upt.TabIndex = 22;
             // 
             // AdminPage
             // 

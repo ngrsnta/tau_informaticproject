@@ -472,10 +472,12 @@ namespace ProjectAssistant
                 MessageBox.Show("Please enter a longer name (Minimum Length = 2)");
                 return;
             }
-
-            
+            else if (0 < textbox_studentpassword_upt.TextLength && textbox_studentpassword_upt.TextLength < 6)
+            {
+                MessageBox.Show("Please enter a longer password (Minimum Length = 6)", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             #endregion
-
 
 
             Student stu_upt = new Student();
