@@ -41,7 +41,7 @@ namespace ProjectAssistant
             label_studName.Text = st.name;
             label_studBirthday.Text = st.dateofbirth.ToShortDateString();
             label_studFaculty.Text = st.faculty;
-            label_semester.Text = st.semester.ToString();
+            label_studSemester.Text = st.semester.ToString();
             label_studId.Text = st.id_number.ToString();
             label_studGender.Text = st.gender;
             label_studMajor.Text = st.major;

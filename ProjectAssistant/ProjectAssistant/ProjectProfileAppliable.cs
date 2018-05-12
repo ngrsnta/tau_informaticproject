@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace ProjectAssistant
 {
-    public partial class ApplicationListItem : UserControl
+    public partial class ProjectProfileAppliable : UserControl
     {
-        public ApplicationListItem()
+        public ProjectProfileAppliable()
         {
             InitializeComponent();
         }
 
-        private void textBox_applyStatus_TextChanged(object sender, EventArgs e)
+        private void label_projectTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

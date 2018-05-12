@@ -183,6 +183,7 @@
             this.textBox_applyStatus.Size = new System.Drawing.Size(100, 16);
             this.textBox_applyStatus.TabIndex = 21;
             this.textBox_applyStatus.Text = "Submitted";
+            this.textBox_applyStatus.TextChanged += new System.EventHandler(this.textBox_applyStatus_TextChanged);
             // 
             // ApplicationListItem
             // 

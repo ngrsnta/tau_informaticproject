@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectAssistant
 {
-    public partial class ApplicationListItem : UserControl
+    public partial class ProjectProfileNotAppliable : UserControl
     {
-        public ApplicationListItem()
+        public ProjectProfileNotAppliable()
         {
             InitializeComponent();
-        }
-
-        private void textBox_applyStatus_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
