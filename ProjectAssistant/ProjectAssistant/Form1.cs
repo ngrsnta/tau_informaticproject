@@ -12,12 +12,9 @@ namespace ProjectAssistant
 {
     public partial class Form1 : Form
     {
-        Student student = new Student();
-        Company company = new Company();
+        //sol panele signout butonu koyulacak
         LoginPage loginPage = new LoginPage();
-        AdminPage adminPage = new AdminPage();
         LoginInfos loginInfo = new LoginInfos();
-        LoadingPage loadPage = new LoadingPage();
         DataBase db = new DataBase();
 
         bool homeDragging;
@@ -42,6 +39,8 @@ namespace ProjectAssistant
         }
         private void loginPage_loginButton_Click(object sender, EventArgs e)
         {
+
+            LoadingPage loadPage = new LoadingPage();
             Form loading = new Form();
             loading.StartPosition = FormStartPosition.CenterScreen;
             loading.FormBorderStyle = FormBorderStyle.None;
@@ -64,7 +63,10 @@ namespace ProjectAssistant
             loginInfo.set_password(loginPage.passwordTextBox.Text);
             if (loginInfo.get_loginId() > 100000000)
             {
+
                 _password = db.select_fromDatabase("studentPassword", "students", "studentId", loginInfo.get_loginId().ToString());
+
+                Student student = new Student();
                 if (loginInfo.get_password() == _password)
                 {
                     student.id_number = loginInfo.get_loginId();
@@ -85,6 +87,8 @@ namespace ProjectAssistant
             else if(loginInfo.get_loginId() < 100000000 && loginInfo.get_loginId() > 10000)
             {
                 _password = db.select_fromDatabase("companyPassword", "companies", "companyId", loginInfo.get_loginId().ToString());
+
+                Company company = new Company();
                 if (loginInfo.get_password() == _password)
                 {
                     company.id_number = loginInfo.get_loginId();
@@ -107,6 +111,7 @@ namespace ProjectAssistant
                 _password = "9876";
                 if (loginInfo.get_password() == _password)
                 {
+                    AdminPage adminPage = new AdminPage();
                     formsPanel.Controls.Clear();
                     formsPanel.Controls.Add(adminPage);
                     headerLabel.Text = "Admin";
@@ -126,6 +131,7 @@ namespace ProjectAssistant
 
         private void adminPageButton_Click(object sender, EventArgs e)
         {
+            AdminPage adminPage = new AdminPage();
             formsPanel.Controls.Clear();
             formsPanel.Controls.Add(adminPage);
             headerLabel.Text = "Admin";
