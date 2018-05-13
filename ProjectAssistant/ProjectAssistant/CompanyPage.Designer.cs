@@ -86,6 +86,7 @@
             // 
             // tabProjectpage
             // 
+            this.tabProjectpage.AutoScroll = true;
             this.tabProjectpage.Location = new System.Drawing.Point(4, 22);
             this.tabProjectpage.Name = "tabProjectpage";
             this.tabProjectpage.Padding = new System.Windows.Forms.Padding(3);
