@@ -53,6 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(37, 29);
             this.label1.Name = "label1";
@@ -63,6 +64,7 @@
             // label_projectTitle
             // 
             this.label_projectTitle.AutoSize = true;
+            this.label_projectTitle.Enabled = false;
             this.label_projectTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_projectTitle.Location = new System.Drawing.Point(37, 50);
             this.label_projectTitle.Name = "label_projectTitle";
@@ -74,6 +76,7 @@
             // 
             this.richTextBox_companyName.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox_companyName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_companyName.Enabled = false;
             this.richTextBox_companyName.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_companyName.Location = new System.Drawing.Point(330, 32);
             this.richTextBox_companyName.Name = "richTextBox_companyName";
@@ -84,6 +87,7 @@
             // richTextBox_projectDescription
             // 
             this.richTextBox_projectDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_projectDescription.Enabled = false;
             this.richTextBox_projectDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_projectDescription.Location = new System.Drawing.Point(41, 210);
             this.richTextBox_projectDescription.Name = "richTextBox_projectDescription";
@@ -94,6 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(38, 71);
             this.label2.Name = "label2";
@@ -104,6 +109,7 @@
             // label_projectId
             // 
             this.label_projectId.AutoSize = true;
+            this.label_projectId.Enabled = false;
             this.label_projectId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_projectId.Location = new System.Drawing.Point(133, 71);
             this.label_projectId.Name = "label_projectId";
@@ -114,6 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(38, 186);
             this.label4.Name = "label4";
@@ -124,6 +131,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(37, 121);
             this.label6.Name = "label6";
@@ -134,6 +142,7 @@
             // label_projectArea
             // 
             this.label_projectArea.AutoSize = true;
+            this.label_projectArea.Enabled = false;
             this.label_projectArea.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_projectArea.Location = new System.Drawing.Point(37, 142);
             this.label_projectArea.Name = "label_projectArea";
@@ -145,6 +154,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Enabled = false;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.Location = new System.Drawing.Point(533, 186);
             this.label8.Name = "label8";
@@ -155,6 +165,7 @@
             // richTextBox_projectRequirements
             // 
             this.richTextBox_projectRequirements.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_projectRequirements.Enabled = false;
             this.richTextBox_projectRequirements.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_projectRequirements.Location = new System.Drawing.Point(537, 210);
             this.richTextBox_projectRequirements.Name = "richTextBox_projectRequirements";
@@ -165,6 +176,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(344, 406);
             this.label5.Name = "label5";
@@ -175,6 +187,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Enabled = false;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(533, 406);
             this.label9.Name = "label9";
@@ -185,6 +198,7 @@
             // label_projectStart
             // 
             this.label_projectStart.AutoSize = true;
+            this.label_projectStart.Enabled = false;
             this.label_projectStart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_projectStart.Location = new System.Drawing.Point(345, 427);
             this.label_projectStart.Name = "label_projectStart";
@@ -195,6 +209,7 @@
             // label_projectEnd
             // 
             this.label_projectEnd.AutoSize = true;
+            this.label_projectEnd.Enabled = false;
             this.label_projectEnd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_projectEnd.Location = new System.Drawing.Point(534, 427);
             this.label_projectEnd.Name = "label_projectEnd";
@@ -215,6 +230,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(412, 494);
             this.label3.Name = "label3";
@@ -225,6 +241,7 @@
             // label_projectDeadline
             // 
             this.label_projectDeadline.AutoSize = true;
+            this.label_projectDeadline.Enabled = false;
             this.label_projectDeadline.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_projectDeadline.Location = new System.Drawing.Point(443, 515);
             this.label_projectDeadline.Name = "label_projectDeadline";
@@ -253,7 +270,7 @@
             this.panel1.Controls.Add(this.richTextBox_companyName);
             this.panel1.Controls.Add(this.label_projectTitle);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(47, 50);
+            this.panel1.Location = new System.Drawing.Point(47, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(993, 570);
             this.panel1.TabIndex = 0;

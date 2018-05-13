@@ -66,7 +66,7 @@ namespace ProjectAssistant
 
             for (int i = 0; i < lst.Count; i++)
             {
-                ProjectListItem projectList = new ProjectListItem();
+                ProjectListItem projectList = new ProjectListItem(lst[i], 0);
                 Project prj = new Project();
                 Company cmp = new Company();
                 //acquiring info about project from the database
@@ -92,7 +92,7 @@ namespace ProjectAssistant
             _lst = db.select_AllasArray("projects");
             for (int i = 0; i < _lst.Count; i++)
             {
-                ProjectListItem projectList = new ProjectListItem();
+                ProjectListItem projectList = new ProjectListItem(_lst[i], 1);
                 Project prj = new Project();
                 Company cmp = new Company();
                 //acquiring info about project from the database

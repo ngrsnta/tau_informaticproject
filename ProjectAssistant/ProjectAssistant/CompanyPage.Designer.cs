@@ -31,7 +31,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabProject = new System.Windows.Forms.TabControl();
             this.tabProjectpage = new System.Windows.Forms.TabPage();
-            this.panelProject = new System.Windows.Forms.Panel();
             this.tabNewprojectpage = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonStartproject = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.richTextBoxCompanybranchdesicription = new System.Windows.Forms.RichTextBox();
             this.textProjecttitle = new System.Windows.Forms.TextBox();
             this.tabPageCompanyinf = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxCompanyemail = new System.Windows.Forms.TextBox();
             this.labelCompanydec = new System.Windows.Forms.Label();
@@ -59,10 +59,7 @@
             this.richTextBoxCompanymission = new System.Windows.Forms.RichTextBox();
             this.richTextBoxCompanyhis = new System.Windows.Forms.RichTextBox();
             this.richTextBoxCompanydec = new System.Windows.Forms.RichTextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabProject.SuspendLayout();
-            this.tabProjectpage.SuspendLayout();
             this.tabNewprojectpage.SuspendLayout();
             this.tabPageCompanyinf.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +86,6 @@
             // 
             // tabProjectpage
             // 
-            this.tabProjectpage.Controls.Add(this.panelProject);
             this.tabProjectpage.Location = new System.Drawing.Point(4, 22);
             this.tabProjectpage.Name = "tabProjectpage";
             this.tabProjectpage.Padding = new System.Windows.Forms.Padding(3);
@@ -97,16 +93,6 @@
             this.tabProjectpage.TabIndex = 0;
             this.tabProjectpage.Text = "Projects";
             this.tabProjectpage.UseVisualStyleBackColor = true;
-            // 
-            // panelProject
-            // 
-            this.panelProject.AutoScroll = true;
-            this.panelProject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelProject.Location = new System.Drawing.Point(3, 3);
-            this.panelProject.Name = "panelProject";
-            this.panelProject.Size = new System.Drawing.Size(1073, 636);
-            this.panelProject.TabIndex = 0;
-            this.panelProject.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProject_Paint);
             // 
             // tabNewprojectpage
             // 
@@ -296,6 +282,16 @@
             this.tabPageCompanyinf.Text = "Company Info";
             this.tabPageCompanyinf.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(879, 71);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -363,16 +359,6 @@
             this.richTextBoxCompanydec.TabIndex = 0;
             this.richTextBoxCompanydec.Text = "";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(879, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // CompanyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,7 +369,6 @@
             this.Size = new System.Drawing.Size(1087, 668);
             this.Load += new System.EventHandler(this.CompanyPage_Load);
             this.tabProject.ResumeLayout(false);
-            this.tabProjectpage.ResumeLayout(false);
             this.tabNewprojectpage.ResumeLayout(false);
             this.tabNewprojectpage.PerformLayout();
             this.tabPageCompanyinf.ResumeLayout(false);
@@ -415,8 +400,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBoxSkillRequirements;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panelProject;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabPageCompanyinf;
         private System.Windows.Forms.Label labelCompanydec;
         private System.Windows.Forms.Label labelCompanyhis;

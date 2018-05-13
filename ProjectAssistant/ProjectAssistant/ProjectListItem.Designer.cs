@@ -181,6 +181,7 @@
             this.Name = "ProjectListItem";
             this.Size = new System.Drawing.Size(779, 153);
             this.Load += new System.EventHandler(this.ProjectListItem_Load);
+            this.Click += new System.EventHandler(this.ProjectListItem_Click);
             this.MouseHover += new System.EventHandler(this.ProjectListItem_MouseHover);
             this.ResumeLayout(false);
             this.PerformLayout();

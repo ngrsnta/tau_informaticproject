@@ -60,7 +60,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.richTextBox_studProfessions = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_studFurtherInfo = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_studSemester = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -431,16 +431,16 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "Other";
             // 
-            // richTextBox2
+            // richTextBox_studFurtherInfo
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox2.Location = new System.Drawing.Point(47, 560);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(436, 146);
-            this.richTextBox2.TabIndex = 34;
-            this.richTextBox2.Text = "There is a Rich TetBox here...\nThere is a Rich TetBox here...\nThere is a Rich Tet" +
+            this.richTextBox_studFurtherInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_studFurtherInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studFurtherInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox_studFurtherInfo.Location = new System.Drawing.Point(47, 560);
+            this.richTextBox_studFurtherInfo.Name = "richTextBox_studFurtherInfo";
+            this.richTextBox_studFurtherInfo.Size = new System.Drawing.Size(436, 146);
+            this.richTextBox_studFurtherInfo.TabIndex = 34;
+            this.richTextBox_studFurtherInfo.Text = "There is a Rich TetBox here...\nThere is a Rich TetBox here...\nThere is a Rich Tet" +
     "Box here...\nThere is a Rich TetBox here...\nThere is a Rich TetBox here...\n\n";
             // 
             // panel1
@@ -493,7 +493,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.richTextBox2);
+            this.panel2.Controls.Add(this.richTextBox_studFurtherInfo);
             this.panel2.Controls.Add(this.richTextBox_studActivities);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.richTextBox_studProfessions);
@@ -523,7 +523,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "StudentProfile";
-            this.Size = new System.Drawing.Size(1087, 668);
+            this.Size = new System.Drawing.Size(1070, 668);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -567,7 +567,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox richTextBox_studProfessions;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox_studFurtherInfo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label_studSemester;
