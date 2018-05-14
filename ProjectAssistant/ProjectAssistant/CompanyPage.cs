@@ -20,17 +20,7 @@ namespace ProjectAssistant
             comp = _comp;
             
             InitializeComponent();
-            InitializeProjectList();
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CompanyPage_Load(object sender, EventArgs e)
-        {
+            getProjectList();
 
         }
 
@@ -40,7 +30,7 @@ namespace ProjectAssistant
             LoadingPage loadPage = new LoadingPage();
             loading.StartPosition = FormStartPosition.CenterScreen;
             loading.FormBorderStyle = FormBorderStyle.None;
-            //loading.TopMost = true;
+            loading.TopMost = true;
             loading.Size = loadPage.Size;
             loading.Controls.Add(loadPage);
             loading.Show();
@@ -53,14 +43,7 @@ namespace ProjectAssistant
                 return;                
             }
 
-            project.title = textProjecttitle.Text;
-            project.areaofinterest = textBoxAreaofinterest.Text;
-            project.deadline = dateTimePickerDeadline.Value;
-            project.end = dateTimePickerProjectend.Value;
-            project.start = dateTimePickerProjectstart.Value;
-            project.projectdesc = richTextBoxProjectdescription.Text;
-            project.skills = richTextBoxSkillRequirements.Text;
-            project.branchdec = richTextBoxCompanybranchdesicription.Text;
+            
 
             Random rnd = new Random();
             int pid = rnd.Next(100000, 999999);
@@ -85,18 +68,8 @@ namespace ProjectAssistant
             //db.update_toDatabase("projects", "projectEnd", project.end, "projectId", id.ToString());
             // db.update_toDatabase("projects", "projectBranch", comp.description, "projectId", id.ToString());
 
-            InitializeProjectList();
+            getProjectList();
             loading.Close();
-
-        }
-
-        private void panelProject_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -113,14 +86,16 @@ namespace ProjectAssistant
            
         }
 
-        private void InitializeProjectList()
+        private void getProjectList()
         {
             tabProjectpage.Controls.Clear();
             List<string> _lst = new List<string>();
-            _lst = db.select_AllasArray("projects");
+            _lst = db.select_ItemasArray("projects", "companyId", comp.id_number.ToString());
             for (int i = 0; i<_lst.Count; i++)
             {
-                ProjectListItem projectList = new ProjectListItem(_lst[i], 0);
+                Student st = new Student();
+                StudentPage stPage = new StudentPage(st, 0);
+                ProjectListItem projectList = new ProjectListItem(_lst[i], 0,"130501105", stPage);
                 Project prj = new Project();
                 Company cmp = new Company();
                 //acquiring info about project from the database

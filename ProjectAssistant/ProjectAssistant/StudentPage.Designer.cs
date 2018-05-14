@@ -501,7 +501,6 @@
             this.label_studName.Size = new System.Drawing.Size(103, 17);
             this.label_studName.TabIndex = 3;
             this.label_studName.Text = "Berk Karaagac";
-            this.label_studName.Click += new System.EventHandler(this.label_studName_Click);
             // 
             // label1
             // 
@@ -524,7 +523,6 @@
             this.studPage_projects.TabIndex = 0;
             this.studPage_projects.Text = "Projects";
             this.studPage_projects.UseVisualStyleBackColor = true;
-            this.studPage_projects.Click += new System.EventHandler(this.studPage_projects_Click);
             // 
             // studPage_applications
             // 

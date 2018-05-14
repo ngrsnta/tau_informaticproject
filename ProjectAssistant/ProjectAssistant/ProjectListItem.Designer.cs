@@ -53,7 +53,6 @@
             this.richTextBox_projectTitle.Size = new System.Drawing.Size(292, 24);
             this.richTextBox_projectTitle.TabIndex = 0;
             this.richTextBox_projectTitle.Text = "Project Title here";
-            this.richTextBox_projectTitle.TextChanged += new System.EventHandler(this.richTextBox_projectTitle_TextChanged);
             // 
             // richTextBox_projectArea
             // 
@@ -126,7 +125,6 @@
             this.label_projectDurationSign.Size = new System.Drawing.Size(94, 16);
             this.label_projectDurationSign.TabIndex = 6;
             this.label_projectDurationSign.Text = "Project Duration";
-            this.label_projectDurationSign.Click += new System.EventHandler(this.label_projectDurationSign_Click);
             // 
             // label_projectStart
             // 
@@ -138,7 +136,6 @@
             this.label_projectStart.Size = new System.Drawing.Size(72, 17);
             this.label_projectStart.TabIndex = 7;
             this.label_projectStart.Text = "15.15.2017";
-            this.label_projectStart.Click += new System.EventHandler(this.label_projectStart_Click);
             // 
             // label_projectEnd
             // 
@@ -161,7 +158,6 @@
             this.label_dontTouch.Size = new System.Drawing.Size(12, 17);
             this.label_dontTouch.TabIndex = 9;
             this.label_dontTouch.Text = "-";
-            this.label_dontTouch.Click += new System.EventHandler(this.label4_Click);
             // 
             // ProjectListItem
             // 
@@ -180,9 +176,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ProjectListItem";
             this.Size = new System.Drawing.Size(779, 153);
-            this.Load += new System.EventHandler(this.ProjectListItem_Load);
             this.Click += new System.EventHandler(this.ProjectListItem_Click);
-            this.MouseHover += new System.EventHandler(this.ProjectListItem_MouseHover);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -72,7 +72,7 @@ namespace ProjectAssistant
                return a;
             }
         }
-        public List<string> select_asArray(string table, string equal1, string equal2)
+        public List<string> select_asArray(string table, string equal1, string equal2, int value)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace ProjectAssistant
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
-                    list.Add(myReader.GetValue(1).ToString());
+                    list.Add(myReader.GetValue(value).ToString());
                     
                 }
                 myReader.Close();
@@ -102,11 +102,41 @@ namespace ProjectAssistant
             }
         }
 
+
         public List<string> select_AllasArray(string table)
         {
             try
             {
                 query = "select * from " + table + ";";
+                string a = "";
+                List<string> list = new List<string>();
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    list.Add(myReader.GetValue(0).ToString());
+
+                }
+                myReader.Close();
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
+                List<string> list = new List<string>();
+                list.Add(e.Message);
+                MessageBox.Show(e.Message + "\n" + e.ToString());
+
+                return list;
+            }
+        }
+        public List<string> select_ItemasArray(string table, string equal1, string equal2)
+        {
+            try
+            {
+                query = "select * from " + table + " where "+equal1+" = "+ equal2 +";";
                 string a = "";
                 List<string> list = new List<string>();
                 myCommand = new MySqlCommand(query, conn);
@@ -143,6 +173,24 @@ namespace ProjectAssistant
                 conn.Close();
             }
             catch(Exception e)
+            {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
+                MessageBox.Show(e.Message);
+                return;
+            }
+        }
+
+        public void update_ApplytoDatabase(string new_value, string prjId, string stuId)
+        {
+            try
+            {
+                query = "update applies set applyStatus = '" + new_value + "' where projectId = " + prjId + " and studentId = "+ stuId +";";
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
+                myCommand.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception e)
             {
                 if (conn.State.ToString() == "Open") { conn.Close(); }
                 MessageBox.Show(e.Message);

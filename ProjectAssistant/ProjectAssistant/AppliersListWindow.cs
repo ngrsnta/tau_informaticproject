@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectAssistant
 {
-    public partial class UserControl1 : UserControl
+    public partial class AppliersListWindow : UserControl
     {
-        public UserControl1()
+        public AppliersListWindow()
         {
             InitializeComponent();
         }

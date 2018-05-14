@@ -86,6 +86,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label_studEmailCompany = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.label_studentTelNumCompany = new System.Windows.Forms.Label();
@@ -102,8 +104,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label_studNameCompany = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -566,7 +566,7 @@
             // richTextBox_studOtherCompany
             // 
             this.richTextBox_studOtherCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studOtherCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studOtherCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studOtherCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studOtherCompany.Location = new System.Drawing.Point(47, 560);
             this.richTextBox_studOtherCompany.Name = "richTextBox_studOtherCompany";
@@ -609,7 +609,7 @@
             // richTextBox_studActivitiesCompany
             // 
             this.richTextBox_studActivitiesCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studActivitiesCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studActivitiesCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studActivitiesCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studActivitiesCompany.Location = new System.Drawing.Point(48, 404);
             this.richTextBox_studActivitiesCompany.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -655,7 +655,7 @@
             // richTextBoxstudCertificatesCompany
             // 
             this.richTextBoxstudCertificatesCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBoxstudCertificatesCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxstudCertificatesCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxstudCertificatesCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBoxstudCertificatesCompany.Location = new System.Drawing.Point(589, 203);
             this.richTextBoxstudCertificatesCompany.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -690,7 +690,7 @@
             // richTextBox_studExperienceCompany
             // 
             this.richTextBox_studExperienceCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studExperienceCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studExperienceCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studExperienceCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studExperienceCompany.Location = new System.Drawing.Point(48, 208);
             this.richTextBox_studExperienceCompany.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -703,7 +703,7 @@
             // richTextBox_studEducationCompany
             // 
             this.richTextBox_studEducationCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studEducationCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studEducationCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studEducationCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studEducationCompany.Location = new System.Drawing.Point(589, 38);
             this.richTextBox_studEducationCompany.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -716,7 +716,7 @@
             // richTextBox_studProjectsCompany
             // 
             this.richTextBox_studProjectsCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studProjectsCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studProjectsCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studProjectsCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studProjectsCompany.Location = new System.Drawing.Point(590, 404);
             this.richTextBox_studProjectsCompany.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -729,7 +729,7 @@
             // richTextBox_studAdressCompany
             // 
             this.richTextBox_studAdressCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studAdressCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studAdressCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studAdressCompany.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studAdressCompany.Location = new System.Drawing.Point(47, 38);
             this.richTextBox_studAdressCompany.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -807,6 +807,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1020, 834);
             this.panel3.TabIndex = 42;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(590, 739);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 43);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Decline";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(374, 738);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 43);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Accept";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -1000,26 +1022,6 @@
             this.label44.TabIndex = 0;
             this.label44.Text = "Student Name";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(374, 738);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 43);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Accept";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(590, 739);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 43);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Decline";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // StudentProfileforCompanies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1032,7 +1034,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "StudentProfileforCompanies";
-            this.Size = new System.Drawing.Size(1070, 651);
+            this.Size = new System.Drawing.Size(1053, 634);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace ProjectAssistant
 {
-    partial class UserControl1
+    partial class AppliersListWindow
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // UserControl1
+            // AppliersListWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(491, 405);
+            this.Name = "AppliersListWindow";
+            this.Size = new System.Drawing.Size(689, 566);
             this.ResumeLayout(false);
 
         }

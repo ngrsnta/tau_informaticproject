@@ -271,7 +271,7 @@
             // richTextBox_studAdress
             // 
             this.richTextBox_studAdress.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studAdress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studAdress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studAdress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studAdress.Location = new System.Drawing.Point(47, 38);
             this.richTextBox_studAdress.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -284,7 +284,7 @@
             // richTextBox_edu
             // 
             this.richTextBox_edu.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_edu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_edu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_edu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_edu.Location = new System.Drawing.Point(589, 38);
             this.richTextBox_edu.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -306,12 +306,12 @@
             // richTextBox_studExperience
             // 
             this.richTextBox_studExperience.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studExperience.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studExperience.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studExperience.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox_studExperience.Location = new System.Drawing.Point(48, 208);
+            this.richTextBox_studExperience.Location = new System.Drawing.Point(48, 203);
             this.richTextBox_studExperience.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.richTextBox_studExperience.Name = "richTextBox_studExperience";
-            this.richTextBox_studExperience.Size = new System.Drawing.Size(436, 254);
+            this.richTextBox_studExperience.Size = new System.Drawing.Size(436, 162);
             this.richTextBox_studExperience.TabIndex = 21;
             this.richTextBox_studExperience.Text = "There is a Rich TetBox here...\nThere is a Rich TetBox here...\nThere is a Rich Tet" +
     "Box here...\nThere is a Rich TetBox here...\nThere is a Rich TetBox here...\n\n";
@@ -341,7 +341,7 @@
             // richTextBox_studCertificates
             // 
             this.richTextBox_studCertificates.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studCertificates.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studCertificates.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studCertificates.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studCertificates.Location = new System.Drawing.Point(589, 203);
             this.richTextBox_studCertificates.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -354,7 +354,7 @@
             // richTextBox_studActivities
             // 
             this.richTextBox_studActivities.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studActivities.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studActivities.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studActivities.Location = new System.Drawing.Point(48, 404);
             this.richTextBox_studActivities.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -389,7 +389,7 @@
             // richTextBox_studProjects
             // 
             this.richTextBox_studProjects.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studProjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studProjects.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studProjects.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studProjects.Location = new System.Drawing.Point(590, 404);
             this.richTextBox_studProjects.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -434,7 +434,7 @@
             // richTextBox_studFurtherInfo
             // 
             this.richTextBox_studFurtherInfo.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_studFurtherInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_studFurtherInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_studFurtherInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox_studFurtherInfo.Location = new System.Drawing.Point(47, 560);
             this.richTextBox_studFurtherInfo.Name = "richTextBox_studFurtherInfo";
@@ -523,7 +523,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "StudentProfile";
-            this.Size = new System.Drawing.Size(1070, 668);
+            this.Size = new System.Drawing.Size(1053, 651);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

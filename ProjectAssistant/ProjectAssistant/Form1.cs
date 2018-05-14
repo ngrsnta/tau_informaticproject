@@ -70,7 +70,7 @@ namespace ProjectAssistant
                 if (loginInfo.get_password() == _password)
                 {
                     student.id_number = loginInfo.get_loginId();
-                    StudentPage studentPage = new StudentPage(student);
+                    StudentPage studentPage = new StudentPage(student, 1);
                     formsPanel.Controls.Clear();
                     formsPanel.Controls.Add(studentPage);
                     headerLabel.Text = "Student";

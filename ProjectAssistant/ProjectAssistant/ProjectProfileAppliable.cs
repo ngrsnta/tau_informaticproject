@@ -13,12 +13,16 @@ namespace ProjectAssistant
     public partial class ProjectProfileAppliable : UserControl
     {
         string projectId;
+        string studentId;
+        StudentPage stPage;
         DataBase db = new DataBase();
 
-        public ProjectProfileAppliable(string prjId)
+        public ProjectProfileAppliable(string prjId, string stuId, StudentPage _stPage)
         {
             InitializeComponent();
             projectId = prjId;
+            studentId = stuId;
+            stPage = _stPage;
 
             Project prj = new Project();
             Company cmp = new Company();
@@ -38,15 +42,18 @@ namespace ProjectAssistant
             //label_projectDeadline.Text = prj.deadline.ToShortDateString(); //CLASSTAN DATE TIME OLARAK DEĞİŞTİR
             //
         }
-
-        private void label_projectTitle_Click(object sender, EventArgs e)
+        private void button_projectApply_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            LoadingPage loadPage = new LoadingPage();
+            Form loading = new Form();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.TopMost = true;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
+            db.insert_toDatabase("applies", "projectId, studentId, applyStatus", projectId + ", " + studentId+", Ongoing");
+            loading.Close();
         }
     }
 }

@@ -69,6 +69,12 @@
     <Compile Include="ApplicationListItem.Designer.cs">
       <DependentUpon>ApplicationListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppliersListWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppliersListWindow.Designer.cs">
+      <DependentUpon>AppliersListWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company.cs" />
     <Compile Include="CompanyPage.cs">
       <SubType>UserControl</SubType>
@@ -142,17 +148,14 @@
     <Compile Include="StudentProfileforCompanies.Designer.cs">
       <DependentUpon>StudentProfileforCompanies.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationListItem.resx">
       <DependentUpon>ApplicationListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppliersListWindow.resx">
+      <DependentUpon>AppliersListWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyPage.resx">
       <DependentUpon>CompanyPage.cs</DependentUpon>
@@ -197,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentProfileforCompanies.resx">
       <DependentUpon>StudentProfileforCompanies.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -14,46 +14,21 @@ namespace ProjectAssistant
     {
         Project prj = new Project();
         DataBase db = new DataBase();
+        StudentPage stPage;
         string projectId;
+        string studentId;
         int pageDecider; // = 0 -> butonsuz
                          // = 1 -> appliable
                          // = 2 ? Bitir iptal et ?
 
 
-        public ProjectListItem(string prjId, int pageDcd)
+        public ProjectListItem(string prjId, int pageDcd, string stuId, StudentPage _stPage)
         {
             InitializeComponent();
             projectId = prjId;
+            studentId = stuId;
             pageDecider = pageDcd;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_projectDurationSign_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProjectListItem_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_projectStart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProjectListItem_MouseHover(object sender, EventArgs e)
-        {
-        }
-
-        private void richTextBox_projectTitle_TextChanged(object sender, EventArgs e)
-        {
-
+            stPage = _stPage;
         }
 
         private void ProjectListItem_Click(object sender, EventArgs e)
@@ -69,7 +44,7 @@ namespace ProjectAssistant
             Form projects = new Form();
             if(pageDecider == 1)
             {
-                ProjectProfileAppliable projectWindow = new ProjectProfileAppliable(projectId);
+                ProjectProfileAppliable projectWindow = new ProjectProfileAppliable(projectId, studentId, stPage);
                 projects.Size = projectWindow.Size;
                 projects.Controls.Add(projectWindow);
                 loading.Close();
@@ -84,5 +59,6 @@ namespace ProjectAssistant
                 projects.Show();
             }
         }
+
     }
 }
