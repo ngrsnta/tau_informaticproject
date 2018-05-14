@@ -15,19 +15,23 @@ namespace ProjectAssistant
         DataBase db = new DataBase();
         Student stu = new Student();
         Company comp = new Company();
-        
- /*     
-        object[] obj_cultural = { "Economics and Administrative Sciences" },
-        obj_economics = { "Science of Management", "Economics", "Political Science and International Relations" },
-        obj_engineering = { "Civil Engineering", "Computer Engineering", "Electrical Engineering",
-                                            "Industrial Engineering","Mechanical Engineering", "Mechatronics"     },
-        obj_law = { "Law" },
-        obj_science = { "Energy Sciences and Technology", "Material Sciences and Technology", "Molecular Biotechnology" };
-*/
+
+        #region Faculties and Majors as Objects
+        /*     
+            object[] obj_cultural = { "Economics and Administrative Sciences" },
+            obj_economics = { "Science of Management", "Economics", "Political Science and International Relations" },
+            obj_engineering = { "Civil Engineering", "Computer Engineering", "Electrical Engineering",
+                                                "Industrial Engineering","Mechanical Engineering", "Mechatronics"     },
+            obj_law = { "Law" },
+            obj_science = { "Energy Sciences and Technology", "Material Sciences and Technology", "Molecular Biotechnology" };
+        */
+        #endregion
+ 
         public AdminPage() //Start
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// When changed to a Tab, delete all Text Boxes
         /// </summary>
@@ -123,16 +127,6 @@ namespace ProjectAssistant
                 stu.major = comboBox_studentmajor.Text;
             //stu.semester = Convert.ToInt32(textbox_studentsemester.Text);
             stu.semester = Convert.ToInt32(comboBox_studentsemester.Text);
-        }
-        
-        /// <summary>
-        /// Makes Student Update Panel Visible
-        /// </summary>
-        void Show_Student_Upt_Panel(bool visible)
-        {
-            groupBox_student_upt.Visible = visible;
-            groupBox_studentID_show.Visible = visible;
-            groupBox_studentinfo_del.Visible = visible;
         }
 
         /// <summary>
@@ -243,11 +237,22 @@ namespace ProjectAssistant
             if (stu.password != stu_upt.password)
                 db.update_toDatabase("students", "studentPassword", stu_upt.password, "studentId", student_ID);
         }
+        
+        #region Reset Functions
+        
+        /// <summary>
+        /// Resets Labels of Showed Student and Company Infos
+        /// </summary>
+        void Reset_Labels()
+        {
+            Reset_Stu_Upt_Labels();
+            Reset_Comp_Upt_Labels();
+        }
 
         /// <summary>
         /// Resets Labels of Showed Student Infos
         /// </summary>
-        void Reset_Label_Stu_Upt()
+        void Reset_Stu_Upt_Labels()
         {
             label_studentnumber_show.Text = "Student ID";
             label_studentname_show.Text = "Name";
@@ -259,12 +264,21 @@ namespace ProjectAssistant
         }
 
         /// <summary>
+        /// Reset Labels of Showed Company Infos
+        /// </summary>
+        void Reset_Comp_Upt_Labels()
+        {
+            label_companyID_show.Text = "Company ID";
+            label_companyname_show.Text = "Name";
+        }
+
+        /// <summary>
         /// Resets TextBoxes in the current Tab
         /// </summary>
         void Reset_Fields()
         {
             var selectedTab = Admin_MainTab.SelectedTab;
-
+            Reset_Labels();
             foreach (Control ctrl in selectedTab.Controls)  //For each Control in Selected Tab 
             {
                 foreach (Control ctrl_sub in ctrl.Controls) //For each Control in Table Layout Panel
@@ -288,7 +302,24 @@ namespace ProjectAssistant
         }
 
         /// <summary>
-        /// Makes Company Update Panel Visible
+        /// Resets the Selected Tab when switched
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Admin_MainTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Reset_Fields();
+            Show_Student_Upt_Panel(false);
+            Show_Company_Upt_Panel(false);
+
+        }
+
+        #endregion
+
+        #region Panel Visibility Functions
+
+        /// <summary>
+        /// Changes Company Update Panel Visibility
         /// </summary>
         void Show_Company_Upt_Panel(bool visible)
         {
@@ -297,13 +328,18 @@ namespace ProjectAssistant
             groupBox_company_upt.Visible = visible;
         }
 
-        private void Admin_MainTab_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Changes Student Update Panel Visibility
+        /// </summary>
+        void Show_Student_Upt_Panel(bool visible)
         {
-            Reset_Fields();
-            Show_Student_Upt_Panel(false);
-            Show_Company_Upt_Panel(false);
-
+            groupBox_student_upt.Visible = visible;
+            groupBox_studentID_show.Visible = visible;
+            groupBox_studentinfo_del.Visible = visible;
         }
+
+        #endregion
+
 
         #region TextBox Limitations KeypressEvent
 
@@ -340,8 +376,6 @@ namespace ProjectAssistant
         }
 
         #endregion
-
-
 
         #region Student Register
 
@@ -428,7 +462,8 @@ namespace ProjectAssistant
             db.insert_toDatabase("students","studentId, studentPassword, studentName, studentGender, studentBirthday, " +
                                  "studentFaculty, studentMajor, studentSemester", stu.id_number+", '"+stu.password+"', '"+stu.name+"', '"+stu.gender+"', '" 
                                  +stu.dateofbirth.ToString("yyyy-MM-dd") + "', '"+stu.faculty+"', '"+stu.major+"', "+stu.semester);
-
+            MessageBox.Show("Student has been succesfully registered!");
+            Reset_Fields();
         }
 
         #endregion
@@ -490,13 +525,11 @@ namespace ProjectAssistant
             Student_UptToDb(stu, stu_upt, db, student_ID);
 
             //Reset Show Student Info Labels
-            Reset_Label_Stu_Upt();
+            Reset_Fields();
 
             //Hide Student Update Panels
             Show_Student_Upt_Panel(false);
 
-            //Reset the Textboxes
-            Reset_Fields();
         }
 
         //3. Delete Student
@@ -505,7 +538,7 @@ namespace ProjectAssistant
             string student_ID = label_studentnumber_show.Text;
 
             //Warning Dialog
-            DialogResult res = MessageBox.Show("Are you sure to delete this user?", "Warning", 
+            DialogResult res = MessageBox.Show("Are you sure you want to delete this user?", "Warning", 
                                                 MessageBoxButtons.YesNoCancel,MessageBoxIcon.Warning,
                                                 MessageBoxDefaultButton.Button2
                                                );
@@ -514,20 +547,25 @@ namespace ProjectAssistant
                 case DialogResult.Yes:
                     {
                         db.delete_fromDatabase("students", "studentId", student_ID);
+
+                        //Reset Show Student Info Labels and Input Fields
+                        Reset_Fields();
+
+                        //Hide Student Update Panels
+                        Show_Student_Upt_Panel(false);
+
                         break;
                     }
                 case DialogResult.No:
                     break;
                 case DialogResult.Cancel:
                     {
-                        //Reset Show Student Info Labels
-                        Reset_Label_Stu_Upt();
+                        //Reset Show Student Info Labels and Input Fields
+                        Reset_Fields();
 
                         //Hide Student Update Panels
                         Show_Student_Upt_Panel(false);
 
-                        //Reset the Textboxes
-                        Reset_Fields();
                         break;
                     } 
             }
@@ -593,6 +631,8 @@ namespace ProjectAssistant
             //Insert Registration Infos from Class to Database
             db.insert_toDatabase("companies", "companyId, companyPassword, companyName",
                                 comp.id_number + ", '" + comp.password + "', '" + comp.name + "'");
+            MessageBox.Show("Company has been succesfully registered!");
+            Reset_Fields();
 
         }
 
@@ -666,14 +706,11 @@ namespace ProjectAssistant
                 db.update_toDatabase("companies", "companyPassword", comp_upt.password, "companyId", company_ID);
             }
 
+            //Reset Company Info Show Labels and Input Fields
+            Reset_Fields();
+
             //Make Company Update Panels Invisible
             Show_Company_Upt_Panel(false);
-
-            //Reset Company Info Show Labels
-            label_companyID_show.Text = "Company ID";
-            label_companyname_show.Text = "Name";
-
-            Reset_Fields();
 
         }
 
@@ -683,7 +720,7 @@ namespace ProjectAssistant
         {
             string company_ID =label_companyID_show.Text;
 
-            DialogResult res = MessageBox.Show("Are you sure to delete this user?", "Warning",
+            DialogResult res = MessageBox.Show("Are you sure you want to delete this user?", "Warning",
                                                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,
                                                MessageBoxDefaultButton.Button2
                                               );
@@ -693,30 +730,24 @@ namespace ProjectAssistant
                     {
                         db.delete_fromDatabase("companies", "companyId", company_ID);
 
-                        //Reset Company Info Show Labels
-                        label_companyID_show.Text = "Company ID";
-                        label_companyname_show.Text = "Name";
+                        //Reset Company Info Show Labels and Input Fields
+                        Reset_Fields();
 
                         //Hide Student Update Panels
                         Show_Company_Upt_Panel(false);
 
-                        //Reset the Textboxes
-                        Reset_Fields();
                         break;
                     }
                 case DialogResult.No:
                     break;
                 case DialogResult.Cancel:
                     {
-                        //Reset Company Info Show Labels
-                        label_companyID_show.Text = "Company ID";
-                        label_companyname_show.Text = "Name";
+                        //Reset Company Info Show Labels and Input Fields
+                        Reset_Fields();
 
                         //Hide Student Update Panels
                         Show_Company_Upt_Panel(false);
 
-                        //Reset the Textboxes
-                        Reset_Fields();
                         break;
                     }
             }
