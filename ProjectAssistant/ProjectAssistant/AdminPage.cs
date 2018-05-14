@@ -15,6 +15,7 @@ namespace ProjectAssistant
         DataBase db = new DataBase();
         Student stu = new Student();
         Company comp = new Company();
+        
  /*     
         object[] obj_cultural = { "Economics and Administrative Sciences" },
         obj_economics = { "Science of Management", "Economics", "Political Science and International Relations" },
@@ -26,7 +27,6 @@ namespace ProjectAssistant
         public AdminPage() //Start
         {
             InitializeComponent();
-
         }
         /// <summary>
         /// When changed to a Tab, delete all Text Boxes
@@ -261,7 +261,7 @@ namespace ProjectAssistant
         /// <summary>
         /// Resets TextBoxes in the current Tab
         /// </summary>
-        void Reset_TextBox()
+        void Reset_Fields()
         {
             var selectedTab = Admin_MainTab.SelectedTab;
 
@@ -277,6 +277,11 @@ namespace ProjectAssistant
                         }
                         else if (ctrl_sub_sub is ComboBox)
                             (ctrl_sub_sub as ComboBox).SelectedIndex = 0;
+                        else if (ctrl_sub_sub is DateTimePicker)
+                        {
+                            (ctrl_sub_sub as DateTimePicker).MaxDate = DateTime.Today;
+                            (ctrl_sub_sub as DateTimePicker).Value = DateTime.Today;
+                        }
                     }
                 }
             }
@@ -294,7 +299,7 @@ namespace ProjectAssistant
 
         private void Admin_MainTab_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Reset_TextBox();
+            Reset_Fields();
             Show_Student_Upt_Panel(false);
             Show_Company_Upt_Panel(false);
 
@@ -339,12 +344,6 @@ namespace ProjectAssistant
 
 
         #region Student Register
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label_test.Text = comboBox_studentfaculty.Text.ToString();
-            label_test2.Text = comboBox_studentmajor.SelectedItem.ToString();
-        }
 
         private void comboBox_faculty_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -497,7 +496,7 @@ namespace ProjectAssistant
             Show_Student_Upt_Panel(false);
 
             //Reset the Textboxes
-            Reset_TextBox();
+            Reset_Fields();
         }
 
         //3. Delete Student
@@ -528,7 +527,7 @@ namespace ProjectAssistant
                         Show_Student_Upt_Panel(false);
 
                         //Reset the Textboxes
-                        Reset_TextBox();
+                        Reset_Fields();
                         break;
                     } 
             }
@@ -674,7 +673,7 @@ namespace ProjectAssistant
             label_companyID_show.Text = "Company ID";
             label_companyname_show.Text = "Name";
 
-            Reset_TextBox();
+            Reset_Fields();
 
         }
 
@@ -702,7 +701,7 @@ namespace ProjectAssistant
                         Show_Company_Upt_Panel(false);
 
                         //Reset the Textboxes
-                        Reset_TextBox();
+                        Reset_Fields();
                         break;
                     }
                 case DialogResult.No:
@@ -717,7 +716,7 @@ namespace ProjectAssistant
                         Show_Company_Upt_Panel(false);
 
                         //Reset the Textboxes
-                        Reset_TextBox();
+                        Reset_Fields();
                         break;
                     }
             }

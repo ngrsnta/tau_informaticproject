@@ -93,9 +93,6 @@
             this.textbox_studentnumber_show = new System.Windows.Forms.TextBox();
             this.label_main_student_upt = new System.Windows.Forms.Label();
             this.tab_student_reg = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label_test2 = new System.Windows.Forms.Label();
-            this.label_test = new System.Windows.Forms.Label();
             this.tableLayoutPanel_student_reg = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox_studentID_reg = new System.Windows.Forms.GroupBox();
             this.label_studentnumber = new System.Windows.Forms.Label();
@@ -789,11 +786,10 @@
             this.datepicker_student_upt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepicker_student_upt.Location = new System.Drawing.Point(284, 149);
             this.datepicker_student_upt.Margin = new System.Windows.Forms.Padding(6);
-            this.datepicker_student_upt.MaxDate = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
+            this.datepicker_student_upt.MaxDate = System.DateTime.Today;
             this.datepicker_student_upt.Name = "datepicker_student_upt";
             this.datepicker_student_upt.Size = new System.Drawing.Size(453, 36);
             this.datepicker_student_upt.TabIndex = 8;
-            this.datepicker_student_upt.Value = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
             // 
             // label_studentsemester_upt
             // 
@@ -1003,9 +999,6 @@
             // 
             // tab_student_reg
             // 
-            this.tab_student_reg.Controls.Add(this.button1);
-            this.tab_student_reg.Controls.Add(this.label_test2);
-            this.tab_student_reg.Controls.Add(this.label_test);
             this.tab_student_reg.Controls.Add(this.tableLayoutPanel_student_reg);
             this.tab_student_reg.Controls.Add(this.label_main_student_reg);
             this.tab_student_reg.Font = new System.Drawing.Font("Century Gothic", 11F);
@@ -1017,36 +1010,6 @@
             this.tab_student_reg.TabIndex = 0;
             this.tab_student_reg.Text = "Student Registration";
             this.tab_student_reg.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(1592, 714);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 61);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label_test2
-            // 
-            this.label_test2.AutoSize = true;
-            this.label_test2.Location = new System.Drawing.Point(1634, 667);
-            this.label_test2.Name = "label_test2";
-            this.label_test2.Size = new System.Drawing.Size(58, 32);
-            this.label_test2.TabIndex = 2;
-            this.label_test2.Text = "test";
-            // 
-            // label_test
-            // 
-            this.label_test.AutoSize = true;
-            this.label_test.Location = new System.Drawing.Point(1634, 600);
-            this.label_test.Name = "label_test";
-            this.label_test.Size = new System.Drawing.Size(58, 32);
-            this.label_test.TabIndex = 2;
-            this.label_test.Text = "test";
             // 
             // tableLayoutPanel_student_reg
             // 
@@ -1319,11 +1282,10 @@
             this.datepicker_student.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepicker_student.Location = new System.Drawing.Point(411, 173);
             this.datepicker_student.Margin = new System.Windows.Forms.Padding(6);
-            this.datepicker_student.MaxDate = new System.DateTime(2018, 5, 6, 0, 0, 0, 0);
+            this.datepicker_student.MaxDate= System.DateTime.Today;
             this.datepicker_student.Name = "datepicker_student";
             this.datepicker_student.Size = new System.Drawing.Size(453, 36);
             this.datepicker_student.TabIndex = 13;
-            this.datepicker_student.Value = new System.DateTime(2018, 5, 5, 0, 0, 0, 0);
             // 
             // label_studentgender
             // 
@@ -1434,7 +1396,6 @@
             this.groupBox_student_show.ResumeLayout(false);
             this.groupBox_student_show.PerformLayout();
             this.tab_student_reg.ResumeLayout(false);
-            this.tab_student_reg.PerformLayout();
             this.tableLayoutPanel_student_reg.ResumeLayout(false);
             this.groupBox_studentID_reg.ResumeLayout(false);
             this.groupBox_studentID_reg.PerformLayout();
@@ -1536,10 +1497,7 @@
         private System.Windows.Forms.RadioButton radioButton_female_upt;
         private System.Windows.Forms.RadioButton radioButton_male_upt;
         private System.Windows.Forms.ComboBox comboBox_studentfaculty;
-        private System.Windows.Forms.Label label_test;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox_studentmajor;
-        private System.Windows.Forms.Label label_test2;
         private System.Windows.Forms.ComboBox comboBox_studentmajor_upt;
         private System.Windows.Forms.ComboBox comboBox_studentfaculty_upt;
     }
