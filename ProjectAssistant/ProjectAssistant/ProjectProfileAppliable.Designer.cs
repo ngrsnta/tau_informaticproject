@@ -47,6 +47,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label_projectDeadline = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBoxCompdec = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxComphis = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxCompbranch = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxCompmission = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,7 +186,7 @@
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(344, 406);
+            this.label5.Location = new System.Drawing.Point(344, 983);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 17;
@@ -189,7 +197,7 @@
             this.label9.AutoSize = true;
             this.label9.Enabled = false;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(533, 406);
+            this.label9.Location = new System.Drawing.Point(533, 983);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 21);
             this.label9.TabIndex = 18;
@@ -200,7 +208,7 @@
             this.label_projectStart.AutoSize = true;
             this.label_projectStart.Enabled = false;
             this.label_projectStart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_projectStart.Location = new System.Drawing.Point(345, 427);
+            this.label_projectStart.Location = new System.Drawing.Point(345, 1004);
             this.label_projectStart.Name = "label_projectStart";
             this.label_projectStart.Size = new System.Drawing.Size(72, 17);
             this.label_projectStart.TabIndex = 19;
@@ -211,7 +219,7 @@
             this.label_projectEnd.AutoSize = true;
             this.label_projectEnd.Enabled = false;
             this.label_projectEnd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_projectEnd.Location = new System.Drawing.Point(534, 427);
+            this.label_projectEnd.Location = new System.Drawing.Point(534, 1004);
             this.label_projectEnd.Name = "label_projectEnd";
             this.label_projectEnd.Size = new System.Drawing.Size(72, 17);
             this.label_projectEnd.TabIndex = 20;
@@ -220,7 +228,7 @@
             // button_projectApply
             // 
             this.button_projectApply.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button_projectApply.Location = new System.Drawing.Point(440, 468);
+            this.button_projectApply.Location = new System.Drawing.Point(446, 1047);
             this.button_projectApply.Name = "button_projectApply";
             this.button_projectApply.Size = new System.Drawing.Size(75, 23);
             this.button_projectApply.TabIndex = 21;
@@ -232,7 +240,7 @@
             this.label3.AutoSize = true;
             this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(412, 494);
+            this.label3.Location = new System.Drawing.Point(410, 1073);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 21);
             this.label3.TabIndex = 22;
@@ -243,7 +251,7 @@
             this.label_projectDeadline.AutoSize = true;
             this.label_projectDeadline.Enabled = false;
             this.label_projectDeadline.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_projectDeadline.Location = new System.Drawing.Point(443, 515);
+            this.label_projectDeadline.Location = new System.Drawing.Point(443, 1094);
             this.label_projectDeadline.Name = "label_projectDeadline";
             this.label_projectDeadline.Size = new System.Drawing.Size(72, 17);
             this.label_projectDeadline.TabIndex = 23;
@@ -251,7 +259,16 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.richTextBoxCompmission);
+            this.panel1.Controls.Add(this.richTextBoxCompbranch);
+            this.panel1.Controls.Add(this.richTextBoxComphis);
+            this.panel1.Controls.Add(this.richTextBoxCompdec);
             this.panel1.Controls.Add(this.label_projectDeadline);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button_projectApply);
@@ -272,8 +289,96 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(47, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 570);
+            this.panel1.Size = new System.Drawing.Size(993, 1148);
             this.panel1.TabIndex = 0;
+            // 
+            // richTextBoxCompdec
+            // 
+            this.richTextBoxCompdec.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxCompdec.Enabled = false;
+            this.richTextBoxCompdec.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxCompdec.Location = new System.Drawing.Point(41, 457);
+            this.richTextBoxCompdec.Name = "richTextBoxCompdec";
+            this.richTextBoxCompdec.Size = new System.Drawing.Size(371, 170);
+            this.richTextBoxCompdec.TabIndex = 24;
+            this.richTextBoxCompdec.Text = "Company Description here";
+            // 
+            // richTextBoxComphis
+            // 
+            this.richTextBoxComphis.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxComphis.Enabled = false;
+            this.richTextBoxComphis.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxComphis.Location = new System.Drawing.Point(537, 457);
+            this.richTextBoxComphis.Name = "richTextBoxComphis";
+            this.richTextBoxComphis.Size = new System.Drawing.Size(371, 170);
+            this.richTextBoxComphis.TabIndex = 25;
+            this.richTextBoxComphis.Text = "Company History here";
+            // 
+            // richTextBoxCompbranch
+            // 
+            this.richTextBoxCompbranch.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxCompbranch.Enabled = false;
+            this.richTextBoxCompbranch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxCompbranch.Location = new System.Drawing.Point(41, 703);
+            this.richTextBoxCompbranch.Name = "richTextBoxCompbranch";
+            this.richTextBoxCompbranch.Size = new System.Drawing.Size(371, 170);
+            this.richTextBoxCompbranch.TabIndex = 26;
+            this.richTextBoxCompbranch.Text = "Company Branch Description here";
+            // 
+            // richTextBoxCompmission
+            // 
+            this.richTextBoxCompmission.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxCompmission.Enabled = false;
+            this.richTextBoxCompmission.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxCompmission.Location = new System.Drawing.Point(537, 703);
+            this.richTextBoxCompmission.Name = "richTextBoxCompmission";
+            this.richTextBoxCompmission.Size = new System.Drawing.Size(371, 170);
+            this.richTextBoxCompmission.TabIndex = 27;
+            this.richTextBoxCompmission.Text = "Project Description here";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Enabled = false;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(38, 433);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 21);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Company Description";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Enabled = false;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(533, 433);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 21);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Company History";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(38, 679);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(238, 21);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Company Branch Description";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Enabled = false;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(533, 679);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(269, 21);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Company Mission and Objectives";
             // 
             // ProjectProfileAppliable
             // 
@@ -282,7 +387,7 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panel1);
             this.Name = "ProjectProfileAppliable";
-            this.Size = new System.Drawing.Size(1087, 668);
+            this.Size = new System.Drawing.Size(1087, 1200);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -310,5 +415,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_projectDeadline;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox richTextBoxCompmission;
+        private System.Windows.Forms.RichTextBox richTextBoxCompbranch;
+        private System.Windows.Forms.RichTextBox richTextBoxComphis;
+        private System.Windows.Forms.RichTextBox richTextBoxCompdec;
     }
 }
