@@ -52,7 +52,7 @@ namespace ProjectAssistant
             loading.Size = loadPage.Size;
             loading.Controls.Add(loadPage);
             loading.Show();
-            db.insert_toDatabase("applies", "projectId, studentId, applyStatus", projectId + ", " + studentId+", Ongoing");
+            db.insert_toDatabase("applies", "projectId, studentId, applyStatus", projectId + ", " + studentId+", 'Ongoing'");
             loading.Close();
         }
     }
