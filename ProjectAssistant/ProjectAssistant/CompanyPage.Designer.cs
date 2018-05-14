@@ -117,10 +117,10 @@
             this.tabNewprojectpage.Controls.Add(this.label1);
             this.tabNewprojectpage.Controls.Add(this.richTextBoxCompanybranchdesicription);
             this.tabNewprojectpage.Controls.Add(this.textProjecttitle);
-            this.tabNewprojectpage.Location = new System.Drawing.Point(4, 22);
+            this.tabNewprojectpage.Location = new System.Drawing.Point(4, 39);
             this.tabNewprojectpage.Name = "tabNewprojectpage";
             this.tabNewprojectpage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNewprojectpage.Size = new System.Drawing.Size(1079, 642);
+            this.tabNewprojectpage.Size = new System.Drawing.Size(1079, 625);
             this.tabNewprojectpage.TabIndex = 1;
             this.tabNewprojectpage.Text = "New Project";
             this.tabNewprojectpage.UseVisualStyleBackColor = true;
@@ -278,19 +278,19 @@
             this.tabPageCompanyinf.Controls.Add(this.richTextBoxCompanymission);
             this.tabPageCompanyinf.Controls.Add(this.richTextBoxCompanyhis);
             this.tabPageCompanyinf.Controls.Add(this.richTextBoxCompanydec);
-            this.tabPageCompanyinf.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCompanyinf.Location = new System.Drawing.Point(4, 39);
             this.tabPageCompanyinf.Name = "tabPageCompanyinf";
             this.tabPageCompanyinf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCompanyinf.Size = new System.Drawing.Size(1079, 642);
+            this.tabPageCompanyinf.Size = new System.Drawing.Size(1079, 625);
             this.tabPageCompanyinf.TabIndex = 2;
             this.tabPageCompanyinf.Text = "Company Info";
             this.tabPageCompanyinf.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(950, 23);
+            this.button1.Location = new System.Drawing.Point(943, 23);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(82, 27);
             this.button1.TabIndex = 8;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;

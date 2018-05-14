@@ -387,7 +387,7 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panel1);
             this.Name = "ProjectProfileAppliable";
-            this.Size = new System.Drawing.Size(1087, 1200);
+            this.Size = new System.Drawing.Size(1070, 668);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
