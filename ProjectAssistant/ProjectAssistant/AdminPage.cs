@@ -30,8 +30,10 @@ namespace ProjectAssistant
         public AdminPage() //Start
         {
             InitializeComponent();
+            datepicker_student_upt.MaxDate = DateTime.Now;
+            datepicker_student.MaxDate = DateTime.Now;
         }
-
+        
         /// <summary>
         /// When changed to a Tab, delete all Text Boxes
         /// </summary>
@@ -753,9 +755,24 @@ namespace ProjectAssistant
             }
         }
 
+
         #endregion
 
+        private void textbox_studentnumber_show_KeyPress(object sender, KeyPressEventArgs keypress)
+        {
+            if (keypress.KeyChar==Convert.ToChar(Keys.Enter))
+            {
+                button_studentshow_Click(sender, keypress);
+            }
+        }
 
+        private void textbox_company_show_KeyPress(object sender, KeyPressEventArgs keypress)
+        {
+            if (keypress.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                button_company_show_Click(sender, keypress);
+            }
+        }
     }
 
  }

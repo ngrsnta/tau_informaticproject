@@ -287,6 +287,7 @@
             this.textbox_company_show.Name = "textbox_company_show";
             this.textbox_company_show.Size = new System.Drawing.Size(222, 36);
             this.textbox_company_show.TabIndex = 4;
+            this.textbox_company_show.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_company_show_KeyPress);
             // 
             // groupBox_company_upt
             // 
@@ -781,7 +782,6 @@
             this.datepicker_student_upt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepicker_student_upt.Location = new System.Drawing.Point(284, 129);
             this.datepicker_student_upt.Margin = new System.Windows.Forms.Padding(6);
-            this.datepicker_student_upt.MaxDate = System.DateTime.Today;
             this.datepicker_student_upt.Name = "datepicker_student_upt";
             this.datepicker_student_upt.Size = new System.Drawing.Size(460, 36);
             this.datepicker_student_upt.TabIndex = 8;
@@ -971,6 +971,7 @@
             this.textbox_studentnumber_show.Name = "textbox_studentnumber_show";
             this.textbox_studentnumber_show.Size = new System.Drawing.Size(316, 36);
             this.textbox_studentnumber_show.TabIndex = 2;
+            this.textbox_studentnumber_show.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_studentnumber_show_KeyPress);
             // 
             // label_main_student_upt
             // 
@@ -1268,7 +1269,6 @@
             this.datepicker_student.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepicker_student.Location = new System.Drawing.Point(392, 172);
             this.datepicker_student.Margin = new System.Windows.Forms.Padding(6);
-            this.datepicker_student.MaxDate = System.DateTime.Today;
             this.datepicker_student.Name = "datepicker_student";
             this.datepicker_student.Size = new System.Drawing.Size(453, 36);
             this.datepicker_student.TabIndex = 13;

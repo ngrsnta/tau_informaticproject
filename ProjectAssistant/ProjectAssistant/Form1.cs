@@ -28,6 +28,7 @@ namespace ProjectAssistant
             formsPanel.Controls.Add(loginPage);
             loginPage.loginIdTextBox.MaxLength = 9;
             loginPage.loginButton.Click += loginPage_loginButton_Click;
+            loginPage.passwordTextBox.KeyPress += loginPage_passwordTextBox_KeyPress;
         }
         
 
@@ -125,9 +126,17 @@ namespace ProjectAssistant
                 }
             }
             loginPage.passwordTextBox.Clear();
+            loginPage.loginIdTextBox.Clear();
             loading.Close();
         }
 
+        private void loginPage_passwordTextBox_KeyPress(object sender, KeyPressEventArgs ke)
+        {
+            if (ke.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                loginPage_loginButton_Click(sender, ke);
+            }
+        }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
