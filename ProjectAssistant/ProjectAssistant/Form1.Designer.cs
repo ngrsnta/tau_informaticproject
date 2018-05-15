@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sideMenuPanel = new System.Windows.Forms.Panel();
-            this.adminPageButton = new System.Windows.Forms.Button();
             this.loginPageButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
@@ -45,28 +44,12 @@
             // sideMenuPanel
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(133)))));
-            this.sideMenuPanel.Controls.Add(this.adminPageButton);
             this.sideMenuPanel.Controls.Add(this.loginPageButton);
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 100);
             this.sideMenuPanel.Name = "sideMenuPanel";
             this.sideMenuPanel.Size = new System.Drawing.Size(276, 668);
             this.sideMenuPanel.TabIndex = 7;
-            // 
-            // adminPageButton
-            // 
-            this.adminPageButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.adminPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminPageButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.adminPageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.adminPageButton.Location = new System.Drawing.Point(0, 50);
-            this.adminPageButton.Name = "adminPageButton";
-            this.adminPageButton.Size = new System.Drawing.Size(276, 50);
-            this.adminPageButton.TabIndex = 2;
-            this.adminPageButton.Text = "  Admin";
-            this.adminPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminPageButton.UseVisualStyleBackColor = true;
-            this.adminPageButton.Click += new System.EventHandler(this.adminPageButton_Click);
             // 
             // loginPageButton
             // 
@@ -81,7 +64,7 @@
             this.loginPageButton.Name = "loginPageButton";
             this.loginPageButton.Size = new System.Drawing.Size(276, 50);
             this.loginPageButton.TabIndex = 1;
-            this.loginPageButton.Text = "  Login Page";
+            this.loginPageButton.Text = "  Sign Out";
             this.loginPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loginPageButton.UseVisualStyleBackColor = false;
             this.loginPageButton.Click += new System.EventHandler(this.loginPageButton_Click);
@@ -135,9 +118,9 @@
             this.headerLabel.ForeColor = System.Drawing.Color.Black;
             this.headerLabel.Location = new System.Drawing.Point(1232, 64);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(74, 24);
+            this.headerLabel.Size = new System.Drawing.Size(64, 24);
             this.headerLabel.TabIndex = 0;
-            this.headerLabel.Text = "label1";
+            this.headerLabel.Text = "Login";
             // 
             // formsPanel
             // 
@@ -171,7 +154,6 @@
         private System.Windows.Forms.Panel sideMenuPanel;
         private System.Windows.Forms.Panel headerPanel;
         public  System.Windows.Forms.Panel formsPanel;
-        private System.Windows.Forms.Button adminPageButton;
         private System.Windows.Forms.Button loginPageButton;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.PictureBox pictureBox1;

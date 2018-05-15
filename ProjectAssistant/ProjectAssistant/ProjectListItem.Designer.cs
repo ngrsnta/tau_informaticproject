@@ -38,7 +38,6 @@
             this.label_projectStart = new System.Windows.Forms.Label();
             this.label_projectEnd = new System.Windows.Forms.Label();
             this.label_dontTouch = new System.Windows.Forms.Label();
-            this.label_studentApplyStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richTextBox_projectTitle
@@ -160,21 +159,10 @@
             this.label_dontTouch.TabIndex = 9;
             this.label_dontTouch.Text = "-";
             // 
-            // label_studentApplyStatus
-            // 
-            this.label_studentApplyStatus.AutoSize = true;
-            this.label_studentApplyStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_studentApplyStatus.Location = new System.Drawing.Point(654, 65);
-            this.label_studentApplyStatus.Name = "label_studentApplyStatus";
-            this.label_studentApplyStatus.Size = new System.Drawing.Size(109, 21);
-            this.label_studentApplyStatus.TabIndex = 10;
-            this.label_studentApplyStatus.Text = "Apply Status";
-            // 
             // ProjectListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label_studentApplyStatus);
             this.Controls.Add(this.label_dontTouch);
             this.Controls.Add(this.label_projectEnd);
             this.Controls.Add(this.label_projectStart);
@@ -206,6 +194,5 @@
         public System.Windows.Forms.Label label_projectStart;
         public System.Windows.Forms.Label label_projectEnd;
         public System.Windows.Forms.Label label_dontTouch;
-        private System.Windows.Forms.Label label_studentApplyStatus;
     }
 }

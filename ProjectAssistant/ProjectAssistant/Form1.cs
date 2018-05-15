@@ -44,7 +44,6 @@ namespace ProjectAssistant
             Form loading = new Form();
             loading.StartPosition = FormStartPosition.CenterScreen;
             loading.FormBorderStyle = FormBorderStyle.None;
-            loading.TopMost = true;
             loading.Size = loadPage.Size;
             loading.Controls.Add(loadPage);
             loading.Show();
@@ -127,15 +126,6 @@ namespace ProjectAssistant
             }
             loginPage.passwordTextBox.Clear();
             loading.Close();
-        }
-
-        private void adminPageButton_Click(object sender, EventArgs e)
-        {
-            AdminPage adminPage = new AdminPage();
-            formsPanel.Controls.Clear();
-            formsPanel.Controls.Add(adminPage);
-            headerLabel.Text = "Admin";
-
         }
 
 

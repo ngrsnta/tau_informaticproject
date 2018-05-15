@@ -185,12 +185,22 @@ namespace ProjectAssistant
                 ProjectListItem projectList = new ProjectListItem(lst[i], 0, st.id_number.ToString(), this);
                 Project prj = new Project();
                 Company cmp = new Company();
+                Label lbl = new Label();
+                Label lbl2 = new Label();
+                lbl.Text = "Application Status";
+                lbl.Location = new Point(640, 60);
+                lbl2.Location = new Point(665, 80);
+                
+                projectList.Controls.Add(lbl);
+                
                 //acquiring info about project from the database
                 prj.title = db.select_fromDatabase("projectTitle", "projects", "projectId", lst[i]);
                 prj.areaofinterest = db.select_fromDatabase("projectArea", "projects", "projectId", lst[i]);
                 prj.projectdesc = db.select_fromDatabase("projectDescription", "projects", "projectId", lst[i]);
                 cmp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "projects", "projectId", lst[i]));
                 cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
+                lbl2.Text = db.select_fromDatabaseTwoElement("applyStatus", "applies", "projectId", lst[i], "studentId", st.id_number.ToString());
+                projectList.Controls.Add(lbl2);
                 //prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectApplydeadlines", "projects", "projectId", lst[i]));
                 //Writing info to the labels in list elements
                 projectList.richTextBox_projectTitle.Text = prj.title;
@@ -211,6 +221,7 @@ namespace ProjectAssistant
             for (int i = 0; i < _lst.Count; i++)
             {
                 ProjectListItem projectList = new ProjectListItem(_lst[i], 1, st.id_number.ToString(), this);
+                
                 Project prj = new Project();
                 Company cmp = new Company();
                 //acquiring info about project from the database
@@ -219,6 +230,7 @@ namespace ProjectAssistant
                 prj.projectdesc = db.select_fromDatabase("projectDescription", "projects", "projectId", _lst[i]);
                 cmp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "projects", "projectId", _lst[i]));
                 cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
+       
                 //prj.deadline = db.select_fromDatabase("projectDeadline", "projects", "projectId", lst[i]); KEZA AYNI ŞEQİLDE
                 //Writing info to the labels in list elements
                 projectList.richTextBox_projectTitle.Text = prj.title;

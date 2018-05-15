@@ -38,8 +38,6 @@
             this.richTextBox_description = new System.Windows.Forms.RichTextBox();
             this.richTextBox_projectArea = new System.Windows.Forms.RichTextBox();
             this.richTextBox_projectTitle = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_applyStatus = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_dontTouch
@@ -161,36 +159,10 @@
             this.richTextBox_projectTitle.TabIndex = 10;
             this.richTextBox_projectTitle.Text = "Project Title here";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(613, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 21);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Application Status";
-            // 
-            // textBox_applyStatus
-            // 
-            this.textBox_applyStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox_applyStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_applyStatus.Enabled = false;
-            this.textBox_applyStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_applyStatus.Location = new System.Drawing.Point(647, 77);
-            this.textBox_applyStatus.Name = "textBox_applyStatus";
-            this.textBox_applyStatus.Size = new System.Drawing.Size(100, 16);
-            this.textBox_applyStatus.TabIndex = 21;
-            this.textBox_applyStatus.Text = "Submitted";
-            this.textBox_applyStatus.TextChanged += new System.EventHandler(this.textBox_applyStatus_TextChanged);
-            // 
             // ApplicationListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox_applyStatus);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label_dontTouch);
             this.Controls.Add(this.label_projectEnd);
             this.Controls.Add(this.label_projectStart);
@@ -220,7 +192,5 @@
         private System.Windows.Forms.RichTextBox richTextBox_description;
         private System.Windows.Forms.RichTextBox richTextBox_projectArea;
         private System.Windows.Forms.RichTextBox richTextBox_projectTitle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_applyStatus;
     }
 }

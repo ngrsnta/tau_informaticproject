@@ -43,14 +43,21 @@ namespace ProjectAssistant
                 return;                
             }
 
-            
+            project.title = textProjecttitle.Text;
+            project.areaofinterest = textBoxAreaofinterest.Text;
+            project.deadline = dateTimePickerDeadline.Value;
+            project.end = dateTimePickerProjectend.Value;
+            project.start = dateTimePickerProjectstart.Value;
+            project.projectdesc = richTextBoxProjectdescription.Text;
+            project.skills = richTextBoxSkillRequirements.Text;
+            project.branchdec = richTextBoxCompanybranchdesicription.Text;
 
             Random rnd = new Random();
             int pid = rnd.Next(100000, 999999);
             int cid = comp.id_number;
 
 
-            db.insert_toDatabase("projects", "projectId, companyId, projectTitle, projectDescription, projectArea, projectReqments, projectApplyDeadline, " 
+           db.insert_toDatabase("projects", "projectId, companyId, projectTitle, projectDescription, projectArea, projectReqments, projectApplyDeadline, " 
                 +"projectStartDate, projectEndDate", pid +", " + cid +", '" + project.title + "', '" + project.projectdesc + "', '" 
                 + project.areaofinterest + "', '" + project.skills + "', '" + project.deadline.ToString("yyyy-MM-dd") + "', '" 
                 + project.start.ToString("yyyy-MM-dd") + "', '" + project.end.ToString("yyyy-MM-dd")+ "'");
@@ -59,11 +66,11 @@ namespace ProjectAssistant
 
 
 
-            //db.update_toDatabase("projects", "projectTitle", project.title, "projectId", id.ToString());
-            //db.update_toDatabase("projects", "projectDescription", project.projectdesc, "projectId", id.ToString());
-            //db.update_toDatabase("projects", "projectArea", project.areaofinterest, "projectId", id.ToString());
-            //db.update_toDatabase("projects", "projectReqments", project.skills, "projectId", id.ToString());
-            //db.update_toDatabase("projects", "projectApplydeadlines", project.deadline, "projectId", id.ToString());
+            db.update_toDatabase("projects", "projectTitle", project.title, "projectId", pid.ToString());
+            db.update_toDatabase("projects", "projectDescription", project.projectdesc, "projectId", pid.ToString());
+            db.update_toDatabase("projects", "projectArea", project.areaofinterest, "projectId", pid.ToString());
+            db.update_toDatabase("projects", "projectReqments", project.skills, "projectId", pid.ToString());
+            //db.update_toDatabase("projects", "projectApplydeadlines", project.deadline, "projectId", pid.ToString());
             //db.update_toDatabase("projects", "projectStart", project.start, "projectId", id.ToString());
             //db.update_toDatabase("projects", "projectEnd", project.end, "projectId", id.ToString());
             // db.update_toDatabase("projects", "projectBranch", comp.description, "projectId", id.ToString());
@@ -115,6 +122,7 @@ namespace ProjectAssistant
                 projectList.BackColor = SystemColors.Control;
                 tabProjectpage.Controls.Add(projectList);
             }
-}
+        }
+        
     }
 }

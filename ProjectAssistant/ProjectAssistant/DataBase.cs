@@ -72,6 +72,41 @@ namespace ProjectAssistant
                return a;
             }
         }
+        public string select_fromDatabaseTwoElement(string item, string table, string equal1, string equal2, string equal3, string equal4)
+        {
+            try
+            {
+                query = "select * from " + table + " where " + equal1 + " = " + equal2 + " and " + equal3 + " = '" + equal4 + "';";
+                string a = "";
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    if (myReader[item].GetType() == a.GetType() || myReader[item].GetType() == anyInt.GetType())
+                    {
+                        a = Convert.ToString(myReader[item]);
+                    }
+                    else
+                    {
+                        a = Convert.ToString(myReader[item]);
+                    }
+                }
+                myReader.Close();
+                conn.Close();
+                return a;
+            }
+            catch (Exception e)
+            {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
+                string a = e.Message;
+                MessageBox.Show(e.Message + "\n" + e.ToString());
+
+                return a;
+            }
+        }
+
+        
         public List<string> select_asArray(string table, string equal1, string equal2, int value)
         {
             try
@@ -86,6 +121,35 @@ namespace ProjectAssistant
                 {
                     list.Add(myReader.GetValue(value).ToString());
                     
+                }
+                myReader.Close();
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                if (conn.State.ToString() == "Open") { conn.Close(); }
+                List<string> list = new List<string>();
+                list.Add(e.Message);
+                MessageBox.Show(e.Message + "\n" + e.ToString());
+
+                return list;
+            }
+        }
+        public List<string> select_asArrayWithTwoElement(string table, string equal1, string equal2, int value, string equal3, string equal4)
+        {
+            try
+            {
+                query = "select * from " + table + " where " + equal1 + " = " + equal2 + " and "+equal3+ " = '"+equal4+ "';";
+                string a = "";
+                List<string> list = new List<string>();
+                myCommand = new MySqlCommand(query, conn);
+                conn.Open();
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    list.Add(myReader.GetValue(value).ToString());
+
                 }
                 myReader.Close();
                 conn.Close();
