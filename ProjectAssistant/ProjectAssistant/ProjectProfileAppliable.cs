@@ -55,6 +55,7 @@ namespace ProjectAssistant
             loading.Controls.Add(loadPage);
             loading.Show();
             db.insert_toDatabase("applies", "projectId, studentId, applyStatus", projectId + ", " + studentId+", 'Ongoing'");
+            stPage.getAppliesList();
             loading.Close();
         }
     }
