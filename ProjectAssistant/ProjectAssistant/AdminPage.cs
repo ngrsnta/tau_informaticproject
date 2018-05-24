@@ -388,7 +388,14 @@ namespace ProjectAssistant
 
         //Register a new Student
         private void reg_student_Click(object sender, EventArgs e)  //Register Student
-        {   
+        {
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             #region Error Catch @ Student Register
 
             int i = 0;
@@ -466,6 +473,7 @@ namespace ProjectAssistant
                                  +stu.dateofbirth.ToString("yyyy-MM-dd") + "', '"+stu.faculty+"', '"+stu.major+"', "+stu.semester);
             MessageBox.Show("Student has been succesfully registered!");
             Reset_Fields();
+            loading.Close();
         }
 
         #endregion
@@ -475,6 +483,13 @@ namespace ProjectAssistant
         //1. Show Student Information
         private void button_studentshow_Click(object sender, EventArgs e)
         {
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             string student_ID = textbox_studentnumber_show.Text;
 
             //From Database to Student Class
@@ -489,7 +504,7 @@ namespace ProjectAssistant
             //Bring Student Info from Class to Update Panel
             StudentToUpt(stu);
 
-            
+            loading.Close();
 
         }
 
@@ -515,7 +530,13 @@ namespace ProjectAssistant
             }
             #endregion
 
-
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             Student stu_upt = new Student();
             
             string student_ID = stu.id_number.ToString();
@@ -531,12 +552,20 @@ namespace ProjectAssistant
 
             //Hide Student Update Panels
             Show_Student_Upt_Panel(false);
+            loading.Close();
 
         }
 
         //3. Delete Student
         private void button_student_del_Click(object sender, EventArgs e)
         {
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             string student_ID = label_studentnumber_show.Text;
 
             //Warning Dialog
@@ -571,6 +600,7 @@ namespace ProjectAssistant
                         break;
                     } 
             }
+            loading.Close();
         }
 
         #endregion
@@ -625,6 +655,14 @@ namespace ProjectAssistant
 
             #endregion
 
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
+
             //Storing inputs to Class
             comp.id_number = Convert.ToInt32(textbox_companyID.Text);
             comp.name = textbox_companyname.Text;
@@ -635,6 +673,7 @@ namespace ProjectAssistant
                                 comp.id_number + ", '" + comp.password + "', '" + comp.name + "'");
             MessageBox.Show("Company has been succesfully registered!");
             Reset_Fields();
+            loading.Close();
 
         }
 
@@ -659,6 +698,13 @@ namespace ProjectAssistant
 
             #endregion
 
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             string company_ID = textbox_company_show.Text;
 
             //From Database to Student Class
@@ -675,6 +721,7 @@ namespace ProjectAssistant
 
             //Bring Student Info from Class to Update Panel
             textbox_companyname_upt.Text = comp.name;
+            loading.Close();
             
         }
 
@@ -688,9 +735,15 @@ namespace ProjectAssistant
                 MessageBox.Show("Please enter a longer password (Minimum Length = 6 )");
                 return;
             }
-           
-            #endregion
 
+            #endregion
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             Company comp_upt = new Company();
             string company_ID = comp.id_number.ToString();
 
@@ -713,13 +766,20 @@ namespace ProjectAssistant
 
             //Make Company Update Panels Invisible
             Show_Company_Upt_Panel(false);
-
+            loading.Close();
         }
 
 
         //3. Delete Company
         private void button_company_del_Click(object sender, EventArgs e)
         {
+            Form loading = new Form();
+            LoadingPage loadPage = new LoadingPage();
+            loading.StartPosition = FormStartPosition.CenterScreen;
+            loading.FormBorderStyle = FormBorderStyle.None;
+            loading.Size = loadPage.Size;
+            loading.Controls.Add(loadPage);
+            loading.Show();
             string company_ID =label_companyID_show.Text;
 
             DialogResult res = MessageBox.Show("Are you sure you want to delete this user?", "Warning",
@@ -753,6 +813,7 @@ namespace ProjectAssistant
                         break;
                     }
             }
+            loading.Close();
         }
 
 

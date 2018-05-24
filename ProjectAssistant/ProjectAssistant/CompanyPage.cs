@@ -70,10 +70,10 @@ namespace ProjectAssistant
             db.update_toDatabase("projects", "projectDescription", project.projectdesc, "projectId", pid.ToString());
             db.update_toDatabase("projects", "projectArea", project.areaofinterest, "projectId", pid.ToString());
             db.update_toDatabase("projects", "projectReqments", project.skills, "projectId", pid.ToString());
-            //db.update_toDatabase("projects", "projectApplydeadlines", project.deadline, "projectId", pid.ToString());
-            //db.update_toDatabase("projects", "projectStart", project.start, "projectId", id.ToString());
-            //db.update_toDatabase("projects", "projectEnd", project.end, "projectId", id.ToString());
-            // db.update_toDatabase("projects", "projectBranch", comp.description, "projectId", id.ToString());
+            db.update_toDatabase("projects", "projectApplydeadline", project.deadline.ToString(), "projectId", pid.ToString());
+            db.update_toDatabase("projects", "projectStart", project.start.ToString(), "projectId", pid.ToString());
+            db.update_toDatabase("projects", "projectEnd", project.end.ToString(), "projectId", pid.ToString());
+            db.update_toDatabase("projects", "projectBranch", comp.description, "projectId", pid.ToString());
 
             getProjectList();
             loading.Close();
@@ -111,13 +111,13 @@ namespace ProjectAssistant
                 prj.projectdesc = db.select_fromDatabase("projectDescription", "projects", "projectId", _lst[i]);
                 cmp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "projects", "projectId", _lst[i]));
                 cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
-                //prj.deadline = db.select_fromDatabase("projectDeadline", "projects", "projectId", lst[i]); KEZA AYNI ŞEQİLDE
+                prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectApplydeadline", "projects", "projectId", _lst[i]));
                 //Writing info to the labels in list elements
                 projectList.richTextBox_projectTitle.Text = prj.title;
                 projectList.richTextBox_projectArea.Text = prj.areaofinterest;
                 projectList.richTextBox_description.Text = prj.projectdesc;
                 projectList.richTextBox_companyName.Text = cmp.name;
-                // projectList.richTextBox_projectDeadline.Text = prj.deadline; CLASSTAN DATE TIME OLARAK DEĞİŞTİR
+                projectList.richTextBox_projectDeadline.Text = prj.deadline.ToShortDateString();
                 projectList.Location = new Point(5, (i* 160) + 5);
                 projectList.BackColor = SystemColors.Control;
                 tabProjectpage.Controls.Add(projectList);

@@ -33,7 +33,7 @@ namespace ProjectAssistant
             prj.skills = db.select_fromDatabase("projectReqments", "projects", "projectId", projectId);
             cmp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "projects", "projectId", projectId));
             cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
-            //prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectDeadline", "projects", "projectId", projectId));
+            prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectApplydeadline", "projects", "projectId", projectId));
             //Writing info to the labels in list elements
             label_projectTitle.Text = prj.title;
             label_projectId.Text = projectId;
@@ -41,7 +41,7 @@ namespace ProjectAssistant
             richTextBox_projectDescription.Text = prj.projectdesc;
             richTextBox_companyName.Text = cmp.name;
             richTextBox_projectRequirements.Text = prj.skills;
-            //label_projectDeadline.Text = prj.deadline.ToShortDateString(); //CLASSTAN DATE TIME OLARAK DEĞİŞTİR
+            label_projectDeadline.Text = prj.deadline.ToShortDateString();
             //
         }
         private void button_projectApply_Click(object sender, EventArgs e)

@@ -56,7 +56,15 @@ namespace ProjectAssistant
                     }
                     else
                     {
-                        a = Convert.ToString(myReader[item]);
+                        try
+                        {
+                            a = Convert.ToDateTime(myReader[item]).ToString();
+                        }
+                        catch (Exception)
+                        {
+                            DateTime val = new DateTime(1999, 1, 1);
+                            a = val.ToString();
+                        }
                     }
                 }
                 myReader.Close();
@@ -89,7 +97,15 @@ namespace ProjectAssistant
                     }
                     else
                     {
-                        a = Convert.ToString(myReader[item]);
+                        try
+                        {
+                            a = Convert.ToDateTime(myReader[item]).ToString();
+                        }
+                        catch (Exception)
+                        {
+                            DateTime val = new DateTime(1999, 1, 1);
+                            a = val.ToString();
+                        }
                     }
                 }
                 myReader.Close();

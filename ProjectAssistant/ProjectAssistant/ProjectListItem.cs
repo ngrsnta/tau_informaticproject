@@ -19,7 +19,6 @@ namespace ProjectAssistant
         string studentId;
         int pageDecider; // = 0 -> butonsuz
                          // = 1 -> appliable
-                         // = 2 ? Bitir iptal et ?
 
 
         public ProjectListItem(string prjId, int pageDcd, string stuId, StudentPage _stPage)

@@ -16,10 +16,5 @@ namespace ProjectAssistant
         {
             InitializeComponent();
         }
-
-        private void textBox_applyStatus_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

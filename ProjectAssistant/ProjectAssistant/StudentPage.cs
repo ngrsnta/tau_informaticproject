@@ -201,7 +201,7 @@ namespace ProjectAssistant
                 cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
                 lbl2.Text = db.select_fromDatabaseTwoElement("applyStatus", "applies", "projectId", lst[i], "studentId", st.id_number.ToString());
                 projectList.Controls.Add(lbl2);
-                //prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectApplydeadlines", "projects", "projectId", lst[i]));
+                prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectApplydeadline", "projects", "projectId", lst[i]));
                 //Writing info to the labels in list elements
                 projectList.richTextBox_projectTitle.Text = prj.title;
                 projectList.richTextBox_projectArea.Text = prj.areaofinterest;
@@ -230,14 +230,13 @@ namespace ProjectAssistant
                 prj.projectdesc = db.select_fromDatabase("projectDescription", "projects", "projectId", _lst[i]);
                 cmp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "projects", "projectId", _lst[i]));
                 cmp.name = db.select_fromDatabase("companyName", "companies", "companyId", cmp.id_number.ToString());
-       
-                //prj.deadline = db.select_fromDatabase("projectDeadline", "projects", "projectId", lst[i]); KEZA AYNI ŞEQİLDE
+                prj.deadline = Convert.ToDateTime(db.select_fromDatabase("projectDeadline", "projects", "projectId", _lst[i]));
                 //Writing info to the labels in list elements
                 projectList.richTextBox_projectTitle.Text = prj.title;
                 projectList.richTextBox_projectArea.Text = prj.areaofinterest;
                 projectList.richTextBox_description.Text = prj.projectdesc;
                 projectList.richTextBox_companyName.Text = cmp.name;
-                // projectList.richTextBox_projectDeadline.Text = prj.deadline; CLASSTAN DATE TIME OLARAK DEĞİŞTİR
+                projectList.richTextBox_projectDeadline.Text = prj.deadline.ToShortDateString();
                 projectList.Location = new Point(5, (i * 160) + 5);
                 projectList.BackColor = SystemColors.Control;
                 studPage_projects.Controls.Add(projectList);
