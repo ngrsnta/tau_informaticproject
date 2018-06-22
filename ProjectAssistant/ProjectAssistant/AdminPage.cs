@@ -35,34 +35,6 @@ namespace ProjectAssistant
         }
         
         /// <summary>
-        /// When changed to a Tab, delete all Text Boxes
-        /// </summary>
-        /*       void Delete_Text()  
-               {
-                   var selectedTab = Admin_MainTab.SelectedTab;
-
-                   foreach (Control ctrl in selectedTab.Controls)
-                   {
-                       if (ctrl is TextBox)
-                       {
-                           (ctrl as TextBox).Text = string.Empty;
-                       }
-
-                       if (ctrl is Label)
-                       {
-                           if ((ctrl != label_studentname ||
-                               ctrl != label_studentnumber ||
-                               ctrl != label_studentsurname ||
-                               ctrl != label_studentpassword) == false)
-                               (ctrl as Label).Text = string.Empty;
-                       }
-
-                       // Other Controls....
-                   }
-               }
-       */
-
-        /// <summary>
         /// Adjusts Student Major ComboBox according to Faculty ComboBox
         /// </summary>
         void FacultyToMajor(ComboBox ctrl_faculty, ComboBox ctrl_major)
@@ -137,8 +109,9 @@ namespace ProjectAssistant
         /// <param name="db">Input DataBase</param>
         /// <param name="student_ID">Input Student ID</param>
         /// <param name="stu">Output Class</param>
-        void DbToStudent(DataBase db,string student_ID, Student stu)
+        string DbToStudent(DataBase db,string student_ID, Student stu)
         {
+            try { 
             stu.id_number = Convert.ToInt32(db.select_fromDatabase("studentId", "students", "studentId", student_ID));
             stu.name = db.select_fromDatabase("studentName", "students", "studentId", student_ID);
             stu.dateofbirth = Convert.ToDateTime(db.select_fromDatabase("studentBirthday", "students", "studentId", student_ID));
@@ -146,6 +119,14 @@ namespace ProjectAssistant
             stu.faculty = db.select_fromDatabase("studentFaculty", "students", "studentId", student_ID);
             stu.major = db.select_fromDatabase("studentMajor", "students", "studentId", student_ID);
             stu.semester = Convert.ToInt32(db.select_fromDatabase("studentSemester", "students", "studentId", student_ID));
+                return "0";
+            }
+            catch (Exception e)
+            {
+                string a = e.Message;
+                MessageBox.Show(e.Message + "\n" + e.ToString());
+                return a;
+            }
         }
 
         /// <summary>
@@ -493,8 +474,19 @@ namespace ProjectAssistant
             string student_ID = textbox_studentnumber_show.Text;
 
             //From Database to Student Class
-            DbToStudent(db,student_ID, stu);
+            string meldung=DbToStudent(db, student_ID, stu);
+            if (meldung != "0")
+            {
+                //Reset Show Student Info Labels
+                Reset_Fields();
 
+                //Hide Student Update Panels
+                Show_Student_Upt_Panel(false);
+
+                loading.Close();
+                return;
+            }
+                
             //Make the update panels visible
             Show_Student_Upt_Panel(true);
 
@@ -506,11 +498,6 @@ namespace ProjectAssistant
 
             loading.Close();
 
-        }
-
-        private void comboBox_studentfaculty_upt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FacultyToMajor(comboBox_studentfaculty_upt, comboBox_studentmajor_upt);
         }
 
         //2. Update Student Informations
@@ -603,6 +590,10 @@ namespace ProjectAssistant
             loading.Close();
         }
 
+        private void comboBox_studentfaculty_upt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FacultyToMajor(comboBox_studentfaculty_upt, comboBox_studentmajor_upt);
+        }
         #endregion
 
         #region Company Register
@@ -708,10 +699,22 @@ namespace ProjectAssistant
             string company_ID = textbox_company_show.Text;
 
             //From Database to Student Class
-            comp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "companies", "companyId", company_ID));
-            comp.name = db.select_fromDatabase("companyName", "companies", "companyId", company_ID);
-            comp.password = db.select_fromDatabase("companyPassword", "companies", "companyId", company_ID);
-
+            try
+            { 
+                comp.id_number = Convert.ToInt32(db.select_fromDatabase("companyId", "companies", "companyId", company_ID));
+                comp.name = db.select_fromDatabase("companyName", "companies", "companyId", company_ID);
+                comp.password = db.select_fromDatabase("companyPassword", "companies", "companyId", company_ID);
+            }
+            catch (Exception ee)
+            {
+                string a = ee.Message;
+                MessageBox.Show(ee.Message + "\n" + ee.ToString());
+                loading.Close();
+                
+                //Reset Company Info Show Labels and Input Fields
+                Reset_Fields();
+                return;
+            }
             //Make the update panels visible
             Show_Company_Upt_Panel(true);
 

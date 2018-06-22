@@ -24,12 +24,15 @@ namespace ProjectAssistant
             {
                 query = "insert into " + table + " (" + columns + ") values(" + values + ");";
                 myCommand = new MySqlCommand(query, conn);
-                conn.Open();
+              /*  conn.Open();
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
                 }
                 myReader.Close();
+                conn.Close();*/
+                conn.Open();
+                myCommand.ExecuteNonQuery();
                 conn.Close();
             }
             catch (Exception e)
