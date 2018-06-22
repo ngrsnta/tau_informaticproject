@@ -534,6 +534,9 @@ namespace ProjectAssistant
             //Compare the updated infos from the temporary class with the current info
             Student_UptToDb(stu, stu_upt, db, student_ID);
 
+            //Message Box to inform the user
+            MessageBox.Show("Student has been succesfully updated!");
+
             //Reset Show Student Info Labels
             Reset_Fields();
 
@@ -565,6 +568,9 @@ namespace ProjectAssistant
                 case DialogResult.Yes:
                     {
                         db.delete_fromDatabase("students", "studentId", student_ID);
+
+                        //Message Box to inform the user
+                        MessageBox.Show("Student has been succesfully deleted!");
 
                         //Reset Show Student Info Labels and Input Fields
                         Reset_Fields();
@@ -764,6 +770,9 @@ namespace ProjectAssistant
                 db.update_toDatabase("companies", "companyPassword", comp_upt.password, "companyId", company_ID);
             }
 
+            //MessageBox to inform the user
+            MessageBox.Show("Company has been succesfully updated!");
+
             //Reset Company Info Show Labels and Input Fields
             Reset_Fields();
 
@@ -794,6 +803,9 @@ namespace ProjectAssistant
                 case DialogResult.Yes:
                     {
                         db.delete_fromDatabase("companies", "companyId", company_ID);
+
+                        //MessageBox to inform the user
+                        MessageBox.Show("Company has been succesfully deleted!");
 
                         //Reset Company Info Show Labels and Input Fields
                         Reset_Fields();
